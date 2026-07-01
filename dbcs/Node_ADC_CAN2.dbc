@@ -1,0 +1,95 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Tablet VCU GILES01
+VAL_TABLE_ CMD_3Point_implement 1 "float" 0 "hold or active DC" ;
+VAL_TABLE_ VT_JoystickYDirection 1 "Forward = B->A, Back = A->B" 0 "Forward = A->B, Back = B->A" ;
+VAL_TABLE_ VT_JoystickXDirection 1 "Left = B->A, Right = A->B" 0 "Left = A->B, Right = B->A" ;
+VAL_TABLE_ VT_JoystickXYMapping 1 "X-axis = port 6, Y-axis = port 2" 0 "X-axis = port 2, Y-axis = port 6" ;
+VAL_TABLE_ FBK_Calib 3 "Calib failed" 2 "Calib done" 1 "In progress" 0 "Default" ;
+VAL_TABLE_ Batt_Swap_State 6 "LV_Low" 5 "Timeout_Error" 4 "Swap_Error" 3 "Swap_Complete" 2 "Swap_in_Progress" 1 "Request_Recieved" 0 "Not_Active" ;
+VAL_TABLE_ CMD_3PointMode 7 "Description for the value '0x7'" 6 "Description for the value '0x6'" 5 "Hold" 4 "Hold NoDrooping" 3 "Hookup" 2 "Float" 1 "Direct Duty Cycle" 0 "Open Loop" ;
+VAL_TABLE_ FWD_mode 2 "Force OFF" 1 "Manual ON" 0 "Auto" ;
+VAL_TABLE_ ASCII 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_TABLE_ PTO_State 1 "PTO Disabled" 0 "PTO Enabled" ;
+VAL_TABLE_ Cell_Temperature_SNA 127 "ERROR" 126 "NO_VALUE" ;
+VAL_TABLE_ Cell_Voltage_SNA 511 "ERROR" 510 "NO_VALUE" ;
+VAL_TABLE_ ROOF_DIRECTION 3 "Signal Not Available, will stop motion" 2 "Moving Down" 1 "Moving Up" 0 "Stop Motion" ;
+VAL_TABLE_ STATE_VCU 15 "Power Off" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Driverless" 9 "Disengaging" 8 "Autopilot" 7 "Enabled Driving" 6 "Enabled Stationary" 5 "HV Disabling" 4 "HV Standby" 3 "Precharging" 2 "Low Voltage Standby" 1 "Initialization" 0 "Not Used" ;
+VAL_TABLE_ STATE_CONTACTORS 3 "DISABLE IN PROCESS" 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_TABLE_ OVERRIDE_BRAKE_LIGHT 3 "FUNCTION NOT AVAILABLE" 2 "ENABLE OVERRIDE TO ON" 1 "ENABLE OVERRIDE TO OFF" 0 "DISABLE OVERRIDE" ;
+VAL_TABLE_ STATE_SHIFT 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_TABLE_ STATE_GEAR_POSITION 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_TABLE_ STATE_HEAD_LIGHT 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_TABLE_ STATE_TURN_SIGNAL 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+
+
+BO_ 2565489970 VCU_FeedbackOTA: 8 VCU
+ SG_ Ecotron_isReadyForOTA : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HRI_isReadyForOTA : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_isReadyForOTA : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_isReadyForOTA : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACDB_isReadyforOTA : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_isReadyForOTA : 0|1@1+ (1,0) [0|1] ""  GILES01
+
+BO_ 2565489969 GILES01_CommandOTA: 8 GILES01
+ SG_ CMD_Ecotron_OTA : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_BMS_OTA : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_HRI_OTA : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_Dash_OTA : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACDB_AvailableOTA : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACDB_OTAcomplete : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_VCU_OTA : 0|1@1+ (1,0) [0|1] ""  VCU
+
+
+
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "version" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "version" "draft_20191030";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_ "NmStationAddress" BU_ Tablet 95;
+BA_ "NmStationAddress" BU_ VCU 97;
+BA_ "NmStationAddress" BU_ GILES01 96;
+BA_ "GenMsgCycleTime" BO_ 2565489970 100;
+BA_ "GenMsgSendType" BO_ 2565489970 0;
+BA_ "GenMsgSendType" BO_ 2565489969 0;
+BA_ "GenMsgCycleTime" BO_ 2565489969 100;
+

@@ -1,0 +1,132 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: MD_Range MD_Gear VCU
+VAL_TABLE_ VCU_RequestByte 80 "Configure Current Limit" 64 "Configure Timeout" 48 "Reset Outputs" 32 "Configure Outputs" 16 "Request Output Status" ;
+VAL_TABLE_ MD_Fault 255 "No Fault" 17 "communication loss" 16 "overcurrent in reverse direction" 1 "overcurrent in forward direction" ;
+VAL_TABLE_ Direction 16 "Reverse (output 2 battery and 1 to ground)" 1 "Forward (output 1 battery and 2 to ground)" 0 "Stopped (both outpus are grounded)" ;
+VAL_TABLE_ MD_Command 2 "Output Status" 1 "Wakeup Or Loss of Communication" ;
+
+
+BO_ 2565829248 VCU_MD_Range_Request: 8 VCU
+ SG_ VCU_CurrentLimit m80 : 8|8@1+ (0.1,0) [0|25.5] "A"  MD_Range
+ SG_ VCU_Timeout m64 : 8|8@1+ (0.1,0) [0|25.5] "s"  MD_Range
+ SG_ VCU_DutyCycle m32 : 24|8@1+ (1,0) [0|255] "%"  MD_Range
+ SG_ VCU_Frequency m32 : 16|8@1+ (1,0) [0|255] "Hz"  MD_Range
+ SG_ VCU_Direction m32 : 8|8@1+ (1,0) [0|255] ""  MD_Range
+ SG_ VCU_RequestByte M : 0|8@1+ (1,0) [0|255] ""  MD_Range
+
+BO_ 2565828992 VCU_MD_Gear_Request: 8 VCU
+ SG_ VCU_CurrentLimit m80 : 8|8@1+ (0.1,0) [0|25.5] "A"  MD_Gear
+ SG_ VCU_Timeout m64 : 8|8@1+ (0.1,0) [0|25.5] "s"  MD_Gear
+ SG_ VCU_DutyCycle m32 : 24|8@1+ (1,0) [0|255] "%"  MD_Gear
+ SG_ VCU_Frequency m32 : 16|8@1+ (1,0) [0|255] "Hz"  MD_Gear
+ SG_ VCU_Direction m32 : 8|8@1+ (1,0) [0|255] ""  MD_Gear
+ SG_ VCU_RequestByte M : 0|8@1+ (1,0) [0|255] ""  MD_Gear
+
+BO_ 2566848626 MD_Range_isUp: 8 MD_Range
+ SG_ MD_CommandByte : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 2566848625 MD_Gear_isUp: 8 MD_Gear
+ SG_ MD_CommandByte : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 2565800050 MD_Range_Status: 8 MD_Range
+ SG_ MD_Frequency m2 : 16|8@1+ (1,0) [0|255] "Hz"  VCU
+ SG_ MD_Current m2 : 32|8@1+ (0.1,0) [0|25.5] "A"  VCU
+ SG_ MD_DutyCycle m2 : 24|8@1+ (1,0) [0|255] "%"  VCU
+ SG_ MD_Fault m2 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MD_Direction m2 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MD_CommandByte M : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 2565800049 MD_Gear_Status: 8 MD_Gear
+ SG_ MD_Frequency m2 : 16|8@1+ (1,0) [0|255] "Hz"  VCU
+ SG_ MD_Current m2 : 32|8@1+ (0.1,0) [0|25.5] "A"  VCU
+ SG_ MD_DutyCycle m2 : 24|8@1+ (1,0) [0|255] "%"  VCU
+ SG_ MD_Fault m2 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MD_Direction m2 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MD_CommandByte M : 0|8@1+ (1,0) [0|255] ""  VCU
+
+
+
+CM_ SG_ 2565829248 VCU_CurrentLimit "the maximum average continueous current (2 seconds), range 0.1A to 25A and all other values will set the current limit to default 25A";
+CM_ SG_ 2565829248 VCU_Timeout "range 0.1s to 25s, all other value make it to default 7 seconds";
+CM_ SG_ 2565829248 VCU_DutyCycle "range 0 to 100%, all other value make duty cycle 50%";
+CM_ SG_ 2565829248 VCU_Frequency "range 2Hz to 250Hz, all other values make frequency 0Hz";
+CM_ SG_ 2565828992 VCU_CurrentLimit "the maximum average continueous current (2 seconds), range 0.1A to 25A and all other values will set the current limit to default 25A";
+CM_ SG_ 2565828992 VCU_Timeout "range 0.1s to 25s, all other value make it to default 7 seconds";
+CM_ SG_ 2565828992 VCU_DutyCycle "range 0 to 100%, all other value make duty cycle 50%";
+CM_ SG_ 2565828992 VCU_Frequency "range 2Hz to 250Hz, all other values make frequency 0Hz";
+CM_ BO_ 2565800050 "Motor drive sends this message on power up and once per second if communication is lost to the vehicle controller";
+CM_ SG_ 2565800050 MD_Frequency "range 2Hz to 250Hz, 0xFF means disable";
+CM_ SG_ 2565800050 MD_Current "range 0 to 25A, 0xFF means disable";
+CM_ SG_ 2565800050 MD_DutyCycle "0xFF means disable";
+CM_ BO_ 2565800049 "Motor drive sends this message on power up and once per second if communication is lost to the vehicle controller";
+CM_ SG_ 2565800049 MD_Frequency "range 2Hz to 250Hz, 0xFF means disable";
+CM_ SG_ 2565800049 MD_Current "range 0 to 25A, 0xFF means disable";
+CM_ SG_ 2565800049 MD_DutyCycle "0xFF means disable";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_ "NmStationAddress" BU_ MD_Range 114;
+BA_ "NmStationAddress" BU_ MD_Gear 113;
+BA_ "NmStationAddress" BU_ VCU 128;
+BA_ "GenMsgSendType" BO_ 2565829248 0;
+BA_ "GenMsgCycleTime" BO_ 2565829248 10;
+BA_ "GenMsgCycleTime" BO_ 2565828992 10;
+BA_ "GenMsgSendType" BO_ 2565828992 0;
+BA_ "GenMsgSendType" BO_ 2566848626 0;
+BA_ "GenMsgCycleTime" BO_ 2566848626 1000;
+BA_ "GenMsgCycleTime" BO_ 2566848625 1000;
+BA_ "GenMsgSendType" BO_ 2566848625 0;
+BA_ "GenMsgCycleTime" BO_ 2565800050 0;
+BA_ "GenMsgSendType" BO_ 2565800050 7;
+BA_ "GenMsgCycleTime" BO_ 2565800049 0;
+BA_ "GenMsgSendType" BO_ 2565800049 7;
+VAL_ 2565829248 VCU_Direction 16 "Reverse (output 2 battery and 1 to ground)" 1 "Forward (output 1 battery and 2 to ground)" 0 "Stopped (both outpus are grounded)" ;
+VAL_ 2565829248 VCU_RequestByte 80 "Configure Current Limit" 64 "Configure Timeout" 48 "Reset Outputs" 32 "Configure Outputs" 16 "Request Output Status" ;
+VAL_ 2565828992 VCU_Direction 16 "Reverse (output 2 battery and 1 to ground)" 1 "Forward (output 1 battery and 2 to ground)" 0 "Stopped (both outpus are grounded)" ;
+VAL_ 2565828992 VCU_RequestByte 80 "Configure Current Limit" 64 "Configure Timeout" 48 "Reset Outputs" 32 "Configure Outputs" 16 "Request Output Status" ;
+VAL_ 2566848626 MD_CommandByte 2 "Output Status" 1 "Wakeup Or Loss of Communication" ;
+VAL_ 2566848625 MD_CommandByte 2 "Output Status" 1 "Wakeup Or Loss of Communication" ;
+VAL_ 2565800050 MD_Fault 255 "No Fault" 17 "communication loss" 16 "overcurrent in reverse direction" 1 "overcurrent in forward direction" ;
+VAL_ 2565800050 MD_Direction 16 "Reverse (output 2 battery and 1 to ground)" 1 "Forward (output 1 battery and 2 to ground)" 0 "Stopped (both outpus are grounded)" ;
+VAL_ 2565800050 MD_CommandByte 2 "Output Status" 1 "Wakeup Or Loss of Communication" ;
+VAL_ 2565800049 MD_Fault 255 "No Fault" 17 "communication loss" 16 "overcurrent in reverse direction" 1 "overcurrent in forward direction" ;
+VAL_ 2565800049 MD_Direction 16 "Reverse (output 2 battery and 1 to ground)" 1 "Forward (output 1 battery and 2 to ground)" 0 "Stopped (both outpus are grounded)" ;
+VAL_ 2565800049 MD_CommandByte 2 "Output Status" 1 "Wakeup Or Loss of Communication" ;
+

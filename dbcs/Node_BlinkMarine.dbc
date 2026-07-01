@@ -1,0 +1,95 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU EAO
+VAL_TABLE_ VT_Startup_LED_Sequence 2 "Fast flash" 1 "Complete RGB show (default)" 0 "Startup sequence off" ;
+VAL_TABLE_ VT_Heartbeat_state 1 "Heartbeat message enabled" 0 "Heartbeat message disabled" ;
+VAL_TABLE_ VT_Command_identifier 114 "Set event driven transmission" 113 "Set periodic CAN transmission" 1 "Set single LED state" ;
+VAL_TABLE_ VT_Periodic_transmission_state 1 "Enabled" 0 "Disabled" ;
+VAL_TABLE_ VT_Button_state 1 "Button Pressed" 0 "Button Released" ;
+VAL_TABLE_ VT_LED_state 3 "Alternate Blink" 2 "Blink" 1 "On" 0 "Off" ;
+VAL_TABLE_ VT_LED_colour 9 "Yellow/Green" 8 "Orange" 7 "White/Blue" 6 "Magenta" 5 "Cyan" 4 "Yellow" 3 "Blue" 2 "Green" 1 "Red" 0 "LED off" ;
+
+
+BO_ 2565808384 VCU_Command: 8 Vector__XXX
+ SG_ Startup_LED_sequence m52 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Event_transmission_state m114 : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Heartbeat_status m117 : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Heartbeat_period m117 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LED_secondary_colour m1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Button_number m1 : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ Reserved m1 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Periodic_transmission_state m113 : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_state m1 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LED_colour m1 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Header_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Header_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Identifier M : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565865249 Feedback_Button_State: 8 EAO
+ SG_ Header_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Header_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Heartbeat_data : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Counter : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Button4_state : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Button3_state : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Button2_state : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Button1_state : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_ "NmStationAddress" BU_ VCU 97;
+BA_ "NmStationAddress" BU_ EAO 128;
+BA_ "GenMsgSendType" BO_ 2565808384 7;
+BA_ "GenMsgSendType" BO_ 2565865249 7;
+VAL_ 2565808384 Startup_LED_sequence 2 "Fast flash" 1 "Complete RGB show (default)" 0 "Startup sequence off" ;
+VAL_ 2565808384 Event_transmission_state 0 "Disabled" 1 "Enabled" ;
+VAL_ 2565808384 Heartbeat_status 1 "Heartbeat message enabled" 0 "Heartbeat message disabled" ;
+VAL_ 2565808384 LED_secondary_colour 9 "Yellow/Green" 8 "Orange" 7 "White/Blue" 6 "Magenta" 5 "Cyan" 4 "Yellow" 3 "Blue" 2 "Green" 1 "Red" 0 "LED off" ;
+VAL_ 2565808384 Periodic_transmission_state 0 "Disabled" 1 "Enabled" ;
+VAL_ 2565808384 LED_state 3 "Alternate Blink" 2 "Blink" 1 "On" 0 "Off" ;
+VAL_ 2565808384 LED_colour 9 "Yellow/Green" 8 "Orange" 7 "White/Blue" 6 "Magenta" 5 "Cyan" 4 "Yellow" 3 "Blue" 2 "Green" 1 "Red" 0 "LED off" ;
+VAL_ 2565808384 Command_Identifier 52 "Set startup LED sequence" 117 "Set heartbeat message" 114 "Set event driven transmission" 113 "Set periodic CAN transmission" 1 "Set single LED state" ;
+VAL_ 2565865249 Button4_state 1 "Button Pressed" 0 "Button Released" ;
+VAL_ 2565865249 Button3_state 1 "Button Pressed" 0 "Button Released" ;
+VAL_ 2565865249 Button2_state 1 "Button Pressed" 0 "Button Released" ;
+VAL_ 2565865249 Button1_state 1 "Button Pressed" 0 "Button Released" ;
+

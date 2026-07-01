@@ -1,0 +1,725 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BECM_2
+
+
+BO_ 1166 PACK2_VEH_OFF_TIME_MASTER: 8 BECM_2
+ SG_ PACK2_VEH_OFF_TIME_MASTER_ARC : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ PACK2_TIME_SINCE_RTC_READJUST_V : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PACK2_TIME_SINCE_RTC_READJUST : 4|29@0+ (1,0) [0|536870911] "s" Vector__XXX
+ SG_ PACK2_TIME_SINCE_PROPSYS_INACT_V : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PACK2_TIME_SINCE_PROPSYS_INACT : 36|29@0+ (1,0) [0|536870911] "s" Vector__XXX
+
+BO_ 1170 PACK2_TIME_STATUS_RTC: 8 BECM_2
+ SG_ PACK2_RTC_GPS_TIMEDELTA_VALID : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PACK2_RTC_GPS_TIMEDELTA_SIGN : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PACK2_RTC_GPS_TIMEDELTA : 53|14@0+ (1,0) [0|16383] "s" Vector__XXX
+ SG_ PACK2_TIME_UTC_YEAR_RTC : 47|8@0+ (1,2000) [2000|2254] "" Vector__XXX
+ SG_ PACK2_TIME_UTC_SECONDS_RTC : 23|8@0+ (1,0) [0|59] "s" Vector__XXX
+ SG_ PACK2_TIME_UTC_MONTH_RTC : 39|8@0+ (1,0) [0|11] "" Vector__XXX
+ SG_ PACK2_TIME_UTC_MINUTES_RTC : 15|8@0+ (1,0) [0|59] "min" Vector__XXX
+ SG_ PACK2_TIME_UTC_HOURS_RTC : 7|8@0+ (1,0) [0|23] "h" Vector__XXX
+ SG_ PACK2_TIME_UTC_DAY_RTC : 31|8@0+ (1,0) [1|31] "" Vector__XXX
+
+BO_ 2042 DIAG_RESPONSE_BECM_CPU2_PACK2: 8 Vector__XXX
+ SG_ DIAG_RESP_SIG_BECM_CPU2_PACK2 : 7|8@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 2034 DIAG_REQUEST_BECM_CPU2_PACK2: 8 Vector__XXX
+ SG_ DIAG_REQ_SIG_BECM_CPU2_PACK2 : 7|64@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 1789 CCP_RESPONSE_BMS_CPU2_PACK2: 8 Vector__XXX
+ SG_ CCP_RESP_SIG_BMS_CPU2_PACK2 : 7|64@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 1787 CCP_RESPONSE_BMS_CPU1_PACK2: 8 BECM_2
+ SG_ CCP_RESP_SIG_BMS_CPU1_PACK2 : 7|64@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 1788 CCP_REQUEST_BMS_CPU2_PACK2: 8 Vector__XXX
+ SG_ CCP_REQ_SIG_BMS_CPU2_PACK2 : 7|64@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 620 PACK2_CMD_BY_CHIEF: 2 Vector__XXX
+ SG_ PACK2_ISO_CHK_CMD : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PACK2_DCCHG_CMD : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PACK2_ACCHG_CMD : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PACK2_HV_ENGAGE_CMD : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 615 PACK2_TRAC_BATT_STATUS_7: 8 BECM_2
+ SG_ Pack2_CapacityNomEst : 30|7@0+ (1,0) [0|100] "Ah" Vector__XXX
+ SG_ Pack2_DCResistanceEst : 39|10@0+ (1,0) [0|1021] "%" Vector__XXX
+ SG_ Pack2_IsoResist : 43|10@0+ (10,0) [0|10000] "kOhm" Vector__XXX
+ SG_ Pack2_HVBatSOH : 49|10@0+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ Pack2_BusbarTempMin : 22|7@0+ (1,-40) [-40|85] "°C" Vector__XXX
+ SG_ Pack2_BusbarTempMax : 6|7@0+ (1,-40) [-40|85] "°C" Vector__XXX
+ SG_ Pack2_BusbarTempAvg : 14|7@0+ (1,-40) [-40|85] "°C" Vector__XXX
+
+BO_ 613 PACK2_TRAC_BATT_STATUS_6: 8 BECM_2
+ SG_ PACK2_CNT_TRAC_BATT_STATUS_6 : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_HVOffTime : 63|8@0+ (1,0) [0|255] "h" Vector__XXX
+ SG_ PACK2_BECM_SW_VER_CHAR_VAL : 47|7@0+ (1,0) [0|126] "" Vector__XXX
+ SG_ PACK2_BECM_SW_VER_CHAR_IDX : 39|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Pack2_DCCnt_VMatch : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_DCCntInputVoltageAbnormal : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_DCCntInputVoltage : 40|9@0+ (1,0) [0|510] "V" Vector__XXX
+ SG_ Pack2_Balancing : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_Balanced : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_ACWiringLimit_I : 31|6@0+ (1,0) [0|63] "A" Vector__XXX
+ SG_ Pack2_ChargeLimit_V : 7|8@0+ (1,200) [200|455] "V" Vector__XXX
+ SG_ Pack2_ChargeLimit_I : 15|16@0+ (0.005,0) [0|327.675] "A" Vector__XXX
+
+BO_ 611 PACK2_TRAC_BATT_STATUS_5: 8 BECM_2
+ SG_ PACK2_CNT_TRAC_BATT_STATUS_5 : 51|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_HVDischargeableCapacity : 49|10@0+ (0.1,0) [0|102] "Ah" Vector__XXX
+ SG_ Pack2_HVChargeableCapacity : 15|10@0+ (0.1,0) [0|102] "Ah" Vector__XXX
+ SG_ Pack2_HVCoolantTemp : 6|7@0+ (1,-40) [-40|85] "°C" Vector__XXX
+ SG_ Pack2_ChargeBuffer : 17|10@0+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ Pack2_DischargeBuffer : 33|10@0+ (0.1,0) [0|100] "%" Vector__XXX
+
+BO_ 609 PACK2_TRAC_BATT_STATUS_4: 7 BECM_2
+ SG_ PACK2_CNT_TRAC_BATT_STATUS_4 : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_DischargeCurrent10sPeak : 21|14@0+ (0.1,0) [0|1600] "A" Vector__XXX
+ SG_ Pack2_DischargeCurrentBuffer : 55|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Pak2DischargeCurrentBufferActive : 39|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Pack2_DischargeCurrentInst : 5|14@0+ (0.1,0) [0|1600] "A" Vector__XXX
+ SG_ Pack2_DischargeCurrentCont : 37|14@0+ (0.1,0) [0|1600] "A" Vector__XXX
+
+BO_ 607 PACK2_TRAC_BATT_STATUS_3: 7 BECM_2
+ SG_ PACK2_CNT_TRAC_BATT_STATUS_3 : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_ChargeCurrentCont : 37|14@0+ (0.1,0) [0|1600] "A" Vector__XXX
+ SG_ Pack2_ChargeCurrentBuffer : 55|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Pack2_ChargeCurrentInst : 5|14@0+ (0.1,0) [0|1600] "A" Vector__XXX
+ SG_ Pack2_ChargeCurrentBufferActive : 39|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Pack2_ChargeCurrent10sPeak : 21|14@0+ (0.1,0) [0|1600] "A" Vector__XXX
+
+BO_ 605 PACK2_TRAC_BATT_STATUS_2: 8 BECM_2
+ SG_ Pack2_Reflash_Status : 52|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PACK2_CNT_TRAC_BATT_STATUS_2 : 51|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_HVMinCellV : 39|9@0+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ Pack2_HVAvgCellT : 30|7@0+ (1,-40) [-40|85] "°C" Vector__XXX
+ SG_ Pack2_HVMaxCellV : 7|9@0+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ Pack2_HVMaxCellT : 14|7@0+ (1,-40) [-40|85] "°C" Vector__XXX
+ SG_ Pack2_HVMinCellT : 46|7@0+ (1,-40) [-40|85] "°C" Vector__XXX
+ SG_ Pack2_HVAvgCellV : 23|9@0+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ Pack2_HVBatSOC : 49|10@0+ (0.1,0) [0|100] "%" Vector__XXX
+
+BO_ 603 PACK2_TRAC_BATT_STATUS_1: 6 BECM_2
+ SG_ Pack2_ChrgHVReadyStat : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_HVReadyStat : 42|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_BECMStat : 45|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ Pack2_DCCntStatus : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_ACCntStatus : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LVBatVol : 39|8@0+ (100,0) [0|25000] "mV" Vector__XXX
+ SG_ Pack2_HVHVILSta : 28|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_HVCntStatus : 26|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Pack2_CriticalBatFault : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_CordConnected : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_HVBatVoltage : 23|9@0+ (1,0) [0|500] "V" Vector__XXX
+ SG_ Pack2_HVBatCurrent : 7|11@0+ (1,-1200) [-1200|800] "A" Vector__XXX
+ SG_ Pack2_TB_Status : 12|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Pack2_HVChrHVILSta : 30|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 601 PACK2_TRAC_BATT_ERR_RPT: 5 BECM_2
+ SG_ Pack2_DCChrRelayWelded : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_DCChrRelayFlt : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_BalancingFlt : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LostSysVFlt : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_FuseFlt : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_ChrRelayFlt : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_I2T_Dischg_Flt : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_PreChrFlt : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LostSysCurFlt : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_PreChrTempFlt : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_PosMCWelded : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LostCelTFlt : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_I2T_Chg_Flt : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LVLoFlt : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_ModHrtbtFlt : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_BatCommFlt : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_CelTmpHiFlt : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_CelOverVFlt : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_CrashDetected : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LostLVVFlt : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_IsolationFlt : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LostChrCANFlt : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_ChrRelayWelded : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_NegMCFlt : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_CPUFlt : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_CelOverTmpFlt : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_NegMCWelded : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_HighLiquidLvl : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_PreChrRelayFlt : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_CelUndVFlt : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_PreChrWelded : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LostVehCANFlt : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_PosMCFlt : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_LostCelVFlt : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 619 PACK2_TRAC_BATT_STATUS_9: 8 BECM_2
+ SG_ Pack2_Time_Discharge_800A : 47|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Discharge_600A : 39|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Discharge_400A : 31|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Discharge_200A : 23|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Discharge_100A : 15|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Discharge_1000A : 7|8@0+ (1,0) [0|0] "s" Vector__XXX
+
+BO_ 617 PACK2_TRAC_BATT_STATUS_8: 8 BECM_2
+ SG_ Pack2_BECM_MSM_Stat : 55|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Pack2_Time_Charge_600A : 47|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Charge_500A : 39|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Charge_400A : 31|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Charge_300A : 23|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Charge_200A : 15|8@0+ (1,0) [0|0] "s" Vector__XXX
+ SG_ Pack2_Time_Charge_100A : 7|8@0+ (1,0) [0|0] "s" Vector__XXX
+
+BO_ 2041 DIAG_RESPONSE_BECM_CPU1_PACK2: 8 BECM_2
+ SG_ DIAG_RESP_SIG_BECM_CPU1_PACK2 : 7|8@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 2033 DIAG_REQUEST_BECM_CPU1_PACK2: 8 Vector__XXX
+ SG_ DIAG_REQ_SIG_BECM_CPU1_PACK2 : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BECM_2
+
+BO_ 1786 CCP_REQUEST_BMS_CPU1_PACK2: 8 Vector__XXX
+ SG_ CCP_REQ_SIG_BMS_CPU1_PACK2 : 7|64@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 560 TRAC_BATT_COMMAND: 2 Vector__XXX
+ SG_ BECM_NM : 14|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCContactorCmd : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCChargingActv : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACChargingActv : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACContactorCmd : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CNT_TRAC_BATT_COMMAND : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ContactorCmd : 4|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2015 FUNC_REQUEST: 8 Vector__XXX
+ SG_ FUNC_REQ_SIG : 7|64@0+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+
+
+CM_ "POWERTRAIN CAN ONLY";
+CM_ BU_ BECM_2 "Battery Electronic Control Module 2  / Battery Control Module";
+CM_ SG_ 1166 PACK2_VEH_OFF_TIME_MASTER_ARC "Alive Rolling Counter for VEH_OFF_TIME_MASTER message.";
+CM_ SG_ 1166 PACK2_TIME_SINCE_RTC_READJUST_V "Validity for TIME_SINCE_RTC_READJUST.";
+CM_ SG_ 1166 PACK2_TIME_SINCE_RTC_READJUST "The number of seconds since the last RTC readjustment. Invalid before the first adjustment at EOL.";
+CM_ SG_ 1166 PACK2_TIME_SINCE_PROPSYS_INACT_V "Validity for TIME_SINCE_PROPSYS_INACTIVE.";
+CM_ SG_ 1166 PACK2_TIME_SINCE_PROPSYS_INACT "The number of seconds since the last falling edge on PROP_SYS_ACTIVE_FLAG (edge from 0x1 to 0x0 only).";
+CM_ BO_ 1170 "Contains the UTC time stamp from the BECM's RTC of Pack2.";
+CM_ SG_ 1170 PACK2_RTC_GPS_TIMEDELTA_VALID "Validity for BECM RTC vs CIU GPS timestamp delta signal.";
+CM_ SG_ 1170 PACK2_RTC_GPS_TIMEDELTA_SIGN "Sign for BECM RTC vs CIU GPS timestamp deviation.";
+CM_ SG_ 1170 PACK2_RTC_GPS_TIMEDELTA "Observed deviation between BECM RTC and CIU GPS time.";
+CM_ BO_ 2042 "Diagnostic response from BECM CPU2 of Pack2";
+CM_ BO_ 2034 "Diagnostic request to BECM CPU2 of Pack2";
+CM_ BO_ 1789 "CCP Response (DTO) from HV-BMS CPU2 of Pack2";
+CM_ BO_ 1787 "CCP Response (DTO) from HV-BMS CPU1 of Pack2";
+CM_ BO_ 1788 "CCP request (CRO) to HV-BMS CPU2 of Pack2";
+CM_ BO_ 620 "Pack 2 Traction Battery Status 9.";
+CM_ BO_ 615 "Pack 2 Traction Battery Status 7.";
+CM_ SG_ 615 Pack2_CapacityNomEst "Estimated nominal pack capacity at 25°C for pack 2.";
+CM_ SG_ 615 Pack2_DCResistanceEst "Estimated pack internal resistance (percent of nominal) at 25°C..";
+CM_ SG_ 615 Pack2_IsoResist "Pack isolation resistance.";
+CM_ SG_ 615 Pack2_HVBatSOH "Battery pack state-of-health.";
+CM_ SG_ 615 Pack2_BusbarTempMin "Current minimum temperature of the HV busbars for pack 2.";
+CM_ SG_ 615 Pack2_BusbarTempMax "Current maximum temperature of the HV busbars for pack 2.";
+CM_ SG_ 615 Pack2_BusbarTempAvg "Current average temperature of the HV busbars for pack 2.";
+CM_ BO_ 613 "Pack 2 Traction Battery Status 6.";
+CM_ SG_ 613 PACK2_CNT_TRAC_BATT_STATUS_6 "Alive Rolling Counter";
+CM_ SG_ 613 Pack2_HVOffTime "Time (hours) since HV contactors were last opened.";
+CM_ SG_ 613 PACK2_BECM_SW_VER_CHAR_VAL "BECM 2 Software Version Character Value (at Index).";
+CM_ SG_ 613 PACK2_BECM_SW_VER_CHAR_IDX "BECM 2 Software Version Character Index (Multiplexor Index). Starting at index 0 and rolling over to index 0 upon end of string (skipping unused index range).";
+CM_ SG_ 613 Pack2_DCCnt_VMatch "BECM confirms that closing DC contactors is safe (delta voltage between contactor sides below threshold).";
+CM_ SG_ 613 Pack2_DCCntInputVoltageAbnormal "Improper or abnormal Input Voltage at DC Inlet (measured at the DC-Charging Contactors).";
+CM_ SG_ 613 Pack2_DCCntInputVoltage "DC Input Voltage at DC Inlet, measured at the DC-Charging Contactors.";
+CM_ SG_ 613 Pack2_Balancing "Cell Balancing in progress yes/no status for pack 2.";
+CM_ SG_ 613 Pack2_Balanced "Cells balanced within target (or better) yes/no status for pack 2.";
+CM_ SG_ 613 Pack2_ACWiringLimit_I "The current rating of the pack 2 battery-internal wiring/fusing in small (OBCM-side) contactor path.";
+CM_ SG_ 613 Pack2_ChargeLimit_V "The battery's not to exceed voltage limit for charging for pack 2.";
+CM_ SG_ 613 Pack2_ChargeLimit_I "The battery's not to exceed current limit for charging for pack 2.";
+CM_ BO_ 611 "Pack 2 Traction Battery Status 5.";
+CM_ SG_ 611 PACK2_CNT_TRAC_BATT_STATUS_5 "Alive Rolling Counter";
+CM_ SG_ 611 Pack2_HVDischargeableCapacity "Battery pack (remaining) Dischargeable Capacity at current condition.";
+CM_ SG_ 611 Pack2_HVChargeableCapacity "Battery pack (remaining) Chargeable Capacity at current condition.";
+CM_ SG_ 611 Pack2_HVCoolantTemp "Battery coolant temperature at outlet.";
+CM_ SG_ 611 Pack2_ChargeBuffer "Charge Buffer for pack 2.";
+CM_ SG_ 611 Pack2_DischargeBuffer "Discharge Buffer.";
+CM_ BO_ 609 "Pack 2 Traction Battery Status 4 (4A).";
+CM_ SG_ 609 PACK2_CNT_TRAC_BATT_STATUS_4 "Alive Rolling Counter";
+CM_ SG_ 609 Pack2_DischargeCurrent10sPeak "Pulse discharge (10s) current limit.";
+CM_ SG_ 609 Pack2_DischargeCurrentBuffer "Discharge current buffer.";
+CM_ SG_ 609 Pack2_DischargeCurrentInst "Instantaneous discharge (2s) current limit.";
+CM_ SG_ 609 Pack2_DischargeCurrentCont "Continous discharge (60s) current limit.";
+CM_ BO_ 607 "Pack 2 Traction Battery Status 3 (3A).";
+CM_ SG_ 607 PACK2_CNT_TRAC_BATT_STATUS_3 "Alive Rolling Counter";
+CM_ SG_ 607 Pack2_ChargeCurrentCont "Continous charge (60s) current limit for pack 2.";
+CM_ SG_ 607 Pack2_ChargeCurrentBuffer "Charge Current Buffer for pack 2.";
+CM_ SG_ 607 Pack2_ChargeCurrentInst "Instantaneous charge (2s) current limit for pack 2.";
+CM_ SG_ 607 Pack2_ChargeCurrent10sPeak "Pulse charge (10s) current limit for pack 2.";
+CM_ BO_ 605 "Pack 2 Traction Battery Status 2.";
+CM_ SG_ 605 Pack2_Reflash_Status "BECM reports if it has been reflashed or not";
+CM_ SG_ 605 PACK2_CNT_TRAC_BATT_STATUS_2 "Alive Rolling Counter";
+CM_ SG_ 605 Pack2_HVMinCellV "Minimum cell voltage.";
+CM_ SG_ 605 Pack2_HVAvgCellT "Average cell temperature.";
+CM_ SG_ 605 Pack2_HVMaxCellV "Maximum cell voltage.";
+CM_ SG_ 605 Pack2_HVMaxCellT "Maximum cell temperature.";
+CM_ SG_ 605 Pack2_HVMinCellT "Minimum cell temperature.";
+CM_ SG_ 605 Pack2_HVAvgCellV "Average cell voltage.";
+CM_ SG_ 605 Pack2_HVBatSOC "Battery pack state-of-charge.";
+CM_ BO_ 603 "Pack 2 Traction Battery Status 1.";
+CM_ SG_ 603 Pack2_ChrgHVReadyStat "BECM 2 =>HCU handshake flag for HV activation (AC-Charging contactors).";
+CM_ SG_ 603 Pack2_HVReadyStat "BECM=>HCU handshake flag for HV activation.";
+CM_ SG_ 603 Pack2_BECMStat "BECM 2 Operating Status.";
+CM_ SG_ 603 Pack2_DCCntStatus "DC-Charging Contactors Open/Closed Status.";
+CM_ SG_ 603 Pack2_ACCntStatus "AC-Charging Contactors Open/Closed Status for Pack 2.";
+CM_ SG_ 603 Pack2_LVBatVol "LV network voltage.";
+CM_ SG_ 603 Pack2_HVHVILSta "Main HVIL loop status.";
+CM_ SG_ 603 Pack2_HVCntStatus "Battery Pack contactor status.";
+CM_ SG_ 603 Pack2_CordConnected "This is an indication of AC cord being connected.";
+CM_ SG_ 603 Pack2_HVBatVoltage "Battery Pack Voltage.";
+CM_ SG_ 603 Pack2_HVBatCurrent "Battery Pack current.";
+CM_ SG_ 603 Pack2_TB_Status "Battery Pack operating Status.";
+CM_ SG_ 603 Pack2_HVChrHVILSta "Charge HVIL loop status.";
+CM_ BO_ 601 "Pack 2 Traction Battery Error Report.";
+CM_ SG_ 601 Pack2_DCChrRelayWelded "If DC charger's relay(s) welded or terminal dV > 10V on pack 2.";
+CM_ SG_ 601 Pack2_DCChrRelayFlt "If fail to close DC-charging relay(s) on pack 2.";
+CM_ SG_ 601 Pack2_LostSysVFlt "Any pack voltage reading is unavailable or invalid (out of range/rationality).";
+CM_ SG_ 601 Pack2_FuseFlt "If battery system's fuse blown.";
+CM_ SG_ 601 Pack2_ChrRelayFlt "If fail to close charger relay on pack 2.";
+CM_ SG_ 601 Pack2_I2T_Dischg_Flt "I2T Discharge Limit Exceeded.";
+CM_ SG_ 601 Pack2_PreChrFlt "If precharge procedure failed.";
+CM_ SG_ 601 Pack2_LostSysCurFlt "Any pack current sensor is unavailable or invalid (out of range/rationality).";
+CM_ SG_ 601 Pack2_PreChrTempFlt "If precharge resistor temperature/energy exceeds thresholds preventing restart.";
+CM_ SG_ 601 Pack2_PosMCWelded "If positive main contactor is welded or terminal dV > 10V.";
+CM_ SG_ 601 Pack2_LostCelTFlt "Any one cell temperature is unavailable or invalid (out of range/rationality) for >500ms";
+CM_ SG_ 601 Pack2_I2T_Chg_Flt "I2T Charge Limit Exceeded.";
+CM_ SG_ 601 Pack2_LVLoFlt "If low voltage battery voltage lower then 9.5 V for 10s";
+CM_ SG_ 601 Pack2_ModHrtbtFlt "Module heartbeat fault or not present.";
+CM_ SG_ 601 Pack2_BatCommFlt "If BCM for pack 2 loses communication with any module or CSM for >500ms.";
+CM_ SG_ 601 Pack2_CelTmpHiFlt "If any of the Cell temperatures are hotter then 62 degree C for 10s on pack 2.";
+CM_ SG_ 601 Pack2_CelOverVFlt "Any of the battery cell voltages are higher than 3.8V for 100ms for pack 2";
+CM_ SG_ 601 Pack2_CrashDetected "Crash Detected.";
+CM_ SG_ 601 Pack2_LostLVVFlt "If LV battery voltage is unavailable or invalid (out of range/rationality).";
+CM_ SG_ 601 Pack2_IsolationFlt "If bettery systems fails isolation test (<500 ohms/V)";
+CM_ SG_ 601 Pack2_LostChrCANFlt "No message(s) from OBCM for 1000ms when sending ChargerCMD message.";
+CM_ SG_ 601 Pack2_ChrRelayWelded "If charger's relay welded or terminal dV > 10V on pack 2.";
+CM_ SG_ 601 Pack2_NegMCFlt "If fail to close negative main contactor.";
+CM_ SG_ 601 Pack2_CPUFlt "CPU fault occured on BECM 2 (unexpected reset, watchdog timeout, NVM error, I/O fault).";
+CM_ SG_ 601 Pack2_CelOverTmpFlt "If any of the Cell temperatures are hotter then 70 degree C for 10s on pack 2.";
+CM_ SG_ 601 Pack2_NegMCWelded "If negative main contactor is welded or terminal dV > 10V.";
+CM_ SG_ 601 Pack2_HighLiquidLvl "Liquid level in the pack is high.";
+CM_ SG_ 601 Pack2_PreChrRelayFlt "If fail to close precharge relay.";
+CM_ SG_ 601 Pack2_CelUndVFlt "If any of the Cell voltages are lower then 2.0 V for 100ms on pack 2.";
+CM_ SG_ 601 Pack2_PreChrWelded "If precharge relay is welded or terminal dV>10V.";
+CM_ SG_ 601 Pack2_LostVehCANFlt "No message(s) from HCU for 500ms when HY_PT_WUP2 (BECM wakeup) or HCU_WAKE (HCU wakeup) is high.";
+CM_ SG_ 601 Pack2_PosMCFlt "If fail to close positive main contactor.";
+CM_ SG_ 601 Pack2_LostCelVFlt "Any one cell voltage is unavailable or invalid (out of range/rationality) for >500ms.";
+CM_ BO_ 619 "Pack 2 Traction Battery Status 9.";
+CM_ BO_ 617 "Pack 2 Traction Battery Status 8.";
+CM_ SG_ 617 Pack2_BECM_MSM_Stat "BECM 1 Operating Status.";
+CM_ BO_ 2041 "Diagnostic response from BECM CPU1 of Pack2";
+CM_ BO_ 2033 "Diagnostic request to BECM CPU1 of Pack2";
+CM_ BO_ 1786 "CCP request (CRO) to HV-BMS CPU1 of Pack2.";
+CM_ BO_ 560 "Commands to the Traction Battery.";
+CM_ SG_ 560 BECM_NM "BECM Network Management command to either stay awake or to stop CAN transmission and then go to sleep, when ready.";
+CM_ SG_ 560 DCContactorCmd "DC-Charging Contactors Open/Close command.";
+CM_ SG_ 560 ACContactorCmd "Small (OBCM-side) Contactor command.";
+CM_ SG_ 560 CNT_TRAC_BATT_COMMAND "Alive Rolling Count";
+CM_ SG_ 560 ContactorCmd "Main Contactor command.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "ON_PT" ENUM  "NO","YES";
+BA_DEF_ BO_  "ON_C" ENUM  "NO","YES";
+BA_DEF_ BO_  "ON_B" ENUM  "NO","YES";
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BO_  "ON_INV" ENUM  "NO","YES";
+BA_DEF_  "Status" ENUM  "DRAFT","RELEASE";
+BA_DEF_  "Baseline" STRING ;
+BA_DEF_  "Model" STRING ;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BU_  "BusConnection4" ENUM  "NoBusConnection","B-CAN","C-CAN","PT-CAN","INV-CAN";
+BA_DEF_ BU_  "BusConnection3" ENUM  "NoBusConnection","B-CAN","C-CAN","PT-CAN","INV-CAN";
+BA_DEF_ BU_  "BusConnection2" ENUM  "NoBusConnection","B-CAN","C-CAN","PT-CAN","INV-CAN","SW-CAN";
+BA_DEF_ BU_  "BusConnection1" ENUM  "NoBusConnection","B-CAN","C-CAN","PT-CAN","INV-CAN","SW-CAN";
+BA_DEF_REL_ BU_SG_REL_  "GenSigTimeoutTime" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "ON_PT" "NO";
+BA_DEF_DEF_  "ON_C" "NO";
+BA_DEF_DEF_  "ON_B" "NO";
+BA_DEF_DEF_  "ILUsed" "No";
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_DEF_DEF_  "ON_INV" "NO";
+BA_DEF_DEF_  "Status" "DRAFT";
+BA_DEF_DEF_  "Baseline" "";
+BA_DEF_DEF_  "Model" "";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "Manufacturer" "KARMA AUTOMOTIVE LLC";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "BusConnection4" "NoBusConnection";
+BA_DEF_DEF_  "BusConnection3" "NoBusConnection";
+BA_DEF_DEF_  "BusConnection2" "NoBusConnection";
+BA_DEF_DEF_  "BusConnection1" "NoBusConnection";
+BA_DEF_DEF_REL_ "GenSigTimeoutTime" 0;
+BA_ "Baseline" "K1-2.0_MY20_BL901B1PLUS_DRAFT";
+BA_ "Manufacturer" "KARMAAUTOMOTIVE";
+BA_ "Baudrate" 500000;
+BA_ "Model" "K1 2.0";
+BA_ "BusType" "CAN";
+BA_ "ON_PT" BO_ 1166 1;
+BA_ "GenMsgCycleTime" BO_ 1166 1000;
+BA_ "GenMsgSendType" BO_ 1166 0;
+BA_ "ON_PT" BO_ 1170 1;
+BA_ "ON_C" BO_ 1170 1;
+BA_ "GenMsgDelayTime" BO_ 1170 50;
+BA_ "GenMsgCycleTime" BO_ 1170 200;
+BA_ "GenMsgSendType" BO_ 1170 0;
+BA_ "ON_PT" BO_ 2034 1;
+BA_ "ON_PT" BO_ 1789 1;
+BA_ "ON_C" BO_ 1789 1;
+BA_ "GenMsgSendType" BO_ 1789 8;
+BA_ "GenMsgILSupport" BO_ 1789 0;
+BA_ "DiagRequest" BO_ 1789 1;
+BA_ "ON_PT" BO_ 1787 1;
+BA_ "ON_C" BO_ 1787 1;
+BA_ "GenMsgSendType" BO_ 1787 8;
+BA_ "GenMsgILSupport" BO_ 1787 0;
+BA_ "DiagRequest" BO_ 1787 1;
+BA_ "ON_PT" BO_ 1788 1;
+BA_ "ON_C" BO_ 1788 1;
+BA_ "GenMsgSendType" BO_ 1788 8;
+BA_ "GenMsgILSupport" BO_ 1788 0;
+BA_ "DiagRequest" BO_ 1788 1;
+BA_ "GenMsgSendType" BO_ 620 0;
+BA_ "GenMsgCycleTime" BO_ 620 100;
+BA_ "ON_PT" BO_ 620 1;
+BA_ "ON_PT" BO_ 615 1;
+BA_ "ON_C" BO_ 615 1;
+BA_ "GenMsgCycleTime" BO_ 615 100;
+BA_ "GenMsgSendType" BO_ 615 0;
+BA_ "ON_PT" BO_ 613 1;
+BA_ "GenMsgCycleTime" BO_ 613 100;
+BA_ "GenMsgSendType" BO_ 613 0;
+BA_ "ON_PT" BO_ 611 1;
+BA_ "ON_C" BO_ 611 1;
+BA_ "GenMsgCycleTime" BO_ 611 100;
+BA_ "GenMsgSendType" BO_ 611 0;
+BA_ "ON_PT" BO_ 609 1;
+BA_ "GenMsgCycleTime" BO_ 609 100;
+BA_ "GenMsgSendType" BO_ 609 0;
+BA_ "ON_PT" BO_ 607 1;
+BA_ "GenMsgCycleTime" BO_ 607 100;
+BA_ "GenMsgSendType" BO_ 607 0;
+BA_ "ON_PT" BO_ 605 1;
+BA_ "ON_C" BO_ 605 1;
+BA_ "GenMsgCycleTime" BO_ 605 100;
+BA_ "GenMsgSendType" BO_ 605 0;
+BA_ "ON_PT" BO_ 603 1;
+BA_ "GenMsgCycleTime" BO_ 603 25;
+BA_ "GenMsgSendType" BO_ 603 0;
+BA_ "ON_PT" BO_ 601 1;
+BA_ "GenMsgCycleTime" BO_ 601 100;
+BA_ "GenMsgSendType" BO_ 601 0;
+BA_ "GenMsgSendType" BO_ 619 0;
+BA_ "GenMsgCycleTime" BO_ 619 100;
+BA_ "ON_PT" BO_ 619 1;
+BA_ "GenMsgSendType" BO_ 617 0;
+BA_ "GenMsgCycleTime" BO_ 617 100;
+BA_ "ON_PT" BO_ 617 1;
+BA_ "ON_PT" BO_ 2033 1;
+BA_ "ON_PT" BO_ 1786 1;
+BA_ "ON_C" BO_ 1786 1;
+BA_ "GenMsgSendType" BO_ 1786 8;
+BA_ "GenMsgILSupport" BO_ 1786 0;
+BA_ "DiagRequest" BO_ 1786 1;
+BA_ "GenMsgSendType" BO_ 560 0;
+BA_ "GenMsgCycleTime" BO_ 560 25;
+BA_ "ON_PT" BO_ 560 1;
+BA_ "ON_B" BO_ 2015 1;
+BA_ "ON_INV" BO_ 2015 1;
+BA_ "DiagState" BO_ 2015 1;
+BA_ "GenMsgSendType" BO_ 2015 8;
+BA_ "ON_C" BO_ 2015 1;
+BA_ "ON_PT" BO_ 2015 1;
+BA_ "GenSigSendType" SG_ 1170 PACK2_RTC_GPS_TIMEDELTA_VALID 7;
+BA_ "GenSigSendType" SG_ 1170 PACK2_RTC_GPS_TIMEDELTA_SIGN 7;
+BA_ "GenSigSendType" SG_ 1170 PACK2_RTC_GPS_TIMEDELTA 7;
+BA_ "GenSigStartValue" SG_ 1170 PACK2_TIME_UTC_YEAR_RTC 255;
+BA_ "GenSigSendType" SG_ 1170 PACK2_TIME_UTC_YEAR_RTC 7;
+BA_ "GenSigStartValue" SG_ 1170 PACK2_TIME_UTC_SECONDS_RTC 255;
+BA_ "GenSigSendType" SG_ 1170 PACK2_TIME_UTC_SECONDS_RTC 3;
+BA_ "GenSigStartValue" SG_ 1170 PACK2_TIME_UTC_MONTH_RTC 255;
+BA_ "GenSigSendType" SG_ 1170 PACK2_TIME_UTC_MONTH_RTC 7;
+BA_ "GenSigStartValue" SG_ 1170 PACK2_TIME_UTC_MINUTES_RTC 255;
+BA_ "GenSigSendType" SG_ 1170 PACK2_TIME_UTC_MINUTES_RTC 7;
+BA_ "GenSigStartValue" SG_ 1170 PACK2_TIME_UTC_HOURS_RTC 255;
+BA_ "GenSigSendType" SG_ 1170 PACK2_TIME_UTC_HOURS_RTC 7;
+BA_ "GenSigStartValue" SG_ 1170 PACK2_TIME_UTC_DAY_RTC 255;
+BA_ "GenSigSendType" SG_ 1170 PACK2_TIME_UTC_DAY_RTC 7;
+BA_ "GenSigSendType" SG_ 1789 CCP_RESP_SIG_BMS_CPU2_PACK2 7;
+BA_ "GenSigSendType" SG_ 1787 CCP_RESP_SIG_BMS_CPU1_PACK2 7;
+BA_ "GenSigSendType" SG_ 1788 CCP_REQ_SIG_BMS_CPU2_PACK2 7;
+BA_ "GenSigStartValue" SG_ 620 PACK2_ISO_CHK_CMD 1;
+BA_ "GenSigSendType" SG_ 615 Pack2_CapacityNomEst 7;
+BA_ "GenSigSendType" SG_ 615 Pack2_DCResistanceEst 7;
+BA_ "GenSigSendType" SG_ 615 Pack2_IsoResist 7;
+BA_ "GenSigSendType" SG_ 615 Pack2_HVBatSOH 7;
+BA_ "GenSigSendType" SG_ 615 Pack2_BusbarTempMin 7;
+BA_ "GenSigStartValue" SG_ 615 Pack2_BusbarTempMin 40;
+BA_ "GenSigSendType" SG_ 615 Pack2_BusbarTempMax 7;
+BA_ "GenSigStartValue" SG_ 615 Pack2_BusbarTempMax 40;
+BA_ "GenSigSendType" SG_ 615 Pack2_BusbarTempAvg 7;
+BA_ "GenSigStartValue" SG_ 615 Pack2_BusbarTempAvg 40;
+BA_ "GenSigSendType" SG_ 613 Pack2_HVOffTime 7;
+BA_ "GenSigSendType" SG_ 613 PACK2_BECM_SW_VER_CHAR_VAL 7;
+BA_ "GenSigSendType" SG_ 613 PACK2_BECM_SW_VER_CHAR_IDX 7;
+BA_ "GenSigSendType" SG_ 613 Pack2_DCCnt_VMatch 7;
+BA_ "GenSigSendType" SG_ 613 Pack2_DCCntInputVoltageAbnormal 7;
+BA_ "GenSigSendType" SG_ 613 Pack2_DCCntInputVoltage 7;
+BA_ "GenSigStartValue" SG_ 613 Pack2_DCCntInputVoltage 0;
+BA_ "GenSigSendType" SG_ 613 Pack2_Balancing 7;
+BA_ "GenSigSendType" SG_ 613 Pack2_Balanced 7;
+BA_ "GenSigStartValue" SG_ 613 Pack2_ACWiringLimit_I 30;
+BA_ "GenSigSendType" SG_ 613 Pack2_ACWiringLimit_I 7;
+BA_ "GenSigStartValue" SG_ 613 Pack2_ChargeLimit_V 0;
+BA_ "GenSigSendType" SG_ 613 Pack2_ChargeLimit_V 7;
+BA_ "GenSigStartValue" SG_ 613 Pack2_ChargeLimit_I 0;
+BA_ "GenSigSendType" SG_ 613 Pack2_ChargeLimit_I 7;
+BA_ "GenSigSendType" SG_ 611 Pack2_HVDischargeableCapacity 7;
+BA_ "GenSigSendType" SG_ 611 Pack2_HVChargeableCapacity 7;
+BA_ "GenSigSendType" SG_ 611 Pack2_HVCoolantTemp 7;
+BA_ "GenSigStartValue" SG_ 611 Pack2_HVCoolantTemp 40;
+BA_ "GenSigSendType" SG_ 611 Pack2_ChargeBuffer 7;
+BA_ "GenSigSendType" SG_ 611 Pack2_DischargeBuffer 7;
+BA_ "GenSigSendType" SG_ 609 Pack2_DischargeCurrent10sPeak 7;
+BA_ "GenSigSendType" SG_ 609 Pack2_DischargeCurrentBuffer 7;
+BA_ "GenSigSendType" SG_ 609 Pak2DischargeCurrentBufferActive 7;
+BA_ "GenSigSendType" SG_ 609 Pack2_DischargeCurrentInst 7;
+BA_ "GenSigSendType" SG_ 609 Pack2_DischargeCurrentCont 7;
+BA_ "GenSigSendType" SG_ 607 Pack2_ChargeCurrentCont 7;
+BA_ "GenSigSendType" SG_ 607 Pack2_ChargeCurrentBuffer 7;
+BA_ "GenSigSendType" SG_ 607 Pack2_ChargeCurrentInst 7;
+BA_ "GenSigSendType" SG_ 607 Pack2_ChargeCurrentBufferActive 7;
+BA_ "GenSigSendType" SG_ 607 Pack2_ChargeCurrent10sPeak 7;
+BA_ "GenSigSendType" SG_ 605 Pack2_HVMinCellV 7;
+BA_ "GenSigStartValue" SG_ 605 Pack2_HVMinCellV 510;
+BA_ "GenSigSendType" SG_ 605 Pack2_HVAvgCellT 7;
+BA_ "GenSigStartValue" SG_ 605 Pack2_HVAvgCellT 40;
+BA_ "GenSigStartValue" SG_ 605 Pack2_HVMaxCellV 510;
+BA_ "GenSigSendType" SG_ 605 Pack2_HVMaxCellV 7;
+BA_ "GenSigSendType" SG_ 605 Pack2_HVMaxCellT 7;
+BA_ "GenSigStartValue" SG_ 605 Pack2_HVMaxCellT 40;
+BA_ "GenSigSendType" SG_ 605 Pack2_HVMinCellT 7;
+BA_ "GenSigStartValue" SG_ 605 Pack2_HVMinCellT 40;
+BA_ "GenSigSendType" SG_ 605 Pack2_HVAvgCellV 7;
+BA_ "GenSigStartValue" SG_ 605 Pack2_HVAvgCellV 510;
+BA_ "GenSigSendType" SG_ 605 Pack2_HVBatSOC 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_BECMStat 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_DCCntStatus 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_ACCntStatus 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_LVBatVol 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_HVHVILSta 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_HVCntStatus 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_CriticalBatFault 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_CordConnected 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_HVBatVoltage 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_HVBatCurrent 7;
+BA_ "GenSigStartValue" SG_ 603 Pack2_HVBatCurrent 1200;
+BA_ "GenSigSendType" SG_ 603 Pack2_TB_Status 7;
+BA_ "GenSigSendType" SG_ 603 Pack2_HVChrHVILSta 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_DCChrRelayWelded 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_DCChrRelayFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_BalancingFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LostSysVFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_FuseFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_ChrRelayFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_I2T_Dischg_Flt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_PreChrFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LostSysCurFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_PreChrTempFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_PosMCWelded 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LostCelTFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_I2T_Chg_Flt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LVLoFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_ModHrtbtFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_BatCommFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_CelTmpHiFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_CelOverVFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_CrashDetected 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LostLVVFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_IsolationFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LostChrCANFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_ChrRelayWelded 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_NegMCFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_CPUFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_CelOverTmpFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_NegMCWelded 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_HighLiquidLvl 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_PreChrRelayFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_CelUndVFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_PreChrWelded 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LostVehCANFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_PosMCFlt 7;
+BA_ "GenSigSendType" SG_ 601 Pack2_LostCelVFlt 7;
+BA_ "GenSigSendType" SG_ 617 Pack2_BECM_MSM_Stat 7;
+BA_ "GenSigSendType" SG_ 1786 CCP_REQ_SIG_BMS_CPU1_PACK2 7;
+BA_ "GenSigSendType" SG_ 560 DCContactorCmd 7;
+BA_ "GenSigSendType" SG_ 560 DCChargingActv 7;
+BA_ "GenSigSendType" SG_ 560 ACChargingActv 7;
+BA_ "GenSigSendType" SG_ 560 ACContactorCmd 7;
+BA_ "GenSigSendType" SG_ 560 CNT_TRAC_BATT_COMMAND 7;
+BA_ "GenSigSendType" SG_ 560 ContactorCmd 7;
+BA_ "GenSigSendType" SG_ 2015 FUNC_REQ_SIG 1;
+VAL_ 1166 PACK2_TIME_SINCE_RTC_READJUST_V 1 "Valid" 0 "Invalid" ;
+VAL_ 1166 PACK2_TIME_SINCE_PROPSYS_INACT_V 1 "Valid" 0 "Invalid" ;
+VAL_ 1170 PACK2_RTC_GPS_TIMEDELTA_VALID 1 "Valid" 0 "Invalid" ;
+VAL_ 1170 PACK2_RTC_GPS_TIMEDELTA_SIGN 1 "RTC is ahead of actual time (GPS)" 0 "RTC is behind actual time (GPS)" ;
+VAL_ 1170 PACK2_RTC_GPS_TIMEDELTA 16383 "N/A" ;
+VAL_ 1170 PACK2_TIME_UTC_YEAR_RTC 255 "SNA" ;
+VAL_ 1170 PACK2_TIME_UTC_SECONDS_RTC 255 "SNA" ;
+VAL_ 1170 PACK2_TIME_UTC_MONTH_RTC 255 "SNA" 11 "DEC" 10 "NOV" 9 "OCT" 8 "SEP" 7 "AUG" 6 "JUL" 5 "JUN" 4 "MAY" 3 "APR" 2 "MAR" 1 "FEB" 0 "JAN" ;
+VAL_ 1170 PACK2_TIME_UTC_MINUTES_RTC 255 "SNA" ;
+VAL_ 1170 PACK2_TIME_UTC_HOURS_RTC 255 "SNA" ;
+VAL_ 1170 PACK2_TIME_UTC_DAY_RTC 255 "SNA" ;
+VAL_ 615 Pack2_CapacityNomEst 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 615 Pack2_DCResistanceEst 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_ 615 Pack2_IsoResist 1022 "INACTIVE" 1023 "ERROR" ;
+VAL_ 615 Pack2_HVBatSOH 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_ 615 Pack2_BusbarTempMin 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 615 Pack2_BusbarTempMax 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 615 Pack2_BusbarTempAvg 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 613 Pack2_HVOffTime 254 "254h or greater." 255 "N/A" ;
+VAL_ 613 Pack2_DCCnt_VMatch 1 "Delta-V acceptable" 0 "Delta-V too high" ;
+VAL_ 613 Pack2_DCCntInputVoltageAbnormal 1 "Abnormal" 0 "Normal" ;
+VAL_ 613 Pack2_DCCntInputVoltage 511 "SNA" ;
+VAL_ 613 Pack2_Balancing 1 "Cell Balancing In Progress" 0 "Cell Balancing Not In Progress" ;
+VAL_ 613 Pack2_Balanced 1 "Balanced Within Target Limits" 0 "Unbalanced / Undetermined" ;
+VAL_ 611 Pack2_HVDischargeableCapacity 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_ 611 Pack2_HVChargeableCapacity 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_ 611 Pack2_HVCoolantTemp 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 611 Pack2_ChargeBuffer 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_ 611 Pack2_DischargeBuffer 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_ 609 Pack2_DischargeCurrent10sPeak 16383 "ERROR" 16382 "NO_VALUE" ;
+VAL_ 609 Pack2_DischargeCurrentBuffer 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 609 Pak2DischargeCurrentBufferActive 3 "CELL_VOLTAGE_BUFFER_ACTIVE" 2 "FUSE_BUFFER_ACTIVE" 1 "CURRENT_BUFFER_ACTIVE" 0 "ALL_BUFFERS_EQUAL" ;
+VAL_ 609 Pack2_DischargeCurrentInst 16383 "ERROR" 16382 "NO_VALUE" ;
+VAL_ 609 Pack2_DischargeCurrentCont 16383 "ERROR" 16382 "NO_VALUE" ;
+VAL_ 607 Pack2_ChargeCurrentCont 16383 "ERROR" 16382 "NO_VALUE" ;
+VAL_ 607 Pack2_ChargeCurrentBuffer 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 607 Pack2_ChargeCurrentInst 16383 "ERROR" 16382 "NO_VALUE" ;
+VAL_ 607 Pack2_ChargeCurrentBufferActive 3 "CELL_VOLTAGE_BUFFER_ACTIVE" 2 "FUSE_BUFFER_ACTIVE" 1 "CURRENT_BUFFER_ACTIVE" 0 "ALL_BUFFERS_EQUAL" ;
+VAL_ 607 Pack2_ChargeCurrent10sPeak 16383 "ERROR" 16382 "NO_VALUE" ;
+VAL_ 605 Pack2_Reflash_Status 1 "Reflash has occurred" 0 "No Reflash" ;
+VAL_ 605 Pack2_HVMinCellV 511 "ERROR" 510 "NO_VALUE" ;
+VAL_ 605 Pack2_HVAvgCellT 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 605 Pack2_HVMaxCellV 511 "ERROR" 510 "NO_VALUE" ;
+VAL_ 605 Pack2_HVMaxCellT 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 605 Pack2_HVMinCellT 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 605 Pack2_HVAvgCellV 511 "ERROR" 510 "NO_VALUE" ;
+VAL_ 605 Pack2_HVBatSOC 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_ 603 Pack2_ChrgHVReadyStat 1 "Ready" 0 "Not Ready" ;
+VAL_ 603 Pack2_HVReadyStat 3 "Reserved" 2 "Reserved" 1 "Ready" 0 "Not Ready" ;
+VAL_ 603 Pack2_BECMStat 7 "Reserved" 6 "Reserved" 5 "Shutdown" 4 "Critical Fault" 3 "HV Engaged" 2 "Standby" 1 "Initialization" 0 "Reserved" ;
+VAL_ 603 Pack2_DCCntStatus 1 "Closed" 0 "Open" ;
+VAL_ 603 Pack2_ACCntStatus 1 "Closed" 0 "Open" ;
+VAL_ 603 Pack2_LVBatVol 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 603 Pack2_HVHVILSta 3 "Undetermined" 2 "Fail" 1 "Pass" 0 "Not Src" ;
+VAL_ 603 Pack2_HVCntStatus 3 "Close" 2 "Open" 1 "Precharge" 0 "Inhibit" ;
+VAL_ 603 Pack2_CriticalBatFault 1 "Error present" 0 "no Error present" ;
+VAL_ 603 Pack2_CordConnected 1 "Cord plugged" 0 "Cord not plugged" ;
+VAL_ 603 Pack2_HVBatVoltage 511 "ERROR" 510 "NO_VALUE" ;
+VAL_ 603 Pack2_HVBatCurrent 2047 "ERROR" 2046 "NO_VALUE" ;
+VAL_ 603 Pack2_TB_Status 8 "HARD_EPO" 7 "SOFT_EPO" 6 "EPO_REQUEST" 5 "LIMP_HOME_LOW_NO_RESTART" 4 "LIMP_HOME_LOW" 3 "LIMP_HOME_HIGH" 2 "CHARGER_DISABLED" 1 "WARNING" 0 "NO_FAULT" ;
+VAL_ 603 Pack2_HVChrHVILSta 3 "Undetermined" 2 "Fail" 1 "Pass" 0 "Not Src" ;
+VAL_ 601 Pack2_DCChrRelayWelded 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_DCChrRelayFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_BalancingFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LostSysVFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_FuseFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_ChrRelayFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_I2T_Dischg_Flt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_PreChrFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LostSysCurFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_PreChrTempFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_PosMCWelded 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LostCelTFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_I2T_Chg_Flt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LVLoFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_ModHrtbtFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_BatCommFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_CelTmpHiFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_CelOverVFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_CrashDetected 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LostLVVFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_IsolationFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LostChrCANFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_ChrRelayWelded 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_NegMCFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_CPUFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_CelOverTmpFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_NegMCWelded 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_HighLiquidLvl 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_PreChrRelayFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_CelUndVFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_PreChrWelded 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LostVehCANFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_PosMCFlt 1 "Yes" 0 "No" ;
+VAL_ 601 Pack2_LostCelVFlt 1 "Yes" 0 "No" ;
+VAL_ 560 BECM_NM 1 "ON" 0 "OFF" ;
+VAL_ 560 DCContactorCmd 1 "Close" 0 "Open" ;
+VAL_ 560 DCChargingActv 1 "Active (DC charging in progress)" 0 "Inactive" ;
+VAL_ 560 ACChargingActv 1 "Active (AC charging in progress)" 0 "Inactive" ;
+VAL_ 560 ACContactorCmd 1 "Close" 0 "Open" ;
+VAL_ 560 ContactorCmd 4 "Un-restricted Close w/ precharge" 3 "Restricted Close" 2 "Un-restricted Open" 1 "Restricted Open" 0 "Invalid" ;
+

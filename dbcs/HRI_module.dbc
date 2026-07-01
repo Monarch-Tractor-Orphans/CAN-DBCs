@@ -1,0 +1,58 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HRI_strip VCU
+
+
+BO_ 270 HRI_commands: 8 VCU
+ SG_ SpecialCommands : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ reverse_order : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ charging_level : 32|8@1+ (0.3922,0) [0|100.011] "%" Vector__XXX
+ SG_ num_LEDs_controlled : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ transition_time : 16|8@1+ (10,0) [0|2550] "ms" Vector__XXX
+ SG_ mode : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ brightness : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ color : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ module_address : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+VAL_ 270 mode 7 "Charge: fill to pcnt then charge" 6 "Fill frm middle: replace to ends" 5 "Fill to middle: replace frm ends" 4 "Chase: replace frm an end" 3 "Blend: slowly blend colors" 2 "Blink: fixed period blink" 1 "Solid: solid color incl off" 0 "Off: power off strip" ;
+VAL_ 270 color 7 "TBD2" 6 "TBD1" 5 "White RGB=(255, 255, 255)" 4 "Green RGB=(0, 204, 53)" 3 "Red RGB=(211, 60, 57)" 2 "Orange RGB=(236, 147, 34" 1 "Teal RGB=(84, 108, 178)" 0 "Off RGB=(0, 0, 0)" ;
+VAL_ 270 module_address 16 "Unused8" 15 "Unused7" 14 "Unused6" 13 "Unused5" 12 "Unused4" 11 "Unused3" 10 "Unused2" 9 "Unused1" 8 "Rear: center (B pillar)" 7 "ADC rearLH(blue),frontRH(purple)" 6 "ADC rearRH(blue),frontLH(purple)" 5 "Left fender" 4 "Right fender" 3 "Hydraulic oil cooler" 2 "Frontbed" 1 "Power electronics cooler" 0 "All modules" ;
+

@@ -1,0 +1,57 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TTC_580 TTC32
+
+
+BO_ 770 TCU_Steering: 8 Vector__XXX
+ SG_ Safety_Enabled : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Code : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ TCU_CNT : 1|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SafetyCheckFailed : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SafetyValveStatus : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 769 VCU_Steering: 8 TTC32
+ SG_ Enable_Safety : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_CNT : 17|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LeftAxlRedunSnsrRaw : 24|16@1+ (1,0) [0|65535] "mV" Vector__XXX
+ SG_ RequestSafetyShutoff : 16|1@1+ (1,0) [0|1] ""  TTC_580
+ SG_ RightAxlRedunSnsrRaw : 0|16@1+ (1,0) [0|65535] "mV"  TTC_580
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

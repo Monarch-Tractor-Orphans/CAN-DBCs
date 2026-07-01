@@ -1,0 +1,57 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ GearStatus 12 "N" 11 "C4" 10 "C3" 9 "C2" 8 "C1" 7 "B4" 6 "B3" 5 "B2" 4 "B1" 3 "A4" 2 "A3" 1 "A2" 0 "A1" ;
+VAL_TABLE_ Indicator 3 "Description for the value '0x3'" 2 "FLASHING" 1 "ON" 0 "OFF" ;
+
+
+BO_ 2147487744 VCU_Command01: 2 Vector__XXX
+ SG_ NewRate : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2147487745 Sprayer_Feedback01: 7 Vector__XXX
+ SG_ LossOfRs232 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TargetRate : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SpeedCal : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FlowCal : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ControlSpeed : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AR : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+CM_ SG_ 2147487745 AR "Actual Rate";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

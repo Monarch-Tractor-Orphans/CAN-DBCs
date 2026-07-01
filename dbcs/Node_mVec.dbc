@@ -1,0 +1,544 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: mVEC_On mVEC_Run mVEC_Roof VCU
+VAL_TABLE_ DTC 3 "Active and Lamp On" 2 "Lamp On" 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ DM1_Flash 3 "Unavilable / Do Not Flash" 2 "Reserved" 1 "Fast Flash" 0 "Slow Flash" ;
+VAL_TABLE_ DM1_Lamp 3 "Not Available" 2 "Reserved" 1 "Lamp On" 0 "Lamp Off" ;
+VAL_TABLE_ Index 250 "Configure Priority" 249 "Reset" 247 "Configure/Report ID" 245 "Configure PID/Freq/Temp" 241 "Request Info" 240 "Configure Scheduled Report Rate" 127 "Request Software Version" 126 "Configure Scheduled Report Rate" 40 "Request Unique Device ID" 15 "Command Position" 239 "Report Software Revision " 152 "Report Enhanced Position" 168 "Report Unique Device ID" 129 "Report Motor Current and Temp" 128 "Report Position" ;
+VAL_TABLE_ Data_Type 65 "Required for Software Version Data" 10 "Required for Position Command" 4 "Required for Position Reach Error Time Configuration" 3 "Required for Motor Over Current Protection" 2 "Required for Automatic Zero Calibration" 1 "Required for Configure Outputs" 0 "Requried for Report ID Reassignment" ;
+VAL_TABLE_ Control_Mode 15 "Set Position(16) - all FET drivers off, sets current position to the given value then transfers to off mode" 5 "Postion w/Speed(5) - FETs powered, unit responds to hold or attain given position command without exceeding the given limit" 4 "Position(4) - FETs powered, unit responds to hold or attain given position command" 3 "Speed(3) - FETs powered, unit responds to hold or attain given speed command" 2 "Torque Assist(2) - FETs powered, unit responds to torque input, current command is generated uging the programmed assist curve" 1 "Current(1) - FETs powered, unit responds to hold or attain given current command" 0 "Off(0) - all FET drivers are off, no control, motor is freely backdriven" ;
+VAL_TABLE_ Disengage_Type 4 "by Steering Wheel" 3 "by Brake Pedal" 2 "by Throttle Pedal" 1 "by Button" 0 "No Disengagement" ;
+VAL_TABLE_ Limit_State 1 "Limited" 0 "Limit Not Triggered" ;
+VAL_TABLE_ Enable 1 "Enabled" 0 "Disabled" ;
+VAL_TABLE_ Direction 3 "Neutral" 2 "Reverse" 1 "Forward" 0 "Reserved" ;
+VAL_TABLE_ Turn_Signal 3 "Harzard" 2 "Right" 1 "Left" 0 "Off" ;
+VAL_TABLE_ LLC_State 15 "Fault" 14 "Disengaged" 13 "Disengage Requested" 12 "Diagnosis" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Autonomy " 3 "Autonomy Requested" 2 "Autonomy Allowed" 1 "Autonomy Not Allowed" 0 "Reserved" ;
+VAL_TABLE_ Diagnosis_Failure 225 "invalid offset" 224 "message is too short" ;
+VAL_TABLE_ Diagnosis 1 "Success" 0 "Failure" ;
+VAL_TABLE_ MessageID_Reply 151 "Show CAN Settings" 150 "Show Relay States" 148 "Show Population Table" 19 "Show Software Version" 1 "Diagnosis" ;
+VAL_TABLE_ Relay_State 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_TABLE_ MessageID_Command 153 "Set Startup Delay Time" 152 "Change Timeout Count" 151 "View CAN Settings" 150 "View Delay Time and Relay State" 149 "Change Default Relay State" 148 "Change Population Table" 146 "View Population Table" 144 "Change SA/PGN Base" 128 "Change Relay State w/o Diagnosis" 18 "View Software Version Number" 136 "Change Relay State w Diagnosis" ;
+VAL_TABLE_ Status_Relay 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_TABLE_ Status_Fuse 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_TABLE_ ManufacturerCode 425 "Methode Electronics Inc, MDI" 424 "Odyne LLC" 423 "BSM Wireless, Inc." 422 "True Heading AB" 421 "Vertex Standard co., ltd" 420 "Vermeer Corporation, ACS Group" 419 "Fusion Electronics Ltd" 418 "Intellistick Inc" 417 "KZValve" 416 "Kubota Corporation" 415 "Valid Manufacturing Ltd." 414 "Cattron Group International" 413 "Datapross Nijbroek bv" 412 "WebTech Wireless Inc." 411 "Hy-Drive Technologies Ltd." 410 "COBO S.p.A. Divisione 3B6" 409 "Transfluid S.r.L." 408 "Corvus Energy Ltd." 407 "Comtech Mobile Datacom" 406 "Vecima Networks Inc." 405 "Wema System AS" 404 "Com Nav Marine Ltd" 403 "Trackwell ADS, Inc." 402 "Simma Software, Inc." 401 "Torqeedo GmbH" 400 "Livorsi Marine" 399 "ISEKI & Co., Ltd." 398 "Hilite International" 397 "Sanyo-kiki Co Ltd." 396 "Beyond Measure" 395 "GENTEC S.R.L." 394 "Capi 2 Nederland BV" 393 "Harvest Tec, Inc" 392 "Tianyuan Technology Co Ltd." 391 "Electronic Design for Industry, Inc" 390 "Partech Inc." 389 "Benchmark Electronics, Minnesota Division" 388 "Innomatix, LLC" 387 "Orscheln Products, LLC" 386 "JLG Automation BVBA" 385 "Johnson Outdoor Marine Electronics" 384 "Camano Light" 383 "MCL Industries" 382 "National Agricultural Research Organization" 380 "Suntech International Ltd." 379 "Yamabiko Corporation" 378 "Glendinning Marine Products" 377 "ifm electronic gmbh" 376 "Quake Global" 375 "Williams Controls Inc." 372 "Delphi" 381 "B&G" 374 "Northern Lights" 373 "Electronic Design" 371 "Heinzmann GmbH & Co. KG" 370 "Rolls-Royce Marine AS" 369 "Power Torque Engineering Ltd" 368 "HANSENHOF_electronic" 367 "Fliegl Agrartechnik" 366 "Viewnyx Corp." 365 "Digi-Star, LLC" 364 "OEM Controls Inc." 363 "BEI Duncan" 362 "Alois Poettinger Maschinenfabrik GmbH" 361 "InMach" 360 "HJS Emission Technology GmbH & Co KG" 359 "Ludwig Bergmann GmbH" 358 "Victron Energy BV" 357 "Hardi International A/S" 356 "Fischer Panda Generators, Inc" 355 "Mastervolt International B.V." 354 "Junkkari OY" 353 "Hegemon Electronics, Inc." 352 "SAME DEUTZ-FAHR" 351 "Thrane & Thrane" 350 "Noris Marine Systems GmbH & Co KG" 349 "Suonentiet" 348 "Amazonen Werke H. Dreyer" 347 "Honeywell" 346 "Control Solutions" 345 "Korean Maritime University" 344 "Parvus Corporation" 343 "Baumer Group" 342 "THOMAS MAGNETE GmbH" 341 "Boning GmbH & Co" 340 "Continental AG" 339 "Competence Center ISOBUS e.V." 338 "GRAF-SYTECO" 337 "Carraro S.p.A." 336 "APE s.r.o." 335 "Evo Electric Ltd" 334 "Takata-Petri AG" 333 "Hadley Products Corporation" 332 "HWH Corporation" 331 "Horton, Inc." 330 "Kidde Aerospace and Defense" 329 "Deif A/S" 328 "Qwerty Electronik AB" 252 "Sensor-Technik Wiedemann GmbH" 251 "German Agricultural Society" 250 "Kuhn Group" 249 "Schaltbau GmbH" 233 "Yacht Monitoring Solutions Inc." 232 "TSD Integrated Controls" 1863 "Thomas G. Faria Co." 1862 "Sanshin" 1861 "Vector CANtech" 1860 "MMP" 1859 "Kvasar AB" 1858 "Litton" 1857 "Simrad" 1856 "Trimble" 1855 "Furuno USA" 1854 "Northstar Technologies" 1853 "Japan Radio Co." 1852 "Navionics" 1851 "Raymarine" 1850 "Teleflex" 222 "Generac Power Systems, Inc." 221 "SiE" 220 "Beede Electrical Instrument Company, Inc." 219 "Cat OEM Solutions" 218 "Gits Manufacturing Company" 217 "RM Michaelides Software & Elektronik GmbH" 216 "Paneltronics Inc." 215 "Aetna Engineering/Fireboy-Xintex" 214 "MC elettronica Srl" 213 "CNH Belgium N.V." 212 "Sure Power Industries, Inc." 211 "DNA Group" 210 "Iteris, Inc." 209 "Bell Equip. Co. SA (PTY) LTD" 208 "Drew Technologies, Inc." 207 "Otto Engineering" 206 "port GmbH" 205 "SmarTire Systems Inc" 204 "The Morey Corporation" 203 "MILtronik GmbH" 202 "Curtis Instruments, Inc." 201 "Disenos y Tecnologia S.A." 200 "MGM Brakes" 199 "Actia Corp." 198 "Mystic Valley Communications" 197 "Mechron Power Systems" 196 "LEMKEN GmbH & Co. KG" 195 "General Engine Products" 194 "TriMark Corporation" 193 "Nobletec" 192 "Floscan" 191 "XATA Corporation" 190 "Hella KGaA Hueck & Co." 189 "QUALCOMM" 188 "EMP Corp." 187 "Air-Weigh" 186 "Altronic, Inc." 185 "Beede Electrical Instrument Company" 184 "EIA Electronics" 183 "KDS Controls, Inc." 182 "Vehicle Systems Engineering B.V." 181 "Coretronics, Inc." 180 "Smart Power Systems" 179 "TeeJet Technologies Denmark" 178 "Siemens VDO Automotive AG" 177 "Diagnostic System Associates" 176 "Moritz Aerospace" 175 "Veris Technologies, Inc." 174 "AB Volvo Penta" 173 "Ryeso, Inc." 172 "Yanmar Marine USA" 171 "Wachendorff Elektronik GmbH & Co. KG" 170 "Computronics Corporation Ltd." 169 "Marlin Technologies Inc." 168 "Xantrex" 167 "JLG Industries Inc." 166 "Phoenix International" 165 "CPAC Systems AB" 164 "DaimlerChrysler Off-Highway" 163 "BRP Inc." 162 "Axiomatic Technologies" 161 "Offshore Systems (UK) Limited" 160 "Nido" 159 "NTech Industries Inc." 158 "Firestone Industrial Products Company" 157 "ISSPRO Inc." 156 "ITT Industries - Cannon" 155 "Vetronix Corporation" 154 "Westerbeke Corporation" 153 "Woodward, Industrial Controls Division" 152 "elobau GmbH & Co. KG" 151 "Raven Industries Inc. - Flow Controls Division" 150 "Fleetguard" 149 "Holset" 148 "Blue Water Data, Inc." 147 "Nautibus Electronic GmbH" 146 "Maxima Technologies" 145 "MurCal Controls" 144 "Mercury Marine" 143 "W. Gmeiner GmbH & Co." 142 "TRW Automotive (Commercial Steering Systems)" 141 "Thales Navigation Ltd." 140 "Lowrance Electronics, Inc." 139 "Caterpillar Trimble Control Technologies (CTCT), LLC" 138 "Georg Fritzmeier GmbH & Co. KG" 137 "Maretron" 136 "Komatsu Ltd." 135 "Airmar Technology Corporation" 134 "Iris Technology Ltd." 133 "Bucher Schoerling GmbH" 132 "Mulag-Fahrzeugwerk" 131 "ITT Industries" 130 "Nido - Universal Machines B.V." 129 "OMNEX Control Systems, Inc." 128 "Gerhard Duecker GmbH & Co. KG" 127 "Holland USA" 126 "Driver Tech" 125 "Nevada Automotive Test Center" 124 "Hydac Electronic" 123 "Basler Electric" 122 "FG Wilson (Engineering) Limited" 121 "HED (Hydro Electronic Devices, Inc.)" 120 "RDS Technology Ltd." 119 "IntegriNautics" 118 "Intron GmbH" 117 "HUSCO International" 116 "BEELINE Technologies" 115 "NACCO Materials Handling Group, Inc." 114 "EControls, Inc." 113 "Stress-Tek, Inc." 112 "MECALAC" 111 "Maschinenfabrik Bernhard Krone GmbH" 110 "EPIQ Sensor-Nite" 109 "TeeJet Technologies Denmark" 108 "WTK-Elecktronik GmbH" 107 "Grimme Landmaschinen GmbH & Co. KG" 106 "BAE Systems Controls, Inc." 105 "Kiepe Elektrik GmbH & Co. KG" 104 "Claas Selbstfahrende Erntemaschinen GmbH" 103 "Agrocom GmbH & Co. Agrarsystem KG" 102 "AGCO GmbH & Co." 101 "Sensoria" 100 "VDO Technik AG" 99 "International Transmissions Ltd (ITL)" 98 "Mueller-Elektronik GmbH & Co." 97 "Ag Leader Technology, Inc." 96 "Mech@tronic IT GmbH" 95 "Pacific Insight Electronics Corp." 94 "CNH Global N.V." 93 "Perkins Engines Company Ltd." 92 "Ag-Chem Equipment Co., Inc." 91 "BSG Bodensee Steuergeraete GmbH" 90 "Knorr-Bremse SfN GmbH" 89 "Kverneland Group, Electronics Division" 88 "Satloc Precision GPS" 87 "J.C. Bamford Excavators Ltd (JCB)" 86 "C.E. Niehoff & Company" 85 "Kohler Co." 84 "New Holland UK Limited" 83 "Eaton VORAD Technologies" 82 "Bobcat/Ingersoll-Rand" 81 "Fire Research Corp" 80 "Twin Disc, Inc." 79 "Daimler Benz AG - Engine Division (PBM)" 78 "Frank W. Murphy Manufacturing, Inc." 77 "Deere Power Systems Group" 76 "unused" 75 "Deere & Co. Agricultural Division" 74 "Eaton Axle-Brake Division" 73 "LeTourneau, Inc." 72 "Sisu Corporation" 71 "Vansco Electronics Ltd." 70 "Flex-Coil Limited" 69 "Trimble Navigation" 68 "Scania" 67 "Funk Manufacturing Company" 66 "John Deere Construction Equipment Division" 65 "MAN Nutzfahrzeuge AG" 64 "unused" 63 "ZF Industries Inc." 62 "Wabco" 61 "Volvo Truck Corp." 60 "Volvo Trucks North America Inc." 59 "VES Inc." 58 "SPX Corporation, OTC Division" 57 "Sauer-Danfoss Co." 56 "SAIC" 55 "Ryder System Inc." 54 "Meritor Wabco" 53 "Continental Automotive Systems US, Inc." 52 "Meritor Automotive, Inc." 51 "Robert Bosch GmbH" 50 "Robert Bosch Corp" 49 "RE America Inc." 48 "Pollak Alphabet" 47 "Phillips Semiconductor" 46 "Noregon Systems, Inc" 45 "PACCAR" 44 "Nippondenso Co. Ltd." 43 "International Truck and Engine Corp. Vehicle Electronics" 42 "International Truck and Engine Corp. Engine Electronics" 41 "Motorola Inc." 40 "Motorola AIEG Inc." 39 "Microfirm Inc." 38 "Micro Processor Systems Inc." 37 "Mack Trucks Inc." 36 "Lucas Ltd." 35 "Kenworth Truck Co." 34 "Kelsey Hayes Co." 33 "John Deere" 32 "Jacobs Vehicle Systems" 31 "J Pollak Corp." 30 "Isuzu Motors Ltd." 29 "Hino Motors Ltd." 28 "Grote Ind. Inc." 27 "GMC" 26 "General Motors Corp., Service Technology Group" 25 "Daimler Trucks North America LLC" 24 "Ford Motor Co., Vehicle Controls" 23 "Ford Motor Co., Heavy Truck" 22 "Ford Motor Co., Electronic Concepts $ Systems" 21 "Echilin Inc., Midland Brake Inc." 20 "Eaton Ltd" 19 "Eaton Corp. Trucking Info Services" 18 "Eaton Corp, Transmission Division" 17 "Eaton Corp. Res & Dev" 16 "Eaton Corp." 15 "Dickey-John Corp." 14 "Detroit Diesel Corporation" 13 "Delco Electronics" 12 "Deere & Company, Precision Farming" 11 "Dearborn Group Inc." 10 "Cummins Engine Co." 9 "Chrysler Corp." 8 "Caterpillar Inc." 7 "Case Corp." 6 "Berifors Electronics AB" 5 "AMP Inc." 4 "Ametek-Dixson" 3 "Ametek, US Gauge Division" 2 "Allison Transmission, GMC" 1 "Allied Signal Inc." 0 "Reserved" 231 "Topcon Positioning Systems, Inc." 230 "Saucon Technologies" 229 "Garmin International Inc." 228 "ZF Marine Electronics" 227 "Lykketronic A/S" 226 "Monaco Coach Corporation" 225 "SKF" 224 "EMMI Network, S.L." 223 "Vaueo Retarder Co., Ltd." 263 "IMMI" 262 "HydraForce, Inc" 261 "Red Dot Corporation" 260 "Reichhardt GmbH" 259 "Jetter AG" 258 "ARAG" 257 "Honda Motor Co., Ltd" 256 "Tyco Electronics AMP" 255 "MEAS France" 254 "GE Sensing" 253 "Mobile Control Systems" 298 "Holley Performance" 297 "Zonar Systems Inc" 296 "micro dynamics GmbH" 295 "BEP Marine" 294 "Grayhill Inc." 293 "Spyder Controls Corp." 292 "IKUSI - Angel Iglesias S.A." 291 "Groeneveld Transport Efficiency BV" 290 "Kuebler GmbH" 289 "Watlow" 288 "Mitsubishi FUSO Truck & Bus Corp." 287 "NTech Industries, Inc" 286 "Coelmo srl" 285 "Sea Recovery Corp" 284 "Mobile Tech Chile" 283 "CWF Hamilton & Co Ltd" 282 "Medallion Instrumentation Systems" 281 "Precision Governors LLC" 311 "Patrick Power Products" 310 "TECNORD srl" 309 "Krauss-Maffei Wegmann GmbH & Co. KG" 308 "Cyntrx" 307 "MAS Technologies" 306 "Sleipner Motor AB" 305 "NovAtel Inc" 304 "EmpirBus AB" 303 "CTS Corporation" 302 "Nissin Kogyo Co., LTD" 301 "Parker Hannifin (UK) Ltd FDE group" 300 "Systron Donner Automotive" 299 "Rauch Landmaschinen GmbH" 280 "Leica Geosystems Pty Ltd" 279 "Geometris LP" 278 "Takata Electronics" 277 "LHP Telematics" 276 "Aqua-Hot Heating Systems" 275 "Navico Egersund AS" 274 "LTW Technology Co., LTD" 273 "Active Research Limited" 272 "Gross Mechanical Laboratories, Inc" 327 "Sonceboz SA" 326 "Akron Brass Company" 325 "ASM Automation Sensorik Messtechnik GmbH" 324 "Snap-on Diagnostics" 323 "Mobileye Vision Technologies Ltd." 322 "MICHENKA s.r.o." 321 "Ultra Electronics, Electrics" 320 "Miedema Landbouwwerktuigenfabriek B.V." 319 "Cadec Global" 318 "SAT Plan" 317 "Navtronics Bvba" 316 "ITT Flow Control" 315 "Icom Incorporated" 314 "CSM GmbH" 313 "Ilmor Engineering, Inc" 312 "Lectronix, Inc." 271 "Cole Hersee" 270 "Tennant" 269 "Saft America Inc.,  Space & Defense Division" 268 "Accurate Technologies" 267 "Red Lion Controls, Inc" 266 "International Thermal Research Ltd" 265 "MTS Sensor Technologie GmbH" 264 "Autolync" 248 "Cooper Standard Automotive Active Systems Group" 247 "ePULSE" 246 "Class 1, Inc" 245 "Capstan Ag Systems, Inc." 244 "Techno-Matic" 243 "eRide, Inc." 242 "Kokusandenki Co. Ltd" 241 "Schneider Automation SAS " 240 "Vanair Mfg" 239 "May & Scofield Ltd" 238 "ZF Friedrichshafen AG" 237 "Agtron Enterprises Inc" 236 "Norac Systems International Inc" 235 "SailorMade Marine Telemetry - Tetra Technology Ltd." 234 "Mondial electronic GmbH" ;
+
+
+BO_ 2565800113 mVEC_On_Reply: 8 Vector__XXX
+ SG_ Reply_Message_ID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 2565800114 mVEC_Run_Reply: 8 mVEC_Run
+ SG_ Reply_Message_ID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 2565845248 VCU_mVEC_On_CMD: 6 VCU
+ SG_ CMD_Grid_Address : 8|8@1+ (1,0) [0|255] "-"  mVEC_On
+ SG_ CMD_Message_ID : 0|8@1+ (1,0) [0|255] "-"  mVEC_On
+ SG_ CMD_Relay01 : 16|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay02 : 18|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay03 : 20|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay04 : 22|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay05 : 24|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay06 : 26|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay07 : 28|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay08 : 30|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay09 : 32|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay10 : 34|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay11 : 36|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_Relay12 : 38|2@1+ (1,0) [0|3] "-"  mVEC_On
+ SG_ CMD_HighSideOutput : 40|2@1+ (1,0) [0|3] "-"  mVEC_On
+
+BO_ 2565845504 VCU_mVEC_Run_CMD: 6 VCU
+ SG_ CMD_Grid_Address : 8|8@1+ (1,0) [0|255] "-"  mVEC_Run
+ SG_ CMD_Message_ID : 0|8@1+ (1,0) [0|255] "-"  mVEC_Run
+ SG_ CMD_Relay01 : 16|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay02 : 18|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay03 : 20|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay04 : 22|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay05 : 24|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay06 : 26|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay07 : 28|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay08 : 30|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay09 : 32|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay10 : 34|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay11 : 36|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_Relay12 : 38|2@1+ (1,0) [0|3] "-"  mVEC_Run
+ SG_ CMD_HighSideOutput : 40|2@1+ (1,0) [0|3] "-"  mVEC_Run
+
+BO_ 2565800112 mVEC_Roof_Reply: 8 mVEC_Roof
+ SG_ Reply_Message_ID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 2565799858 mVEC_Run_ACL: 8 Vector__XXX
+
+BO_ 2565799857 mVEC_On_ACL: 8 Vector__XXX
+
+BO_ 2565799856 mVEC_Roof_ACL: 8 mVEC_Roof
+
+BO_ 2566889906 mVEC_Run_PropB_elayStatus: 8 mVEC_Run
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ mVEC_Relay09_Status : 40|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay08_Status : 36|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay07_Status : 32|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay06_Status : 28|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay05_Status : 24|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay04_Status : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay03_Status : 16|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay02_Status : 12|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay01_Status : 8|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay12_Status : 52|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay11_Status : 48|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay10_Status : 44|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_High_Side_Output_Status : 56|4@1+ (1,0) [0|15] "-" Vector__XXX
+
+BO_ 2566889650 mVEC_Run_PropB_FuseStatus: 8 mVEC_Run
+ SG_ mVEC_Fuse24_Status : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse23_Status : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse22_Status : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse21_Status : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse20_Status : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse19_Status : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse18_Status : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse17_Status : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse16_Status : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse15_Status : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse14_Status : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse13_Status : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse12_Status : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse11_Status : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse10_Status : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse09_Status : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse08_Status : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse07_Status : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse06_Status : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse05_Status : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse04_Status : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse03_Status : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse02_Status : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse01_Status : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 2566890162 mVEC_Run_PropB_ErrorStatus: 8 mVEC_Run
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ mVEC_FLT_InvalidConfiguration : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_FlashMiscompare : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_ChecksumFailure : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_InvalidLength : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_BadFlashAddress : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_ShortMessage : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_SpiError : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_OverVoltage : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_UnexpectedReset : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_CanTxError : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_CanRxError : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_HarnessAddressPinChange : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_GridAddressChanged : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566889905 mVEC_On_PropB_RelayStatus: 8 mVEC_On
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ mVEC_Relay09_Status : 40|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay08_Status : 36|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay07_Status : 32|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay06_Status : 28|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay05_Status : 24|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay04_Status : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay03_Status : 16|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay02_Status : 12|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay01_Status : 8|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay12_Status : 52|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay11_Status : 48|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay10_Status : 44|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_High_Side_Output_Status : 56|4@1+ (1,0) [0|15] "-" Vector__XXX
+
+BO_ 2566889649 mVEC_On_PropB_FuseStatus: 8 mVEC_On
+ SG_ mVEC_Fuse24_Status : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse23_Status : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse22_Status : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse21_Status : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse20_Status : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse19_Status : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse18_Status : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse17_Status : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse16_Status : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse15_Status : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse14_Status : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse13_Status : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse12_Status : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse11_Status : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse10_Status : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse09_Status : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse08_Status : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse07_Status : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse06_Status : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse05_Status : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse04_Status : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse03_Status : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse02_Status : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse01_Status : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 2566890161 mVEC_On_PropB_ErrorStatus: 8 mVEC_On
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ mVEC_FLT_InvalidConfiguration : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_FlashMiscompare : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_ChecksumFailure : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_InvalidLength : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_BadFlashAddress : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_ShortMessage : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_SpiError : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_OverVoltage : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_UnexpectedReset : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_CanTxError : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_CanRxError : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_HarnessAddressPinC_0000 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_GridAddressChanged : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566890160 mVEC_Roof_PropB_ErrorStatus: 8 mVEC_Roof
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ mVEC_FLT_InvalidConfiguration : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_FlashMiscompare : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_ChecksumFailure : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_InvalidLength : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_BadFlashAddress : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_ShortMessage : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_SpiError : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_OverVoltage : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_UnexpectedReset : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_CanTxError : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_CanRxError : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_HarnessAddressPinC_0001 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mVEC_FLT_GridAddressChanged : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566889648 mVEC_Roof_PropB_FuseStatus: 8 mVEC_Roof
+ SG_ mVEC_Fuse24_Status : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse23_Status : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse22_Status : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse21_Status : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse20_Status : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse19_Status : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse18_Status : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse17_Status : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse16_Status : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse15_Status : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse14_Status : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse13_Status : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse12_Status : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse11_Status : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse10_Status : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse09_Status : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse08_Status : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse07_Status : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse06_Status : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse05_Status : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse04_Status : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse03_Status : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse02_Status : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Fuse01_Status : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 2566889904 mVEC_Roof_PropB_RelayStatus: 8 mVEC_Roof
+ SG_ mVEC_Grid_Address_Status : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ mVEC_Relay09_Status : 40|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay08_Status : 36|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay07_Status : 32|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay06_Status : 28|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay05_Status : 24|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay04_Status : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay03_Status : 16|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay02_Status : 12|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay01_Status : 8|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay12_Status : 52|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay11_Status : 48|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_Relay10_Status : 44|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ mVEC_High_Side_Output_Status : 56|4@1+ (1,0) [0|15] "-" Vector__XXX
+
+BO_ 2565844992 VCU_mVEC_Roof_CMD: 6 VCU
+ SG_ CMD_HighSideOutput : 40|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay12 : 38|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay11 : 36|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay10 : 34|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay09 : 32|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay08 : 30|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay07 : 28|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay06 : 26|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay05 : 24|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay04 : 22|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay03 : 20|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay02 : 18|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Relay01 : 16|2@1+ (1,0) [0|3] "-"  mVEC_Roof
+ SG_ CMD_Message_ID : 0|8@1+ (1,0) [0|255] "-"  mVEC_Roof
+ SG_ CMD_Grid_Address : 8|8@1+ (1,0) [0|255] "-"  mVEC_Roof
+
+
+
+CM_ BU_ mVEC_Roof "Eaton J1939 PDM";
+CM_ BO_ 2566889906 "The status of each of the relays (status numbers 0 to F; data type is not a boolean). See mVEC manual for more information. Message ID 0x80.";
+CM_ SG_ 2566890162 mVEC_FLT_InvalidConfiguration "mVEC contains invalid configuration information.mVEC must be re-configured by Cooper Bussmann.";
+CM_ SG_ 2566890162 mVEC_FLT_FlashMiscompare "FLASH miscompare FLASH data doesn’t match received data after Write Memory command.";
+CM_ SG_ 2566890162 mVEC_FLT_ChecksumFailure "Checksum failure Invalid checksum for received data for Write Memory command.";
+CM_ SG_ 2566890162 mVEC_FLT_InvalidLength "Invalid length Invalid data length specified for Write Memory command.";
+CM_ SG_ 2566890162 mVEC_FLT_BadFlashAddress "Bad FLASH address Invalid address specified for Erase Region or Write Memory command.";
+CM_ SG_ 2566890162 mVEC_FLT_ShortMessage "Short message received Erase Region command incomplete. Check host application.";
+CM_ SG_ 2566890162 mVEC_FLT_SpiError "SPI error Internal error.";
+CM_ SG_ 2566890162 mVEC_FLT_OverVoltage "Over voltage Batt+ is greater than about 43v. Reduce input voltage.";
+CM_ SG_ 2566890162 mVEC_FLT_UnexpectedReset "Unexpected reset, or watchdog timer reset. Check power and ground connections on the CAN connector. Refer to Section 11. Troubleshooting for more details.";
+CM_ SG_ 2566890162 mVEC_FLT_CanTxError "CAN Tx communication error. This happens when a message sent by the mVEC is not received by an external module. Cycle vehicle power. Check terminators in the harness. If no result, contact Cooper Bussmann.";
+CM_ SG_ 2566890162 mVEC_FLT_CanRxError "CAN Rx communication error. This happens when the mVEC receives an insufficient number of messages. Adjust CAN message count threshold. Check module harnesses in the system that are sending the mVEC messages.";
+CM_ SG_ 2566890162 mVEC_FLT_HarnessAddressPinChange "CAN Harness address input pin values have changed during operation. Check harness connections. If no result, contact Cooper Bussmann.";
+CM_ SG_ 2566890162 mVEC_FLT_GridAddressChanged "Internal electrical grid identifier values have changed since power-up. Note: Initial error may have no effect, but functionality may change on next power-up. mVEC must be serviced by Cooper Bussmann.";
+CM_ BO_ 2566889905 "The status of each of the relays (status numbers 0 to F; data type is not a boolean). See mVEC manual for more information. Message ID 0x80.";
+CM_ SG_ 2566890161 mVEC_FLT_InvalidConfiguration "mVEC contains invalid configuration information.mVEC must be re-configured by Cooper Bussmann.";
+CM_ SG_ 2566890161 mVEC_FLT_FlashMiscompare "FLASH miscompare FLASH data doesn’t match received data after Write Memory command.";
+CM_ SG_ 2566890161 mVEC_FLT_ChecksumFailure "Checksum failure Invalid checksum for received data for Write Memory command.";
+CM_ SG_ 2566890161 mVEC_FLT_InvalidLength "Invalid length Invalid data length specified for Write Memory command.";
+CM_ SG_ 2566890161 mVEC_FLT_BadFlashAddress "Bad FLASH address Invalid address specified for Erase Region or Write Memory command.";
+CM_ SG_ 2566890161 mVEC_FLT_ShortMessage "Short message received Erase Region command incomplete. Check host application.";
+CM_ SG_ 2566890161 mVEC_FLT_SpiError "SPI error Internal error.";
+CM_ SG_ 2566890161 mVEC_FLT_OverVoltage "Over voltage Batt+ is greater than about 43v. Reduce input voltage.";
+CM_ SG_ 2566890161 mVEC_FLT_UnexpectedReset "Unexpected reset, or watchdog timer reset. Check power and ground connections on the CAN connector. Refer to Section 11. Troubleshooting for more details.";
+CM_ SG_ 2566890161 mVEC_FLT_CanTxError "CAN Tx communication error. This happens when a message sent by the mVEC is not received by an external module. Cycle vehicle power. Check terminators in the harness. If no result, contact Cooper Bussmann.";
+CM_ SG_ 2566890161 mVEC_FLT_CanRxError "CAN Rx communication error. This happens when the mVEC receives an insufficient number of messages. Adjust CAN message count threshold. Check module harnesses in the system that are sending the mVEC messages.";
+CM_ SG_ 2566890161 mVEC_FLT_HarnessAddressPinC_0000 "CAN Harness address input pin values have changed during operation. Check harness connections. If no result, contact Cooper Bussmann.";
+CM_ SG_ 2566890161 mVEC_FLT_GridAddressChanged "Internal electrical grid identifier values have changed since power-up. Note: Initial error may have no effect, but functionality may change on next power-up. mVEC must be serviced by Cooper Bussmann.";
+CM_ SG_ 2566890160 mVEC_FLT_InvalidConfiguration "mVEC contains invalid configuration information.mVEC must be re-configured by Cooper Bussmann.";
+CM_ SG_ 2566890160 mVEC_FLT_FlashMiscompare "FLASH miscompare FLASH data doesn’t match received data after Write Memory command.";
+CM_ SG_ 2566890160 mVEC_FLT_ChecksumFailure "Checksum failure Invalid checksum for received data for Write Memory command.";
+CM_ SG_ 2566890160 mVEC_FLT_InvalidLength "Invalid length Invalid data length specified for Write Memory command.";
+CM_ SG_ 2566890160 mVEC_FLT_BadFlashAddress "Bad FLASH address Invalid address specified for Erase Region or Write Memory command.";
+CM_ SG_ 2566890160 mVEC_FLT_ShortMessage "Short message received Erase Region command incomplete. Check host application.";
+CM_ SG_ 2566890160 mVEC_FLT_SpiError "SPI error Internal error.";
+CM_ SG_ 2566890160 mVEC_FLT_OverVoltage "Over voltage Batt+ is greater than about 43v. Reduce input voltage.";
+CM_ SG_ 2566890160 mVEC_FLT_UnexpectedReset "Unexpected reset, or watchdog timer reset. Check power and ground connections on the CAN connector. Refer to Section 11. Troubleshooting for more details.";
+CM_ SG_ 2566890160 mVEC_FLT_CanTxError "CAN Tx communication error. This happens when a message sent by the mVEC is not received by an external module. Cycle vehicle power. Check terminators in the harness. If no result, contact Cooper Bussmann.";
+CM_ SG_ 2566890160 mVEC_FLT_CanRxError "CAN Rx communication error. This happens when the mVEC receives an insufficient number of messages. Adjust CAN message count threshold. Check module harnesses in the system that are sending the mVEC messages.";
+CM_ SG_ 2566890160 mVEC_FLT_HarnessAddressPinC_0001 "CAN Harness address input pin values have changed during operation. Check harness connections. If no result, contact Cooper Bussmann.";
+CM_ SG_ 2566890160 mVEC_FLT_GridAddressChanged "Internal electrical grid identifier values have changed since power-up. Note: Initial error may have no effect, but functionality may change on next power-up. mVEC must be serviced by Cooper Bussmann.";
+CM_ BO_ 2566889904 "The status of each of the relays (status numbers 0 to F; data type is not a boolean). See mVEC manual for more information. Message ID 0x80.";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "NmStationAddress" BU_ mVEC_On 177;
+BA_ "NmStationAddress" BU_ mVEC_Run 178;
+BA_ "NmStationAddress" BU_ mVEC_Roof 176;
+BA_ "GenMsgSendType" BO_ 2565800113 7;
+BA_ "GenMsgSendType" BO_ 2565800114 7;
+BA_ "GenMsgCycleTime" BO_ 2565845248 100;
+BA_ "GenMsgSendType" BO_ 2565845248 0;
+BA_ "GenMsgCycleTime" BO_ 2565845504 100;
+BA_ "GenMsgSendType" BO_ 2565845504 0;
+BA_ "GenMsgSendType" BO_ 2565800112 7;
+BA_ "GenMsgSendType" BO_ 2565799858 7;
+BA_ "GenMsgSendType" BO_ 2565799857 7;
+BA_ "GenMsgSendType" BO_ 2565799856 7;
+BA_ "GenMsgCycleTime" BO_ 2566889906 1000;
+BA_ "GenMsgSendType" BO_ 2566889906 0;
+BA_ "GenMsgCycleTime" BO_ 2566889650 1000;
+BA_ "GenMsgSendType" BO_ 2566889650 0;
+BA_ "GenMsgCycleTime" BO_ 2566890162 1000;
+BA_ "GenMsgSendType" BO_ 2566890162 0;
+BA_ "GenMsgCycleTime" BO_ 2566889905 1000;
+BA_ "GenMsgSendType" BO_ 2566889905 0;
+BA_ "GenMsgCycleTime" BO_ 2566889649 1000;
+BA_ "GenMsgSendType" BO_ 2566889649 0;
+BA_ "GenMsgCycleTime" BO_ 2566890161 1000;
+BA_ "GenMsgSendType" BO_ 2566890161 0;
+BA_ "GenMsgSendType" BO_ 2566890160 0;
+BA_ "GenMsgCycleTime" BO_ 2566890160 1000;
+BA_ "GenMsgSendType" BO_ 2566889648 0;
+BA_ "GenMsgCycleTime" BO_ 2566889648 1000;
+BA_ "GenMsgSendType" BO_ 2566889904 0;
+BA_ "GenMsgCycleTime" BO_ 2566889904 1000;
+BA_ "GenMsgSendType" BO_ 2565844992 0;
+BA_ "GenMsgCycleTime" BO_ 2565844992 100;
+BA_ "SystemSignalLongSymbol" SG_ 2566890162 mVEC_FLT_HarnessAddressPinChange "mVEC_FLT_HarnessAddressPinChanged";
+BA_ "SystemSignalLongSymbol" SG_ 2566890161 mVEC_FLT_HarnessAddressPinC_0000 "mVEC_FLT_HarnessAddressPinChanged";
+BA_ "SystemSignalLongSymbol" SG_ 2566890160 mVEC_FLT_HarnessAddressPinC_0001 "mVEC_FLT_HarnessAddressPinChanged";
+VAL_ 2565800113 Reply_Message_ID 151 "Show CAN Settings" 150 "Show Relay States" 148 "Show Population Table" 19 "Show Software Version" 1 "Diagnosis" ;
+VAL_ 2565800114 Reply_Message_ID 151 "Show CAN Settings" 150 "Show Relay States" 148 "Show Population Table" 19 "Show Software Version" 1 "Diagnosis" ;
+VAL_ 2565845248 CMD_Message_ID 153 "Set Startup Delay Time" 152 "Change Timeout Count" 151 "View CAN Settings" 150 "View Delay Time and Relay State" 149 "Change Default Relay State" 148 "Change Population Table" 146 "View Population Table" 144 "Change SA/PGN Base" 128 "Change Relay State w/o Diagnosis" 18 "View Software Version Number" 136 "Change Relay State w Diagnosis" ;
+VAL_ 2565845248 CMD_Relay01 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay02 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay03 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay04 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay05 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay06 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay07 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay08 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay09 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay10 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay11 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_Relay12 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845248 CMD_HighSideOutput 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Message_ID 153 "Set Startup Delay Time" 152 "Change Timeout Count" 151 "View CAN Settings" 150 "View Delay Time and Relay State" 149 "Change Default Relay State" 148 "Change Population Table" 146 "View Population Table" 144 "Change SA/PGN Base" 128 "Change Relay State w/o Diagnosis" 18 "View Software Version Number" 136 "Change Relay State w Diagnosis" ;
+VAL_ 2565845504 CMD_Relay01 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay02 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay03 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay04 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay05 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay06 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay07 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay08 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay09 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay10 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay11 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_Relay12 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565845504 CMD_HighSideOutput 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565800112 Reply_Message_ID 151 "Show CAN Settings" 150 "Show Relay States" 148 "Show Population Table" 19 "Show Software Version" 1 "Diagnosis" ;
+VAL_ 2566889906 mVEC_Relay09_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay08_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay07_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay06_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay05_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay04_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay03_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay02_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay01_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay12_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay11_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889906 mVEC_Relay10_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889650 mVEC_Fuse24_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse23_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse22_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse21_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse20_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse19_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse18_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse17_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse16_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse15_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse14_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse13_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse12_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse11_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse10_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse09_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse08_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse07_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse06_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse05_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse04_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse03_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse02_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889650 mVEC_Fuse01_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889905 mVEC_Relay09_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay08_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay07_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay06_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay05_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay04_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay03_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay02_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay01_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay12_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay11_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889905 mVEC_Relay10_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889649 mVEC_Fuse24_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse23_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse22_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse21_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse20_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse19_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse18_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse17_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse16_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse15_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse14_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse13_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse12_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse11_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse10_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse09_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse08_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse07_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse06_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse05_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse04_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse03_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse02_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889649 mVEC_Fuse01_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse24_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse23_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse22_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse21_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse20_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse19_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse18_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse17_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse16_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse15_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse14_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse13_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse12_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse11_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse10_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse09_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse08_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse07_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse06_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse05_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse04_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse03_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse02_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889648 mVEC_Fuse01_Status 3 "Not Used" 2 "Not Powered" 1 "Blown" 0 "No Fault" ;
+VAL_ 2566889904 mVEC_Relay09_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay08_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay07_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay06_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay05_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay04_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay03_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay02_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay01_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay12_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay11_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2566889904 mVEC_Relay10_Status 15 "Relay location not used" 14 "Reserved" 13 "High-side driver over voltage" 12 "High-side driver open load" 11 "High-side driver fault" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "(N.C) contact is shorted" 6 "(N.O) contact is shorted" 5 "coil no power" 4 "(N.C) contact is open" 3 "(N.O) contact is open" 2 "Coil shorted" 1 "Relay coil open" 0 "Okay" ;
+VAL_ 2565844992 CMD_HighSideOutput 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay12 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay11 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay10 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay09 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay08 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay07 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay06 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay05 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay04 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay03 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay02 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Relay01 3 "Do not change relay state" 2 "Do not change relay state" 1 "Turn Relay On" 0 "Turn Relay Off" ;
+VAL_ 2565844992 CMD_Message_ID 153 "Set Startup Delay Time" 152 "Change Timeout Count" 151 "View CAN Settings" 150 "View Delay Time and Relay State" 149 "Change Default Relay State" 148 "Change Population Table" 146 "View Population Table" 144 "Change SA/PGN Base" 128 "Change Relay State w/o Diagnosis" 18 "View Software Version Number" 136 "Change Relay State w Diagnosis" ;
+

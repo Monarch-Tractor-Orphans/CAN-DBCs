@@ -1,0 +1,471 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU Tester DCU
+VAL_TABLE_ vcuNodeLess 1 "VCU节点丢失" 0 "VCU节点未丢失" ;
+VAL_TABLE_ ctrlTmpOv 1 "控制器过温" 0 "控制器未过温" ;
+VAL_TABLE_ motTmpOv 1 "电机过温" 0 "电机未过温" ;
+VAL_TABLE_ DTCLvl 4 "四级故障，关管停机，请求断高压" 3 "三级故障，关管停机" 2 "二级故障，降功率运行" 1 "一级故障，正常运行" 0 "无故障" ;
+VAL_TABLE_ actDischrgSts 3 "放电失败" 2 "放电完成" 1 "放电中" 0 "初始状态" ;
+VAL_TABLE_ hillHoldSts 1 "驻坡状态" 0 "非驻坡状态" ;
+VAL_TABLE_ runSts 1 "开管中" 0 "未开管" ;
+VAL_TABLE_ ctrlModeSts 1 "速度控" 0 "转矩控" ;
+VAL_TABLE_ workModeSts 4 "发生关管停机故障；" 3 "开管且处于制动状态；" 2 "开管且处于驱动状态；" 1 "高压上电完成且未开管；" 0 "低压上电完成" ;
+VAL_TABLE_ enableReq 1 "开管" 0 "关管" ;
+VAL_TABLE_ actDischrgReq 1 "有效" 0 "无效" ;
+VAL_TABLE_ handBrake 1 "有效" 0 "无效" ;
+VAL_TABLE_ footBrake 1 "有效" 0 "无效" ;
+VAL_TABLE_ gearReq 3 "无效" 2 "D档（如L/S/M档统一下发D档）" 1 "R档" 0 "N档" ;
+VAL_TABLE_ hillHoldReq 3 "ECU控制" 2 "VCU关闭" 1 "VCU开启" 0 "ECU控制" ;
+VAL_TABLE_ actDmpReq 3 "ECU控制" 2 "VCU关闭" 1 "VCU开启" 0 "ECU控制" ;
+VAL_TABLE_ ABSSts 1 "有效" 0 "无效" ;
+VAL_TABLE_ ctrlModeReq 1 "speed mode(速度模式)" 0 "torque mode(转矩模式)" ;
+VAL_TABLE_ mainKmSt 1 "有效" 0 "无效" ;
+VAL_TABLE_ crashSts 1 "有效" 0 "无效" ;
+
+
+BO_ 2349003175 VCU_CMD2: 8 VCU
+ SG_ VCU_Cmd2_TrqLmtMin : 52|12@1+ (1,-3000) [-3000|0] "Nm"  DCU
+ SG_ VCU_Cmd2_TrqLmtMax : 40|12@1+ (1,0) [0|3000] "Nm"  DCU
+ SG_ VCU_Cmd2_SpdLmtMin : 28|12@1+ (5,-20000) [-20000|0] "rpm"  DCU
+ SG_ VCU_Cmd2_Reversed1 : 14|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd2_LmtCtrl : 12|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd2_LifeCnt : 8|4@1+ (1,0) [0|15] ""  DCU
+ SG_ VCU_Cmd2_CheckSum : 0|8@1+ (1,0) [0|255] ""  DCU
+ SG_ VCU_Cmd2_SpdLmtMax : 16|12@1+ (5,0) [0|20000] "rpm"  DCU
+
+BO_ 2348937639 VCU_CMD1: 8 VCU
+ SG_ VCU_Cmd1_Reversed1 : 14|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd1_trqReq : 40|16@1+ (1,-3000) [-3000|3000] "Nm"  DCU
+ SG_ VCU_Cmd1_spdReq : 24|16@1+ (1,-20000) [-20000|20000] "rpm"  DCU
+ SG_ VCU_Cmd1_Reversed2 : 60|4@1+ (1,0) [0|15] ""  DCU
+ SG_ VCU_Cmd1_mainKmSt : 13|1@1+ (1,0) [0|1] ""  DCU
+ SG_ VCU_Cmd1_LifeCnt : 8|4@1+ (1,0) [0|15] ""  DCU
+ SG_ VCU_Cmd1_hillHoldReq : 58|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd1_handBrake : 21|1@1+ (1,0) [0|1] ""  DCU
+ SG_ VCU_Cmd1_gearReq : 18|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd1_footBrake : 20|1@1+ (1,0) [0|1] ""  DCU
+ SG_ VCU_Cmd1_enableReq : 23|1@1+ (1,0) [0|1] ""  DCU
+ SG_ VCU_Cmd1_ctrlModeReq : 16|1@1+ (1,0) [0|1] ""  DCU
+ SG_ VCU_Cmd1_crashSts : 12|1@1+ (1,0) [0|1] ""  DCU
+ SG_ VCU_Cmd1_CheckSum : 0|8@1+ (1,0) [0|255] ""  DCU
+ SG_ VCU_Cmd1_actDmpReq : 56|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd1_actDischrgReq : 22|1@1+ (1,0) [0|1] ""  DCU
+ SG_ VCU_Cmd1_ABSSts : 17|1@1+ (1,0) [0|1] ""  DCU
+
+BO_ 2550441969 MCU_STATUS4: 8 DCU
+ SG_ MCU_STATUS4_vcuNodeLess : 14|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MCU_STATUS4_swVer : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS4_motTmpOv : 12|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MCU_STATUS4_motTemp : 32|8@1+ (1,-40) [-40|210] "C"  VCU
+ SG_ MCU_STATUS4_mcuSts4Reserved1 : 15|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MCU_STATUS4_mcuSts4CheckSum : 0|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS4_mcuSts1LifeCnt : 8|4@1+ (1,0) [0|15] ""  VCU
+ SG_ MCU_STATUS4_IacAct : 16|16@1+ (0.1,0) [0|1000] "A"  VCU
+ SG_ MCU_STATUS4_ctrlTmpOv : 13|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MCU_STATUS4_ctrlTjTemp : 48|8@1+ (1,-40) [-40|210] "C"  VCU
+ SG_ MCU_STATUS4_ctrlNtcTemp : 40|8@1+ (1,-40) [-40|210] "C"  VCU
+
+BO_ 2550376433 MCU_STATUS3: 8 DCU
+ SG_ MCU_STATUS3_mcuSts3Reversed1 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS3_mcuSts3LifeCnt : 8|4@1+ (1,0) [0|15] ""  VCU
+ SG_ MCU_STATUS3_mcuSts3CheckSum : 0|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS3_ErrSum : 12|4@1+ (1,0) [0|15] ""  VCU
+ SG_ MCU_STATUS3_DTCCode5 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS3_DTCCode4 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS3_DTCCode3 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS3_DTCCode2 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS3_DTCCode1 : 16|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 2550310897 MCU_STATUS2: 8 DCU
+ SG_ MCU_STATUS2_UdcAct : 28|12@1+ (1,0) [0|1000] "V"  VCU
+ SG_ MCU_STATUS2_mcuSts2Reversed1 : 12|4@1+ (1,0) [0|15] ""  VCU
+ SG_ MCU_STATUS2_mcuSts2LifeCnt : 8|4@1+ (1,0) [0|15] ""  VCU
+ SG_ MCU_STATUS2_mcuSts2CheckSum : 0|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS2_IdcAct : 16|12@1+ (0.2,-400) [-400|400] "A"  VCU
+ SG_ MCU_STATUS2_DrvTrqMax : 40|12@1+ (1,0) [0|3000] "Nm"  VCU
+ SG_ MCU_STATUS2_BrkTrqMax : 52|12@1+ (1,-3000) [-3000|0] "Nm"  VCU
+
+BO_ 2550245361 MCU_STATUS1: 8 DCU
+ SG_ MCU_STATUS1_workModeSts : 12|3@1+ (1,0) [0|7] ""  VCU
+ SG_ MCU_STATUS1_trqAct : 24|16@1+ (1,-3000) [-3000|3000] "Nm"  VCU
+ SG_ MCU_STATUS1_spdAct : 40|16@1+ (1,-20000) [-20000|20000] "rpm"  VCU
+ SG_ MCU_STATUS1_runSts : 16|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MCU_STATUS1_mcuSts1Reversed1 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS1_LifeCnt : 8|4@1+ (1,0) [0|15] ""  VCU
+ SG_ MCU_STATUS1_hillHoldSts : 17|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MCU_STATUS1_DTCLvl : 20|4@1+ (1,0) [0|4] ""  VCU
+ SG_ MCU_STATUS1_ctrlModeSts : 15|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MCU_STATUS1_CheckSum : 0|8@1+ (1,0) [0|255] ""  VCU
+ SG_ MCU_STATUS1_actDischrgSts : 18|2@1+ (1,0) [0|3] ""  VCU
+
+BO_ 1508 DCU_NM: 8 DCU
+ SG_ DCU_NMNodeAddress : 7|8@0+ (1,0) [0|255] "-"  VCU
+ SG_ DCU_NMDataField1 : 15|8@0+ (1,0) [0|0] "-"  VCU
+ SG_ DCU_NMWakeupOrigin : 23|8@0+ (1,0) [0|255] "-"  VCU
+ SG_ DCU_SubNetWakeRq : 31|8@0+ (1,0) [0|255] "-"  VCU
+ SG_ DCU_NMDataField2 : 39|32@0+ (1,0) [0|0] "-"  VCU
+
+BO_ 2015 Func_Diag_Rx: 8 Tester
+ SG_ Func_Diag_Rx : 7|64@0+ (1,0) [0|0] ""  DCU,VCU
+
+BO_ 2349068711 VCU_CMD3: 8 VCU
+ SG_ VCU_Cmd3_Reversed4 : 56|8@1+ (1,0) [0|255] ""  DCU
+ SG_ VCU_Cmd3_Reversed3 : 48|8@1+ (1,0) [0|255] ""  DCU
+ SG_ VCU_Cmd3_Reversed2 : 40|8@1+ (1,0) [0|255] ""  DCU
+ SG_ VCU_Cmd3_Reversed1 : 14|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd3_LmtCtrl : 12|2@1+ (1,0) [0|3] ""  DCU
+ SG_ VCU_Cmd3_LifeCnt : 8|4@1+ (1,0) [0|15] ""  DCU
+ SG_ VCU_Cmd3_DrvIdcLmt : 16|12@1+ (0.1,0) [0|400] "A"  DCU
+ SG_ VCU_Cmd3_CheckSum : 0|8@1+ (1,0) [0|255] ""  DCU
+ SG_ VCU_Cmd3_BrkIdcLmt : 28|12@1+ (0.1,-400) [-400|0] "A"  DCU
+
+BO_ 2020 DCU_Phys_Diag_Rx: 8 Tester
+ SG_ DCU_Diag_Request : 7|64@0+ (1,0) [0|0] ""  DCU
+
+BO_ 2028 DCU_Diag_Tx: 8 DCU
+ SG_ DCU_Diag_Response : 7|64@0+ (1,0) [0|0] "-"  Tester
+
+
+
+CM_ SG_ 2349003175 VCU_Cmd2_TrqLmtMin "转矩下限 ";
+CM_ SG_ 2349003175 VCU_Cmd2_TrqLmtMax "转矩上限";
+CM_ SG_ 2349003175 VCU_Cmd2_SpdLmtMin "转速下限";
+CM_ SG_ 2349003175 VCU_Cmd2_Reversed1 "预留";
+CM_ SG_ 2349003175 VCU_Cmd2_LmtCtrl "Vcu指令2限制控制";
+CM_ SG_ 2349003175 VCU_Cmd2_LifeCnt "心跳";
+CM_ SG_ 2349003175 VCU_Cmd2_CheckSum "和校验";
+CM_ SG_ 2349003175 VCU_Cmd2_SpdLmtMax "转速上限 ";
+CM_ SG_ 2348937639 VCU_Cmd1_Reversed1 "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_trqReq "【注】正、负值代表力的方向";
+CM_ SG_ 2348937639 VCU_Cmd1_spdReq "速度请求值";
+CM_ SG_ 2348937639 VCU_Cmd1_Reversed2 "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_mainKmSt "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_LifeCnt "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_hillHoldReq "驻坡请求";
+CM_ SG_ 2348937639 VCU_Cmd1_handBrake "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_gearReq "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_footBrake "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_enableReq "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_ctrlModeReq "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_crashSts "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_CheckSum "需要关联ID校验；确认平台中CRC算法中ID当前关联策略；";
+CM_ SG_ 2348937639 VCU_Cmd1_actDmpReq "主动阻尼请求";
+CM_ SG_ 2348937639 VCU_Cmd1_actDischrgReq "RollingCounter 0->1->2->···";
+CM_ SG_ 2348937639 VCU_Cmd1_ABSSts "RollingCounter 0->1->2->···";
+CM_ SG_ 2550441969 MCU_STATUS4_vcuNodeLess "0：VCU节点未丢失
+1：VCU节点丢失";
+CM_ SG_ 2550441969 MCU_STATUS4_motTmpOv "0：电机未过温
+1：电机过温";
+CM_ SG_ 2550441969 MCU_STATUS4_ctrlTmpOv "0：控制器未过温
+1：控制器过温";
+CM_ SG_ 2550376433 MCU_STATUS3_DTCCode4 "上传EventID";
+CM_ SG_ 2550376433 MCU_STATUS3_DTCCode3 "上传EventID";
+CM_ SG_ 2550310897 MCU_STATUS2_mcuSts2LifeCnt "RollingCounter 0->1->2->···";
+CM_ SG_ 2550310897 MCU_STATUS2_mcuSts2CheckSum "需要关联ID校验；确认平台中CRC算法中ID当前关联策略；";
+CM_ SG_ 2550310897 MCU_STATUS2_IdcAct "0：未开管
+1：开管中";
+CM_ SG_ 2550245361 MCU_STATUS1_workModeSts "0：低压上电完成
+1：高压上电完成且未开管；
+2：开管且处于驱动状态；
+3：开管且处于制动状态；
+4：发生关管停机故障；";
+CM_ SG_ 2550245361 MCU_STATUS1_trqAct "正、负值代表整车前进、后退方向";
+CM_ SG_ 2550245361 MCU_STATUS1_spdAct "电机当前运行转速";
+CM_ SG_ 2550245361 MCU_STATUS1_runSts "0：未开管
+1：开管中";
+CM_ SG_ 2550245361 MCU_STATUS1_hillHoldSts "0：非驻坡状态
+1：驻坡状态";
+CM_ SG_ 2550245361 MCU_STATUS1_DTCLvl "0：无故障
+1：一级故障，正常运行
+2：二级故障，降功率运行
+3：三级故障，关管停机
+4：四级故障，关管停机，请求断高压
+注：上传当前最严重故障匹配的故障等级；";
+CM_ SG_ 2550245361 MCU_STATUS1_ctrlModeSts "0：转矩控
+1：速度控";
+CM_ SG_ 2550245361 MCU_STATUS1_actDischrgSts "0：初始状态
+1：放电中
+2：放电完成
+3：放电失败";
+CM_ SG_ 1508 DCU_NMNodeAddress "DCU node address";
+CM_ SG_ 1508 DCU_NMDataField1 "DCU Network management data";
+CM_ SG_ 1508 DCU_NMWakeupOrigin "Origin of the wake up";
+CM_ SG_ 1508 DCU_SubNetWakeRq "SubNet wake up request";
+CM_ SG_ 1508 DCU_NMDataField2 "DCU Network management data";
+CM_ SG_ 2349068711 VCU_Cmd3_Reversed4 "RollingCounter 0->1->2->···";
+CM_ SG_ 2349068711 VCU_Cmd3_Reversed3 "RollingCounter 0->1->2->···";
+CM_ SG_ 2349068711 VCU_Cmd3_LmtCtrl "bit0:母线电流限制控制
+bit1:保留
+注：bit位置位，表示采用VCU下发值限制，否则采用MCU默认值限制；";
+CM_ SG_ 2349068711 VCU_Cmd3_LifeCnt "RollingCounter 0->1->2->···";
+CM_ SG_ 2349068711 VCU_Cmd3_DrvIdcLmt "放电母线电流限制";
+CM_ SG_ 2349068711 VCU_Cmd3_CheckSum "需要关联ID校验；确认平台中CRC算法中ID当前关联策略；";
+CM_ SG_ 2349068711 VCU_Cmd3_BrkIdcLmt "回馈母线电流限制";
+CM_ SG_ 2020 DCU_Diag_Request "Diagnostic physical request";
+CM_ SG_ 2028 DCU_Diag_Response "DCU diagnostic response";
+BA_DEF_ BO_  "GenMsgTimeoutTime" INT 0 65535;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "Phy_DataType" ENUM  "float32","uint8","uint16","uint32","sint8","sint16","sint32";
+BA_DEF_ SG_  "CounterSelection" ENUM  "No","Yes";
+BA_DEF_ SG_  "ChecksumSelection" ENUM  "No","Yes";
+BA_DEF_ BO_  "RxDeadlineMonitoring" ENUM  "No","Yes";
+BA_DEF_ BO_  "E2E_Message" ENUM  "No","Yes";
+BA_DEF_ SG_  "GatewayedSignals" ENUM  "No","Yes";
+BA_DEF_  "Manufactor" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 0 65535;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNodeIdentifier" INT 0 255;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "No","Yes";
+BA_DEF_  "NmAsrMessageCount" INT 0 256;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 0 65535;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 536870911;
+BA_DEF_ BU_  "NodelayerModules" STRING ;
+BA_DEF_ SG_  "Remark" STRING ;
+BA_DEF_ SG_  "EventCommandSignal" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigInvalidValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 2147483648;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","NotUsed","NotUsed","NoSigSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 255;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NoMsgSendType";
+BA_DEF_DEF_  "GenMsgTimeoutTime" 0;
+BA_DEF_DEF_  "NmType" "NmAsr";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "Phy_DataType" "float32";
+BA_DEF_DEF_  "CounterSelection" "No";
+BA_DEF_DEF_  "ChecksumSelection" "No";
+BA_DEF_DEF_  "RxDeadlineMonitoring" "No";
+BA_DEF_DEF_  "E2E_Message" "No";
+BA_DEF_DEF_  "GatewayedSignals" "No";
+BA_DEF_DEF_  "Manufactor" "Vector";
+BA_DEF_DEF_  "DBName" "CAN";
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 1000;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 500;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 1000;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrNode" "Yes";
+BA_DEF_DEF_  "NmAsrMessageCount" 256;
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 50;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 200;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrBaseAddress" 1280;
+BA_DEF_DEF_  "NodelayerModules" "CANoeILNLVector.dll";
+BA_DEF_DEF_  "Remark" "*";
+BA_DEF_DEF_  "EventCommandSignal" "No";
+BA_DEF_DEF_  "GenSigInvalidValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_ "NmAsrMessageCount" 256;
+BA_ "DBName" "CANB";
+BA_ "GenMsgCycleTime" BO_ 2349003175 50;
+BA_ "GenMsgTimeoutTime" BO_ 2349003175 50;
+BA_ "RxDeadlineMonitoring" BO_ 2349003175 1;
+BA_ "GenMsgTimeoutTime" BO_ 2348937639 50;
+BA_ "GenMsgCycleTime" BO_ 2348937639 10;
+BA_ "GenMsgSendType" BO_ 2348937639 0;
+BA_ "RxDeadlineMonitoring" BO_ 2348937639 1;
+BA_ "GenMsgCycleTime" BO_ 2550441969 100;
+BA_ "GenMsgSendType" BO_ 2550441969 0;
+BA_ "GenMsgCycleTime" BO_ 2550376433 100;
+BA_ "GenMsgSendType" BO_ 2550376433 0;
+BA_ "GenMsgCycleTime" BO_ 2550310897 50;
+BA_ "GenMsgSendType" BO_ 2550310897 0;
+BA_ "GenMsgCycleTime" BO_ 2550245361 10;
+BA_ "GenMsgSendType" BO_ 2550245361 0;
+BA_ "GenMsgILSupport" BO_ 1508 1;
+BA_ "NmMessage" BO_ 1508 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1508 0;
+BA_ "GenMsgCycleTime" BO_ 1508 200;
+BA_ "GenMsgSendType" BO_ 1508 0;
+BA_ "DiagState" BO_ 2015 1;
+BA_ "GenMsgCycleTimeFast" BO_ 2015 0;
+BA_ "GenMsgCycleTime" BO_ 2015 0;
+BA_ "GenMsgSendType" BO_ 2015 8;
+BA_ "GenMsgSendType" BO_ 2349068711 0;
+BA_ "GenMsgCycleTime" BO_ 2349068711 50;
+BA_ "GenMsgTimeoutTime" BO_ 2349068711 50;
+BA_ "RxDeadlineMonitoring" BO_ 2349068711 1;
+BA_ "DiagRequest" BO_ 2020 1;
+BA_ "GenMsgSendType" BO_ 2020 8;
+BA_ "GenMsgCycleTimeFast" BO_ 2020 0;
+BA_ "GenMsgCycleTime" BO_ 2020 0;
+BA_ "GenMsgILSupport" BO_ 2020 0;
+BA_ "DiagResponse" BO_ 2028 1;
+BA_ "GenMsgSendType" BO_ 2028 8;
+BA_ "GenMsgCycleTimeFast" BO_ 2028 0;
+BA_ "GenMsgCycleTime" BO_ 2028 0;
+BA_ "GenMsgILSupport" BO_ 2028 0;
+BA_ "GenSigStartValue" SG_ 2349003175 VCU_Cmd2_TrqLmtMin 3000;
+BA_ "GenSigStartValue" SG_ 2349003175 VCU_Cmd2_SpdLmtMin 4000;
+BA_ "ChecksumSelection" SG_ 2349003175 VCU_Cmd2_CheckSum 1;
+BA_ "GenSigStartValue" SG_ 2348937639 VCU_Cmd1_trqReq 3000;
+BA_ "GenSigStartValue" SG_ 2348937639 VCU_Cmd1_spdReq 20000;
+BA_ "ChecksumSelection" SG_ 2348937639 VCU_Cmd1_CheckSum 1;
+BA_ "GenSigStartValue" SG_ 2550441969 MCU_STATUS4_motTemp 40;
+BA_ "ChecksumSelection" SG_ 2550441969 MCU_STATUS4_mcuSts4CheckSum 1;
+BA_ "CounterSelection" SG_ 2550441969 MCU_STATUS4_mcuSts1LifeCnt 1;
+BA_ "GenSigStartValue" SG_ 2550441969 MCU_STATUS4_ctrlTjTemp 40;
+BA_ "GenSigStartValue" SG_ 2550441969 MCU_STATUS4_ctrlNtcTemp 40;
+BA_ "CounterSelection" SG_ 2550376433 MCU_STATUS3_mcuSts3LifeCnt 1;
+BA_ "ChecksumSelection" SG_ 2550376433 MCU_STATUS3_mcuSts3CheckSum 1;
+BA_ "CounterSelection" SG_ 2550310897 MCU_STATUS2_mcuSts2LifeCnt 1;
+BA_ "ChecksumSelection" SG_ 2550310897 MCU_STATUS2_mcuSts2CheckSum 1;
+BA_ "GenSigStartValue" SG_ 2550310897 MCU_STATUS2_IdcAct 2000;
+BA_ "GenSigStartValue" SG_ 2550310897 MCU_STATUS2_BrkTrqMax 3000;
+BA_ "GenSigStartValue" SG_ 2550245361 MCU_STATUS1_trqAct 3000;
+BA_ "GenSigStartValue" SG_ 2550245361 MCU_STATUS1_spdAct 20000;
+BA_ "CounterSelection" SG_ 2550245361 MCU_STATUS1_LifeCnt 1;
+BA_ "ChecksumSelection" SG_ 2550245361 MCU_STATUS1_CheckSum 1;
+BA_ "GenSigTimeoutValue" SG_ 1508 DCU_NMNodeAddress 0;
+BA_ "Remark" SG_ 1508 DCU_NMNodeAddress "";
+BA_ "EventCommandSignal" SG_ 1508 DCU_NMNodeAddress 0;
+BA_ "GatewayedSignals" SG_ 1508 DCU_NMNodeAddress 0;
+BA_ "GenSigSendType" SG_ 1508 DCU_NMNodeAddress 1;
+BA_ "GenSigInactiveValue" SG_ 1508 DCU_NMNodeAddress 0;
+BA_ "GenSigInvalidValue" SG_ 1508 DCU_NMNodeAddress 0;
+BA_ "GenSigStartValue" SG_ 1508 DCU_NMNodeAddress 228;
+BA_ "GenSigTimeoutValue" SG_ 1508 DCU_NMDataField1 0;
+BA_ "Remark" SG_ 1508 DCU_NMDataField1 "";
+BA_ "EventCommandSignal" SG_ 1508 DCU_NMDataField1 0;
+BA_ "GatewayedSignals" SG_ 1508 DCU_NMDataField1 0;
+BA_ "GenSigSendType" SG_ 1508 DCU_NMDataField1 1;
+BA_ "GenSigInactiveValue" SG_ 1508 DCU_NMDataField1 0;
+BA_ "GenSigInvalidValue" SG_ 1508 DCU_NMDataField1 0;
+BA_ "GenSigStartValue" SG_ 1508 DCU_NMDataField1 0;
+BA_ "GenSigTimeoutValue" SG_ 1508 DCU_NMWakeupOrigin 0;
+BA_ "Remark" SG_ 1508 DCU_NMWakeupOrigin "";
+BA_ "EventCommandSignal" SG_ 1508 DCU_NMWakeupOrigin 0;
+BA_ "GatewayedSignals" SG_ 1508 DCU_NMWakeupOrigin 0;
+BA_ "GenSigSendType" SG_ 1508 DCU_NMWakeupOrigin 1;
+BA_ "GenSigInactiveValue" SG_ 1508 DCU_NMWakeupOrigin 0;
+BA_ "GenSigInvalidValue" SG_ 1508 DCU_NMWakeupOrigin 0;
+BA_ "GenSigStartValue" SG_ 1508 DCU_NMWakeupOrigin 0;
+BA_ "GenSigTimeoutValue" SG_ 1508 DCU_SubNetWakeRq 0;
+BA_ "Remark" SG_ 1508 DCU_SubNetWakeRq "";
+BA_ "EventCommandSignal" SG_ 1508 DCU_SubNetWakeRq 0;
+BA_ "GatewayedSignals" SG_ 1508 DCU_SubNetWakeRq 0;
+BA_ "GenSigSendType" SG_ 1508 DCU_SubNetWakeRq 1;
+BA_ "GenSigInactiveValue" SG_ 1508 DCU_SubNetWakeRq 0;
+BA_ "GenSigInvalidValue" SG_ 1508 DCU_SubNetWakeRq 0;
+BA_ "GenSigStartValue" SG_ 1508 DCU_SubNetWakeRq 0;
+BA_ "GenSigTimeoutValue" SG_ 1508 DCU_NMDataField2 0;
+BA_ "Remark" SG_ 1508 DCU_NMDataField2 "";
+BA_ "EventCommandSignal" SG_ 1508 DCU_NMDataField2 0;
+BA_ "GatewayedSignals" SG_ 1508 DCU_NMDataField2 0;
+BA_ "GenSigSendType" SG_ 1508 DCU_NMDataField2 1;
+BA_ "GenSigInactiveValue" SG_ 1508 DCU_NMDataField2 0;
+BA_ "GenSigInvalidValue" SG_ 1508 DCU_NMDataField2 0;
+BA_ "GenSigStartValue" SG_ 1508 DCU_NMDataField2 0;
+BA_ "GenSigTimeoutValue" SG_ 2015 Func_Diag_Rx 0;
+BA_ "Remark" SG_ 2015 Func_Diag_Rx "";
+BA_ "EventCommandSignal" SG_ 2015 Func_Diag_Rx 0;
+BA_ "GatewayedSignals" SG_ 2015 Func_Diag_Rx 0;
+BA_ "GenSigSendType" SG_ 2015 Func_Diag_Rx 1;
+BA_ "GenSigInactiveValue" SG_ 2015 Func_Diag_Rx 0;
+BA_ "GenSigInvalidValue" SG_ 2015 Func_Diag_Rx 0;
+BA_ "GenSigStartValue" SG_ 2015 Func_Diag_Rx 0;
+BA_ "ChecksumSelection" SG_ 2349068711 VCU_Cmd3_CheckSum 1;
+BA_ "GenSigStartValue" SG_ 2349068711 VCU_Cmd3_BrkIdcLmt 4000;
+BA_ "GenSigTimeoutValue" SG_ 2020 DCU_Diag_Request 0;
+BA_ "Remark" SG_ 2020 DCU_Diag_Request "";
+BA_ "EventCommandSignal" SG_ 2020 DCU_Diag_Request 0;
+BA_ "GatewayedSignals" SG_ 2020 DCU_Diag_Request 0;
+BA_ "GenSigSendType" SG_ 2020 DCU_Diag_Request 1;
+BA_ "GenSigInactiveValue" SG_ 2020 DCU_Diag_Request 0;
+BA_ "GenSigInvalidValue" SG_ 2020 DCU_Diag_Request 0;
+BA_ "GenSigStartValue" SG_ 2020 DCU_Diag_Request 0;
+BA_ "GenSigTimeoutValue" SG_ 2028 DCU_Diag_Response 0;
+BA_ "Remark" SG_ 2028 DCU_Diag_Response "";
+BA_ "EventCommandSignal" SG_ 2028 DCU_Diag_Response 0;
+BA_ "GatewayedSignals" SG_ 2028 DCU_Diag_Response 0;
+BA_ "GenSigSendType" SG_ 2028 DCU_Diag_Response 1;
+BA_ "GenSigInactiveValue" SG_ 2028 DCU_Diag_Response 0;
+BA_ "GenSigInvalidValue" SG_ 2028 DCU_Diag_Response 0;
+BA_ "GenSigStartValue" SG_ 2028 DCU_Diag_Response 0;
+VAL_ 2348937639 VCU_Cmd1_mainKmSt 1 "有效" 0 "无效" ;
+VAL_ 2348937639 VCU_Cmd1_hillHoldReq 3 "ECU控制" 2 "VCU关闭" 1 "VCU开启" 0 "ECU控制" ;
+VAL_ 2348937639 VCU_Cmd1_handBrake 1 "有效" 0 "无效" ;
+VAL_ 2348937639 VCU_Cmd1_gearReq 3 "无效" 2 "D档（如L/S/M档统一下发D档）" 1 "R档" 0 "N档" ;
+VAL_ 2348937639 VCU_Cmd1_footBrake 1 "有效" 0 "无效" ;
+VAL_ 2348937639 VCU_Cmd1_enableReq 1 "开管" 0 "关管" ;
+VAL_ 2348937639 VCU_Cmd1_ctrlModeReq 1 "speed mode(速度模式)" 0 "torque mode(转矩模式)" ;
+VAL_ 2348937639 VCU_Cmd1_crashSts 1 "有效" 0 "无效" ;
+VAL_ 2348937639 VCU_Cmd1_actDmpReq 3 "ECU控制" 2 "VCU关闭" 1 "VCU开启" 0 "ECU控制" ;
+VAL_ 2348937639 VCU_Cmd1_actDischrgReq 1 "有效" 0 "无效" ;
+VAL_ 2348937639 VCU_Cmd1_ABSSts 1 "有效" 0 "无效" ;
+VAL_ 2550441969 MCU_STATUS4_vcuNodeLess 1 "VCU节点丢失" 0 "VCU节点未丢失" ;
+VAL_ 2550441969 MCU_STATUS4_motTmpOv 1 "电机过温" 0 "电机未过温" ;
+VAL_ 2550441969 MCU_STATUS4_ctrlTmpOv 1 "控制器过温" 0 "控制器未过温" ;
+VAL_ 2550245361 MCU_STATUS1_workModeSts 4 "发生关管停机故障；" 3 "开管且处于制动状态；" 2 "开管且处于驱动状态；" 1 "高压上电完成且未开管；" 0 "低压上电完成" ;
+VAL_ 2550245361 MCU_STATUS1_runSts 1 "开管中" 0 "未开管" ;
+VAL_ 2550245361 MCU_STATUS1_hillHoldSts 1 "驻坡状态" 0 "非驻坡状态" ;
+VAL_ 2550245361 MCU_STATUS1_DTCLvl 4 "四级故障，关管停机，请求断高压" 3 "三级故障，关管停机" 2 "二级故障，降功率运行" 1 "一级故障，正常运行" 0 "无故障" ;
+VAL_ 2550245361 MCU_STATUS1_ctrlModeSts 1 "速度控" 0 "转矩控" ;
+VAL_ 2550245361 MCU_STATUS1_actDischrgSts 3 "放电失败" 2 "放电完成" 1 "放电中" 0 "初始状态" ;
+VAL_ 1508 DCU_NMWakeupOrigin 18 "IGN ON" 1 "Message wake up" ;
+

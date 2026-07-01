@@ -1,0 +1,553 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Tablet VCU GILES01
+VAL_TABLE_ FBK_Calib 3 "Calib failed" 2 "Calib done" 1 "In progress" 0 "Default" ;
+VAL_TABLE_ Batt_Swap_State 6 "LV_Low" 5 "Timeout_Error" 4 "Swap_Error" 3 "Swap_Complete" 2 "Swap_in_Progress" 1 "Request_Recieved" 0 "Not_Active" ;
+VAL_TABLE_ CMD_3PointMode 7 "Description for the value '0x7'" 6 "Description for the value '0x6'" 5 "Hold" 4 "Hold NoDrooping" 3 "Hookup" 2 "Float" 1 "Direct Duty Cycle" 0 "Open Loop" ;
+VAL_TABLE_ FWD_mode 2 "Force OFF" 1 "Manual ON" 0 "Auto" ;
+VAL_TABLE_ ASCII 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_TABLE_ PTO_State 1 "PTO Disabled" 0 "PTO Enabled" ;
+VAL_TABLE_ Cell_Temperature_SNA 127 "ERROR" 126 "NO_VALUE" ;
+VAL_TABLE_ Cell_Voltage_SNA 511 "ERROR" 510 "NO_VALUE" ;
+VAL_TABLE_ ROOF_DIRECTION 3 "Signal Not Available, will stop motion" 2 "Moving Down" 1 "Moving Up" 0 "Stop Motion" ;
+VAL_TABLE_ STATE_VCU 15 "Power Off" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Driverless" 9 "Disengaging" 8 "Autopilot" 7 "Enabled Driving" 6 "Enabled Stationary" 5 "HV Disabling" 4 "HV Standby" 3 "Precharging" 2 "Low Voltage Standby" 1 "Initialization" 0 "Not Used" ;
+VAL_TABLE_ STATE_CONTACTORS 3 "DISABLE IN PROCESS" 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_TABLE_ OVERRIDE_BRAKE_LIGHT 3 "FUNCTION NOT AVAILABLE" 2 "ENABLE OVERRIDE TO ON" 1 "ENABLE OVERRIDE TO OFF" 0 "DISABLE OVERRIDE" ;
+VAL_TABLE_ STATE_SHIFT 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_TABLE_ STATE_GEAR_POSITION 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_TABLE_ STATE_HEAD_LIGHT 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_TABLE_ STATE_TURN_SIGNAL 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ CMD_FWD_enable : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_TransmissionPressure : 0|6@1+ (1,0) [0|63] "bar" Vector__XXX
+ SG_ FBK_AccumulatorPressure : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ FBK_BrakePressure_RH : 0|8@1+ (0.2,0) [0|51] "bar" Vector__XXX
+ SG_ FBK_BrakePressure_LH : 0|8@1+ (0.2,0) [0|51] "bar" Vector__XXX
+ SG_ FBK_3PointDepthDeltaPressure_RH : 0|9@1- (1,0) [-256|255] "bar" Vector__XXX
+ SG_ FBK_3PointDepthDeltaPressure_LH : 0|9@1- (1,0) [-256|255] "bar" Vector__XXX
+ SG_ CMD_DriveMode : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_BrakeSelect : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_LeftBrakePressure : 0|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ CMD_RightBrakePressure : 0|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ CMD_ThreePoint_RH_ZeroPcnt : 0|12@1+ (1,0) [0|4095] "mv" Vector__XXX
+ SG_ CMD_ThreePoint_RH_FullPcnt : 0|12@1+ (1,0) [0|4095] "mv" Vector__XXX
+ SG_ CMD_ThreePoint_LH_ZeroPcnt : 0|12@1+ (1,0) [0|4095] "mv" Vector__XXX
+ SG_ CMD_ThreePoint_LH_FullPcnt : 0|12@1+ (1,0) [0|4095] "mv" Vector__XXX
+
+BO_ 2364212320 GILES01_Command_Implement: 8 Vector__XXX
+ SG_ CMD_ImplementValve : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_Implement_Rate : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ CMD_Implement_Action3 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CMD_Implement_Action2 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CMD_Implement_Action1 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CMD_AuxHydraulic_2 : 24|10@1- (0.2,0) [-102.4|102.2] "%" Vector__XXX
+ SG_ CMD_AuxHydraulic_1 : 14|10@1- (0.2,0) [-102.4|102.2] "%" Vector__XXX
+
+BO_ 2565543265 VCU_Feedback_Fr05_Implement: 8 Vector__XXX
+ SG_ FBK_ImpHydroForce_Right m1 : 12|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ FBK_ImpHydroForce_Left m1 : 24|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ FBK_EstimatedImplementWeight m1 : 0|12@1+ (1,0) [0|4095] "kg" Vector__XXX
+ SG_ FBK_ImplementMessageIndex M : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FBK_3PointModeAllowLeft_Position m0 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointModeAllowLeft_Hockup m0 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointModeAllowLeft_Float m0 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointModeAllowLeft_Draft m0 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointControlMode_Left m0 : 48|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ FBK_3PointModeAllowRight_Draft m0 : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointModeAllowRight_Float m0 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointModeAllowRight_Hockup m0 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointModeAllowRight_Positio m0 : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointControlMode_Right m0 : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ FBK_PressureDO3_Implement m0 : 35|9@1+ (0.5,0) [0|255.5] "bar" Vector__XXX
+ SG_ FBK_ImplementValve m0 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_Implement_Rate m0 : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ FBK_Implement_Action3 m0 : 12|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FBK_Implement_Action2 m0 : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FBK_Implement_Action1 m0 : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FBK_AuxHydraulicDeltaPressure_2 m0 : 14|10@1- (0.5,0) [-256|255.5] "bar" Vector__XXX
+ SG_ FBK_AuxHydraulicDeltaPressure_1 m0 : 24|10@1- (0.5,0) [-256|255.5] "bar" Vector__XXX
+
+BO_ 2565543009 VCU_Feedback_Fr04_Battery: 8 VCU
+ SG_ FBK_HVBattCellVoltage_Avg m2 : 16|9@1+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ FBK_HVBattCellTemp_MinStringNum m1 : 7|1@1+ (1,1) [1|2] "" Vector__XXX
+ SG_ FBK_HVBattCellTemp_MinModuleNum m1 : 2|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ FBK_HVBattCellTemp_MaxStringNum m3 : 7|1@1+ (1,1) [1|2] "" Vector__XXX
+ SG_ FBK_HVBattCellTemp_MaxModuleNum m3 : 2|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ FBK_HVBattCellTemp_Avg m2 : 8|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ FBK_HVBattState : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_HVBattVoltage : 46|10@1+ (0.5,0) [0|511.5] "V" Vector__XXX
+ SG_ FBK_HVBattSOC : 56|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ FBK_HvBattDischargingLimit m1 : 35|11@1- (0.5,0) [-512|511.5] "A" Vector__XXX
+ SG_ FBK_HvBattCurrent m2 : 35|11@1- (0.5,0) [-512|511.5] "A" Vector__XXX
+ SG_ FBK_HvBattChargingLimit m3 : 35|11@1- (0.5,0) [-512|511.5] "A" Vector__XXX
+ SG_ FBK_HVBattCellReadingType M : 0|2@1+ (1,0) [1|3] "" Vector__XXX
+ SG_ FBK_HVBattCellVoltage_MinStringN m1 : 31|1@1+ (1,1) [1|2] "" Vector__XXX
+ SG_ FBK_HVBattCellVoltage_MinModuleN m1 : 26|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ FBK_HVBattCellVoltage_MaxStringN m3 : 31|1@1+ (1,1) [1|2] "" Vector__XXX
+ SG_ FBK_HVBattCellVoltage_MaxModuleN m3 : 26|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ FBK_HVBattCellVoltage_Min m1 : 16|9@1+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ FBK_HVBattCellTemp_Min m1 : 8|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ FBK_HVBattCellVoltage_Max m3 : 16|9@1+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ FBK_HVBattCellTemp_Max m3 : 8|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+
+BO_ 2364236127 Tablet_Command: 8 Tablet
+ SG_ Hour_Meter : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ CNT : 60|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 2566910305 VCU_FaultReport_01: 8 VCU
+ SG_ FLT_LOC_Tablete : 62|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_GearSelector : 59|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_JS : 60|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_BMU_E_Lower : 47|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_BMU_D_Upper : 46|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_P1 : 51|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_StwRange : 53|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_StwGear : 52|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_EHi_B : 43|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_EHi_A : 42|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_WP : 54|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_Sevcon : 50|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_mVecRoof : 58|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_mVecRun : 57|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_mVecOn : 56|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_DCDC : 48|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_INVOBC : 49|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_Dash : 61|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_TFD_B : 45|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_TFD_A : 44|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_ADC_B : 41|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_LOC_ADC_A : 40|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_SHIFT_RangeAbsEncoder : 32|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_SHIFT_GearAbsEncoder : 31|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_NOP_PtoSW : 34|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_NOP_BrkPedSW : 33|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_Oil_Temp : 30|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_OilRad_Temp : 29|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_3PDepPos_RH : 28|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_3PDepPos_LH : 27|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_3PDepCtrlIn : 26|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_RHBrkRotPos : 25|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_LHBrkRotPos : 24|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_DISC_HTS : 23|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_DISC_TPS : 20|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_HTS_Ch2 : 22|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_HTS_Ch1 : 21|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_TPS_Ch2 : 19|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_TPS_Ch1 : 18|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_ImpPres : 13|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_TM_SysPres : 16|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_TM_RevPres : 15|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_TM_FwdPres : 14|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_TM_AcumPres : 17|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_FntAxRevPres : 12|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_FntAxFwdPres : 11|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxB_RerB_Pres : 10|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxB_RerA_Pres : 9|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxB_FntB_Pres : 8|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxB_FntA_Pres : 7|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxA_RerB_Pres : 6|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxA_RerA_Pres : 5|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxA_FntB_Pres : 4|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_DO3_AuxA_FntA_Pres : 3|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_BM_StrBrkAcumPres : 2|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_BM_RHBrkPres : 1|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FLT_OOR_BM_LHBrkPres : 0|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+
+BO_ 2565542753 VCU_Feedback_Fr03_AccAndThermal: 8 VCU
+ SG_ FBK_LowPowerMode : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Batt_Swap_State : 19|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ FBK_12VISObus : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_IsCharging : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_AcOutletOn_220V : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_HrsToCharge : 8|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ FBK_HighBeams : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_WorkLights : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_RunningLights : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_LowBeam : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_Voltage_12V : 24|8@1+ (0.1,0) [0|25.5] "V" Vector__XXX
+ SG_ FBK_Temp_Multiplexor M : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_Temp_Hydraulics_Sump m1 : 56|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ FBK_Temp_Hydraulics_FWD m1 : 48|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ FBK_Temp_Coolant_RadiatorOut m0 : 56|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ FBK_Temp_ACDB m0 : 48|8@1+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ FBK_Temp_OilRadiator_Inlet m1 : 32|8@1+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ FBK_Temp_OilRadiator_Outlet m1 : 40|8@1+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ FBK_Temp_VMAX_Outlet m0 : 40|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ FBK_Temp_VMAX_Inlet m0 : 32|8@1+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ FBK_BrakeLight : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_AcOutletOn_110V : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_TurnSignals : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2565538656 GILES01_Command_Accessory: 3 GILES01
+ SG_ Batt_Swap_Request : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Command_Horn : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CMD_Buzzer : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_IsoBus12V : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_RearWorkLightConfig : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_FrontWorkLightConfig : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_RightWorkLightConfig : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_LeftWorkLightConfig : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_AcOutletOn220V : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_RearWorkingLight : 5|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_RightSideWorkingLight : 7|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_LeftSideWorkingLight : 6|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_AcOutletOn110V : 8|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_TurnSignal : 2|2@1+ (1,0) [0|3] ""  VCU
+ SG_ CMD_Headlights : 0|2@1+ (1,0) [0|3] ""  VCU
+ SG_ CMD_FrontWorkingLight : 4|1@1+ (1,0) [0|1] ""  VCU
+
+BO_ 2566521440 GILES01_IMUdata_Fr02: 8 GILES01
+ SG_ IMU_z_accuracy m0 : 48|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ IMU_y_accuracy m0 : 40|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ IMU_x_accuracy m0 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ IMU_Mux M : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_GPS_Speed_Z m1 : 16|8@1- (0.07,0) [-8.96|8.89] "m/s" Vector__XXX
+ SG_ FBK_GPS_Speed_Y m1 : 8|8@1- (0.07,0) [-8.96|8.89] "m/s" Vector__XXX
+ SG_ FBK_GPS_Speed_X m1 : 0|8@1- (0.07,0) [-8.96|8.89] "m/s" Vector__XXX
+ SG_ FBK_Pitch m0 : 8|8@1- (1,0) [-128|127] "deg/s"  VCU
+ SG_ FBK_Yaw m0 : 16|9@1- (1,0) [-256|255] "deg/s"  VCU
+ SG_ FBK_Roll m0 : 0|8@1- (1,0) [-128|127] "deg"  VCU
+
+BO_ 2566521184 GILES01_IMUdata_Fr01: 8 GILES01
+ SG_ FBK_AccY : 16|16@1- (0.0001,0) [-3.2768|3.2767] "g"  VCU
+ SG_ FBK_AccZ : 32|16@1- (0.0001,0) [-3.2768|3.2767] "g"  VCU
+ SG_ FBK_AccX : 0|16@1- (0.0001,0) [-3.2768|3.2767] "g"  VCU
+
+BO_ 2364215905 VCU_Feedback_Fr02_Hydraulic: 8 VCU
+ SG_ FBK_ImplEnable : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_Calib_Steering : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_Calib_Brakes : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_Calib_3Pt : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_Implement_Action3 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_Implement_Action2 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_Implement_Action1 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_3PointMode : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FBK_Fwd_mode : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_3PointSetPosition_Top : 16|7@1+ (0.8,0) [0|100] "%" Vector__XXX
+ SG_ FBK_3PointSetPosition_Bottom : 0|7@1+ (0.8,0) [0|100] "%" Vector__XXX
+ SG_ FBK_BrakeReleased_RH : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_BrakeReleased_LH : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_3PointPosition_RH : 25|7@1+ (0.8,0) [0|101.6] "%" Vector__XXX
+ SG_ FBK_3PointPosition_LH : 9|7@1+ (0.8,0) [0|101.6] "%" Vector__XXX
+
+BO_ 2565603680 GILES01_CommandLimit: 8 GILES01
+ SG_ CMD_RoofReboot : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2364211552 GILES01_Command_Drive: 8 GILES01
+ SG_ CMD_PTO_RPM : 38|10@1+ (1,0) [0|1023] "" Vector__XXX
+ SG_ CMD_AllowDriving : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_AllowDriverless : 57|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ CMD_LoginStatus : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_VehicleVelocity : 0|10@1- (0.1,0) [-51.2|51.1] "kph" Vector__XXX
+ SG_ CMD_ThreePointSelect : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_PtoSelect : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_SteerSelect : 51|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_PropulsionSelect : 49|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_PtoSwitch : 48|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_ADCCapable : 56|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_FNR : 54|2@1+ (1,0) [0|3] ""  VCU
+ SG_ CMD_Gear : 34|4@1+ (1,0) [0|15] ""  VCU
+ SG_ CMD_SteeringAngle : 23|11@1- (0.1,0) [-102.4|102.3] "%"  VCU
+ SG_ CMD_TractionMotorSpeed : 10|13@1+ (1,0) [0|8191] "RPM"  VCU
+ SG_ CNT : 58|5@1+ (1,0) [0|31] ""  VCU
+
+BO_ 2364215649 VCU_Feedback_Fr01_Drive: 8 VCU
+ SG_ CNT : 8|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ FBK_BatterySOC : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ FBK_GearTarget : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FBK_MotorTorque : 50|10@1- (0.5,0) [-256|255.5] "Nm" Vector__XXX
+ SG_ FBK_Gear : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FBK_SteeringAngle : 38|12@1- (0.05,0) [-100|100] "%" Vector__XXX
+ SG_ FBK_TractionMotorSpeed : 24|14@1+ (1,0) [0|16383] "RPM" Vector__XXX
+
+BO_ 2364215393 VCU_State: 8 VCU
+ SG_ FBK_isReadyforOTA : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_bBeta1 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_InverterChargerState : 10|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FBK_PtoEngaged : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_JoyStickTouched : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_AutonomyComputeSwitchState : 49|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FBK_isButtonDetected : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_ByPassAdcBootUpDownWait : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_bAllowEnterNextState : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFine_ObDbW : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isCommandAligned : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isOverridenByUser : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isAutonomyRequestOn : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isDriverTakeOverDetected : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isDriverlessAllowedByTablet : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isDrivingAllowedByTablet : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isNoSpd : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_PowerOffRequest : 5|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FBK_ThreePointSelect : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_PtoSelect : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isSeatBeltPlugged : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFineHV : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFine_HvOn_2 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFine_HvOn_1 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFine_HvIsolation_2 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_HVBattState : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_DisengageBySteeringWheel : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_DisengageByBrakePedal : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_DisengageByAccelerator : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isDriverOccupancy : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isNoneEPO : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFineADC : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFineVehicle : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_isFine_HvIsolation_1 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_PtoSwitch : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_Horn : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_FNR : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_SteerSelected : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_PropulsionSelected : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_BrakeSelected : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FBK_LLCState : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CNT : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2364211808 GILES01_Command_Hydraulic: 8 GILES01
+ SG_ CMD_3PointLowerAndFloat : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_3PointMode : 30|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CMD_Fwd_mode : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CMD_DisablePTO : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_AuxHydraulic_6_enable : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_AuxHydraulic_6_direction : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_AuxHydraulic_2_direction : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_AuxHydraulic_1_enable : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_AuxHydraulic_1_direction : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_3PointSetPosition_Top : 14|7@1+ (0.8,0) [0|100] "%" Vector__XXX
+ SG_ CMD_3PointSetPosition_Bottom : 21|7@1+ (0.8,0) [0|100] "%" Vector__XXX
+ SG_ CMD_3PointRiseRate : 51|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ CMD_3PointFallRate : 48|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ CMD_3PointPosition : 0|7@1+ (0.8,0) [0|100] "%" Vector__XXX
+ SG_ CMD_AuxHydraulic_2_enable : 11|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CMD_AuxHydraulic_1_GPM : 38|5@1+ (1,0) [0|31] "%"  VCU
+ SG_ CMD_DraftControl : 56|8@1+ (0.4,0) [0|102] "%"  VCU
+
+BO_ 2566913889 VCU_FirmwareVersion: 8 VCU
+ SG_ FBK_DateTime m1 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Version_mux M : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FBK_FirmwareBuild_7 m0 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FBK_FirmwareBuild_6 m0 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FBK_FirmwareBuild_5 m0 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FBK_FirmwareBuild_4 m0 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FBK_FirmwareBuild_3 m0 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FBK_FirmwareBuild_2 m0 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FBK_FirmwareBuild_1 m0 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2565543009 FBK_HVBattCellTemp_MinStringNum "String 1 is the upper string on CAN3, string 2 is the lower string on CAN4";
+CM_ SG_ 2565543009 FBK_HVBattCellTemp_MinModuleNum "The module number which contains the maximum cell voltage";
+CM_ SG_ 2565543009 FBK_HVBattCellTemp_MaxStringNum "String 1 is the upper string on CAN3, string 2 is the lower string on CAN4";
+CM_ SG_ 2565543009 FBK_HVBattCellTemp_MaxModuleNum "The module number which contains the maximum cell voltage";
+CM_ SG_ 2565543009 FBK_HVBattCellVoltage_MinStringN "String 1 is the upper string on CAN3, string 2 is the lower string on CAN4";
+CM_ SG_ 2565543009 FBK_HVBattCellVoltage_MinModuleN "The module number which contains the minimum cell voltage";
+CM_ SG_ 2565543009 FBK_HVBattCellVoltage_MaxStringN "String 1 is the upper string on CAN3, string 2 is the lower string on CAN4";
+CM_ SG_ 2565543009 FBK_HVBattCellVoltage_MaxModuleN "The module number which contains the maximum cell voltage";
+CM_ SG_ 2566910305 FLT_LOC_Tablete "Tablet Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_GearSelector "Grayhill Gear Selector Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_JS "Joystick Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_BMU_E_Lower "Lower Battery Pack BMU Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_BMU_D_Upper "Upper Battery Pack BMU Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_P1 "Primary Pump Parker P1/PD Controller Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_StwRange "STW Bridge Drive for Range Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_StwGear "STW Bridge Drive for Gear Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_EHi_B "Danfoss EHi Steer-by-Wire Device CAN_B Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_EHi_A "Danfoss EHi Steer-by-Wire Device CAN_A Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_WP "EMP WP29/32 Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_Sevcon "Motor Controller Sevcon Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_mVecRoof "mVec Roof Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_mVecRun "mVecRun Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_mVecOn "mVecOn Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_DCDC "DC-DC Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_INVOBC "Inverter Charger Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_Dash "MTA Dashboard Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_TFD_B "Steering Torque Feedback Device CAN_B Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_TFD_A "Steering Torque Feedback Device CAN_A Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_ADC_B "ADC Node CAN_B Loss Of Communication";
+CM_ SG_ 2566910305 FLT_LOC_ADC_A "ADC Node CAN_A Loss Of Communication";
+CM_ SG_ 2566910305 FLT_OOR_SHIFT_RangeAbsEncoder "Shifting Range Absolute Encoder Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_SHIFT_GearAbsEncoder "Shifting Gear Absolute Encoder Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_NOP_PtoSW "PTO Switch NO/NC Not Opposite Fault";
+CM_ SG_ 2566910305 FLT_NOP_BrkPedSW "Brake Pedal Switch NO/NC Not Opposite Fault";
+CM_ SG_ 2566910305 FLT_OOR_Oil_Temp "Oil Loop Temperature Sensor Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_OilRad_Temp "Oil Radiator Temperature Sensor Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_3PDepPos_RH "Three Point Depth Position Right Hand Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_3PDepPos_LH "Three Point Depth Position Left Hand Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_3PDepCtrlIn "Three Point Depth Control Input Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_RHBrkRotPos "Right Brake Rotary Position Sensor Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_LHBrkRotPos "Left Brake Rotary Position Sensor Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_DISC_HTS "Hand Throttle Sensor Discrepancy Fault";
+CM_ SG_ 2566910305 FLT_DISC_TPS "Throttle Pedal Position Sensor Discrepancy Fault";
+CM_ SG_ 2566910305 FLT_OOR_HTS_Ch2 "Hand Throttle Sensor Channel 2 Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_HTS_Ch1 "Hand Throttle Sensor Channel 1 Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_TPS_Ch2 "Throttle Pedal Position Channel 2 Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_TPS_Ch1 "Throttle Pedal Position Channel 1 Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_ImpPres "DO3 Implement Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_TM_SysPres "Trans Manifold System Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_TM_RevPres "Trans Manifold Reverse Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_TM_FwdPres "Trans Manifold Forward Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_TM_AcumPres "Trans Manifold Accumulator Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_FntAxRevPres "DO3 Front Axle Reverse Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_FntAxFwdPres "DO3 Front Axle Forward Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxB_RerB_Pres "DO3 Auxiliary B Rear B Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxB_RerA_Pres "DO3 Auxiliary B Rear A Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxB_FntB_Pres "DO3 Auxiliary B Front B Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxB_FntA_Pres "DO3 Auxiliary B Front A Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxA_RerB_Pres "DO3 Auxiliary A Rear B Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxA_RerA_Pres "DO3 Auxiliary A Rear A Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxA_FntB_Pres "DO3 Auxiliary A Front B Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_DO3_AuxA_FntA_Pres "DO3 Auxiliary A Front A Pressure Out of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_BM_StrBrkAcumPres "Brake Manifold Left Hand Brake Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_BM_RHBrkPres "Brake Manifold Right Hand Brake Pressure Out Of Range Fault";
+CM_ SG_ 2566910305 FLT_OOR_BM_LHBrkPres "Brake Manifold Left Hand Brake Pressure Out Of Range Fault";
+CM_ SG_ 2364211552 CMD_SteeringAngle "equivelant front steering tire angle, NOT wheel";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "version" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "version" "draft_20191030";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "NmStationAddress" BU_ Tablet 95;
+BA_ "NmStationAddress" BU_ VCU 97;
+BA_ "NmStationAddress" BU_ GILES01 96;
+BA_ "GenMsgSendType" BO_ 2565543009 0;
+BA_ "GenMsgCycleTime" BO_ 2565543009 100;
+BA_ "GenMsgSendType" BO_ 2364236127 0;
+BA_ "GenMsgCycleTime" BO_ 2364236127 100;
+BA_ "GenMsgSendType" BO_ 2566910305 0;
+BA_ "GenMsgCycleTime" BO_ 2566910305 200;
+BA_ "GenMsgCycleTime" BO_ 2565542753 100;
+BA_ "GenMsgSendType" BO_ 2565542753 0;
+BA_ "GenMsgSendType" BO_ 2565538656 0;
+BA_ "GenMsgCycleTime" BO_ 2565538656 100;
+BA_ "GenMsgCycleTime" BO_ 2566521440 10;
+BA_ "GenMsgSendType" BO_ 2566521440 0;
+BA_ "GenMsgCycleTime" BO_ 2566521184 10;
+BA_ "GenMsgSendType" BO_ 2566521184 0;
+BA_ "GenMsgCycleTime" BO_ 2364215905 10;
+BA_ "GenMsgSendType" BO_ 2364215905 0;
+BA_ "GenMsgSendType" BO_ 2565603680 0;
+BA_ "GenMsgCycleTime" BO_ 2565603680 1000;
+BA_ "GenMsgSendType" BO_ 2364211552 0;
+BA_ "GenMsgCycleTime" BO_ 2364211552 10;
+BA_ "GenMsgCycleTime" BO_ 2364215649 10;
+BA_ "GenMsgSendType" BO_ 2364215649 0;
+BA_ "GenMsgCycleTime" BO_ 2364215393 10;
+BA_ "GenMsgSendType" BO_ 2364215393 0;
+BA_ "GenMsgCycleTime" BO_ 2364211808 10;
+BA_ "GenMsgSendType" BO_ 2364211808 0;
+BA_ "GenMsgCycleTime" BO_ 2566913889 10000;
+BA_ "GenMsgSendType" BO_ 2566913889 0;
+BA_ "GenSigStartValue" SG_ 2565543009 FBK_HVBattCellVoltage_Avg 510;
+BA_ "GenSigStartValue" SG_ 2565543009 FBK_HVBattCellTemp_Avg 40;
+BA_ "GenSigStartValue" SG_ 2565543009 FBK_HVBattCellReadingType 1;
+BA_ "SystemSignalLongSymbol" SG_ 2565543009 FBK_HVBattCellVoltage_MinStringN "FBK_HVBattCellVoltage_MinStringNum";
+BA_ "SystemSignalLongSymbol" SG_ 2565543009 FBK_HVBattCellVoltage_MinModuleN "FBK_HVBattCellVoltage_MinModuleNum";
+BA_ "SystemSignalLongSymbol" SG_ 2565543009 FBK_HVBattCellVoltage_MaxStringN "FBK_HVBattCellVoltage_MaxStringNum";
+BA_ "SystemSignalLongSymbol" SG_ 2565543009 FBK_HVBattCellVoltage_MaxModuleN "FBK_HVBattCellVoltage_MaxModuleNum";
+BA_ "GenSigStartValue" SG_ 2565543009 FBK_HVBattCellVoltage_Min 510;
+BA_ "GenSigStartValue" SG_ 2565543009 FBK_HVBattCellTemp_Min 40;
+BA_ "GenSigStartValue" SG_ 2565543009 FBK_HVBattCellVoltage_Max 510;
+BA_ "GenSigStartValue" SG_ 2565543009 FBK_HVBattCellTemp_Max 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_Hydraulics_Sump 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_Hydraulics_FWD 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_Coolant_RadiatorOut 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_ACDB 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_OilRadiator_Inlet 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_OilRadiator_Outlet 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_VMAX_Outlet 40;
+BA_ "GenSigStartValue" SG_ 2565542753 FBK_Temp_VMAX_Inlet 40;
+VAL_ 2364212320 CMD_Implement_Action3 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2364212320 CMD_Implement_Action2 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2364212320 CMD_Implement_Action1 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2565543265 FBK_Implement_Action3 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2565543265 FBK_Implement_Action2 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2565543265 FBK_Implement_Action1 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2565543009 FBK_HVBattCellVoltage_Avg 511 "ERROR" 510 "NO_VALUE" ;
+VAL_ 2565543009 FBK_HVBattCellTemp_Avg 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565543009 FBK_HVBattState 3 "DISABLE IN PROCESS" 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_ 2565543009 FBK_HVBattCellVoltage_Min 511 "ERROR" 510 "NO_VALUE" ;
+VAL_ 2565543009 FBK_HVBattCellTemp_Min 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565543009 FBK_HVBattCellVoltage_Max 511 "ERROR" 510 "NO_VALUE" ;
+VAL_ 2565543009 FBK_HVBattCellTemp_Max 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 Batt_Swap_State 6 "LV_Low" 5 "Timeout_Error" 4 "Swap_Error" 3 "Swap_Complete" 2 "Swap_in_Progress" 1 "Request_Recieved" 0 "Not_Active" ;
+VAL_ 2565542753 FBK_Temp_Hydraulics_Sump 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_Temp_Hydraulics_FWD 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_Temp_Coolant_RadiatorOut 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_Temp_ACDB 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_Temp_OilRadiator_Inlet 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_Temp_OilRadiator_Outlet 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_Temp_VMAX_Outlet 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_Temp_VMAX_Inlet 127 "ERROR" 126 "NO_VALUE" ;
+VAL_ 2565542753 FBK_TurnSignals 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+VAL_ 2565538656 CMD_TurnSignal 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+VAL_ 2565538656 CMD_Headlights 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_ 2364215905 FBK_Calib_Steering 3 "Calib failed" 2 "Calib done" 1 "In progress" 0 "Default" ;
+VAL_ 2364215905 FBK_Calib_Brakes 3 "Calib failed" 2 "Calib done" 1 "In progress" 0 "Default" ;
+VAL_ 2364215905 FBK_Calib_3Pt 3 "Calib failed" 2 "Calib done" 1 "In progress" 0 "Default" ;
+VAL_ 2364215905 FBK_Implement_Action3 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2364215905 FBK_Implement_Action2 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2364215905 FBK_Implement_Action1 3 "Hold Last" 2 "Inactive" 1 "Active" 0 "Off/Disable" ;
+VAL_ 2364215905 FBK_3PointMode 7 "Description for the value '0x7'" 6 "Description for the value '0x6'" 5 "Hold" 4 "Hold NoDrooping" 3 "Hookup" 2 "Float" 1 "Direct Duty Cycle" 0 "Open Loop" ;
+VAL_ 2364215905 FBK_Fwd_mode 2 "Force OFF" 1 "Manual ON" 0 "Auto" ;
+VAL_ 2364211552 CMD_FNR 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_ 2364211552 CMD_Gear 14 "AUTOMATIC" 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_ 2364215649 FBK_Gear 15 "FAULT" 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_ 2364215393 FBK_InverterChargerState 11 "InverterMode_On" 10 "InverterMode_Off" 5 "ChargerMode_HighPower" 4 "ChargerMode_LowPower" 3 "ChargerMode_Off" 2 "StandBy_On" 1 "StandBy_Off" 0 "Fault" ;
+VAL_ 2364215393 FBK_HVBattState 3 "DISABLE IN PROCESS" 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_ 2364215393 FBK_FNR 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_ 2364211808 CMD_3PointLowerAndFloat 1 "Lower and Float" 0 "Hold Position" ;
+VAL_ 2364211808 CMD_3PointMode 7 "Description for the value '0x7'" 6 "Description for the value '0x6'" 5 "Hold" 4 "Hold NoDrooping" 3 "Hookup" 2 "Float" 1 "Direct Duty Cycle" 0 "Open Loop" ;
+VAL_ 2364211808 CMD_Fwd_mode 2 "Force OFF" 1 "Manual ON" 0 "Auto" ;
+VAL_ 2364211808 CMD_DisablePTO 1 "PTO Disabled" 0 "PTO Enabled" ;
+VAL_ 2566913889 FBK_FirmwareBuild_7 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_ 2566913889 FBK_FirmwareBuild_6 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_ 2566913889 FBK_FirmwareBuild_5 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_ 2566913889 FBK_FirmwareBuild_4 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_ 2566913889 FBK_FirmwareBuild_3 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_ 2566913889 FBK_FirmwareBuild_2 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_ 2566913889 FBK_FirmwareBuild_1 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+

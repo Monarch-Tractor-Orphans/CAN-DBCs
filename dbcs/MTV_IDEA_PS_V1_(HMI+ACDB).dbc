@@ -1,0 +1,158 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Dash VCU
+VAL_TABLE_ VT_Lights 1 "Light on" 0 "Light off" ;
+VAL_TABLE_ VT_ErrorCodes 4 "HV battery overvoltage fault" 3 "HV Battery isolation fault" 2 "E-stop Pressed" 1 "12V battery low" 0 "No Error" ;
+VAL_TABLE_ VT_Parking_Brake 1 "Parking brake engaged" 0 "Parking brake disengaged" ;
+VAL_TABLE_ VT_Seatbelt 1 "Seatbelt plugged in" 0 "Seatbelt not plugged in" ;
+VAL_TABLE_ VT_FNR 2 "R" 1 "F" 0 "N" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Light_L6 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L5 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L4 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L3 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L17 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L14 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L2 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Fault_Detection : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ CNT : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Light_L18 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L13 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L16 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L15 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L9 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L12 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L11 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L10 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gear_Target : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Fault_Code : 0|10@1+ (1,20000) [20000|21023] "" Vector__XXX
+
+BO_ 2565609313 Autonomy_Data: 3 Vector__XXX
+ SG_ Trip_Hour_meter : 17|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Black_Screen_on : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hour_meter : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2565543777 VCU_Data: 8 Vector__XXX
+ SG_ Hitch_Position : 56|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Tractor_Ready : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Autonomous_mode_on : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Shifting_Locked : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OTA_Ongoing : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TCS_on : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hill_Hold_on : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Split_Braking_active : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RevMatch_Upper_Limit_exceeded : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RevMatch_Lower_Limit_exceeded : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FWD_on : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Buzzer : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L8 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L7 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_Error_code : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ HV_Battery_SOC : 30|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ PTO_RPM : 20|10@1+ (1,0) [0|1023] "" Vector__XXX
+ SG_ Vehicle_Speed : 14|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ Seatbelt : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Parking_Brake : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Traction_Motor_RPM : 8|6@1+ (100,0) [0|6300] "" Vector__XXX
+ SG_ FNR_Feedback : 4|2@1- (1,0) [-2|1] "" Vector__XXX
+ SG_ Gear_Feedback : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2565562647 Dash_IO_Temp_Status: 8 Dash
+ SG_ PE_VMAX_Coolant_Outlet_Temp : 46|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ PE_VMAX_Coolant_Inlet_Temp : 34|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ PE_Rad_Coolant_Outlet_Temp : 10|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Dash_Washer : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ S_IMPL_Voltage_Detection : 22|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Dash_StalkRotaryPosition_01 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_RightTurn : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_ReverseReq : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_StalkRotaryPosition_02 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_LeftTurnReq : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_HornReq : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_StalkRotaryPosition_03 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_ForwardReq : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_StalkFlashPosition_01 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2565562647 Dash_StalkRotaryPosition_01 "running light";
+CM_ SG_ 2565562647 Dash_StalkRotaryPosition_02 "low beam
+";
+CM_ SG_ 2565562647 Dash_StalkRotaryPosition_03 "high beam
+";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "HMI_dbc_test";
+BA_ "GenMsgSendType" BO_ 2565562647 0;
+BA_ "GenMsgCycleTime" BO_ 2565562647 100;
+VAL_ 3221225472 Light_L6 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L5 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L4 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L3 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L17 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L14 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L2 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L1 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L18 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L13 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L16 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L15 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L9 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L12 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L11 1 "Light on" 0 "Light off" ;
+VAL_ 3221225472 Light_L10 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L8 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L7 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 VCU_Error_code 4 "HV battery overvoltage fault" 3 "HV Battery isolation fault" 2 "E-stop Pressed" 1 "12V battery low" 0 "No Error" ;
+VAL_ 2565543777 Seatbelt 1 "Seatbelt plugged in" 0 "Seatbelt not plugged in" ;
+VAL_ 2565543777 Parking_Brake 1 "Parking brake engaged" 0 "Parking brake disengaged" ;
+

@@ -1,0 +1,422 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU INVOBC
+VAL_TABLE_ Vt_INVCH_SignalDSP_state 43 "CTRL_STATE_EXPORT_SHUTDOWN_4" 42 "CTRL_STATE_EXPORT_SHUTDOWN_3" 41 "CTRL_STATE_EXPORT_SHUTDOWN_2" 40 "CTRL_STATE_EXPORT_SHUTDOWN_1" 39 "CTRL_STATE_NA" 38 "CTRL_STATE_NA" 37 "CTRL_STATE_NA" 36 "CTRL_STATE_NA" 35 "CTRL_STATE_NA" 34 "CTRL_STATE_EXPORT_ALCI" 33 "CTRL_STATE_EXPORT_SHUTDOWN" 32 "CTRL_STATE_EXPORT_ENERGY" 31 "CTRL_STATE_EXPORT_DISABLED" 30 "CTRL_STATE_EXPORT_INIT" 29 "CTRL_STATE_NA" 28 "CTRL_STATE_NA" 27 "CTRL_STATE_NA" 26 "CTRL_STATE_NA" 25 "CTRL_STATE_NA" 24 "CTRL_STATE_NA" 23 "CTRL_STATE_CHARGER_SHUTDOWN_4" 22 "CTRL_STATE_CHARGER_SHUTDOWN_3" 21 "CTRL_STATE_CHARGER_SHUTDOWN_2" 20 "CTRL_STATE_CHARGER_SHUTDOWN_1" 19 "CTRL_STATE_NA" 18 "CTRL_STATE_NA" 17 "CTRL_STATE_NA" 16 "CTRL_STATE_NA" 15 "CTRL_STATE_VEHICLE_DOWN_CHARGER" 14 "CTRL_STATE_VEHICLE_ERROR" 13 "CTRL_STATE_VEHICLE_ENERGY_DISC_E" 12 "CTRL_STATE_VEHICLE_ACCEPT_CD" 11 "CTRL_STATE_VEHICLE_CONNECTED_B" 10 "CTRL_STATE_VEHICLE_NOT_CON_A" 9 "CTRL_STATE_MODULE_DEBUG" 8 "CTRL_STATE_MODULE_STAND_BY" 7 "CTRL_STATE_MODULE_EXPORT" 6 "CTRL_STATE_MODULE_TEST" 5 "CTRL_STATE_MODULE_DELAYED_SLEEP" 4 "CTRL_STATE_MODULE_SLEEP" 3 "CTRL_STATE_MODULE_OTP" 2 "CTRL_STATE_MODULE_VEHICLE_CHARGE" 1 "CTRL_STATE_MODULE_WAKE_UP" 0 "CTRL_STATE_MODULE_INIT" ;
+VAL_TABLE_ Vt_Unit_ready 1 "Unit is ready" 0 "Unit is NOT ready" ;
+VAL_TABLE_ Vt_Chg_Vehicle_States 6 "State F" 5 "State E" 4 "State D" 3 "State C" 2 "State B" 1 "State A" ;
+VAL_TABLE_ Vt_Signal_State 43 "CTRL_STATE_EXPORT_SHUTDOWN_4" 42 "CTRL_STATE_EXPORT_SHUTDOWN_3" 41 "CTRL_STATE_EXPORT_SHUTDOWN_2" 40 "CTRL_STATE_EXPORT_SHUTDOWN_1" 39 "CTRL_STATE_NA" 38 "CTRL_STATE_NA" 37 "CTRL_STATE_NA" 36 "CTRL_STATE_NA" 35 "CTRL_STATE_NA" 34 "CTRL_STATE_EXPORT_ALCI" 33 "CTRL_STATE_EXPORT_SHUTDOWN" 32 "CTRL_STATE_EXPORT_ENERGY" 31 "CTRL_STATE_EXPORT_DISABLED" 30 "CTRL_STATE_EXPORT_INIT" 29 "CTRL_STATE_NA" 28 "CTRL_STATE_NA" 27 "CTRL_STATE_NA" 26 "CTRL_STATE_NA" 25 "CTRL_STATE_NA" 24 "CTRL_STATE_NA" 23 "CTRL_STATE_CHARGER_SHUTDOWN_4" 22 "CTRL_STATE_CHARGER_SHUTDOWN_3" 21 "CTRL_STATE_CHARGER_SHUTDOWN_2" 20 "CTRL_STATE_CHARGER_SHUTDOWN_1" 19 "CTRL_STATE_NA" 18 "CTRL_STATE_NA" 17 "CTRL_STATE_NA" 16 "CTRL_STATE_NA" 15 "CTRL_STATE_VEHICLE_SHDN_CHARGER" 14 "CTRL_STATE_VEHICLE_ERROR" 13 "CTRL_STATE_VEHICLE_ENERGY_DISC_E" 12 "CTRL_STATE_VEHICLE_ACCEPT_ENG_CD" 11 "CTRL_STATE_VEHICLE_CONNECTED_B" 10 "CTRL_STATE_VEHICLE_NOT_CON_A" 9 "CTRL_STATE_NA" 8 "CTRL_STATE_MODULE_DEBUG" 7 "CTRL_STATE_MODULE_EXPORT" 6 "CTRL_STATE_MODULE_TEST" 5 "CTRL_STATE_MODULE_DELAYED_SLEEP" 4 "CTRL_STATE_MODULE_SLEEP" 3 "CTRL_STATE_MODULE_PREPARE_SLEEP" 2 "CTRL_STATE_MODULE_VEHICLE_CHARGE" 1 "CTRL_STATE_MODULE_WAKE_UP" 0 "CTRL_STATE_MODULE_INIT" ;
+VAL_TABLE_ Vt_ALCI_test 1 "Perform ALCI test" ;
+VAL_TABLE_ Vt_LED_Mode 2 "FLASH" 1 "SOLID" 0 "OFF" ;
+VAL_TABLE_ Vt_Pilot_Impedance 1 "State C" 0 "State B" ;
+VAL_TABLE_ Vt_WOC_Mode 2 "WOC_mode_VcuReWake" 1 "WOC_mode_delayed_module_sleep" 0 "WOC_mode_Sleep" ;
+VAL_TABLE_ Vt_Wake_Signal 1 "Turn ON WAKE output" 0 "Turn OFF WAKE output" ;
+VAL_TABLE_ Vt_Mode 1 "Charger Mode" 0 "Export Power Mode" ;
+VAL_TABLE_ Vt_Enable 1 "Turn ON oputput" 0 "Turn OFF output" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ INVCH_Bdc_SignalDSP_State : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_TempPercent : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Int : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Bb : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Inv : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_TempPercent : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Int : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Bb : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+
+BO_ 2565406656 INVCH_unknown: 8 INVOBC
+
+BO_ 2566834880 INVCH_DM1: 8 INVOBC
+
+BO_ 2632712128 INVCH_TPDT: 8 INVOBC
+
+BO_ 2632777664 INVCH_TPCM: 8 INVOBC
+
+BO_ 2566904768 INVCH_Bdc_Temperature_Bb: 8 INVOBC
+ SG_ INVCH_Bdc_Bb_BBTemp : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Bb_BBIntTemp : 48|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Bb_BBDC2Temp : 32|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Bb_BBDC1Temp : 16|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+
+BO_ 2566904512 INVCH_Bdc_Temperature_Inv: 8 INVOBC
+ SG_ INVCH_Bdc_Inv_TempInv2Deg : 48|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Inv_TempInv1Deg : 32|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Inv_TempDcDc2Deg : 16|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Inv_TempDcDc1Deg : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+
+BO_ 2566904256 INVCH_Bdc_Chg_Info: 8 INVOBC
+ SG_ INVCH_Bdc_Chg_Vehicle_State : 16|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ INVCH_Chg_Ibat_max_available : 0|16@1+ (0.05,0) [0|80] "A" Vector__XXX
+
+BO_ 2566902976 INVCH_Bdc_F_W_S_Message: 8 INVOBC
+ SG_ INVCH_Bdc_bEVSEMode m0 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bExport50Hz m0 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bAutoLowPower m0 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bEVSEDisConnected m0 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bFreqOver m3 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bFreqUnder m3 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bExtCanFail m3 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Signal_ShutDown_State m0 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ INVCH_Bdc_ShutDown_Source : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bWakeOutputError m3 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bOTP m3 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bInverterFault m3 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bHVBatteryUV m3 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bHVBatteryOV m3 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bExportOverload m3 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bBBFault m3 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bBatteryUV m3 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bACUV m3 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bACOV m3 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Error_bACOk m3 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Inverter_Status m2 : 40|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ INVCH_Bdc_BuckBoost_Status m1 : 40|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ INVCH_Bdc_bStandBy m0 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bLowPowerMode m0 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bGridTied m0 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bUnitReady m0 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_Signal_State m0 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ INVCH_Bdc_bWakeOutputOn m0 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bVehicleConnected m0 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bReWaked m0 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bProximityEn m0 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bPilotInPwm m0 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bSwitchS2En m0 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bModuleDelayledSleepM m0 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bKeySwitch m0 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bInvReady m0 : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bInvAlive m0 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bExporting m0 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bExportEnergyEn m0 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bEVSEConnected m0 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bCharging m0 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bBBReady m0 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bBBAlive m0 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bAuxEn m0 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bAlciReset m0 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bAlciActive m0 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_bChrgEnergyFlowEn m0 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Index M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565849088 VCU_INVCH_Bdc_Setpoint: 8 VCU
+ SG_ INVCH_Inv_Freq m2 : 24|8@1+ (1,0) [0|255] "Hz" Vector__XXX
+ SG_ INVCH_Inv_Volt m2 : 32|8@1+ (1,0) [0|255] "Vac" Vector__XXX
+ SG_ INVCH_Bdc_inv_alci_disable m7 : 24|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ INVCH_Bdc_12V_Battery_UV_Limit m10 : 8|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ INVCH_Chg_Iac_Lim m1 : 40|16@1+ (0.05,0) [0|80] "A" Vector__XXX
+ SG_ INVCH_Chg_EVSE_Mode m1 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_Battery_StateOfCharge m9 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ INVCH_Index3 m8M : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch9 m1 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch8 m1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch7 m1 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch6 m0 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch5 m0 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch4 m0 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch32 m5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch31 m5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch30 m5 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch3 m0 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch29 m5 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch28 m4 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch27 m4 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch26 m4 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch25 m4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch24 m4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch23 m4 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch22 m3 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch21 m3 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch20 m3 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch2 m0 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch19 m3 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch18 m3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch17 m3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch16 m2 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch15 m2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch14 m2 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch13 m2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch12 m1 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch11 m1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch10 m1 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_lcd_ch1 m0 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Bdc_inv_alci_test m7 : 8|8@1+ (1,0) [1|1] "" Vector__XXX
+ SG_ INVCH_Bdc_inv_alci_LED_bright m7 : 16|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_LED_On_timer m6 : 48|16@1+ (1,0) [0|65535] "min" Vector__XXX
+ SG_ INVCH_Bdc_LED2_phase m7 : 48|16@1- (1,0) [0|65535] "ms" Vector__XXX
+ SG_ INVCH_Bdc_LED2_on_time m7 : 32|8@1+ (50,0) [0|12750] "ms" Vector__XXX
+ SG_ INVCH_Bdc_LED2_mode m7 : 16|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ INVCH_Bdc_LED2_duty m7 : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_LED2_bright m7 : 24|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_LED1_on_time m6 : 32|8@1+ (50,0) [0|12750] "ms" Vector__XXX
+ SG_ INVCH_Bdc_LED1_mode m6 : 16|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ INVCH_Bdc_LED1_duty m6 : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_LED1_bright m6 : 24|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_woc_undervoltage_set m3 : 16|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ INVCH_Bdc_woc_undervoltage_act m3 : 32|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ INVCH_Bdc_woc_timer_delay_action m2 : 32|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ INVCH_Bdc_woc_timer_delay m2 : 16|16@1+ (1,0) [0|65535] "min" Vector__XXX
+ SG_ INVCH_Bdc_woc_mode m1 : 16|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ INVCH_Bdc_woc_ctrl_pil_tresh_low m4 : 16|8@1+ (1,0) [3|97] "%" Vector__XXX
+ SG_ INVCH_Bdc_woc_ctrl_pil_tresh_hi m4 : 24|8@1+ (1,0) [3|97] "%" Vector__XXX
+ SG_ INVCH_Bdc_woc_ctrl_pil_cycle_act m4 : 32|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ INVCH_Bdc_woc_control_pilot_imp m5 : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_woc_wake m0 : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Index2 m3M : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INVCH_Inv_Vbat_UV_lim m2 : 8|16@1+ (0.05,0) [0|3276.75] "Vdc" Vector__XXX
+ SG_ INVCH_Chg_Ibat_lim m1 : 24|16@1+ (0.05,0) [0|80] "A" Vector__XXX
+ SG_ INVCH_Chg_Vbat_lim m1 : 8|16@1+ (0.05,0) [0|500] "Vdc" Vector__XXX
+ SG_ INVCH_Bdc_cmd_Mode m0 : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Bdc_cmd_Enable m0 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INVCH_Index M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566904000 INVCH_Bdc_J1772: 8 INVOBC
+ SG_ INVCH_Bdc_On_Time : 40|24@1+ (1,0) [0|16777215] "min" Vector__XXX
+ SG_ INVCH_Chg_Pilot_Freq : 24|16@1+ (1,0) [0|1500] "Hz" Vector__XXX
+ SG_ INVCH_Chg_Pilot_Duty : 16|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_12Vbat : 0|16@1+ (0.02,0) [0|1310.7] "V" Vector__XXX
+
+BO_ 2566903232 INVCH_Bdc_Temperature: 8 INVOBC
+ SG_ INVCH_Bdc_TempPercent : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Int : 32|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Bb : 16|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+ SG_ INVCH_Bdc_Temperature_Inv : 0|16@1- (0.1,0) [-100|200] "degC" Vector__XXX
+
+BO_ 2566903744 INVCH_Bdc_battery_Chg_input: 8 INVOBC
+ SG_ INVCH_Chg_Iin_RMS : 48|16@1+ (0.05,0) [0|200] "A" Vector__XXX
+ SG_ INVCH_Chg_Vin_RMS : 32|16@1+ (0.05,0) [0|300] "V" Vector__XXX
+ SG_ INVCH_Bdc_Ibat : 16|16@1- (0.05,0) [-50|50] "A" Vector__XXX
+ SG_ INVCH_Bdc_Vbat : 0|16@1+ (0.05,0) [0|500] "V" Vector__XXX
+
+BO_ 2566903488 INVCH_Inv_Output: 8 INVOBC
+ SG_ INVCH_Inv_Iout2_RMS : 48|16@1+ (0.05,0) [0|100] "A" Vector__XXX
+ SG_ INVCH_Inv_Iout1_RMS : 32|16@1+ (0.05,0) [0|100] "A" Vector__XXX
+ SG_ INVCH_Inv_Vout2_RMS : 16|16@1+ (0.05,0) [0|200] "V" Vector__XXX
+ SG_ INVCH_Inv_Vout1_RMS : 0|16@1+ (0.05,0) [0|200] "V" Vector__XXX
+
+BO_ 2565521408 RQST: 8 Vector__XXX
+ SG_ ParameterGroupNumber : 0|24@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "ProtocolType" "";
+BA_ "BusType" "CAN";
+BA_ "DBName" "Node_INVOBC";
+BA_ "NmStationAddress" BU_ VCU 97;
+BA_ "NmStationAddress" BU_ INVOBC 192;
+BA_ "GenMsgSendType" BO_ 2565406656 0;
+BA_ "GenMsgCycleTime" BO_ 2565406656 100;
+BA_ "VFrameFormat" BO_ 2565406656 1;
+BA_ "VFrameFormat" BO_ 2566834880 1;
+BA_ "VFrameFormat" BO_ 2632712128 1;
+BA_ "VFrameFormat" BO_ 2632777664 1;
+BA_ "GenMsgCycleTime" BO_ 2566904768 1000;
+BA_ "VFrameFormat" BO_ 2566904768 1;
+BA_ "GenMsgCycleTime" BO_ 2566904512 1000;
+BA_ "VFrameFormat" BO_ 2566904512 1;
+BA_ "VFrameFormat" BO_ 2566904256 1;
+BA_ "VFrameFormat" BO_ 2566902976 1;
+BA_ "GenMsgCycleTime" BO_ 2566902976 100;
+BA_ "GenMsgCycleTime" BO_ 2565849088 100;
+BA_ "GenMsgRequestable" BO_ 2565849088 1;
+BA_ "VFrameFormat" BO_ 2565849088 1;
+BA_ "VFrameFormat" BO_ 2566904000 1;
+BA_ "GenMsgCycleTime" BO_ 2566904000 1000;
+BA_ "VFrameFormat" BO_ 2566903232 1;
+BA_ "GenMsgCycleTime" BO_ 2566903232 1000;
+BA_ "VFrameFormat" BO_ 2566903744 1;
+BA_ "GenMsgCycleTime" BO_ 2566903744 100;
+BA_ "VFrameFormat" BO_ 2566903488 1;
+BA_ "GenMsgCycleTime" BO_ 2566903488 100;
+BA_ "VFrameFormat" BO_ 2565521408 1;
+BA_ "GenSigStartValue" SG_ 2565849088 INVCH_Bdc_inv_alci_disable 1;
+BA_ "GenSigStartValue" SG_ 2565849088 INVCH_Bdc_inv_alci_test 1;
+BA_ "GenSigStartValue" SG_ 2565849088 INVCH_Bdc_woc_ctrl_pil_tresh_low 3;
+BA_ "GenSigStartValue" SG_ 2565849088 INVCH_Bdc_woc_ctrl_pil_tresh_hi 3;
+BA_ "GenSigStartValue" SG_ 2565849088 INVCH_Bdc_woc_ctrl_pil_cycle_act 0;
+VAL_ 2566904256 INVCH_Bdc_Chg_Vehicle_State 6 "State F" 5 "State E" 4 "State D" 3 "State C" 2 "State B" 1 "State A" ;
+VAL_ 2566902976 INVCH_Bdc_Signal_ShutDown_State 0 "INIT" 1 "WAKE_UP" 2 "VEH_CHARGE" 3 "OTP" 4 "SLEEP" 5 "DELAYED_SLEEP" 6 "TEST" 7 "EXPORT" 8 "STANDBY" 9 "DEBUG" 10 "NOT_CONN_A" 11 "CONN_B" 12 "ACCEPT_ENERGY_CD" 13 "ENERGY_DISC_E" 14 "ERR" 15 "SHUTDOWN_CHARGER" 20 "CHRGR_SHTDOWN_1" 21 "CHRGR_SHTDOWN_2" 22 "CHRGR_SHTDOWN_3" 23 "CHRGR_SHTDOWN_4" 30 "EXP_INIT" 31 "EXP_DISABLED" 32 "EXP_ENERGY" 33 "EXP_SHTDOWN" 34 "EXP_ALCI" 40 "EXP_SHTDWN_1" 41 "EXP_SHTDWN_2" 42 "EXP_SHTDWN_3" 43 "EXP_SHTDWN_4" ;
+VAL_ 2566902976 INVCH_Bdc_ShutDown_Source 19 "AC_OV_FAIL" 18 "AC_UV_FAIL" 17 "FREQ_OVER_FAIL" 16 "FREQ_UNDER_FAIL" 15 "EXT_CAN_TIMEOUT" 14 "DELAYED_SLEEP" 13 "BUCKBOOST_CAN_FAIL" 12 "INVERTER_CAN_FAIL" 11 "PROXIMITY" 10 "PILOT" 9 "S2_SWITCH" 8 "HV_BATTERY_UV" 7 "HV_BATTERY_OV" 6 "OTP" 5 "AC_FAIL" 4 "BUCKBOOST_ERROR" 3 "INVERTER_ERROR" 2 "KEY_SWITCH" 1 "COMMAND" 0 "NONE" ;
+VAL_ 2566902976 INVCH_Bdc_Inverter_Status 34 "INV_HICCUP" 33 "PFC_ENABLE_N" 32 "INV_ENABLE_N" 31 "INV_DC_DEBUG_NO_PROT" 30 "WATCHDOG" 29 "PFC_AC_UV_OV" 28 "INV_DC_DEBUG" 27 "DC_DEBUG" 26 "PFC_RUNNING" 25 "PFC_RELAY_START" 24 "PFC_SOFTSTART" 23 "PFC_DRIVER_SOFTSTART" 22 "PFC_DEBUG" 21 "INV_RELAY_START" 20 "ALCI_ACTIVE" 19 "INV_DRIVER_SOFTSTART" 18 "PFC_DC_UV_OV" 17 "GOTO_SLEEP" 16 "JUMP_BOOTLOADER" 15 "SOFTSTART" 14 "BB_SOFTSTART" 13 "INV_SOFTSTART" 12 "SHORTCIRCUIT" 11 "OVERLOAD" 10 "DRIVER_FAULT" 9 "INIT" 8 "INV_DEBUG" 7 "OTP" 6 "BUS_ERROR" 5 "LATCHED_FAULT" 4 "INV_RUNNING" 3 "INV_STARTUP" 2 "INV_UV_OV" 1 "IDDLE" 0 "FIRST_START" ;
+VAL_ 2566902976 INVCH_Bdc_BuckBoost_Status 20 "WATCHDOG" 19 "DC_DEBUG" 18 "BB_DEBUG" 17 "GOTO_SLEEP" 16 "JUMP_BOOTLOADER" 15 "SOFTSTART" 14 "BB_SOFTSTART" 13 "DCDC_SOFTSTART" 12 "SHORTCIRCUIT" 11 "OVERLOAD" 10 "DRIVER_FAULT" 9 "INIT" 8 "DEBUG" 7 "OTP" 6 "BUS_ERROR" 5 "LATCHED_FAULT" 4 "RUNNING" 3 "STARTUP" 2 "UV_OV" 1 "IDDLE" 0 "FIRST_START" ;
+VAL_ 2566902976 INVCH_Bdc_bUnitReady 1 "Unit is ready" 0 "Unit is NOT ready" ;
+VAL_ 2566902976 INVCH_Bdc_Signal_State 0 "INIT" 1 "WAKE_UP" 2 "VEH_CHARGE" 3 "OTP" 4 "SLEEP" 5 "DELAYED_SLEEP" 6 "TEST" 7 "EXPORT" 8 "STANDBY" 9 "DEBUG" 10 "NOT_CONN_A" 11 "CONN_B" 12 "ACCEPT_ENERGY_CD" 13 "ENERGY_DISC_E" 14 "ERR" 15 "SHUTDOWN_CHARGER" 20 "CHRGR_SHTDOWN_1" 21 "CHRGR_SHTDOWN_2" 22 "CHRGR_SHTDOWN_3" 23 "CHRGR_SHTDOWN_4" 30 "EXP_INIT" 31 "EXP_DISABLED" 32 "EXP_ENERGY" 33 "EXP_SHTDOWN" 34 "EXP_ALCI" 40 "EXP_SHTDWN_1" 41 "EXP_SHTDWN_2" 42 "EXP_SHTDWN_3" 43 "EXP_SHTDWN_4" ;
+VAL_ 2565849088 INVCH_Bdc_inv_alci_disable 1 "Disable ALCI" ;
+VAL_ 2565849088 INVCH_Bdc_inv_alci_test 1 "Perform ALCI test" ;
+VAL_ 2565849088 INVCH_Bdc_LED2_mode 2 "FLASH" 1 "SOLID" 0 "OFF" ;
+VAL_ 2565849088 INVCH_Bdc_LED1_mode 2 "FLASH" 1 "SOLID" 0 "OFF" ;
+VAL_ 2565849088 INVCH_Bdc_woc_undervoltage_act 2 "WOC_VcuReWake" 1 "WOC_sleep" 0 "WOC_no_action" ;
+VAL_ 2565849088 INVCH_Bdc_woc_timer_delay_action 2 "WOC_VcuReWake" 1 "WOC_sleep" 0 "WOC_no_action" ;
+VAL_ 2565849088 INVCH_Bdc_woc_mode 2 "WOC_mode_VcuReWake" 1 "WOC_mode_delayed_module_sleep" 0 "WOC_mode_Sleep" ;
+VAL_ 2565849088 INVCH_Bdc_woc_ctrl_pil_cycle_act 2 "WOC_VcuReWake" 1 "WOC_sleep" 0 "WOC_no_action" ;
+VAL_ 2565849088 INVCH_Bdc_woc_control_pilot_imp 1 "State C" 0 "State B" ;
+VAL_ 2565849088 INVCH_Bdc_woc_wake 1 "Turn ON WAKE output" 0 "Turn OFF WAKE output" ;
+VAL_ 2565849088 INVCH_Bdc_cmd_Mode 3 "Charger Low Power Mode" 2 "Stand-By" 1 "Charger Mode" 0 "Export Power Mode" ;
+VAL_ 2565849088 INVCH_Bdc_cmd_Enable 1 "Turn ON oputput" 0 "Turn OFF output" ;
+VAL_ 2565521408 ParameterGroupNumber 65259 "Component ID" 65242 "Software version" ;
+
+SG_MUL_VAL_ 2565849088 INVCH_Inv_Freq INVCH_Index 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Inv_Volt INVCH_Index 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_inv_alci_disable INVCH_Index 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_12V_Battery_UV_Limit INVCH_Index 10-10;
+SG_MUL_VAL_ 2565849088 INVCH_Chg_Iac_Lim INVCH_Index 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Chg_EVSE_Mode INVCH_Index 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_Battery_StateOfCharge INVCH_Index 9-9;
+SG_MUL_VAL_ 2565849088 INVCH_Index3 INVCH_Index 8-8;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch9 INVCH_Index3 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch8 INVCH_Index3 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch7 INVCH_Index3 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch6 INVCH_Index3 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch5 INVCH_Index3 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch4 INVCH_Index3 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch32 INVCH_Index3 5-5;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch31 INVCH_Index3 5-5;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch30 INVCH_Index3 5-5;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch3 INVCH_Index3 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch29 INVCH_Index3 5-5;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch28 INVCH_Index3 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch27 INVCH_Index3 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch26 INVCH_Index3 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch25 INVCH_Index3 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch24 INVCH_Index3 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch23 INVCH_Index3 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch22 INVCH_Index3 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch21 INVCH_Index3 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch20 INVCH_Index3 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch2 INVCH_Index3 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch19 INVCH_Index3 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch18 INVCH_Index3 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch17 INVCH_Index3 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch16 INVCH_Index3 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch15 INVCH_Index3 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch14 INVCH_Index3 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch13 INVCH_Index3 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch12 INVCH_Index3 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch11 INVCH_Index3 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch10 INVCH_Index3 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_lcd_ch1 INVCH_Index3 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_inv_alci_test INVCH_Index 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_inv_alci_LED_bright INVCH_Index 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED_On_timer INVCH_Index2 6-6;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED2_phase INVCH_Index2 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED2_on_time INVCH_Index2 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED2_mode INVCH_Index2 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED2_duty INVCH_Index2 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED2_bright INVCH_Index2 7-7;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED1_on_time INVCH_Index2 6-6;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED1_mode INVCH_Index2 6-6;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED1_duty INVCH_Index2 6-6;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_LED1_bright INVCH_Index2 6-6;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_undervoltage_set INVCH_Index2 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_undervoltage_act INVCH_Index2 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_timer_delay_action INVCH_Index2 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_timer_delay INVCH_Index2 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_mode INVCH_Index2 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_ctrl_pil_tresh_low INVCH_Index2 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_ctrl_pil_tresh_hi INVCH_Index2 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_ctrl_pil_cycle_act INVCH_Index2 4-4;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_control_pilot_imp INVCH_Index2 5-5;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_woc_wake INVCH_Index2 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Index2 INVCH_Index 3-3;
+SG_MUL_VAL_ 2565849088 INVCH_Inv_Vbat_UV_lim INVCH_Index 2-2;
+SG_MUL_VAL_ 2565849088 INVCH_Chg_Ibat_lim INVCH_Index 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Chg_Vbat_lim INVCH_Index 1-1;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_cmd_Mode INVCH_Index 0-0;
+SG_MUL_VAL_ 2565849088 INVCH_Bdc_cmd_Enable INVCH_Index 0-0;

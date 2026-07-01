@@ -1,0 +1,104 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DBG VCU
+VAL_TABLE_ Battery_Subsystem 24 "HV battery Low" 23 "12 Battery Low" 22 "Tractor HVIL" 21 "BMS HVIL" 20 "Lower BMS Severe Fault" 19 "Lower String High CellV" 18 "Lower String Over Voltage" 17 "Lower String Low CellV" 16 "Lower String Low Voltage" 15 "Upper BMS Severe Fault" 14 "Upper String High CellV" 13 "Upper String Over Voltage" 12 "Upper String Low CellV" 11 "Upper String low Voltage" 10 "Pack imbl_ Upper Active" 9 "Pack imbl_ Lower Active" 8 "SOC Critically Low" 7 "Low SOC" 6 "Lower String Down" 5 "Upper String Down" 4 "Voltage Imbalance" 3 "Both BMS LOC" 2 "Lower String LOC" 1 "Upper String LOC" 0 "No Fault" ;
+VAL_TABLE_ Hydraulics_Flt 37 "Work Pump Pos OOR" 36 "Drive Clutch Pressure OOR" 35 "PTO Clutch Pressure OOR" 34 "Trans Acc Pressure OOR" 33 "SteerBrk Acc Pressure OOR" 32 "Suction Line Pressure OOR" 31 "Tractor Pump Pressure OOR" 30 "Work Pump Pressure OOR" 29 "Right Brake Pressure OOR" 28 "Left Brake Pressure OOR" 27 "Tractor Pump OverLoaded" 26 "RH Brake Out Of Calibration" 25 "LH Brake Out Of Calibration" 24 "RH Brake SetValve OpenCircuit" 23 "RH Brake RelValve OpenCircuit" 22 "LH Brake SetValve OpenCircuit" 21 "LH Brake RelValve OpenCircuit" 20 "RH Brake Under Engagement" 19 "LH Brake Under Engagement" 18 "RH Brake Over Engagement" 17 "LH Brake Over Engagement" 16 "PTO Engagement Interlock" 15 "PTO Clutch Valve OpenCircuit" 14 "Lube Valve OpenCircuit" 13 "Drive Clutch Valve OpenCircuit" 12 "Lube Valve Timeout" 11 "Gear mismatch clutch disengaged" 10 "Clutch Pressure Low" 9 "Aux ON/OFFvalve OpenCircuit" 8 "WorkPumpOverloaded/Air" 7 "PTO Clutch Pressure Low" 6 "TransFlowValve OpenCircuit" 5 "Trans Manifold Pressure High" 4 "Trans Manifold Pressure Low" 3 "SteerBrake Valve OpenCircuit" 2 "SteerBrake Acc Press High" 1 "SteerBrake Acc Press Low" 0 "No Fault" ;
+VAL_TABLE_ Charging_Flt 32 "Chargers Disabled" 31 "DCAC_3 Flt" 30 "DCAC_2 Flt" 29 "DCAC_1 Flt" 28 "DCDC_3 Irregular Voltage" 27 "DCDC_2 Irregular Voltage" 26 "DCDC_1 Irregular Voltage" 25 "Chg_3 OBC Flt" 24 "Chg_2 OBC Flt" 23 "Chg_1 OBC Flt" 22 "DCDC_3 OverTemp" 21 "DCDC_2 OverTemp" 20 "DCDC_1 OverTemp" 19 "Chg_3 OverTemp " 18 "Chg_2 OverTemp" 17 "Chg_1 OverTemp" 16 "DCDC_3 Flt" 15 "DCDC_2 Flt" 14 "DCDC_1 Flt" 13 "ACDB eFuse8 OverCurrent" 12 "ACDB eFuse6 OverCurrent" 11 "ACDB eFuse3 OverCurrent" 10 "ACDB eFuse1 OverCurrent" 9 "ACDB Conv. Error" 8 "ACDB SIMPL Error" 7 "ACDB EVSE Error" 6 "ACDB 3Ph Error" 5 "ACDB 1Ph Error" 4 "ACDB OverTemp" 3 "ACDB disabled" 2 "Charger Improper Connection" 1 "Charger LOC" 0 "No Fault" ;
+VAL_TABLE_ Thermal_Flt 5 "Hyd Over Temp Protection" 4 "Hyd Over Temp Warning" 3 "Cooling Pump Disconnected" 2 "Air in cooling system" 1 "Cooling Pump OverCurrent" 0 "No Fault" ;
+VAL_TABLE_ Traction_Flt 23 "Inverter LOC" 22 "Regen Limited" 21 "Regen Disabled" 20 "Clutch Interlock" 19 "Motor Over loaded" 18 "bStart Check Fail" 17 "Disengage by Accel." 16 "Min Cell Voltage Low" 15 "DC Link Voltage Low" 14 "Pack Voltage Low" 13 "Speed Input Error" 12 "Motor Torque Limit" 11 "Insufficient Torque Applied" 10 "Hydraulic Oil Over Temp" 9 "Inverter Over Temperature" 8 "Inverter Fault OFF" 7 "Control Word Check Error" 6 "Hand Throttle Error" 5 "Hand Throttle Ch2 OOR" 4 "Hand Throttle Ch1 OOR" 3 "Foot Throttle Error" 2 "Foot Throttle Ch2 OOR" 1 "Foot Throttle Ch1 OOR" 0 "No Fault" ;
+VAL_TABLE_ Shift_Position_Error 0 "Not In Any Target" ;
+VAL_TABLE_ STATE_CONTACTORS 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_TABLE_ OVERRIDE_BRAKE_LIGHT 3 "FUNCTION NOT AVAILABLE" 2 "ENABLE OVERRIDE TO ON" 1 "ENABLE OVERRIDE TO OFF" 0 "DISABLE OVERRIDE" ;
+VAL_TABLE_ STATE_SHIFT 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_TABLE_ STATE_GEAR_POSITION 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_TABLE_ STATE_HEAD_LIGHT 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_TABLE_ STATE_TURN_SIGNAL 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+VAL_TABLE_ State 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Left_Sen_deg : 0|7@1- (1,0) [-64|63] "" Vector__XXX
+ SG_ Right_Sen_deg : 0|7@1- (1,0) [-64|63] "" Vector__XXX
+ SG_ Steering_PID_Error : 0|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Tires_moving_state : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Steering_wheel_moving : 0|2@1- (1,0) [-2|1] "" Vector__XXX
+ SG_ Steering_CtrlStr_RightOffset : 0|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Steering_CtrlStr_MoveRightOffset : 0|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Steering_CtrlStr_MoveLeftOffset : 0|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Steering_CtrlStr_LeftOffset : 0|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Steering_PID_output : 0|8@1- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 2147485714 Steering_Debug_3: 8 Vector__XXX
+ SG_ Left_Steering_Sensor_pcnt : 19|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Right_Steering_Sensor_pcnt : 11|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Right_Steering_Sensor_Redun_mV : 53|11@1+ (4,0) [0|8188] "" Vector__XXX
+ SG_ Right_Steering_Sensor_Prim_mV : 42|11@1+ (4,0) [0|8188] "" Vector__XXX
+ SG_ Left_Steering_Sensor_Redun_mV : 31|11@1+ (4,0) [0|8188] "" Vector__XXX
+ SG_ Left_Steering_Sensor_Prim_mV : 0|11@1+ (4,0) [0|8188] "" Vector__XXX
+
+BO_ 2147485713 Steering_Debug_2: 8 VCU
+ SG_ ValveStuckOpenRight : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ValveStuckOpenLeft : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ValveStuckOpenRight_SteerLocal_2 : 55|14@0- (0.015625,0) [-128|127.984375] "" Vector__XXX
+ SG_ ValveStuckOpenRight_SteerLocal : 37|14@0- (0.015625,0) [-128|127.984375] "" Vector__XXX
+ SG_ ValveStuckOpenLeft_SteerLocal_2 : 19|14@0+ (1,0) [0|16383] "" Vector__XXX
+ SG_ ValveStuckOpenLeft_SteerLocal : 4|14@0+ (1,0) [0|16383] "" Vector__XXX
+ SG_ ValveStuckOpenRightState : 5|3@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ValveStuckOpenLeftState : 20|3@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2147485712 Steering_Debug_1: 8 VCU
+ SG_ Steering_tire_angle : 39|16@0- (0.00390625,0) [-128|127.99609375] "" Vector__XXX
+ SG_ Steering_Right_PWM : 16|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Steering_Left_PWM : 24|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Steering_Steer_Left_Current : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Steering_Steer_Right_Current : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "version" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_DEF_  "version" "draft_20191030";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_ "version" "";
+BA_ "GenMsgCycleTime" BO_ 2147485714 100;
+BA_ "GenMsgCycleTime" BO_ 2147485713 5;
+BA_ "GenMsgSendType" BO_ 2147485713 0;
+BA_ "GenMsgSendType" BO_ 2147485712 0;
+BA_ "GenMsgCycleTime" BO_ 2147485712 5;
+

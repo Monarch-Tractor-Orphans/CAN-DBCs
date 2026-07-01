@@ -1,0 +1,71 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ Pump_DTC 7 "Reserve" 6 "Reserve" 5 "Reserve" 4 "Over Temperature: 0 normal; 1 error" 3 "Over Voltage: 0 normal; 1 error" 2 "Inefficient Voltage: 0 normal; 1 error" 1 "HW error: 0 normal; 1 error" 0 "Reserve" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Reserved : 0|56@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566890753 Command: 8 Vector__XXX
+ SG_ Pump_Speed : 15|16@0+ (1,0) [0|65535] "RPM" Vector__XXX
+ SG_ Pump_Enable : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566848933 SCU_MSG: 8 Vector__XXX
+ SG_ Input_Current : 63|8@0+ (0.5,0) [0|0] "" Vector__XXX
+ SG_ Input_Voltage : 55|8@0+ (0.0808,0) [62|235] "" Vector__XXX
+ SG_ Real_Speed : 39|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Target_Speed : 23|16@0+ (1,0) [2460|4740] "" Vector__XXX
+ SG_ Stalk : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverVoltage : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overall_Status : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Over_Temperature : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Over_Load : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Over_Current : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ InefficientVoltage : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_Error : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2566890753 Pump_Speed "0 0%
+100 %";
+CM_ SG_ 2566890753 Pump_Enable "55 Stop
+Others start
+";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

@@ -1,0 +1,603 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: IX3212_Roof IX3212_Bed VCU
+VAL_TABLE_ H_Bridge 1 "H-Bridge" 0 "High Side" ;
+VAL_TABLE_ Current_Retry 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_TABLE_ Feedback_Type 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_TABLE_ Diagnostic_bits 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_TABLE_ Digital_Input 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_TABLE_ Feedback_ID 134 "Motor Model Configuration" 136 "Channel 7-12 Configuration" 135 "Channel 1-6 Configuration" 133 "Channel 7-12 Feedback" 132 "Channel 1-6 Feedback" 131 "Analog7-8, SW Version" 130 "Analog5-6, Batt Volt, 5V" 129 "Analog3-4, Diagnostic" 128 "Analog1-2, Digital 1-12" ;
+VAL_TABLE_ Output_Command_Identifier 7 "Configuration 7-12" 6 "Configuration 1-6" 5 "Command 7-12" 4 "Command 1-6" 0 "Motor Model Configuration" ;
+
+
+BO_ 2498695454 IX3212_Feedback: 8 Vector__XXX
+ SG_ Overcurrent_Retry_9 m136 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_8 m136 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_7 m136 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_12 m136 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_11 m136 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_10 m136 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_9 m136 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_8 m136 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_7 m136 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_12 m136 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_11 m136 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_10 m136 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Feedback_Type_9 m136 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_8 m136 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_7 m136 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_12 m136 : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_11 m136 : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_10 m136 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Config_9_Overcurrent m136 : 24|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_8_Overcurrent m136 : 16|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_7_Overcurrent m136 : 8|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_12_Overcurrent m136 : 48|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_11_Overcurrent m136 : 40|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_10_Overcurrent m136 : 32|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Overcurrent_Retry_6 m135 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_5 m135 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_4 m135 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_3 m135 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_2 m135 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overcurrent_Retry_1 m135 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_6 m135 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_5 m135 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_4 m135 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_3 m135 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_2 m135 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_1 m135 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Feedback_Type_6 m135 : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_5 m135 : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_4 m135 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_3 m135 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_2 m135 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type_1 m135 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Config_6_Overcurrent m135 : 8|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_5_Overcurrent m135 : 16|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_4_Overcurrent m135 : 24|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_3_Overcurrent m135 : 32|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_2_Overcurrent m135 : 40|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Config_1_Overcurrent m135 : 48|4@1+ (1,2.5) [0|15] "" Vector__XXX
+ SG_ Output_Ch9 m133 : 24|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch8 m133 : 16|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch7 m133 : 8|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch12 m133 : 48|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch11 m133 : 40|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch10 m133 : 32|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch6 m132 : 48|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch5 m132 : 40|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch4 m132 : 32|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch3 m132 : 24|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch2 m132 : 16|8@1- (0.125,0) [-25|25] "" Vector__XXX
+ SG_ Output_Ch1 m132 : 8|8@1- (0.125,0) [-25|35] "" Vector__XXX
+ SG_ Analog_8 m131 : 48|10@1+ (0.0048828,0) [0|5] "" Vector__XXX
+ SG_ Analog_7 m131 : 32|10@1+ (0.0048828,0) [0|5] "" Vector__XXX
+ SG_ Analog_6 m130 : 48|10@1+ (0.0048828,0) [0|5] "" Vector__XXX
+ SG_ Analog_5 m130 : 32|10@1+ (0.0048828,0) [0|5] "" Vector__XXX
+ SG_ Diagnostic_9 m129 : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_8 m129 : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_7 m129 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_6 m129 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_5 m129 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_4 m129 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_3 m129 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_2 m129 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_12 m129 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_11 m129 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_10 m129 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Diagnostic_1 m129 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Analog_4 m129 : 48|10@1+ (0.0048828,0) [0|5] "" Vector__XXX
+ SG_ Analog_3 m129 : 32|10@1+ (0.0048828,0) [0|4.9951044] "" Vector__XXX
+ SG_ Digital_9 m128 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_8 m128 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_7 m128 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_6 m128 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_5 m128 : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_4 m128 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_3 m128 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_2 m128 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_12 m128 : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_11 m128 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_10 m128 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Digital_1 m128 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Analog_2 m128 : 42|10@1+ (0.0048828,0) [0|5] "" Vector__XXX
+ SG_ Analog_1 m128 : 32|10@1+ (0.0048828,0) [0|4.9951044] "" Vector__XXX
+ SG_ SoftStartStepSize_FB m134 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Response_FB m134 : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Reserved1_FB m134 : 34|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ PRO_Enable_FB m134 : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ POR_Command_FB m134 : 40|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Output_Channel_No_FB m134 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MotorLampMode_FB m134 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Motor_Braking_FB m134 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LSC_Digital_Input_FB m134 : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LossofCommunication_FB m134 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Command_Type_FB m134 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Calibration_Time_FB m134 : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_ID M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2498698769 VCU_IX3212_Command: 8 Vector__XXX
+ SG_ Reserved7 m7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Reserved6 m6 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HSorHbridge9 m7 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge8 m7 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge7 m7 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge6 m6 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge5 m6 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge4 m6 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge3 m6 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge2 m6 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge12 m7 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge11 m7 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge10 m7 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HSorHbridge1 m6 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset9 m7 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset8 m7 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset7 m7 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset6 m6 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset5 m6 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset4 m6 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset3 m6 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset2 m6 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset12 m7 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset11 m7 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset10 m7 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Automatic_Reset1 m6 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Feedback_Type9 m7 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type8 m7 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type7 m7 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type6 m6 : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type5 m6 : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type4 m6 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type3 m6 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type2 m6 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type12 m7 : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type11 m7 : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type10 m7 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Feedback_Type1 m6 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Current_Limit_9 m7 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_8 m7 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_7 m7 : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_6 m6 : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_5 m6 : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_4 m6 : 36|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_3 m6 : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_2 m6 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_12 m7 : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_11 m7 : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_10 m7 : 36|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Current_Limit_1 m6 : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Modulde_Transmit_Rate_7_12 m5 : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Response m0 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Reseved2 m0 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PRO_Enable m0 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ POR_Command m0 : 51|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Motor_Braking m0 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LSC_Digital_Input m0 : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Command_Type m0 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Calibration_Time m0 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SoftStartStepSize m0 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Reserved1 m0 : 34|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ Output_Channel_No m0 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MotorLampMode m0 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LossofCommunication m0 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Modulde_Transmit_Rate_1_6 m4 : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Enable_Output9 m5 : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output8 m5 : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output7 m5 : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output6 m4 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output5 m4 : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output4 m4 : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output3 m4 : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output2 m4 : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output12 m5 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output11 m5 : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output10 m5 : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Enable_Output1 m4 : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Command_Output9 m5 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output8 m5 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output7 m5 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output6 m4 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output5 m4 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output4 m4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output3 m4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output2 m4 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output12 m5 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output11 m5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output10 m5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Command_Output1 m4 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Output_Command_Identifier M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+CM_ SG_ 2498698769 Feedback_Type9 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type8 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type7 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type6 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type5 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type4 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type3 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type2 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type12 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type11 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type10 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Feedback_Type1 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498698769 Current_Limit_9 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_8 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_7 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_6 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_5 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_4 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_3 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_2 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_12 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_11 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_10 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Current_Limit_1 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498698769 Command_Output9 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output8 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output7 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output6 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output5 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output4 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output3 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output2 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output12 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output11 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output10 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498698769 Command_Output1 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "Node_IX3212_Roof";
+BA_ "GenMsgCycleTimeFast" BO_ 2498698769 100;
+BA_ "GenMsgSendType" BO_ 2498698769 0;
+BA_ "GenMsgCycleTime" BO_ 2498698769 100;
+VAL_ 2498695454 Overcurrent_Retry_9 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_8 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_7 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_12 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_11 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_10 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 H_Bridge_9 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_8 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_7 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_12 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_11 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_10 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 Feedback_Type_9 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_8 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_7 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_12 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_11 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_10 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Overcurrent_Retry_6 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_5 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_4 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_3 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_2 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 Overcurrent_Retry_1 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695454 H_Bridge_6 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_5 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_4 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_3 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_2 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 H_Bridge_1 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695454 Feedback_Type_6 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_5 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_4 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_3 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_2 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Feedback_Type_1 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695454 Diagnostic_9 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_8 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_7 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_6 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_5 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_4 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_3 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_2 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_12 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_11 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_10 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Diagnostic_1 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695454 Digital_9 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_8 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_7 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_6 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_5 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_4 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_3 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_2 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_12 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_11 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_10 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Digital_1 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695454 Feedback_ID 134 "Motor Model Configuration" 136 "Channel 7-12 Configuration" 135 "Channel 1-6 Configuration" 133 "Channel 7-12 Feedback" 132 "Channel 1-6 Feedback" 131 "Analog7-8, SW Version" 130 "Analog5-6, Batt Volt, 5V" 129 "Analog3-4, Diagnostic" 128 "Analog1-2, Digital 1-12" ;
+VAL_ 2498698769 Output_Command_Identifier 7 "Configuration 7-12" 6 "Configuration 1-6" 5 "Command 7-12" 4 "Command 1-6" 0 "Motor Model Configuration" ;
+

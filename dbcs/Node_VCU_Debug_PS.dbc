@@ -1,0 +1,324 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DBG VCU
+VAL_TABLE_ Battery_Subsystem 24 "HV battery Low" 23 "12 Battery Low" 22 "Tractor HVIL" 21 "BMS HVIL" 20 "Lower BMS Severe Fault" 19 "Lower String High CellV" 18 "Lower String Over Voltage" 17 "Lower String Low CellV" 16 "Lower String Low Voltage" 15 "Upper BMS Severe Fault" 14 "Upper String High CellV" 13 "Upper String Over Voltage" 12 "Upper String Low CellV" 11 "Upper String low Voltage" 10 "Pack imbl_ Upper Active" 9 "Pack imbl_ Lower Active" 8 "SOC Critically Low" 7 "Low SOC" 6 "Lower String Down" 5 "Upper String Down" 4 "Voltage Imbalance" 3 "Both BMS LOC" 2 "Lower String LOC" 1 "Upper String LOC" 0 "No Fault" ;
+VAL_TABLE_ Hydraulics_Flt 37 "Work Pump Pos OOR" 36 "Drive Clutch Pressure OOR" 35 "PTO Clutch Pressure OOR" 34 "Trans Acc Pressure OOR" 33 "SteerBrk Acc Pressure OOR" 32 "Suction Line Pressure OOR" 31 "Tractor Pump Pressure OOR" 30 "Work Pump Pressure OOR" 29 "Right Brake Pressure OOR" 28 "Left Brake Pressure OOR" 27 "Tractor Pump OverLoaded" 26 "RH Brake Out Of Calibration" 25 "LH Brake Out Of Calibration" 24 "RH Brake SetValve OpenCircuit" 23 "RH Brake RelValve OpenCircuit" 22 "LH Brake SetValve OpenCircuit" 21 "LH Brake RelValve OpenCircuit" 20 "RH Brake Under Engagement" 19 "LH Brake Under Engagement" 18 "RH Brake Over Engagement" 17 "LH Brake Over Engagement" 16 "PTO Engagement Interlock" 15 "PTO Clutch Valve OpenCircuit" 14 "Lube Valve OpenCircuit" 13 "Drive Clutch Valve OpenCircuit" 12 "Lube Valve Timeout" 11 "Gear mismatch clutch disengaged" 10 "Clutch Pressure Low" 9 "Aux ON/OFFvalve OpenCircuit" 8 "WorkPumpOverloaded/Air" 7 "PTO Clutch Pressure Low" 6 "TransFlowValve OpenCircuit" 5 "Trans Manifold Pressure High" 4 "Trans Manifold Pressure Low" 3 "SteerBrake Valve OpenCircuit" 2 "SteerBrake Acc Press High" 1 "SteerBrake Acc Press Low" 0 "No Fault" ;
+VAL_TABLE_ Charging_Flt 32 "Chargers Disabled" 31 "DCAC_3 Flt" 30 "DCAC_2 Flt" 29 "DCAC_1 Flt" 28 "DCDC_3 Irregular Voltage" 27 "DCDC_2 Irregular Voltage" 26 "DCDC_1 Irregular Voltage" 25 "Chg_3 OBC Flt" 24 "Chg_2 OBC Flt" 23 "Chg_1 OBC Flt" 22 "DCDC_3 OverTemp" 21 "DCDC_2 OverTemp" 20 "DCDC_1 OverTemp" 19 "Chg_3 OverTemp " 18 "Chg_2 OverTemp" 17 "Chg_1 OverTemp" 16 "DCDC_3 Flt" 15 "DCDC_2 Flt" 14 "DCDC_1 Flt" 13 "ACDB eFuse8 OverCurrent" 12 "ACDB eFuse6 OverCurrent" 11 "ACDB eFuse3 OverCurrent" 10 "ACDB eFuse1 OverCurrent" 9 "ACDB Conv. Error" 8 "ACDB SIMPL Error" 7 "ACDB EVSE Error" 6 "ACDB 3Ph Error" 5 "ACDB 1Ph Error" 4 "ACDB OverTemp" 3 "ACDB disabled" 2 "Charger Improper Connection" 1 "Charger LOC" 0 "No Fault" ;
+VAL_TABLE_ Thermal_Flt 5 "Hyd Over Temp Protection" 4 "Hyd Over Temp Warning" 3 "Cooling Pump Disconnected" 2 "Air in cooling system" 1 "Cooling Pump OverCurrent" 0 "No Fault" ;
+VAL_TABLE_ Traction_Flt 23 "Inverter LOC" 22 "Regen Limited" 21 "Regen Disabled" 20 "Clutch Interlock" 19 "Motor Over loaded" 18 "bStart Check Fail" 17 "Disengage by Accel." 16 "Min Cell Voltage Low" 15 "DC Link Voltage Low" 14 "Pack Voltage Low" 13 "Speed Input Error" 12 "Motor Torque Limit" 11 "Insufficient Torque Applied" 10 "Hydraulic Oil Over Temp" 9 "Inverter Over Temperature" 8 "Inverter Fault OFF" 7 "Control Word Check Error" 6 "Hand Throttle Error" 5 "Hand Throttle Ch2 OOR" 4 "Hand Throttle Ch1 OOR" 3 "Foot Throttle Error" 2 "Foot Throttle Ch2 OOR" 1 "Foot Throttle Ch1 OOR" 0 "No Fault" ;
+VAL_TABLE_ Shift_Position_Error 0 "Not In Any Target" ;
+VAL_TABLE_ STATE_CONTACTORS 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_TABLE_ OVERRIDE_BRAKE_LIGHT 3 "FUNCTION NOT AVAILABLE" 2 "ENABLE OVERRIDE TO ON" 1 "ENABLE OVERRIDE TO OFF" 0 "DISABLE OVERRIDE" ;
+VAL_TABLE_ STATE_SHIFT 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_TABLE_ STATE_GEAR_POSITION 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_TABLE_ STATE_HEAD_LIGHT 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_TABLE_ STATE_TURN_SIGNAL 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+VAL_TABLE_ State 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ New_Signal_195 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VehicleSpeed_kmoh : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_EstimateMassFromFo : 0|12@1- (1,0) [-2048|2047] "kg" Vector__XXX
+ SG_ VCU_CtrlTrePt_EndAHeight_Right : 0|8@1+ (0.01,0) [0|2.55] "m" Vector__XXX
+ SG_ VCU_CtrlTrePt_EndAHeight_Left : 0|8@1+ (0.01,0) [0|2.55] "m" Vector__XXX
+ SG_ VCU_CtrlTrePt_CylinderPosition_R : 0|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ VCU_CtrlTrePt_CylinderPosition_L : 0|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ VCU_CtrlTrePt_State_Right : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_State_Left : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_EnPressurePID_Righ : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_EnPressurePID_Left : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_OnGrou : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_Error : 0|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_EquivM : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_Actual : 0|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_Acc : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_OnGroun : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_Error : 0|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_Actual : 0|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_Acc : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_EquivMa : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ power_motor : 0|17@1- (1,0) [-65536|65535] "W" Vector__XXX
+ SG_ power_hydraulic : 0|16@1+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ power_battery : 0|18@1- (1,0) [-131072|131071] "W" Vector__XXX
+ SG_ power_DCDC : 0|12@1+ (1,0) [0|4095] "W" Vector__XXX
+ SG_ three_point_depth_position_senso : 0|14@1+ (1,0) [0|16383] "mV" Vector__XXX
+ SG_ do3_right_three_point_up_valve_d : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ do3_right_three_point_down_valve : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ three_point_depth_position__0000 : 0|14@1+ (1,0) [0|16383] "mV" Vector__XXX
+ SG_ do3_left_three_point_down_valve_ : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ do3_left_three_point_up_valve_du : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ range_control_execute : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_control_done : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_control_busy : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_control_abort : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_target_position_voltage : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ range_target_position_logical : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ range_feedback_position_voltage : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ range_feedback_position_logical : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ gear_control_abort : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_control_busy : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_control_done : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_control_execute : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_feedback_position_logical : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ gear_target_position_logical : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ gear_feedback_position_voltage : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ gear_target_position_voltage : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ right_wheel_speed_sensor_motion_ : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ right_wheel_speed_sensor_calcula : 0|12@1+ (0.001,0) [0|4.095] "" Vector__XXX
+ SG_ right_wheel_speed_sensor_pulse_w : 0|24@1+ (1,0) [0|16777215] "us" Vector__XXX
+ SG_ right_wheel_speed_sensor_freq_ra : 0|16@1+ (1,0) [0|65535] "mHz" Vector__XXX
+ SG_ right_wheel_speed_sensor_error : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RightBrkSpeed_Pcnt : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ LeftBrkSpeed_Pcnt : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ right_wheel_speed_raw : 0|8@1+ (1,0) [0|255] "rpm" Vector__XXX
+ SG_ left_wheel_speed_raw : 0|8@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ right_whee_speed : 0|8@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ left_whee_speed : 0|8@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ left_wheel_speed_sensor_motion_d : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ left_wheel_speed_sensor_calculat : 0|12@1+ (0.001,0) [0|4.095] "" Vector__XXX
+ SG_ left_wheel_speed_sensor_error : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ left_wheel_speed_sensor_pulse_wi : 0|24@1+ (1,0) [0|16777215] "us" Vector__XXX
+ SG_ left_wheel_speed_sensor_freq_raw : 0|16@1+ (1,0) [0|65535] "mHz" Vector__XXX
+ SG_ brake_pedal_switch : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ three_point_depth_position__0001 : 0|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ do3_auxiliary_b_front_a_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_b_front_b_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_b_rear_a_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_b_rear_b_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ three_point_depth_position__0002 : 0|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ do3_auxiliary_a_front_a_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_a_front_b_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_a_rear_a_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_a_rear_b_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_front_axle_forward_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_front_axle_reverse_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_implement_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ trans_manifold_forward_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ trans_manifold_reverse_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ trans_manifold_accumulator_press : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ trans_manifold_system_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ brake_manifold_steer_brake_accum : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ brake_manifold_right_hand_brake_ : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ brake_manifold_left_hand_brake_p : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ pump_power_watts : 0|16@1+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ pump_flow_rate_lpm : 0|16@1+ (0.001,0) [0|40] "lpm" Vector__XXX
+ SG_ stock_pto_engage_valve : 0|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ trans_manifold_lubrication_valve : 0|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ priority_on_off_valve : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ trans_manifold_reverse_valve : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ trans_manifold_forward_valve : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ brake_manifold_right_hand_b_0000 : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ brake_manifold_left_hand_brake_s : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ FWD_RPM : 0|16@1- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ New_Signal_201 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_200 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 0 New_Message_13: 8 Vector__XXX
+ SG_ New_Signal_202 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1901 VCU_FaultCodes: 8 Vector__XXX
+ SG_ Battery_Subsystem m1 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Hydraulic_Subsystem m1 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Charging_Subsystem m1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault_Code_mux M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Thermal_Subsystem m1 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Traction_Subsystem m1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1300 VCU_Geartrain: 8 Vector__XXX
+ SG_ FWD_slip_pcnt m1 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ FWD_Target_RPM m1 : 32|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ FWD_RPM_KF m1 : 16|16@1- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ Geartrain_MUX M : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ TargetRightwheelSpeed m0 : 52|8@1+ (1,0) [0|255] "RPM" Vector__XXX
+ SG_ TargetRightBrake_Pcnt m0 : 45|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ TargetLeftwheelSpeed m0 : 37|8@1+ (1,0) [0|255] "RPM" Vector__XXX
+ SG_ TargetLeftBrake_Pcnt m0 : 30|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ RightBrake_Pcnt m0 : 23|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ LeftBrake_Pcnt m0 : 16|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ RangeTargetPos m0 : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ RangeFBKPos m0 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ GearTargetPos m0 : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ GearFBKPos m0 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1754 VCU_Energy_01: 8 VCU
+ SG_ energy_hydraulic : 44|12@1+ (3,0) [0|12285] "Wh" Vector__XXX
+ SG_ energy_DCDC : 32|12@1+ (3,0) [0|12285] "Wh" Vector__XXX
+ SG_ energy_battery : 16|16@1- (4,0) [-131072|131068] "Wh" Vector__XXX
+ SG_ energy_mechanical : 0|16@1- (4,0) [-131072|131068] "Wh" Vector__XXX
+
+BO_ 1811 VCU_TTLIB_DEBUG_03: 8 VCU
+ SG_ ttlib_diag_status_watchdog_state : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_watchdog_error : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_watchdog_devic : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_error_count : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_state : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_error_cod : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_device_nu : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_b_IODrv_versio : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ttlib_diag_status_b_FPGA_version : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1810 VCU_TTLIB_DEBUG_02: 8 VCU
+ SG_ ttlib_diag_status_watchdog_fault : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_faulty_va : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 1809 VCU_TTLIB_DEBUG_01: 8 VCU
+ SG_ ttlib_diag_status_error_code : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ttlib_maindlg_error_code : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ttlib_maindlg_execution_time : 0|32@1+ (1,0) [0|4294967295] "ms" Vector__XXX
+
+BO_ 1702 VCU_DriverInputs_02: 8 VCU
+ SG_ right_brake_rotary_position_raw : 40|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ left_brake_rotary_position_raw : 24|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ left_brake_rotary_position : 0|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ right_brake_rotary_position : 12|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+
+BO_ 1701 VCU_DriverInputs_01: 8 VCU
+ SG_ three_point_depth_control_input : 48|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ hand_throttle_sensor_ch2 : 40|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ hand_throttle_sensor_ch1 : 32|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ hand_throttle_sensor : 8|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ throttle_pedal_position_ch2 : 24|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ throttle_pedal_position_ch1 : 16|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ throttle_pedal_position : 0|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+
+BO_ 1697 VCU_HydraulicPressure: 8 VCU
+ SG_ ImplConstantFlowPress_bar m2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Pump_TargetLPM m2 : 40|8@1+ (0.34,0) [0|86.7] "" Vector__XXX
+ SG_ Pump_LPM m2 : 48|8@1+ (0.34,0) [0|86.7] "" Vector__XXX
+ SG_ FWD_Press_bar m2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OilRadiator_OutletPress m2 : 16|8@1+ (0.03,0) [0|7.65] "" Vector__XXX
+ SG_ OilRadiator_InletPress m2 : 24|8@1+ (0.03,0) [0|7.65] "" Vector__XXX
+ SG_ SuctionLinePress m2 : 8|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ TopLink_Extend_Press_bar m1 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TopLink_Retract_Press_bar m1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ThreePoint_RightRaisePress_bar m1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ThreePoint_RightLowerPress_bar m1 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ThreePoint_LeftRaisePress_bar m1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ThreePoint_LeftLowerPress_bar m1 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SteerBrakeAccumulatorPress m1 : 40|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ HydraulicPressure_Mux M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PTOClutchPressure_bar m0 : 56|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ DriveClutchPressure_bar m0 : 48|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ WorkPumpPressure_bar m0 : 40|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ TractorPumpPressure_bar m0 : 32|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ RightBrakeAccumulatorPress m0 : 24|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ LeftBrakeAccumulatorPress m0 : 16|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ TransManifoldPress_bar m0 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1585 VCU_HydraulicControl: 8 VCU
+ SG_ FWD_ReverseValve_Duty m3 : 28|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ FWD_ForwardValve_Duty m3 : 18|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ WorkPumpSwashPlate_Pcnt m3 : 8|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ TopLink_Retract_Valve_Duty m2 : 8|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ TopLink_Extend_Valve_Duty m1 : 48|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_RightUp_Duty m2 : 18|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_RightDown_Duty m2 : 28|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_LeftUp_Duty m2 : 38|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_LeftDown_Duty m2 : 48|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ PTO_ClutchValve m1 : 38|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ WorkPumpDutyCycle m0 : 48|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ LubricationValve m1 : 28|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ HydraulicControl_Mux M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TransFlowControlValve m1 : 18|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ DriveClutch_Valve m1 : 8|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ RightBrakeSetValve m0 : 38|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ RightBrakeReleaseValve m0 : 28|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ LeftBrakeSetValve m0 : 18|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ LeftBrakeReleaseValve m0 : 8|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "version" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "version" "draft_20191030";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "version" "";
+BA_ "GenMsgSendType" BO_ 1702 0;
+BA_ "GenMsgCycleTime" BO_ 1702 100;
+BA_ "GenMsgSendType" BO_ 1701 0;
+BA_ "GenMsgCycleTime" BO_ 1701 100;
+BA_ "GenMsgSendType" BO_ 1697 0;
+BA_ "GenMsgCycleTime" BO_ 1697 100;
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 VCU_CtrlTrePt_EstimateMassFromFo "VCU_CtrlTrePt_EstimateMassFromForce_Total";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 VCU_CtrlTrePt_Force_Right_OnGrou "VCU_CtrlTrePt_Force_Right_OnGround";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 VCU_CtrlTrePt_Force_Right_EquivM "VCU_CtrlTrePt_Force_Right_EquivMass";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 VCU_CtrlTrePt_Force_Left_OnGroun "VCU_CtrlTrePt_Force_Left_OnGround";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 VCU_CtrlTrePt_Force_Left_EquivMa "VCU_CtrlTrePt_Force_Left_EquivMass";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 three_point_depth_position_senso "three_point_depth_position_sensor_right_hand_raw";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 do3_right_three_point_up_valve_d "do3_right_three_point_up_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 do3_right_three_point_down_valve "do3_right_three_point_down_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 three_point_depth_position__0000 "three_point_depth_position_sensor_left_hand_raw";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 do3_left_three_point_down_valve_ "do3_left_three_point_down_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 do3_left_three_point_up_valve_du "do3_left_three_point_up_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 right_wheel_speed_sensor_motion_ "right_wheel_speed_sensor_motion_detected";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 right_wheel_speed_sensor_calcula "right_wheel_speed_sensor_calculated_value";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 right_wheel_speed_sensor_pulse_w "right_wheel_speed_sensor_pulse_width";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 right_wheel_speed_sensor_freq_ra "right_wheel_speed_sensor_freq_raw";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 left_wheel_speed_sensor_motion_d "left_wheel_speed_sensor_motion_detected";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 left_wheel_speed_sensor_calculat "left_wheel_speed_sensor_calculated_value";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 left_wheel_speed_sensor_pulse_wi "left_wheel_speed_sensor_pulse_width";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 three_point_depth_position__0001 "three_point_depth_position_sensor_right_hand";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 three_point_depth_position__0002 "three_point_depth_position_sensor_left_hand";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 trans_manifold_accumulator_press "trans_manifold_accumulator_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 brake_manifold_steer_brake_accum "brake_manifold_steer_brake_accumulator_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 brake_manifold_right_hand_brake_ "brake_manifold_right_hand_brake_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 brake_manifold_left_hand_brake_p "brake_manifold_left_hand_brake_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 brake_manifold_right_hand_b_0000 "brake_manifold_right_hand_brake_servo_valve";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 brake_manifold_left_hand_brake_s "brake_manifold_left_hand_brake_servo_valve";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_watchdog_error "ttlib_diag_status_watchdog_error_code";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_watchdog_devic "ttlib_diag_status_watchdog_device_num";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_diag_error_cod "ttlib_diag_status_diag_error_code";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_diag_device_nu "ttlib_diag_status_diag_device_num";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_b_IODrv_versio "ttlib_diag_status_b_IODrv_version_OK";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_b_FPGA_version "ttlib_diag_status_b_FPGA_version_OK";
+BA_ "SystemSignalLongSymbol" SG_ 1810 ttlib_diag_status_watchdog_fault "ttlib_diag_status_watchdog_faulty_value";
+BA_ "SystemSignalLongSymbol" SG_ 1810 ttlib_diag_status_diag_faulty_va "ttlib_diag_status_diag_faulty_value";
+VAL_ 3221225472 VCU_CtrlTrePt_State_Right 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+VAL_ 3221225472 VCU_CtrlTrePt_State_Left 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+VAL_ 3221225472 range_target_position_logical 0 "Not In Any Target" ;
+VAL_ 3221225472 range_feedback_position_logical 0 "Not In Any Target" ;
+VAL_ 1901 Battery_Subsystem 24 "HV battery Low" 23 "12 Battery Low" 22 "Tractor HVIL" 21 "BMS HVIL" 20 "Lower BMS Severe Fault" 19 "Lower String High CellV" 18 "Lower String Over Voltage" 17 "Lower String Low CellV" 16 "Lower String Low Voltage" 15 "Upper BMS Severe Fault" 14 "Upper String High CellV" 13 "Upper String Over Voltage" 12 "Upper String Low CellV" 11 "Upper String low Voltage" 10 "Pack imbl_ Upper Active" 9 "Pack imbl_ Lower Active" 8 "SOC Critically Low" 7 "Low SOC" 6 "Lower String Down" 5 "Upper String Down" 4 "Voltage Imbalance" 3 "Both BMS LOC" 2 "Lower String LOC" 1 "Upper String LOC" 0 "No Fault" ;
+VAL_ 1901 Hydraulic_Subsystem 45 "RH Brake Sensor Failure" 44 "LH Brake Sensor Failure" 43 "Work Pump Open Circuit" 42 "4WD Bad Sensor" 41 "Brakes Stuck - Speed Limit" 40 "Brakes Stuck - RollBack" 39 "Brakes Stuck - Parking" 38 "Brakes Stuck - Pressure" 37 "Work Pump Pos OOR" 36 "Drive Clutch Pressure OOR" 35 "PTO Clutch Pressure OOR" 34 "Trans Acc Pressure OOR" 33 "SteerBrk Acc Pressure OOR" 32 "Suction Line Pressure OOR" 31 "Tractor Pump Pressure OOR" 30 "Work Pump Pressure OOR" 29 "Right Brake Pressure OOR" 28 "Left Brake Pressure OOR" 27 "Tractor Pump OverLoaded" 26 "RH Brake Out Of Calibration" 25 "LH Brake Out Of Calibration" 24 "RH Brake SetValve OpenCircuit" 23 "RH Brake RelValve OpenCircuit" 22 "LH Brake SetValve OpenCircuit" 21 "LH Brake RelValve OpenCircuit" 20 "RH Brake Under Engagement" 19 "LH Brake Under Engagement" 18 "RH Brake Over Engagement" 17 "LH Brake Over Engagement" 16 "PTO Engagement Interlock" 15 "PTO Clutch Valve OpenCircuit" 14 "Lube Valve OpenCircuit" 13 "Drive Clutch Valve OpenCircuit" 12 "Lube Valve Timeout" 11 "Gear mismatch clutch disengaged" 10 "Clutch Pressure Low" 9 "Aux ON/OFFvalve OpenCircuit" 8 "WorkPumpOverloaded/Air" 7 "WorkPumpSwash FBK Error" 6 "TransFlowValve OpenCircuit" 5 "Trans Manifold Pressure High" 4 "Trans Manifold Pressure Low" 3 "SteerBrake Valve OpenCircuit" 2 "SteerBrake Acc Press High" 1 "SteerBrake Acc Press Low" 0 "No Fault" ;
+VAL_ 1901 Charging_Subsystem 38 "ACDB eFuse OverCurrent" 37 "ACDB outlet relay welded stuck" 36 "ACDB SIMPL relay welded stuck" 35 "ACDB EVSE relay welded stuck" 34 "ACDB 3 Phase relay welded stuck" 33 "ACDB 1 Phase relay welded stuck" 32 "Chargers Disabled" 31 "DCAC_3 Flt" 30 "DCAC_2 Flt" 29 "DCAC_1 Flt" 28 "DCDC_3 Irregular Voltage" 27 "DCDC_2 Irregular Voltage" 26 "DCDC_1 Irregular Voltage" 25 "Chg_3 OBC Flt" 24 "Chg_2 OBC Flt" 23 "Chg_1 OBC Flt" 22 "DCDC_3 OverTemp" 21 "DCDC_2 OverTemp" 20 "DCDC_1 OverTemp" 19 "Chg_3 OverTemp " 18 "Chg_2 OverTemp" 17 "Chg_1 OverTemp" 16 "DCDC_3 Flt" 15 "DCDC_2 Flt" 14 "DCDC_1 Flt" 13 "ACDB eFuse8 OverCurrent" 12 "ACDB eFuse6 OverCurrent" 11 "ACDB eFuse3 OverCurrent" 10 "ACDB eFuse1 OverCurrent" 9 "ACDB Conv. Error" 8 "ACDB SIMPL Error" 7 "ACDB EVSE Error" 6 "ACDB 3Ph Error" 5 "ACDB 1Ph Error" 4 "ACDB OverTemp" 3 "ACDB disabled" 2 "Charger Improper Connection" 1 "Charger LOC" 0 "No Fault" ;
+VAL_ 1901 Thermal_Subsystem 9 "Oil fans disabled" 8 "Oil fan stopped/broken" 7 "PE fans disabled" 6 "PE fan stopped/broken" 5 "Hyd Over Temp Protection" 4 "Hyd Over Temp Warning" 3 "Cooling Pump Disconnected" 2 "Air in cooling system" 1 "Cooling Pump OverCurrent" 0 "No Fault" ;
+VAL_ 1901 Traction_Subsystem 23 "Inverter LOC" 22 "Regen Limited" 21 "Regen Disabled" 20 "Clutch Interlock" 19 "Motor Over loaded" 18 "bStart Check Fail" 17 "Disengage by Accel." 16 "Min Cell Voltage Low" 15 "DC Link Voltage Low" 14 "Pack Voltage Low" 13 "Speed Input Error" 12 "Motor Torque Limit" 11 "Insufficient Torque Applied" 10 "Hydraulic Oil Over Temp" 9 "Inverter Over Temperature" 8 "Inverter Fault OFF" 7 "Control Word Check Error" 6 "Hand Throttle Error" 5 "Hand Throttle Ch2 OOR" 4 "Hand Throttle Ch1 OOR" 3 "Foot Throttle Error" 2 "Foot Throttle Ch2 OOR" 1 "Foot Throttle Ch1 OOR" 0 "No Fault" ;
+

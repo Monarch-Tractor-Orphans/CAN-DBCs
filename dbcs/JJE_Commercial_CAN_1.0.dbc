@@ -1,0 +1,263 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: MCU HCU
+VAL_TABLE_ MCU1_Tx_Fail_Grade 3 "Fault(shut down MCU) " 2 "Fault(zero torque output) " 1 "Warning(derating)" 0 "No Fault" ;
+VAL_TABLE_ MCU1_Tx_Discharge_Enable_Fdck 1 "enable" 0 "disable" ;
+VAL_TABLE_ MCU1_Tx_Work_Mode 8 "FAULT" 7 "Active discharge_Complete" 6 "Active discharge
+" 5 "Torque Control" 4 "Speed Control" 3 "Idle
+" 2 "Reverse" 1 "Low_Voltage_PowerUp" 0 "Init" ;
+VAL_TABLE_ MCU1_Tx_IGBT_Enable_Feedback 1 "enable" 0 "disable" ;
+VAL_TABLE_ MCU1_Tx_Precharge_Allow 1 "enable" 0 "disable" ;
+VAL_TABLE_ MCU1_Rx_FootBrake 1 "Footbrake" 0 "No Footbrake" ;
+VAL_TABLE_ MCU1_Rx_HandBrake 1 "Handbrake" 0 "No Handbrake" ;
+VAL_TABLE_ MCU1_Rx_Gear 2 "Reverse" 1 "Drive" 0 "Neutral" ;
+VAL_TABLE_ MCU1_Rx_Enable 1 "enable" 0 "disable" ;
+VAL_TABLE_ MCU1_Rx_Control_Mode 3 "Active Discharge" 2 "Torque Control" 1 "Speed Control" 0 "Standby" ;
+
+
+BO_ 2365393135 Park_Rx_Command: 8 HCU
+ SG_ Park_Rx_Brake_PedalPercent : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Park_Rx_Accelerator_PedalPercent : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Park_Rx_VehicleSpeed_kph : 40|16@1+ (0.0078125,0) [0|511.9921875] "kph" Vector__XXX
+ SG_ Park_Rx_ALiveCounter : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Rx_ParkingCommand : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365522952 Park_Tx_STATUS1: 8 Vector__XXX
+ SG_ Park_Tx_HWA3922Status : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Park_Tx_PawlPositionCounts : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Park_Tx_PowerVoltage_V : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Park_Tx_ActuatorCurrent_A : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Park_Tx_ActuatorPositonCounts : 32|16@1+ (1,0) [0|65535] ""  HCU
+
+BO_ 2365523208 Park_Tx_STATUS2: 8 Vector__XXX
+ SG_ Park_Tx_SoftwareVersion : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Tx_AliveCounter : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Tx_ActuatorStatus : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Tx_DTC_Code : 24|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ Park_Tx_MPRStatus : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Tx_PawlStatus : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Tx_Fault_Level : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Tx_FeedbackStatus : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Park_Tx_PWM_Output : 48|8@1+ (1,0) [0|255] "%"  HCU
+
+BO_ 2365522696 MCU1_Tx_STATUS4: 8 MCU
+ SG_ MCU1_Tx_DTC_Code4 : 48|16@1+ (1,0) [0|65535] ""  HCU
+ SG_ MCU1_Tx_DTC_Code3 : 32|16@1+ (1,0) [0|65535] ""  HCU
+ SG_ MCU1_Tx_DTC_Code2 : 16|16@1+ (1,0) [0|65535] ""  HCU
+ SG_ MCU1_Tx_DTC_Code1 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2365522440 MCU1_Tx_STATUS3: 8 MCU
+ SG_ MCU1_Tx_VoltageUtilization_Ratio : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU1_Tx_Live_counter3 : 60|4@1+ (1,0) [0|15] ""  HCU
+ SG_ MCU1_Tx_Motor_Rotation_Count : 48|8@1+ (1,0) [0|255] "rotate"  HCU
+ SG_ MCU1_Tx_DC_Voltage : 32|16@1+ (0.1,0) [0|1000] "V"  HCU
+ SG_ MCU1_Tx_DC_Current : 16|16@1+ (1,-1000) [-1000|64535] "A"  HCU
+
+BO_ 2365522184 MCU1_Tx_STATUS2: 8 MCU
+ SG_ MCU1_Tx_Live_counter2 : 60|4@1+ (1,0) [0|15] ""  HCU
+ SG_ MCU1_Tx_Fail_Grade : 48|4@1+ (1,0) [0|4] ""  HCU
+ SG_ MCU1_Tx_Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|60535] "Nm"  HCU
+ SG_ MCU1_Tx_Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm"  HCU
+ SG_ MCU1_Tx_MCU_Temperature : 8|8@1+ (1,-40) [-40|215] "℃"  HCU
+ SG_ MCU1_Tx_Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃"  HCU
+
+BO_ 2365521928 MCU1_Tx_STATUS1: 8 MCU
+ SG_ MCU1_Tx_Discharge_Enable_Fdck : 53|1@1+ (1,0) [0|1] ""  HCU
+ SG_ MCU1_Tx_Live_counter1 : 60|4@1+ (1,0) [0|15] ""  HCU
+ SG_ MCU1_Tx_Motor_AC_Current : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  HCU
+ SG_ MCU1_Tx_Work_Mode : 56|4@1+ (1,0) [0|15] ""  HCU
+ SG_ MCU1_Tx_IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|1] ""  HCU
+ SG_ MCU1_Tx_Precharge_Allow : 52|1@1+ (1,0) [0|1] ""  HCU
+ SG_ MCU1_Tx_Motor_Torque : 16|16@1+ (1,-5000) [-5000|60535] "Nm"  HCU
+ SG_ MCU1_Tx_Motor_Speed : 0|16@1+ (1,-15000) [-15000|50535] "rpm"  HCU
+
+BO_ 2365524207 MCU1_Rx_Command: 8 HCU
+ SG_ MCU1_Rx_FootBrake : 6|1@1+ (1,0) [0|1] ""  MCU
+ SG_ MCU1_Rx_HandBrake : 7|1@1+ (1,0) [0|0] ""  MCU
+ SG_ MCU1_Rx_Gear : 4|2@1+ (1,0) [0|0] ""  MCU
+ SG_ MCU1_Rx_Demand_Speed : 48|16@1+ (1,-15000) [-15000|50535] "rpm"  MCU
+ SG_ MCU1_Rx_Demand_Torque : 32|16@1+ (1,-5000) [-5000|60535] "Nm"  MCU
+ SG_ MCU1_Rx_Limit_Negative_Value : 20|12@1+ (6,0) [0|24570] "Nm/rpm"  MCU
+ SG_ MCU1_Rx_Limit_Positive_Value : 8|12@1+ (6,0) [0|24570] "Nm/rpm"  MCU
+ SG_ MCU1_Rx_Control_Mode : 2|2@1+ (1,0) [0|3] ""  MCU
+ SG_ MCU1_Rx_Fault_Reset : 1|1@1+ (1,0) [0|1] ""  MCU
+ SG_ MCU1_Rx_Enable : 0|1@1+ (1,0) [0|1] ""  MCU
+
+
+
+CM_ SG_ 2365393135 Park_Rx_Brake_PedalPercent "刹车踏板开度百分比
+Percentage of brake pedal opening";
+CM_ SG_ 2365393135 Park_Rx_Accelerator_PedalPercent "加速踏板开度百分比
+Percentage of accelerator pedal opening.";
+CM_ SG_ 2365393135 Park_Rx_VehicleSpeed_kph "Vehicle speed from VCU";
+CM_ SG_ 2365393135 Park_Rx_ALiveCounter "VCU life status";
+CM_ SG_ 2365393135 Park_Rx_ParkingCommand "Park control command from VCU";
+CM_ SG_ 2365522952 Park_Tx_HWA3922Status "A3922 drive chip status";
+CM_ SG_ 2365522952 Park_Tx_PawlPositionCounts "Park pawl position counts";
+CM_ SG_ 2365522952 Park_Tx_PowerVoltage_V "Park power supply voltage";
+CM_ SG_ 2365522952 Park_Tx_ActuatorCurrent_A "Park actuator working current";
+CM_ SG_ 2365522952 Park_Tx_ActuatorPositonCounts "Park actuator position counts";
+CM_ SG_ 2365523208 Park_Tx_SoftwareVersion "Park application software version";
+CM_ SG_ 2365523208 Park_Tx_AliveCounter "Park life status";
+CM_ SG_ 2365523208 Park_Tx_ActuatorStatus "Actuator position status";
+CM_ SG_ 2365523208 Park_Tx_DTC_Code "Park fault code";
+CM_ SG_ 2365523208 Park_Tx_MPRStatus "MPR feedback status";
+CM_ SG_ 2365523208 Park_Tx_PawlStatus "Pawl position status
+";
+CM_ SG_ 2365523208 Park_Tx_Fault_Level "Park fault level";
+CM_ SG_ 2365523208 Park_Tx_FeedbackStatus "Park feedback status
+";
+CM_ SG_ 2365523208 Park_Tx_PWM_Output "Park caculated PWM output";
+CM_ BO_ 2365522440 "Period 100ms";
+CM_ SG_ 2365522440 MCU1_Tx_VoltageUtilization_Ratio "电压利用率Voltage Utilization";
+CM_ SG_ 2365522440 MCU1_Tx_DC_Current "直流电流（估计值），电机驱动转态为负，发电状态为正。
+Dc current (estimated value), motor drive state is negative, power generation state is positive.";
+CM_ BO_ 2365522184 "Period 50ms";
+CM_ SG_ 2365522184 MCU1_Tx_Fail_Grade "0 = No Fault  无故障
+1 = Warning(derating) 警告，降功率
+2 = Fault(zero torque output)  零扭矩输出
+3 = Fault(shut down MCU)   关使能";
+CM_ SG_ 2365522184 MCU1_Tx_Torque_Limit_Low "转矩下限
+Torque_Limit_Low";
+CM_ SG_ 2365522184 MCU1_Tx_Torque_Limit_High "转矩上限
+Torque_Limit_High";
+CM_ SG_ 2365522184 MCU1_Tx_MCU_Temperature "控制器温度
+MCU temperature
+";
+CM_ SG_ 2365522184 MCU1_Tx_Motor_Temperature "电机温度
+Motor temperature
+";
+CM_ BO_ 2365521928 "Period 10ms";
+CM_ SG_ 2365521928 MCU1_Tx_Discharge_Enable_Fdck "主动放电反馈 
+Active discharge feedback signal";
+CM_ SG_ 2365521928 MCU1_Tx_Motor_AC_Current "交流侧电流有效值反馈 
+AC Current RMS value feedback ";
+CM_ SG_ 2365521928 MCU1_Tx_Work_Mode "0 = Init     初始化
+1 = Low_Voltage_PowerUp  低压上电正常
+2 = (Reserved)   预留
+3= Idle   电机允许运行 
+4= Speed Control 电机转速闭环运行
+5= Torque Control 电机转矩闭环运行
+6= Active discharge 主动放电
+7= Active discharge_Complete 放电完成
+8= FAULT   故障";
+CM_ SG_ 2365521928 MCU1_Tx_IGBT_Enable_Feedback "使能状态反馈
+Enable status feedback";
+CM_ SG_ 2365521928 MCU1_Tx_Precharge_Allow "允许预充电
+Pre-charge allow signal
+";
+CM_ SG_ 2365521928 MCU1_Tx_Motor_Torque "转矩矩大于0为转矩方向与发动机转向相同
+Torque torque greater than 0 means the torque direction is the same as the engine steering";
+CM_ SG_ 2365521928 MCU1_Tx_Motor_Speed "电机转速正负表示电机转向，转速为正时与发动机正常转动方向一致
+Positive and negative motor speed indicates motor steering, and a positive speed is consistent with the normal rotation direction of the engine";
+CM_ BO_ 2365524207 "Period 10ms";
+CM_ SG_ 2365524207 MCU1_Rx_FootBrake "用于整车控制器反馈给电机控制器脚刹信号
+Used for vehicle controller feedback to motor controller foot brake signal。";
+CM_ SG_ 2365524207 MCU1_Rx_HandBrake "用于整车控制器反馈给电机控制器手刹信号 
+Used for vehicle controller feedback to motor controller handbrake signal";
+CM_ SG_ 2365524207 MCU1_Rx_Gear "档位信息，分别为空档
+（Neutral），前进档(Drive)，后退档（Reverse）。
+Gear information, respectively, is neutral 
+(Neutral), Drive, Reverse";
+CM_ SG_ 2365524207 MCU1_Rx_Demand_Speed "转速的正负表示电机旋转的方向（与发动机正常转动方向同向为正）
+The positive or negative speed indicates the direction of motor rotation 
+(positive in the same direction as the normal rotation direction of the engine).";
+CM_ SG_ 2365524207 MCU1_Rx_Demand_Torque "转矩的正负表示力的方向，规定发动机旋转方向为正向。
+The positive and negative torque indicates the direction of the force, and specifies that the direction of engine rotation is positive ";
+CM_ SG_ 2365524207 MCU1_Rx_Limit_Negative_Value "转矩/转速指令限值下限 
+转矩控制模式时，转速限制起作用；转速控制模式时，转矩限制起作用。
+注意：此处网络上发送的是正数
+Torque/Speed demand limit .In torque control mode, speed limit is in effect; In speed control mode, Torque limits come into play. 
+Note: The value sent on the network is positive.
+
+";
+CM_ SG_ 2365524207 MCU1_Rx_Limit_Positive_Value "转矩/转速指令限值上限 
+转矩控制模式时，转速限制起作用；转速控制模式时， 转矩限制起作用。 
+Torque/Speed demand limit .In torque control mode, speed limit is in effect;
+ In speed control mode, Torque limits come into play.";
+CM_ SG_ 2365524207 MCU1_Rx_Control_Mode "0 = Standby
+1 = Speed Control
+2 = Torque Control
+3 = Active Discharge";
+CM_ SG_ 2365524207 MCU1_Rx_Fault_Reset "0 = disable
+1 = enable";
+CM_ SG_ 2365524207 MCU1_Rx_Enable "控制器的使能指令，具体指控制器 IGBT 的 PWM 开关指令。
+MCU enable, indicating PWM enable. 
+";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","cyclic if event active";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 10 1000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenMsgSendType" "cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "GenMsgCycleTime" BO_ 2365393135 10;
+BA_ "GenMsgCycleTime" BO_ 2365522952 10;
+BA_ "GenMsgCycleTime" BO_ 2365523208 10;
+BA_ "GenMsgCycleTime" BO_ 2365522696 20;
+BA_ "GenMsgCycleTime" BO_ 2365522184 50;
+BA_ "GenMsgCycleTime" BO_ 2365521928 10;
+BA_ "GenMsgCycleTime" BO_ 2365524207 10;
+VAL_ 2365393135 Park_Rx_ParkingCommand 2 "Engage" 1 "Disengage" 0 "Invalid" ;
+VAL_ 2365523208 Park_Tx_ActuatorStatus 6 "Disengaged Endstop" 5 "Disengaged" 4 "Between Engaged and Disengaged" 3 "Engaged" 2 "Engaged Endstop" 1 "Failure" 0 "Init" ;
+VAL_ 2365523208 Park_Tx_MPRStatus 3 "Disengaged" 2 "Engaged" 1 "Unjnown" 0 "Init" ;
+VAL_ 2365523208 Park_Tx_PawlStatus 5 "Disengaged" 4 "Tooth-to-Tooth" 3 "Between Engaged and Disengaged" 2 "Engaged " 1 "Failure" 0 "Init" ;
+VAL_ 2365523208 Park_Tx_Fault_Level 3 "Non recoverable critical fault" 2 "Recoverable fault" 1 "Warning" 0 "Fault not present" ;
+VAL_ 2365523208 Park_Tx_FeedbackStatus 6 "Fault latched" 5 "Fault recoverable" 4 "Disengaged" 3 "Disengaging" 2 "Engaged" 1 "Engaging" 0 "Init" ;
+VAL_ 2365522184 MCU1_Tx_Fail_Grade 3 "Fault(shut down MCU) " 2 "Fault(zero torque output) " 1 "Warning(derating)" 0 "No Fault" ;
+VAL_ 2365521928 MCU1_Tx_Discharge_Enable_Fdck 1 "enable" 0 "disable" ;
+VAL_ 2365521928 MCU1_Tx_Work_Mode 8 "FAULT" 7 "LV_PWR_DWN" 6 "Active discharge
+" 5 "Torque Control" 4 "Speed Control" 3 "Idle
+" 2 "Reverse" 1 "LV_PWR_UP" 0 "INIT" ;
+VAL_ 2365521928 MCU1_Tx_IGBT_Enable_Feedback 1 "enable" 0 "disable" ;
+VAL_ 2365521928 MCU1_Tx_Precharge_Allow 1 "enable" 0 "disable" ;
+VAL_ 2365524207 MCU1_Rx_FootBrake 1 "Footbrake" 0 "No Footbrake" ;
+VAL_ 2365524207 MCU1_Rx_HandBrake 1 "Handbrake" 0 "No Handbrake" ;
+VAL_ 2365524207 MCU1_Rx_Gear 2 "Reverse" 1 "Drive" 0 "Neutral" ;
+VAL_ 2365524207 MCU1_Rx_Control_Mode 3 "Active Discharge" 2 "Torque Control" 1 "Speed Control" 0 "Standby" ;
+VAL_ 2365524207 MCU1_Rx_Enable 1 "enable" 0 "disable" ;
+

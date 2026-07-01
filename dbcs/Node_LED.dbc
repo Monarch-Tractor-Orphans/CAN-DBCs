@@ -1,0 +1,60 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU LED
+VAL_TABLE_ Mode 2 "CHARGE" 1 "ALL ON" 0 "ALL OFF" ;
+
+
+BO_ 2553544401 Set_LED: 8 Vector__XXX
+ SG_ Charge_Percent : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Intensity : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Blue : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Green : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Red : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Mode : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_ "NmStationAddress" BU_ VCU 209;
+BA_ "NmStationAddress" BU_ LED 254;
+BA_ "GenMsgSendType" BO_ 2553544401 7;
+VAL_ 2553544401 Mode 2 "CHARGE" 1 "ALL ON" 0 "ALL OFF" ;
+

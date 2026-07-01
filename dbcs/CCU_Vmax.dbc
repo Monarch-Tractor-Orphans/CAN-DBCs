@@ -1,0 +1,1036 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU CCU Computer
+VAL_TABLE_ VoltFreqTable 3 "220VAC, 50Hz" 2 "230VAC, 50Hz" 1 "120VAC, 60Hz" 0 "240VAC, 60Hz" ;
+VAL_TABLE_ CCU_ID_Version 3 "C3" 2 "C2" 1 "C1" 0 "Default" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ CCU_ID1_Rsvd1 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_Rsvd2 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_Rsvd1 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_Rsvd2 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_Rsvd1 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_Rsvd2 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1088 CCU_ID0_Fr02: 8 CCU
+ SG_ CCU_ID0_DCAC_Power : 51|12@0+ (1,0) [0|2047] "W" Vector__XXX
+ SG_ CCU_ID0_DCAC_FaultLvl : 47|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID0_DCAC_WorkSts : 44|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID0_DCAC_CCSts : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID0_CP_DutyValue : 7|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ CCU_ID0_S2Sts : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_OBC_CCSts : 10|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID0_Rsvd5 : 14|4@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID0_ChgOTPFaultLvl : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID0_CoolingReq : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_Rsvd1 : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_Rsvd2 : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_TempChg : 31|8@0+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ CCU_ID0_Rsvd4 : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CCU_ID0_CP_DutyFault : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_Rsvd3 : 23|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID0_CPState : 55|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1089 CCU_ID1_Fr02: 8 CCU
+ SG_ CCU_ID1_VersionNo : 20|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID1_DCAC_Power : 51|12@0+ (1,0) [0|2047] "W" Vector__XXX
+ SG_ CCU_ID1_DCAC_FaultLvl : 47|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID1_DCAC_WorkSts : 44|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID1_DCAC_CCSts : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID1_CP_DutyValue : 7|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ CCU_ID1_S2Sts : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_OBC_CCSts : 10|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID1_Version : 14|4@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID1_ChgOTPFaultLvl : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID1_CoolingReq : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_TempChg : 31|8@0+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ CCU_ID1_AC_Volt : 39|8@0+ (2,0) [0|510] "" Vector__XXX
+ SG_ CCU_ID1_CP_DutyFault : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_Rsvd3 : 23|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID1_CPState : 55|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1090 CCU_ID2_Fr02: 8 CCU
+ SG_ CCU_ID2_VersionNo : 20|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID2_DCAC_Power : 51|12@0+ (1,0) [0|2047] "W" Vector__XXX
+ SG_ CCU_ID2_DCAC_FaultLvl : 47|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID2_DCAC_WorkSts : 44|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID2_DCAC_CCSts : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID2_CP_DutyValue : 7|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ CCU_ID2_S2Sts : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_OBC_CCSts : 10|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID2_Version : 14|4@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID2_ChgOTPFaultLvl : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID2_CoolingReq : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_TempChg : 31|8@0+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ CCU_ID2_AC_Volt : 39|8@0+ (2,0) [0|510] "" Vector__XXX
+ SG_ CCU_ID2_CP_DutyFault : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_Rsvd3 : 23|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID2_CPState : 55|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1091 CCU_ID3_Fr02: 8 CCU
+ SG_ CCU_ID3_VersionNo : 20|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID3_DCAC_Power : 51|12@0+ (1,0) [0|2047] "W" Vector__XXX
+ SG_ CCU_ID3_DCAC_FaultLvl : 47|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID3_DCAC_WorkSts : 44|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID3_DCAC_CCSts : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID3_CP_DutyValue : 7|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ CCU_ID3_S2Sts : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_OBC_CCSts : 10|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID3_Version : 14|4@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID3_ChgOTPFaultLvl : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCU_ID3_CoolingReq : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_TempChg : 31|8@0+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ CCU_ID3_AC_Volt : 39|8@0+ (2,0) [0|510] "" Vector__XXX
+ SG_ CCU_ID3_CP_DutyFault : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_Rsvd3 : 23|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID3_CPState : 55|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1056 VCU_CCU_ID0_Fr02: 8 VCU
+ SG_ VCU_CCU_ID0_AC_Volt_Freq : 55|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_CCU_ID0_Rsvd0 : 51|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID0_OBC_WorkModReq : 7|8@0+ (1,0) [0|4] ""  CCU
+ SG_ VCU_CCU_ID0_OBC_CurrReq : 15|16@0+ (0.05,0) [0|400] "A"  CCU
+ SG_ VCU_CCU_ID0_OBC_VoltReq : 31|16@0+ (0.05,0) [0|1000] "V"  CCU
+ SG_ VCU_CCU_ID0_LVOutDisable : 48|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID0_CPState : 47|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID0_CCState : 43|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID0_DCAC_EnReq : 50|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID0_DutyValue : 63|8@0+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1057 VCU_CCU_ID1_Fr02: 8 VCU
+ SG_ VCU_CCU_ID1_AC_Volt_Freq : 55|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_CCU_ID1_Rsvd0 : 51|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID1_OBC_WorkModReq : 7|8@0+ (1,0) [0|4] ""  CCU
+ SG_ VCU_CCU_ID1_OBC_CurrReq : 15|16@0+ (0.05,0) [0|400] "A"  CCU
+ SG_ VCU_CCU_ID1_OBC_VoltReq : 31|16@0+ (0.05,0) [0|1000] "V"  CCU
+ SG_ VCU_CCU_ID1_LVOutDisable : 48|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID1_CPState : 47|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID1_CCState : 43|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID1_DCAC_EnReq : 50|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID1_DutyValue : 63|8@0+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1058 VCU_CCU_ID2_Fr02: 8 VCU
+ SG_ VCU_CCU_ID2_AC_Volt_Freq : 55|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_CCU_ID2_Rsvd0 : 51|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID2_OBC_WorkModReq : 7|8@0+ (1,0) [0|4] ""  CCU
+ SG_ VCU_CCU_ID2_OBC_CurrReq : 15|16@0+ (0.05,0) [0|400] "A"  CCU
+ SG_ VCU_CCU_ID2_OBC_VoltReq : 31|16@0+ (0.05,0) [0|1000] "V"  CCU
+ SG_ VCU_CCU_ID2_LVOutDisable : 48|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID2_CPState : 47|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID2_CCState : 43|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID2_DCAC_EnReq : 50|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID2_DutyValue : 63|8@0+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1059 VCU_CCU_ID3_Fr02: 8 VCU
+ SG_ VCU_CCU_ID3_AC_Volt_Freq : 55|3@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_CCU_ID3_Rsvd0 : 51|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID3_OBC_WorkModReq : 7|8@0+ (1,0) [0|4] ""  CCU
+ SG_ VCU_CCU_ID3_OBC_CurrReq : 15|16@0+ (0.05,0) [0|400] "A"  CCU
+ SG_ VCU_CCU_ID3_OBC_VoltReq : 31|16@0+ (0.05,0) [0|1000] "V"  CCU
+ SG_ VCU_CCU_ID3_LVOutDisable : 48|1@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID3_CPState : 47|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID3_CCState : 43|4@0+ (1,0) [0|0] ""  CCU
+ SG_ VCU_CCU_ID3_DCAC_EnReq : 50|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID3_DutyValue : 63|8@0+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1104 CCU_ID0_Fr03: 8 CCU
+ SG_ CCU_ID0_DCDC_OutputVolt : 7|8@0+ (0.1,0) [0|25.4] "V"  VCU
+ SG_ CCU_ID0_DCDC_OutputCurr : 15|8@0+ (1,0) [0|254] "A"  VCU
+ SG_ CCU_ID0_DCDC_InputVolt : 16|9@0+ (1,0) [0|510] "V"  VCU
+ SG_ CCU_ID0_DCDC_Temp : 39|8@0+ (1,-40) [-40|200] "oC"  VCU
+ SG_ CCU_ID0_DCDC_WorkSts : 41|2@0+ (1,0) [0|3] ""  VCU
+ SG_ CCU_ID0_DCDC_EnSts : 42|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_DTC : 63|8@0+ (1,0) [0|255] ""  VCU
+ SG_ CCU_ID0_RollCnt : 46|4@0+ (1,0) [0|15] ""  VCU
+ SG_ CCU_ID0_DCDC_LVOVP : 48|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_LVUVP : 49|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_OTP : 50|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_LVOCP : 51|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_HVOVP : 52|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_HVUVP : 53|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_CANTimeOut : 54|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_CoolRqt : 47|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID0_DCDC_ConvMode : 23|2@0+ (1,0) [0|3] ""  VCU
+
+BO_ 1105 CCU_ID1_Fr03: 8 CCU
+ SG_ CCU_ID1_DCDC_OutputVolt : 7|8@0+ (0.1,0) [0|25.4] "V"  VCU
+ SG_ CCU_ID1_DCDC_OutputCurr : 15|8@0+ (1,0) [0|254] "A"  VCU
+ SG_ CCU_ID1_DCDC_InputVolt : 16|9@0+ (1,0) [0|510] "V"  VCU
+ SG_ CCU_ID1_DCDC_Temp : 39|8@0+ (1,-40) [-40|200] "oC"  VCU
+ SG_ CCU_ID1_DCDC_WorkSts : 41|2@0+ (1,0) [0|3] ""  VCU
+ SG_ CCU_ID1_DCDC_EnSts : 42|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_DTC : 63|8@0+ (1,0) [0|255] ""  VCU
+ SG_ CCU_ID1_RollCnt : 46|4@0+ (1,0) [0|15] ""  VCU
+ SG_ CCU_ID1_DCDC_LVOVP : 48|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_LVUVP : 49|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_OTP : 50|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_LVOCP : 51|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_HVOVP : 52|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_HVUVP : 53|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_CANTimeOut : 54|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_CoolRqt : 47|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID1_DCDC_ConvMode : 23|2@0+ (1,0) [0|3] ""  VCU
+
+BO_ 1106 CCU_ID2_Fr03: 8 CCU
+ SG_ CCU_ID2_DCDC_OutputVolt : 7|8@0+ (0.1,0) [0|25.4] "V"  VCU
+ SG_ CCU_ID2_DCDC_OutputCurr : 15|8@0+ (1,0) [0|254] "A"  VCU
+ SG_ CCU_ID2_DCDC_InputVolt : 16|9@0+ (1,0) [0|510] "V"  VCU
+ SG_ CCU_ID2_DCDC_Temp : 39|8@0+ (1,-40) [-40|200] "oC"  VCU
+ SG_ CCU_ID2_DCDC_WorkSts : 41|2@0+ (1,0) [0|3] ""  VCU
+ SG_ CCU_ID2_DCDC_EnSts : 42|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_DTC : 63|8@0+ (1,0) [0|255] ""  VCU
+ SG_ CCU_ID2_RollCnt : 46|4@0+ (1,0) [0|15] ""  VCU
+ SG_ CCU_ID2_DCDC_LVOVP : 48|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_LVUVP : 49|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_OTP : 50|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_LVOCP : 51|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_HVOVP : 52|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_HVUVP : 53|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_CANTimeOut : 54|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_CoolRqt : 47|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID2_DCDC_ConvMode : 23|2@0+ (1,0) [0|3] ""  VCU
+
+BO_ 1107 CCU_ID3_Fr03: 8 CCU
+ SG_ CCU_ID3_DCDC_OutputVolt : 7|8@0+ (0.1,0) [0|25.4] "V"  VCU
+ SG_ CCU_ID3_DCDC_OutputCurr : 15|8@0+ (1,0) [0|254] "A"  VCU
+ SG_ CCU_ID3_DCDC_InputVolt : 16|9@0+ (1,0) [0|510] "V"  VCU
+ SG_ CCU_ID3_DCDC_Temp : 39|8@0+ (1,-40) [-40|200] "oC"  VCU
+ SG_ CCU_ID3_DCDC_WorkSts : 41|2@0+ (1,0) [0|3] ""  VCU
+ SG_ CCU_ID3_DCDC_EnSts : 42|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_DTC : 63|8@0+ (1,0) [0|255] ""  VCU
+ SG_ CCU_ID3_RollCnt : 46|4@0+ (1,0) [0|15] ""  VCU
+ SG_ CCU_ID3_DCDC_LVOVP : 48|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_LVUVP : 49|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_OTP : 50|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_LVOCP : 51|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_HVOVP : 52|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_HVUVP : 53|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_CANTimeOut : 54|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_CoolRqt : 47|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCU_ID3_DCDC_ConvMode : 23|2@0+ (1,0) [0|3] ""  VCU
+
+BO_ 1024 VCU_CCU_ID0_Fr01: 8 VCU
+ SG_ VCU_CCU_ID0_Rsvd1 : 47|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID0_DCDCVoutSet : 55|8@0+ (0.1,0) [0|20] "V"  CCU
+ SG_ VCU_CCU_ID0_Rsvd0 : 15|2@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID0_DCDCEnable : 4|1@0+ (1,0) [0|1] ""  CCU
+
+BO_ 1025 VCU_CCU_ID1_Fr01: 8 VCU
+ SG_ VCU_CCU_ID1_Rsvd1 : 47|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID1_DCDCVoutSet : 55|8@0+ (0.1,0) [0|20] "V"  CCU
+ SG_ VCU_CCU_ID1_Rsvd0 : 15|2@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID1_DCDCEnable : 4|1@0+ (1,0) [0|1] ""  CCU
+
+BO_ 1026 VCU_CCU_ID2_Fr01: 8 VCU
+ SG_ VCU_CCU_ID2_Rsvd1 : 47|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID2_DCDCVoutSet : 55|8@0+ (0.1,0) [0|20] "V"  CCU
+ SG_ VCU_CCU_ID2_Rsvd0 : 15|2@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID2_DCDCEnable : 4|1@0+ (1,0) [0|1] ""  CCU
+
+BO_ 1027 VCU_CCU_ID3_Fr01: 8 VCU
+ SG_ VCU_CCU_ID3_Rsvd1 : 47|2@0+ (1,0) [0|3] ""  CCU
+ SG_ VCU_CCU_ID3_DCDCVoutSet : 55|8@0+ (0.1,0) [0|20] "V"  CCU
+ SG_ VCU_CCU_ID3_Rsvd0 : 15|2@0+ (1,0) [0|1] ""  CCU
+ SG_ VCU_CCU_ID3_DCDCEnable : 4|1@0+ (1,0) [0|1] ""  CCU
+
+BO_ 1072 CCU_ID0_Fr01: 8 CCU
+ SG_ CCU_ID0_OBCSts : 2|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID0_FaultLvl : 5|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID0_ChgCurr : 15|16@0+ (0.05,0) [0|400] "A" Vector__XXX
+ SG_ CCU_ID0_ChgVolt : 31|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+ SG_ CCU_ID0_HV_UVP : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_HV_OVP : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_AC_UVP : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_AC_OVP : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_LV_UVP : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_LV_OVP : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_HV_OCP : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_CAN_Fault : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_DCAC_DTC : 55|7@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID0_OBC_DTC : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1073 CCU_ID1_Fr01: 8 CCU
+ SG_ CCU_ID1_OBCSts : 2|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID1_FaultLvl : 5|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID1_ChgCurr : 15|16@0+ (0.05,0) [0|400] "A" Vector__XXX
+ SG_ CCU_ID1_ChgVolt : 31|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+ SG_ CCU_ID1_HV_UVP : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_HV_OVP : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_AC_UVP : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_AC_OVP : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_LV_UVP : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_LV_OVP : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_HV_OCP : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_CAN_Fault : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_DCAC_DTC : 55|7@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID1_OBC_DTC : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1074 CCU_ID2_Fr01: 8 CCU
+ SG_ CCU_ID2_OBCSts : 2|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID2_FaultLvl : 5|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID2_ChgCurr : 15|16@0+ (0.05,0) [0|400] "A" Vector__XXX
+ SG_ CCU_ID2_ChgVolt : 31|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+ SG_ CCU_ID2_HV_UVP : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_HV_OVP : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_AC_UVP : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_AC_OVP : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_LV_UVP : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_LV_OVP : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_HV_OCP : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_CAN_Fault : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_DCAC_DTC : 55|7@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID2_OBC_DTC : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1075 CCU_ID3_Fr01: 8 CCU
+ SG_ CCU_ID3_OBCSts : 2|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID3_FaultLvl : 5|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCU_ID3_ChgCurr : 15|16@0+ (0.05,0) [0|400] "A" Vector__XXX
+ SG_ CCU_ID3_ChgVolt : 31|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+ SG_ CCU_ID3_HV_UVP : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_HV_OVP : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_AC_UVP : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_AC_OVP : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_LV_UVP : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_LV_OVP : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_HV_OCP : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_CAN_Fault : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_DCAC_DTC : 55|7@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCU_ID3_OBC_DTC : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1280 CaliI_CCU_ID0_DTX: 8 Computer
+ SG_ CaliIDTX_0 : 7|64@0+ (1,0) [0|0] ""  CCU
+
+BO_ 1281 CaliI_CCU_ID1_DTX: 8 Computer
+ SG_ CaliIDTX_1 : 7|64@0+ (1,0) [0|0] ""  CCU
+
+BO_ 1282 CaliI_CCU_ID2_DTX: 8 Computer
+ SG_ CaliIDTX_2 : 7|64@0+ (1,0) [0|0] ""  CCU
+
+BO_ 1283 CaliI_CCU_ID3_DTX: 8 Computer
+ SG_ CaliIDTX_3 : 7|64@0+ (1,0) [0|0] ""  CCU
+
+BO_ 1296 CaliI_CCU_ID0_DRX: 8 CCU
+ SG_ CaliIDRX_0 : 7|64@0+ (1,0) [0|0] ""  Computer
+
+BO_ 1297 CaliI_CCU_ID1_DRX: 8 CCU
+ SG_ CaliIDRX_1 : 7|64@0+ (1,0) [0|0] ""  Computer
+
+BO_ 1298 CaliI_CCU_ID2_DRX: 8 CCU
+ SG_ CaliIDRX_2 : 7|64@0+ (1,0) [0|0] ""  Computer
+
+BO_ 1299 CaliI_CCU_ID3_DRX: 8 CCU
+ SG_ CaliIDRX_3 : 7|64@0+ (1,0) [0|0] ""  Computer
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 CCU_ID1_Rsvd1 "Reserved";
+CM_ SG_ 3221225472 CCU_ID1_Rsvd2 "Reserved";
+CM_ SG_ 3221225472 CCU_ID2_Rsvd1 "Reserved";
+CM_ SG_ 3221225472 CCU_ID2_Rsvd2 "Reserved";
+CM_ SG_ 3221225472 CCU_ID3_Rsvd1 "Reserved";
+CM_ SG_ 3221225472 CCU_ID3_Rsvd2 "Reserved";
+CM_ SG_ 1088 CCU_ID0_DCAC_Power "DCAC output power";
+CM_ SG_ 1088 CCU_ID0_DCAC_FaultLvl "DCAC fault level";
+CM_ SG_ 1088 CCU_ID0_DCAC_WorkSts "DCAC work status";
+CM_ SG_ 1088 CCU_ID0_DCAC_CCSts "CC connect status in DCAC mode";
+CM_ SG_ 1088 CCU_ID0_CP_DutyValue "CP duty value";
+CM_ SG_ 1088 CCU_ID0_S2Sts "S2 switch status";
+CM_ SG_ 1088 CCU_ID0_OBC_CCSts "CC connect status in OBC mode";
+CM_ SG_ 1088 CCU_ID0_ChgOTPFaultLvl "Charge over temperature protection";
+CM_ SG_ 1088 CCU_ID0_CoolingReq "Charger cool request";
+CM_ SG_ 1088 CCU_ID0_Rsvd1 "Reserved";
+CM_ SG_ 1088 CCU_ID0_Rsvd2 "Reserved";
+CM_ SG_ 1088 CCU_ID0_TempChg "Charger temperature";
+CM_ SG_ 1088 CCU_ID0_Rsvd4 "Reserved.";
+CM_ SG_ 1088 CCU_ID0_CP_DutyFault "CP duty abnormal";
+CM_ SG_ 1088 CCU_ID0_CPState "CP state";
+CM_ SG_ 1089 CCU_ID1_DCAC_Power "DCAC output power";
+CM_ SG_ 1089 CCU_ID1_DCAC_FaultLvl "DCAC fault level";
+CM_ SG_ 1089 CCU_ID1_DCAC_WorkSts "DCAC work status";
+CM_ SG_ 1089 CCU_ID1_DCAC_CCSts "CC connect status in DCAC mode";
+CM_ SG_ 1089 CCU_ID1_CP_DutyValue "CP duty value";
+CM_ SG_ 1089 CCU_ID1_S2Sts "S2 switch status";
+CM_ SG_ 1089 CCU_ID1_OBC_CCSts "CC connect status in OBC mode";
+CM_ SG_ 1089 CCU_ID1_ChgOTPFaultLvl "Charge over temperature protection";
+CM_ SG_ 1089 CCU_ID1_CoolingReq "Charger cool request";
+CM_ SG_ 1089 CCU_ID1_TempChg "Charger temperature";
+CM_ SG_ 1089 CCU_ID1_AC_Volt "Reserved.";
+CM_ SG_ 1089 CCU_ID1_CP_DutyFault "CP duty abnormal";
+CM_ SG_ 1089 CCU_ID1_CPState "CP state";
+CM_ SG_ 1090 CCU_ID2_DCAC_Power "DCAC output power";
+CM_ SG_ 1090 CCU_ID2_DCAC_FaultLvl "DCAC fault level";
+CM_ SG_ 1090 CCU_ID2_DCAC_WorkSts "DCAC work status";
+CM_ SG_ 1090 CCU_ID2_DCAC_CCSts "CC connect status in DCAC mode";
+CM_ SG_ 1090 CCU_ID2_CP_DutyValue "CP duty value";
+CM_ SG_ 1090 CCU_ID2_S2Sts "S2 switch status";
+CM_ SG_ 1090 CCU_ID2_OBC_CCSts "CC connect status in OBC mode";
+CM_ SG_ 1090 CCU_ID2_ChgOTPFaultLvl "Charge over temperature protection";
+CM_ SG_ 1090 CCU_ID2_CoolingReq "Charger cool request";
+CM_ SG_ 1090 CCU_ID2_TempChg "Charger temperature";
+CM_ SG_ 1090 CCU_ID2_AC_Volt "Reserved.";
+CM_ SG_ 1090 CCU_ID2_CP_DutyFault "CP duty abnormal";
+CM_ SG_ 1090 CCU_ID2_CPState "CP state";
+CM_ SG_ 1091 CCU_ID3_DCAC_Power "DCAC output power";
+CM_ SG_ 1091 CCU_ID3_DCAC_FaultLvl "DCAC fault level";
+CM_ SG_ 1091 CCU_ID3_DCAC_WorkSts "DCAC work status";
+CM_ SG_ 1091 CCU_ID3_DCAC_CCSts "CC connect status in DCAC mode";
+CM_ SG_ 1091 CCU_ID3_CP_DutyValue "CP duty value";
+CM_ SG_ 1091 CCU_ID3_S2Sts "S2 switch status";
+CM_ SG_ 1091 CCU_ID3_OBC_CCSts "CC connect status in OBC mode";
+CM_ SG_ 1091 CCU_ID3_ChgOTPFaultLvl "Charge over temperature protection";
+CM_ SG_ 1091 CCU_ID3_CoolingReq "Charger cool request";
+CM_ SG_ 1091 CCU_ID3_TempChg "Charger temperature";
+CM_ SG_ 1091 CCU_ID3_AC_Volt "Reserved.";
+CM_ SG_ 1091 CCU_ID3_CP_DutyFault "CP duty abnormal";
+CM_ SG_ 1091 CCU_ID3_CPState "CP state";
+CM_ SG_ 1056 VCU_CCU_ID0_AC_Volt_Freq "Reserved,all value keep 0.";
+CM_ SG_ 1056 VCU_CCU_ID0_Rsvd0 "Reserved, all value keep 0.";
+CM_ SG_ 1056 VCU_CCU_ID0_OBC_WorkModReq "BMS request work mode";
+CM_ SG_ 1056 VCU_CCU_ID0_OBC_CurrReq "OBC output current point setting";
+CM_ SG_ 1056 VCU_CCU_ID0_OBC_VoltReq "OBC output voltage point setting";
+CM_ SG_ 1056 VCU_CCU_ID0_LVOutDisable "BMS request DCDC stop output";
+CM_ SG_ 1056 VCU_CCU_ID0_CPState "CP state";
+CM_ SG_ 1056 VCU_CCU_ID0_CCState "CC state";
+CM_ SG_ 1056 VCU_CCU_ID0_DCAC_EnReq "BMS enable DCAC output";
+CM_ SG_ 1056 VCU_CCU_ID0_DutyValue "CP duty value";
+CM_ SG_ 1057 VCU_CCU_ID1_AC_Volt_Freq "Reserved,all value keep 0.";
+CM_ SG_ 1057 VCU_CCU_ID1_Rsvd0 "Reserved,all value keep 0.";
+CM_ SG_ 1057 VCU_CCU_ID1_OBC_WorkModReq "BMS request work mode";
+CM_ SG_ 1057 VCU_CCU_ID1_OBC_CurrReq "OBC output current point setting";
+CM_ SG_ 1057 VCU_CCU_ID1_OBC_VoltReq "OBC output voltage point setting";
+CM_ SG_ 1057 VCU_CCU_ID1_LVOutDisable "BMS request DCDC stop output";
+CM_ SG_ 1057 VCU_CCU_ID1_CPState "CP state";
+CM_ SG_ 1057 VCU_CCU_ID1_CCState "CC state";
+CM_ SG_ 1057 VCU_CCU_ID1_DCAC_EnReq "BMS enable DCAC output";
+CM_ SG_ 1057 VCU_CCU_ID1_DutyValue "CP duty value";
+CM_ SG_ 1058 VCU_CCU_ID2_AC_Volt_Freq "Reserved,all value keep 0.";
+CM_ SG_ 1058 VCU_CCU_ID2_Rsvd0 "Reserved,all value keep 0.";
+CM_ SG_ 1058 VCU_CCU_ID2_OBC_WorkModReq "BMS request work mode";
+CM_ SG_ 1058 VCU_CCU_ID2_OBC_CurrReq "OBC output current point setting";
+CM_ SG_ 1058 VCU_CCU_ID2_OBC_VoltReq "OBC output voltage point setting";
+CM_ SG_ 1058 VCU_CCU_ID2_LVOutDisable "BMS request DCDC stop output";
+CM_ SG_ 1058 VCU_CCU_ID2_CPState "CP state";
+CM_ SG_ 1058 VCU_CCU_ID2_CCState "CC state";
+CM_ SG_ 1058 VCU_CCU_ID2_DCAC_EnReq "BMS enable DCAC output";
+CM_ SG_ 1058 VCU_CCU_ID2_DutyValue "CP duty value";
+CM_ SG_ 1059 VCU_CCU_ID3_AC_Volt_Freq "Reserved,all value keep 0.";
+CM_ SG_ 1059 VCU_CCU_ID3_Rsvd0 "Reserved,all value keep 0.";
+CM_ SG_ 1059 VCU_CCU_ID3_OBC_WorkModReq "BMS request work mode";
+CM_ SG_ 1059 VCU_CCU_ID3_OBC_CurrReq "OBC output current point setting";
+CM_ SG_ 1059 VCU_CCU_ID3_OBC_VoltReq "OBC output voltage point setting";
+CM_ SG_ 1059 VCU_CCU_ID3_LVOutDisable "BMS request DCDC stop output";
+CM_ SG_ 1059 VCU_CCU_ID3_CPState "CP state";
+CM_ SG_ 1059 VCU_CCU_ID3_CCState "CC state";
+CM_ SG_ 1059 VCU_CCU_ID3_DCAC_EnReq "BMS enable DCAC output";
+CM_ SG_ 1059 VCU_CCU_ID3_DutyValue "CP duty value";
+CM_ SG_ 1104 CCU_ID0_DCDC_OutputVolt "DCDC output voltage";
+CM_ SG_ 1104 CCU_ID0_DCDC_OutputCurr "DCDC output current";
+CM_ SG_ 1104 CCU_ID0_DCDC_InputVolt "DCDC input voltage";
+CM_ SG_ 1104 CCU_ID0_DCDC_Temp "DCDC temperature";
+CM_ SG_ 1104 CCU_ID0_DCDC_WorkSts "DCDC work status";
+CM_ SG_ 1104 CCU_ID0_DCDC_EnSts "DCDC output enable status feedback";
+CM_ SG_ 1104 CCU_ID0_DCDC_DTC "DCDC DTC";
+CM_ SG_ 1104 CCU_ID0_RollCnt "Rolling counter.";
+CM_ SG_ 1104 CCU_ID0_DCDC_LVOVP "DCDC output over voltage";
+CM_ SG_ 1104 CCU_ID0_DCDC_LVUVP "DCDC output under voltage";
+CM_ SG_ 1104 CCU_ID0_DCDC_OTP "DCDC over temperature fault";
+CM_ SG_ 1104 CCU_ID0_DCDC_LVOCP "DCDC output over current fault";
+CM_ SG_ 1104 CCU_ID0_DCDC_HVOVP "DCDC input over voltage";
+CM_ SG_ 1104 CCU_ID0_DCDC_HVUVP "DCDC input under voltage";
+CM_ SG_ 1104 CCU_ID0_DCDC_CANTimeOut "DCDC CAN communication time-out";
+CM_ SG_ 1104 CCU_ID0_DCDC_CoolRqt "DCDC cool request";
+CM_ SG_ 1104 CCU_ID0_DCDC_ConvMode "DCDC power conversion mode";
+CM_ SG_ 1105 CCU_ID1_DCDC_OutputVolt "DCDC output voltage";
+CM_ SG_ 1105 CCU_ID1_DCDC_OutputCurr "DCDC output current";
+CM_ SG_ 1105 CCU_ID1_DCDC_InputVolt "DCDC input voltage";
+CM_ SG_ 1105 CCU_ID1_DCDC_Temp "DCDC temperature";
+CM_ SG_ 1105 CCU_ID1_DCDC_WorkSts "DCDC work status";
+CM_ SG_ 1105 CCU_ID1_DCDC_EnSts "DCDC output enable status feedback";
+CM_ SG_ 1105 CCU_ID1_DCDC_DTC "DCDC DTC";
+CM_ SG_ 1105 CCU_ID1_RollCnt "Rolling counter.";
+CM_ SG_ 1105 CCU_ID1_DCDC_LVOVP "DCDC output over voltage";
+CM_ SG_ 1105 CCU_ID1_DCDC_LVUVP "DCDC output under voltage";
+CM_ SG_ 1105 CCU_ID1_DCDC_OTP "DCDC over temperature fault";
+CM_ SG_ 1105 CCU_ID1_DCDC_LVOCP "DCDC output over current fault";
+CM_ SG_ 1105 CCU_ID1_DCDC_HVOVP "DCDC input over voltage";
+CM_ SG_ 1105 CCU_ID1_DCDC_HVUVP "DCDC input under voltage";
+CM_ SG_ 1105 CCU_ID1_DCDC_CANTimeOut "DCDC CAN communication time-out";
+CM_ SG_ 1105 CCU_ID1_DCDC_CoolRqt "DCDC cool request";
+CM_ SG_ 1105 CCU_ID1_DCDC_ConvMode "DCDC power conversion mode";
+CM_ SG_ 1106 CCU_ID2_DCDC_OutputVolt "DCDC output voltage";
+CM_ SG_ 1106 CCU_ID2_DCDC_OutputCurr "DCDC output current";
+CM_ SG_ 1106 CCU_ID2_DCDC_InputVolt "DCDC input voltage";
+CM_ SG_ 1106 CCU_ID2_DCDC_Temp "DCDC temperature";
+CM_ SG_ 1106 CCU_ID2_DCDC_WorkSts "DCDC work status";
+CM_ SG_ 1106 CCU_ID2_DCDC_EnSts "DCDC output enable status feedback";
+CM_ SG_ 1106 CCU_ID2_DCDC_DTC "DCDC DTC";
+CM_ SG_ 1106 CCU_ID2_RollCnt "Rolling counter.";
+CM_ SG_ 1106 CCU_ID2_DCDC_LVOVP "DCDC output over voltage";
+CM_ SG_ 1106 CCU_ID2_DCDC_LVUVP "DCDC output under voltage";
+CM_ SG_ 1106 CCU_ID2_DCDC_OTP "DCDC over temperature fault";
+CM_ SG_ 1106 CCU_ID2_DCDC_LVOCP "DCDC output over current fault";
+CM_ SG_ 1106 CCU_ID2_DCDC_HVOVP "DCDC input over voltage";
+CM_ SG_ 1106 CCU_ID2_DCDC_HVUVP "DCDC input under voltage";
+CM_ SG_ 1106 CCU_ID2_DCDC_CANTimeOut "DCDC CAN communication time-out";
+CM_ SG_ 1106 CCU_ID2_DCDC_CoolRqt "DCDC cool request";
+CM_ SG_ 1106 CCU_ID2_DCDC_ConvMode "DCDC power conversion mode";
+CM_ SG_ 1107 CCU_ID3_DCDC_OutputVolt "DCDC output voltage";
+CM_ SG_ 1107 CCU_ID3_DCDC_OutputCurr "DCDC output current";
+CM_ SG_ 1107 CCU_ID3_DCDC_InputVolt "DCDC input voltage";
+CM_ SG_ 1107 CCU_ID3_DCDC_Temp "DCDC temperature";
+CM_ SG_ 1107 CCU_ID3_DCDC_WorkSts "DCDC work status";
+CM_ SG_ 1107 CCU_ID3_DCDC_EnSts "DCDC output enable status feedback";
+CM_ SG_ 1107 CCU_ID3_DCDC_DTC "DCDC DTC";
+CM_ SG_ 1107 CCU_ID3_RollCnt "Rolling counter.";
+CM_ SG_ 1107 CCU_ID3_DCDC_LVOVP "DCDC output over voltage";
+CM_ SG_ 1107 CCU_ID3_DCDC_LVUVP "DCDC output under voltage";
+CM_ SG_ 1107 CCU_ID3_DCDC_OTP "DCDC over temperature fault";
+CM_ SG_ 1107 CCU_ID3_DCDC_LVOCP "DCDC output over current fault";
+CM_ SG_ 1107 CCU_ID3_DCDC_HVOVP "DCDC input over voltage";
+CM_ SG_ 1107 CCU_ID3_DCDC_HVUVP "DCDC input under voltage";
+CM_ SG_ 1107 CCU_ID3_DCDC_CANTimeOut "DCDC CAN communication time-out";
+CM_ SG_ 1107 CCU_ID3_DCDC_CoolRqt "DCDC cool request";
+CM_ SG_ 1107 CCU_ID3_DCDC_ConvMode "DCDC power conversion mode";
+CM_ SG_ 1024 VCU_CCU_ID0_Rsvd1 "Reserved,all value keep 0.";
+CM_ SG_ 1024 VCU_CCU_ID0_DCDCVoutSet "DCDC output voltage point setting";
+CM_ SG_ 1024 VCU_CCU_ID0_Rsvd0 "Reserved,all value keep 0.";
+CM_ SG_ 1024 VCU_CCU_ID0_DCDCEnable "DCDC output enable command";
+CM_ SG_ 1025 VCU_CCU_ID1_Rsvd1 "Reserved,all value keep 0.";
+CM_ SG_ 1025 VCU_CCU_ID1_DCDCVoutSet "DCDC output voltage point setting";
+CM_ SG_ 1025 VCU_CCU_ID1_Rsvd0 "Reserved,all value keep 0.";
+CM_ SG_ 1025 VCU_CCU_ID1_DCDCEnable "DCDC output enable command";
+CM_ SG_ 1026 VCU_CCU_ID2_Rsvd1 "Reserved,all value keep 0.";
+CM_ SG_ 1026 VCU_CCU_ID2_DCDCVoutSet "DCDC output voltage point setting";
+CM_ SG_ 1026 VCU_CCU_ID2_Rsvd0 "Reserved,all value keep 0.";
+CM_ SG_ 1026 VCU_CCU_ID2_DCDCEnable "DCDC output enable command";
+CM_ SG_ 1027 VCU_CCU_ID3_Rsvd1 "Reserved,all value keep 0.";
+CM_ SG_ 1027 VCU_CCU_ID3_DCDCVoutSet "DCDC output voltage point setting";
+CM_ SG_ 1027 VCU_CCU_ID3_Rsvd0 "Reserved,all value keep 0.";
+CM_ SG_ 1027 VCU_CCU_ID3_DCDCEnable "DCDC output enable command";
+CM_ SG_ 1072 CCU_ID0_OBCSts "OBC work status";
+CM_ SG_ 1072 CCU_ID0_FaultLvl "OBC fault level";
+CM_ SG_ 1072 CCU_ID0_ChgCurr "OBC output current";
+CM_ SG_ 1072 CCU_ID0_ChgVolt "OBC output voltage";
+CM_ SG_ 1072 CCU_ID0_HV_UVP "OBC output under voltage";
+CM_ SG_ 1072 CCU_ID0_HV_OVP "OBC output over voltage";
+CM_ SG_ 1072 CCU_ID0_AC_UVP "OBC input under voltage";
+CM_ SG_ 1072 CCU_ID0_AC_OVP "OBC input over voltage";
+CM_ SG_ 1072 CCU_ID0_LV_UVP "OBC KL30 under voltage";
+CM_ SG_ 1072 CCU_ID0_LV_OVP "OBC KL30 over voltage";
+CM_ SG_ 1072 CCU_ID0_HV_OCP "OBC output over current";
+CM_ SG_ 1072 CCU_ID0_CAN_Fault "CCU CAN communiction time-out";
+CM_ SG_ 1072 CCU_ID0_DCAC_DTC "DCAC_DTC";
+CM_ SG_ 1072 CCU_ID0_OBC_DTC "OBC_DTC";
+CM_ SG_ 1073 CCU_ID1_OBCSts "OBC work status";
+CM_ SG_ 1073 CCU_ID1_FaultLvl "OBC fault level";
+CM_ SG_ 1073 CCU_ID1_ChgCurr "OBC output current";
+CM_ SG_ 1073 CCU_ID1_ChgVolt "OBC output voltage";
+CM_ SG_ 1073 CCU_ID1_HV_UVP "OBC output under voltage";
+CM_ SG_ 1073 CCU_ID1_HV_OVP "OBC output over voltage";
+CM_ SG_ 1073 CCU_ID1_AC_UVP "OBC input under voltage";
+CM_ SG_ 1073 CCU_ID1_AC_OVP "OBC input over voltage";
+CM_ SG_ 1073 CCU_ID1_LV_UVP "OBC KL30 under voltage";
+CM_ SG_ 1073 CCU_ID1_LV_OVP "OBC KL30 over voltage";
+CM_ SG_ 1073 CCU_ID1_HV_OCP "OBC output over current";
+CM_ SG_ 1073 CCU_ID1_CAN_Fault "CCU CAN communiction time-out";
+CM_ SG_ 1073 CCU_ID1_DCAC_DTC "DCAC_DTC";
+CM_ SG_ 1073 CCU_ID1_OBC_DTC "OBC_DTC";
+CM_ SG_ 1074 CCU_ID2_OBCSts "OBC work status";
+CM_ SG_ 1074 CCU_ID2_FaultLvl "OBC fault level";
+CM_ SG_ 1074 CCU_ID2_ChgCurr "OBC output current";
+CM_ SG_ 1074 CCU_ID2_ChgVolt "OBC output voltage";
+CM_ SG_ 1074 CCU_ID2_HV_UVP "OBC output under voltage";
+CM_ SG_ 1074 CCU_ID2_HV_OVP "OBC output over voltage";
+CM_ SG_ 1074 CCU_ID2_AC_UVP "OBC input under voltage";
+CM_ SG_ 1074 CCU_ID2_AC_OVP "OBC input over voltage";
+CM_ SG_ 1074 CCU_ID2_LV_UVP "OBC KL30 under voltage";
+CM_ SG_ 1074 CCU_ID2_LV_OVP "OBC KL30 over voltage";
+CM_ SG_ 1074 CCU_ID2_HV_OCP "OBC output over current";
+CM_ SG_ 1074 CCU_ID2_CAN_Fault "CCU CAN communiction time-out";
+CM_ SG_ 1074 CCU_ID2_DCAC_DTC "DCAC_DTC";
+CM_ SG_ 1074 CCU_ID2_OBC_DTC "OBC_DTC";
+CM_ SG_ 1075 CCU_ID3_OBCSts "OBC work status";
+CM_ SG_ 1075 CCU_ID3_FaultLvl "OBC fault level";
+CM_ SG_ 1075 CCU_ID3_ChgCurr "OBC output current";
+CM_ SG_ 1075 CCU_ID3_ChgVolt "OBC output voltage";
+CM_ SG_ 1075 CCU_ID3_HV_UVP "OBC output under voltage";
+CM_ SG_ 1075 CCU_ID3_HV_OVP "OBC output over voltage";
+CM_ SG_ 1075 CCU_ID3_AC_UVP "OBC input under voltage";
+CM_ SG_ 1075 CCU_ID3_AC_OVP "OBC input over voltage";
+CM_ SG_ 1075 CCU_ID3_LV_UVP "OBC KL30 under voltage";
+CM_ SG_ 1075 CCU_ID3_LV_OVP "OBC KL30 over voltage";
+CM_ SG_ 1075 CCU_ID3_HV_OCP "OBC output over current";
+CM_ SG_ 1075 CCU_ID3_CAN_Fault "CCU CAN communiction time-out";
+CM_ SG_ 1075 CCU_ID3_DCAC_DTC "DCAC_DTC";
+CM_ SG_ 1075 CCU_ID3_OBC_DTC "OBC_DTC";
+CM_ BO_ 1280 "Event";
+CM_ BO_ 1281 "Event";
+CM_ BO_ 1282 "Event";
+CM_ BO_ 1283 "Event";
+CM_ BO_ 1296 "Event";
+CM_ BO_ 1297 "Event";
+CM_ BO_ 1298 "Event";
+CM_ BO_ 1299 "Event";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 1088 500;
+BA_ "GenMsgCycleTime" BO_ 1089 500;
+BA_ "GenMsgCycleTime" BO_ 1090 500;
+BA_ "GenMsgCycleTime" BO_ 1091 500;
+BA_ "GenMsgCycleTime" BO_ 1056 500;
+BA_ "GenMsgCycleTime" BO_ 1057 500;
+BA_ "GenMsgCycleTime" BO_ 1058 500;
+BA_ "GenMsgCycleTime" BO_ 1059 500;
+BA_ "GenMsgCycleTime" BO_ 1104 10;
+BA_ "GenMsgCycleTime" BO_ 1105 10;
+BA_ "GenMsgCycleTime" BO_ 1106 10;
+BA_ "GenMsgCycleTime" BO_ 1107 10;
+BA_ "GenMsgCycleTime" BO_ 1024 100;
+BA_ "GenMsgCycleTime" BO_ 1025 100;
+BA_ "GenMsgCycleTime" BO_ 1026 100;
+BA_ "GenMsgCycleTime" BO_ 1027 100;
+BA_ "GenMsgCycleTime" BO_ 1072 500;
+BA_ "GenMsgCycleTime" BO_ 1073 500;
+BA_ "GenMsgCycleTime" BO_ 1074 500;
+BA_ "GenMsgCycleTime" BO_ 1075 500;
+BA_ "GenSigStartValue" SG_ 3221225472 CCU_ID1_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 CCU_ID1_Rsvd2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 CCU_ID2_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 CCU_ID2_Rsvd2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 CCU_ID3_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 CCU_ID3_Rsvd2 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_DCAC_Power 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_DCAC_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_DCAC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_DCAC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_CP_DutyValue 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_S2Sts 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_OBC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_Rsvd5 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_ChgOTPFaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_CoolingReq 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_Rsvd2 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_TempChg 40;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_Rsvd4 40;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_CP_DutyFault 0;
+BA_ "GenSigStartValue" SG_ 1088 CCU_ID0_Rsvd3 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_DCAC_Power 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_DCAC_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_DCAC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_DCAC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_CP_DutyValue 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_S2Sts 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_OBC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_Version 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_ChgOTPFaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_CoolingReq 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_TempChg 40;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_AC_Volt 40;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_CP_DutyFault 0;
+BA_ "GenSigStartValue" SG_ 1089 CCU_ID1_Rsvd3 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_DCAC_Power 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_DCAC_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_DCAC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_DCAC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_CP_DutyValue 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_S2Sts 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_OBC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_Version 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_ChgOTPFaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_CoolingReq 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_TempChg 40;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_AC_Volt 40;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_CP_DutyFault 0;
+BA_ "GenSigStartValue" SG_ 1090 CCU_ID2_Rsvd3 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_VersionNo 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_DCAC_Power 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_DCAC_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_DCAC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_DCAC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_CP_DutyValue 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_S2Sts 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_OBC_CCSts 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_Version 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_ChgOTPFaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_CoolingReq 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_TempChg 40;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_AC_Volt 40;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_CP_DutyFault 0;
+BA_ "GenSigStartValue" SG_ 1091 CCU_ID3_Rsvd3 0;
+BA_ "GenSigStartValue" SG_ 1056 VCU_CCU_ID0_AC_Volt_Freq 0;
+BA_ "GenSigStartValue" SG_ 1056 VCU_CCU_ID0_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1056 VCU_CCU_ID0_OBC_WorkModReq 0;
+BA_ "GenSigStartValue" SG_ 1056 VCU_CCU_ID0_OBC_CurrReq 200;
+BA_ "GenSigStartValue" SG_ 1056 VCU_CCU_ID0_OBC_VoltReq 7000;
+BA_ "GenSigStartValue" SG_ 1056 VCU_CCU_ID0_LVOutDisable 0;
+BA_ "GenSigStartValue" SG_ 1056 VCU_CCU_ID0_DCAC_EnReq 0;
+BA_ "GenSigStartValue" SG_ 1057 VCU_CCU_ID1_AC_Volt_Freq 0;
+BA_ "GenSigStartValue" SG_ 1057 VCU_CCU_ID1_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1057 VCU_CCU_ID1_OBC_WorkModReq 0;
+BA_ "GenSigStartValue" SG_ 1057 VCU_CCU_ID1_OBC_CurrReq 200;
+BA_ "GenSigStartValue" SG_ 1057 VCU_CCU_ID1_OBC_VoltReq 7000;
+BA_ "GenSigStartValue" SG_ 1057 VCU_CCU_ID1_LVOutDisable 0;
+BA_ "GenSigStartValue" SG_ 1057 VCU_CCU_ID1_DCAC_EnReq 0;
+BA_ "GenSigStartValue" SG_ 1058 VCU_CCU_ID2_AC_Volt_Freq 0;
+BA_ "GenSigStartValue" SG_ 1058 VCU_CCU_ID2_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1058 VCU_CCU_ID2_OBC_WorkModReq 0;
+BA_ "GenSigStartValue" SG_ 1058 VCU_CCU_ID2_OBC_CurrReq 200;
+BA_ "GenSigStartValue" SG_ 1058 VCU_CCU_ID2_OBC_VoltReq 7000;
+BA_ "GenSigStartValue" SG_ 1058 VCU_CCU_ID2_LVOutDisable 0;
+BA_ "GenSigStartValue" SG_ 1058 VCU_CCU_ID2_DCAC_EnReq 0;
+BA_ "GenSigStartValue" SG_ 1059 VCU_CCU_ID3_AC_Volt_Freq 0;
+BA_ "GenSigStartValue" SG_ 1059 VCU_CCU_ID3_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1059 VCU_CCU_ID3_OBC_WorkModReq 0;
+BA_ "GenSigStartValue" SG_ 1059 VCU_CCU_ID3_OBC_CurrReq 200;
+BA_ "GenSigStartValue" SG_ 1059 VCU_CCU_ID3_OBC_VoltReq 7000;
+BA_ "GenSigStartValue" SG_ 1059 VCU_CCU_ID3_LVOutDisable 0;
+BA_ "GenSigStartValue" SG_ 1059 VCU_CCU_ID3_DCAC_EnReq 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_OutputVolt 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_OutputCurr 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_InputVolt 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_Temp 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_EnSts 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_DTC 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_RollCnt 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_LVOVP 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_LVUVP 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_OTP 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_LVOCP 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_HVOVP 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_HVUVP 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_CANTimeOut 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_CoolRqt 0;
+BA_ "GenSigStartValue" SG_ 1104 CCU_ID0_DCDC_ConvMode 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_OutputVolt 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_OutputCurr 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_InputVolt 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_Temp 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_EnSts 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_DTC 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_RollCnt 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_LVOVP 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_LVUVP 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_OTP 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_LVOCP 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_HVOVP 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_HVUVP 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_CANTimeOut 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_CoolRqt 0;
+BA_ "GenSigStartValue" SG_ 1105 CCU_ID1_DCDC_ConvMode 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_OutputVolt 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_OutputCurr 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_InputVolt 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_Temp 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_EnSts 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_DTC 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_RollCnt 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_LVOVP 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_LVUVP 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_OTP 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_LVOCP 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_HVOVP 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_HVUVP 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_CANTimeOut 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_CoolRqt 0;
+BA_ "GenSigStartValue" SG_ 1106 CCU_ID2_DCDC_ConvMode 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_OutputVolt 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_OutputCurr 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_InputVolt 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_Temp 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_WorkSts 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_EnSts 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_DTC 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_RollCnt 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_LVOVP 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_LVUVP 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_OTP 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_LVOCP 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_HVOVP 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_HVUVP 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_CANTimeOut 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_CoolRqt 0;
+BA_ "GenSigStartValue" SG_ 1107 CCU_ID3_DCDC_ConvMode 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_CCU_ID0_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_CCU_ID0_DCDCVoutSet 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_CCU_ID0_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_CCU_ID0_DCDCEnable 0;
+BA_ "GenSigStartValue" SG_ 1025 VCU_CCU_ID1_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 1025 VCU_CCU_ID1_DCDCVoutSet 0;
+BA_ "GenSigStartValue" SG_ 1025 VCU_CCU_ID1_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1025 VCU_CCU_ID1_DCDCEnable 0;
+BA_ "GenSigStartValue" SG_ 1026 VCU_CCU_ID2_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 1026 VCU_CCU_ID2_DCDCVoutSet 0;
+BA_ "GenSigStartValue" SG_ 1026 VCU_CCU_ID2_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1026 VCU_CCU_ID2_DCDCEnable 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_CCU_ID3_Rsvd1 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_CCU_ID3_DCDCVoutSet 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_CCU_ID3_Rsvd0 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_CCU_ID3_DCDCEnable 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_OBCSts 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_ChgCurr 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_ChgVolt 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_HV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_HV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_AC_UVP 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_AC_OVP 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_LV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_LV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_HV_OCP 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_CAN_Fault 0;
+BA_ "GenSigStartValue" SG_ 1072 CCU_ID0_DCAC_DTC 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_OBCSts 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_ChgCurr 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_ChgVolt 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_HV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_HV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_AC_UVP 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_AC_OVP 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_LV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_LV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_HV_OCP 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_CAN_Fault 0;
+BA_ "GenSigStartValue" SG_ 1073 CCU_ID1_DCAC_DTC 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_OBCSts 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_ChgCurr 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_ChgVolt 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_HV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_HV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_AC_UVP 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_AC_OVP 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_LV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_LV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_HV_OCP 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_CAN_Fault 0;
+BA_ "GenSigStartValue" SG_ 1074 CCU_ID2_DCAC_DTC 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_OBCSts 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_FaultLvl 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_ChgCurr 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_ChgVolt 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_HV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_HV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_AC_UVP 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_AC_OVP 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_LV_UVP 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_LV_OVP 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_HV_OCP 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_CAN_Fault 0;
+BA_ "GenSigStartValue" SG_ 1075 CCU_ID3_DCAC_DTC 0;
+VAL_ 3221225472 CCU_ID1_Rsvd1 0 "Normal" 1 "Fault" ;
+VAL_ 3221225472 CCU_ID1_Rsvd2 0 "Normal" 1 "Fault" ;
+VAL_ 3221225472 CCU_ID2_Rsvd1 0 "Normal" 1 "Fault" ;
+VAL_ 3221225472 CCU_ID2_Rsvd2 0 "Normal" 1 "Fault" ;
+VAL_ 3221225472 CCU_ID3_Rsvd1 0 "Normal" 1 "Fault" ;
+VAL_ 3221225472 CCU_ID3_Rsvd2 0 "Normal" 1 "Fault" ;
+VAL_ 1088 CCU_ID0_DCAC_FaultLvl 3 "Level3 fault" 2 "Level2 fault" 1 "Level1 fault" 0 "No fault" ;
+VAL_ 1088 CCU_ID0_DCAC_WorkSts 0 "No charge" 1 "Ready" 2 "DCharging" 3 "DCharge finished" ;
+VAL_ 1088 CCU_ID0_DCAC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1088 CCU_ID0_S2Sts 0 "open" 1 "closed" ;
+VAL_ 1088 CCU_ID0_OBC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1088 CCU_ID0_ChgOTPFaultLvl 0 "Normal" 1 "Over_Tempe_1_level" 2 "Over_Tempe_2_level" ;
+VAL_ 1088 CCU_ID0_CoolingReq 0 "No_request" 1 "Cool_request" ;
+VAL_ 1088 CCU_ID0_Rsvd1 0 "Normal" 1 "Fault" ;
+VAL_ 1088 CCU_ID0_Rsvd2 0 "Normal" 1 "Fault" ;
+VAL_ 1088 CCU_ID0_CP_DutyFault 0 "Normal" 1 "CP_duty_fault" ;
+VAL_ 1088 CCU_ID0_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1089 CCU_ID1_VersionNo 3 "C3" 2 "C2" 1 "C1" 0 "Default" ;
+VAL_ 1089 CCU_ID1_DCAC_FaultLvl 3 "Level3 fault" 2 "Level2 fault" 1 "Level1 fault" 0 "No fault" ;
+VAL_ 1089 CCU_ID1_DCAC_WorkSts 0 "No charge" 1 "Ready" 2 "DCharging" 3 "DCharge finished" ;
+VAL_ 1089 CCU_ID1_DCAC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1089 CCU_ID1_S2Sts 0 "open" 1 "closed" ;
+VAL_ 1089 CCU_ID1_OBC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1089 CCU_ID1_ChgOTPFaultLvl 0 "Normal" 1 "Over_Tempe_1_level" 2 "Over_Tempe_2_level" ;
+VAL_ 1089 CCU_ID1_CoolingReq 0 "No_request" 1 "Cool_request" ;
+VAL_ 1089 CCU_ID1_CP_DutyFault 0 "Normal" 1 "CP_duty_fault" ;
+VAL_ 1089 CCU_ID1_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1090 CCU_ID2_VersionNo 3 "C3" 2 "C2" 1 "C1" 0 "Default" ;
+VAL_ 1090 CCU_ID2_DCAC_FaultLvl 3 "Level3 fault" 2 "Level2 fault" 1 "Level1 fault" 0 "No fault" ;
+VAL_ 1090 CCU_ID2_DCAC_WorkSts 0 "No charge" 1 "Ready" 2 "DCharging" 3 "DCharge finished" ;
+VAL_ 1090 CCU_ID2_DCAC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1090 CCU_ID2_S2Sts 0 "open" 1 "closed" ;
+VAL_ 1090 CCU_ID2_OBC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1090 CCU_ID2_ChgOTPFaultLvl 0 "Normal" 1 "Over_Tempe_1_level" 2 "Over_Tempe_2_level" ;
+VAL_ 1090 CCU_ID2_CoolingReq 0 "No_request" 1 "Cool_request" ;
+VAL_ 1090 CCU_ID2_CP_DutyFault 0 "Normal" 1 "CP_duty_fault" ;
+VAL_ 1090 CCU_ID2_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1091 CCU_ID3_VersionNo 3 "C3" 2 "C2" 1 "C1" 0 "Default" ;
+VAL_ 1091 CCU_ID3_DCAC_FaultLvl 3 "Level3 fault" 2 "Level2 fault" 1 "Level1 fault" 0 "No fault" ;
+VAL_ 1091 CCU_ID3_DCAC_WorkSts 0 "No charge" 1 "Ready" 2 "DCharging" 3 "DCharge finished" ;
+VAL_ 1091 CCU_ID3_DCAC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1091 CCU_ID3_S2Sts 0 "open" 1 "closed" ;
+VAL_ 1091 CCU_ID3_OBC_CCSts 0 "CC_UnConnect" 1 "CC_Connect" 2 "CC_HalfConnect" ;
+VAL_ 1091 CCU_ID3_ChgOTPFaultLvl 0 "Normal" 1 "Over_Tempe_1_level" 2 "Over_Tempe_2_level" ;
+VAL_ 1091 CCU_ID3_CoolingReq 0 "No_request" 1 "Cool_request" ;
+VAL_ 1091 CCU_ID3_CP_DutyFault 0 "Normal" 1 "CP_duty_fault" ;
+VAL_ 1091 CCU_ID3_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1056 VCU_CCU_ID0_AC_Volt_Freq 3 "220VAC, 50Hz" 2 "230VAC, 50Hz" 1 "120VAC, 60Hz" 0 "240VAC, 60Hz" ;
+VAL_ 1056 VCU_CCU_ID0_OBC_WorkModReq 0 "Disconnect" 1 "Charge" 2 "Heat" 3 "Precharge" 4 "Discharge" ;
+VAL_ 1056 VCU_CCU_ID0_LVOutDisable 0 "Output Enable" 1 "Output Disable" ;
+VAL_ 1056 VCU_CCU_ID0_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1056 VCU_CCU_ID0_CCState 0 "CC_UnConnect" 1 "CC_HalfConnect" 2 "CC_Connect" ;
+VAL_ 1056 VCU_CCU_ID0_DCAC_EnReq 0 "Inactive/Initial value" 1 "Disable" 2 "Enable" ;
+VAL_ 1057 VCU_CCU_ID1_AC_Volt_Freq 3 "220VAC, 50Hz" 2 "230VAC, 50Hz" 1 "120VAC, 60Hz" 0 "240VAC, 60Hz" ;
+VAL_ 1057 VCU_CCU_ID1_OBC_WorkModReq 0 "Disconnect" 1 "Charge" 2 "Heat" 3 "Precharge" 4 "Discharge" ;
+VAL_ 1057 VCU_CCU_ID1_LVOutDisable 0 "Output Enable" 1 "Output Disable" ;
+VAL_ 1057 VCU_CCU_ID1_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1057 VCU_CCU_ID1_CCState 0 "CC_UnConnect" 1 "CC_HalfConnect" 2 "CC_Connect" ;
+VAL_ 1057 VCU_CCU_ID1_DCAC_EnReq 0 "Inactive/Initial value" 1 "Disable" 2 "Enable" ;
+VAL_ 1058 VCU_CCU_ID2_AC_Volt_Freq 3 "220VAC, 50Hz" 2 "230VAC, 50Hz" 1 "120VAC, 60Hz" 0 "240VAC, 60Hz" ;
+VAL_ 1058 VCU_CCU_ID2_OBC_WorkModReq 0 "Disconnect" 1 "Charge" 2 "Heat" 3 "Precharge" 4 "Discharge" ;
+VAL_ 1058 VCU_CCU_ID2_LVOutDisable 0 "Output Enable" 1 "Output Disable" ;
+VAL_ 1058 VCU_CCU_ID2_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1058 VCU_CCU_ID2_CCState 0 "CC_UnConnect" 1 "CC_HalfConnect" 2 "CC_Connect" ;
+VAL_ 1058 VCU_CCU_ID2_DCAC_EnReq 0 "Inactive/Initial value" 1 "Disable" 2 "Enable" ;
+VAL_ 1059 VCU_CCU_ID3_AC_Volt_Freq 3 "220VAC, 50Hz" 2 "230VAC, 50Hz" 1 "120VAC, 60Hz" 0 "240VAC, 60Hz" ;
+VAL_ 1059 VCU_CCU_ID3_OBC_WorkModReq 0 "Disconnect" 1 "Charge" 2 "Heat" 3 "Precharge" 4 "Discharge" ;
+VAL_ 1059 VCU_CCU_ID3_LVOutDisable 0 "Output Enable" 1 "Output Disable" ;
+VAL_ 1059 VCU_CCU_ID3_CPState 0 "CP_UnConnect" 1 "CP_3V" 2 "CP_3VPWM" 3 "CP_6V" 4 "CP_6VPWM" 5 "CP_9V" 6 "CP_9VPWM" 7 "CP_12V" 8 "CP_12VPWM" 15 "CP_OutOfRange" ;
+VAL_ 1059 VCU_CCU_ID3_CCState 0 "CC_UnConnect" 1 "CC_HalfConnect" 2 "CC_Connect" ;
+VAL_ 1059 VCU_CCU_ID3_DCAC_EnReq 0 "Inactive/Initial value" 1 "Disable" 2 "Enable" ;
+VAL_ 1104 CCU_ID0_DCDC_WorkSts 0 "Standby" 1 "Buck" 2 "Failure" 3 "Reserved" ;
+VAL_ 1104 CCU_ID0_DCDC_EnSts 0 "Disable" 1 "Enable" ;
+VAL_ 1104 CCU_ID0_DCDC_DTC 0 "No Fault" 1 "RSVD1" 2 "ACUVP" 3 "RSVD3" 4 "HVUVP" 5 "HVOVP" 6 "HVOCP " 7 "HWOCP" 8 "LVIoFbOpen" 9 "LVVoFbOpen" 10 "PFCOVP" 11 "LVOCP" 12 "VinOVP" 13 "VinUVP" 14 "Inn1CommuErr" 15 "Inn0CommuErr" 16 "RSVD16" 17 "LVOVP" 18 "DCDCOTP" 19 "TempSenseErr" 255 "RSVD255" ;
+VAL_ 1104 CCU_ID0_DCDC_LVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1104 CCU_ID0_DCDC_LVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1104 CCU_ID0_DCDC_OTP 0 "NoFault" 1 "Fault" ;
+VAL_ 1104 CCU_ID0_DCDC_LVOCP 0 "NoFault" 1 "Fault" ;
+VAL_ 1104 CCU_ID0_DCDC_HVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1104 CCU_ID0_DCDC_HVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1104 CCU_ID0_DCDC_CANTimeOut 0 "NoFault" 1 "Fault" ;
+VAL_ 1104 CCU_ID0_DCDC_CoolRqt 0 "NoCoolingRqt" 1 "CoolingRqt" ;
+VAL_ 1104 CCU_ID0_DCDC_ConvMode 0 "HV_LV" 1 "AC_LV" 2 "Rsvd0" 3 "Rsvd1" ;
+VAL_ 1105 CCU_ID1_DCDC_WorkSts 0 "Standby" 1 "Buck" 2 "Failure" 3 "Reserved" ;
+VAL_ 1105 CCU_ID1_DCDC_EnSts 0 "Disable" 1 "Enable" ;
+VAL_ 1105 CCU_ID1_DCDC_DTC 0 "No Fault" 1 "RSVD1" 2 "ACUVP" 3 "RSVD3" 4 "HVUVP" 5 "HVOVP" 6 "HVOCP " 7 "HWOCP" 8 "LVIoFbOpen" 9 "LVVoFbOpen" 10 "PFCOVP" 11 "LVOCP" 12 "VinOVP" 13 "VinUVP" 14 "Inn1CommuErr" 15 "Inn0CommuErr" 16 "RSVD16" 17 "LVOVP" 18 "DCDCOTP" 19 "TempSenseErr" 255 "RSVD255" ;
+VAL_ 1105 CCU_ID1_DCDC_LVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1105 CCU_ID1_DCDC_LVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1105 CCU_ID1_DCDC_OTP 0 "NoFault" 1 "Fault" ;
+VAL_ 1105 CCU_ID1_DCDC_LVOCP 0 "NoFault" 1 "Fault" ;
+VAL_ 1105 CCU_ID1_DCDC_HVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1105 CCU_ID1_DCDC_HVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1105 CCU_ID1_DCDC_CANTimeOut 0 "NoFault" 1 "Fault" ;
+VAL_ 1105 CCU_ID1_DCDC_CoolRqt 0 "NoCoolingRqt" 1 "CoolingRqt" ;
+VAL_ 1105 CCU_ID1_DCDC_ConvMode 0 "HV_LV" 1 "AC_LV" 2 "Rsvd0" 3 "Rsvd1" ;
+VAL_ 1106 CCU_ID2_DCDC_WorkSts 0 "Standby" 1 "Buck" 2 "Failure" 3 "Reserved" ;
+VAL_ 1106 CCU_ID2_DCDC_EnSts 0 "Disable" 1 "Enable" ;
+VAL_ 1106 CCU_ID2_DCDC_DTC 0 "No Fault" 1 "RSVD1" 2 "ACUVP" 3 "RSVD3" 4 "HVUVP" 5 "HVOVP" 6 "HVOCP " 7 "HWOCP" 8 "LVIoFbOpen" 9 "LVVoFbOpen" 10 "PFCOVP" 11 "LVOCP" 12 "VinOVP" 13 "VinUVP" 14 "Inn1CommuErr" 15 "Inn0CommuErr" 16 "RSVD16" 17 "LVOVP" 18 "DCDCOTP" 19 "TempSenseErr" 255 "RSVD255" ;
+VAL_ 1106 CCU_ID2_DCDC_LVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1106 CCU_ID2_DCDC_LVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1106 CCU_ID2_DCDC_OTP 0 "NoFault" 1 "Fault" ;
+VAL_ 1106 CCU_ID2_DCDC_LVOCP 0 "NoFault" 1 "Fault" ;
+VAL_ 1106 CCU_ID2_DCDC_HVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1106 CCU_ID2_DCDC_HVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1106 CCU_ID2_DCDC_CANTimeOut 0 "NoFault" 1 "Fault" ;
+VAL_ 1106 CCU_ID2_DCDC_CoolRqt 0 "NoCoolingRqt" 1 "CoolingRqt" ;
+VAL_ 1106 CCU_ID2_DCDC_ConvMode 0 "HV_LV" 1 "AC_LV" 2 "Rsvd0" 3 "Rsvd1" ;
+VAL_ 1107 CCU_ID3_DCDC_WorkSts 0 "Standby" 1 "Buck" 2 "Failure" 3 "Reserved" ;
+VAL_ 1107 CCU_ID3_DCDC_EnSts 0 "Disable" 1 "Enable" ;
+VAL_ 1107 CCU_ID3_DCDC_DTC 0 "No Fault" 1 "RSVD1" 2 "ACUVP" 3 "RSVD3" 4 "HVUVP" 5 "HVOVP" 6 "HVOCP " 7 "HWOCP" 8 "LVIoFbOpen" 9 "LVVoFbOpen" 10 "PFCOVP" 11 "LVOCP" 12 "VinOVP" 13 "VinUVP" 14 "Inn1CommuErr" 15 "Inn0CommuErr" 16 "RSVD16" 17 "LVOVP" 18 "DCDCOTP" 19 "TempSenseErr" 255 "RSVD255" ;
+VAL_ 1107 CCU_ID3_DCDC_LVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1107 CCU_ID3_DCDC_LVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1107 CCU_ID3_DCDC_OTP 0 "NoFault" 1 "Fault" ;
+VAL_ 1107 CCU_ID3_DCDC_LVOCP 0 "NoFault" 1 "Fault" ;
+VAL_ 1107 CCU_ID3_DCDC_HVOVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1107 CCU_ID3_DCDC_HVUVP 0 "NoFault" 1 "Fault" ;
+VAL_ 1107 CCU_ID3_DCDC_CANTimeOut 0 "NoFault" 1 "Fault" ;
+VAL_ 1107 CCU_ID3_DCDC_CoolRqt 0 "NoCoolingRqt" 1 "CoolingRqt" ;
+VAL_ 1107 CCU_ID3_DCDC_ConvMode 0 "HV_LV" 1 "AC_LV" 2 "Rsvd0" 3 "Rsvd1" ;
+VAL_ 1024 VCU_CCU_ID0_DCDCEnable 0 "Disable" 1 "Enable" ;
+VAL_ 1025 VCU_CCU_ID1_DCDCEnable 0 "Disable" 1 "Enable" ;
+VAL_ 1026 VCU_CCU_ID2_DCDCEnable 0 "Disable" 1 "Enable" ;
+VAL_ 1027 VCU_CCU_ID3_DCDCEnable 0 "Disable" 1 "Enable" ;
+VAL_ 1072 CCU_ID0_OBCSts 0 "No charge" 1 "Ready" 2 "Charging" 3 "Charge finished" 4 "Heating" 5 "Charging pause" ;
+VAL_ 1072 CCU_ID0_FaultLvl 0 "No fault" 1 "Level1 fault" 2 "Level2 fault" 3 "Level2 fault" ;
+VAL_ 1072 CCU_ID0_HV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_HV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_AC_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_AC_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_LV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_LV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_HV_OCP 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_CAN_Fault 0 "No fault" 1 "Fault" ;
+VAL_ 1072 CCU_ID0_DCAC_DTC 0 "NO Fault" 1 "TempSenseErr" 2 "InsulationFault" 3 "LVOVP" 4 "PFCOCP " 5 "LVUVP" 6 "VinOVP" 7 "VinUVP" 8 "PFCOVP" 9 "ACOVP" 10 "CCUnValid" 11 "Inn1CommuErr" 12 "Inn2CommuErr" 13 "AirUTP" 14 "HWOCP" 15 "AIROTP" 16 "Cali2Err" 17 "Cali1Err" 18 "BMSCANTimeOut" 255 "RSVD255" ;
+VAL_ 1072 CCU_ID0_OBC_DTC 0 "NO Fault" 1 "RSVD1" 2 "TempDerate" 3 "TempSenseErr" 4 "RSVD4" 5 "LVOVP" 6 "PFCOCP" 7 "LVUVP" 8 "HVOVP" 9 "HVUVP" 10 "PFCOVP" 11 "ACOVP" 12 "ACUVP" 13 "ACOFF" 14 "Inn1CommuErr" 15 "Inn2CommuErr" 16 "CPUnValid" 17 "CCUnValid" 18 "AirUTP" 19 "KL31OVP" 20 "WakeUpShort" 21 "HWOCP" 22 "OBCOTP" 23 "Cali2Err" 24 "Cali1Err" 25 "BMSCANTimeOut" 255 "RSVD255" ;
+VAL_ 1073 CCU_ID1_OBCSts 0 "No charge" 1 "Ready" 2 "Charging" 3 "Charge finished" 4 "Heating" 5 "Charging pause" ;
+VAL_ 1073 CCU_ID1_FaultLvl 0 "No fault" 1 "Level1 fault" 2 "Level2 fault" 3 "Level2 fault" ;
+VAL_ 1073 CCU_ID1_HV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_HV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_AC_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_AC_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_LV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_LV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_HV_OCP 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_CAN_Fault 0 "No fault" 1 "Fault" ;
+VAL_ 1073 CCU_ID1_DCAC_DTC 0 "NO Fault" 1 "TempSenseErr" 2 "InsulationFault" 3 "LVOVP" 4 "PFCOCP " 5 "LVUVP" 6 "VinOVP" 7 "VinUVP" 8 "PFCOVP" 9 "ACOVP" 10 "CCUnValid" 11 "Inn1CommuErr" 12 "Inn2CommuErr" 13 "AirUTP" 14 "HWOCP" 15 "AIROTP" 16 "Cali2Err" 17 "Cali1Err" 18 "BMSCANTimeOut" 255 "RSVD255" ;
+VAL_ 1073 CCU_ID1_OBC_DTC 0 "NO Fault" 1 "RSVD1" 2 "TempDerate" 3 "TempSenseErr" 4 "RSVD4" 5 "LVOVP" 6 "PFCOCP" 7 "LVUVP" 8 "HVOVP" 9 "HVUVP" 10 "PFCOVP" 11 "ACOVP" 12 "ACUVP" 13 "ACOFF" 14 "Inn1CommuErr" 15 "Inn2CommuErr" 16 "CPUnValid" 17 "CCUnValid" 18 "AirUTP" 19 "KL31OVP" 20 "WakeUpShort" 21 "HWOCP" 22 "OBCOTP" 23 "Cali2Err" 24 "Cali1Err" 25 "BMSCANTimeOut" 255 "RSVD255" ;
+VAL_ 1074 CCU_ID2_OBCSts 0 "No charge" 1 "Ready" 2 "Charging" 3 "Charge finished" 4 "Heating" 5 "Charging pause" ;
+VAL_ 1074 CCU_ID2_FaultLvl 0 "No fault" 1 "Level1 fault" 2 "Level2 fault" 3 "Level2 fault" ;
+VAL_ 1074 CCU_ID2_HV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_HV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_AC_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_AC_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_LV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_LV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_HV_OCP 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_CAN_Fault 0 "No fault" 1 "Fault" ;
+VAL_ 1074 CCU_ID2_DCAC_DTC 0 "NO Fault" 1 "TempSenseErr" 2 "InsulationFault" 3 "LVOVP" 4 "PFCOCP " 5 "LVUVP" 6 "VinOVP" 7 "VinUVP" 8 "PFCOVP" 9 "ACOVP" 10 "CCUnValid" 11 "Inn1CommuErr" 12 "Inn2CommuErr" 13 "AirUTP" 14 "HWOCP" 15 "AIROTP" 16 "Cali2Err" 17 "Cali1Err" 18 "BMSCANTimeOut" 255 "RSVD255" ;
+VAL_ 1074 CCU_ID2_OBC_DTC 0 "NO Fault" 1 "RSVD1" 2 "TempDerate" 3 "TempSenseErr" 4 "RSVD4" 5 "LVOVP" 6 "PFCOCP" 7 "LVUVP" 8 "HVOVP" 9 "HVUVP" 10 "PFCOVP" 11 "ACOVP" 12 "ACUVP" 13 "ACOFF" 14 "Inn1CommuErr" 15 "Inn2CommuErr" 16 "CPUnValid" 17 "CCUnValid" 18 "AirUTP" 19 "KL31OVP" 20 "WakeUpShort" 21 "HWOCP" 22 "OBCOTP" 23 "Cali2Err" 24 "Cali1Err" 25 "BMSCANTimeOut" 255 "RSVD255" ;
+VAL_ 1075 CCU_ID3_OBCSts 0 "No charge" 1 "Ready" 2 "Charging" 3 "Charge finished" 4 "Heating" 5 "Charging pause" ;
+VAL_ 1075 CCU_ID3_FaultLvl 0 "No fault" 1 "Level1 fault" 2 "Level2 fault" 3 "Level2 fault" ;
+VAL_ 1075 CCU_ID3_HV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_HV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_AC_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_AC_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_LV_UVP 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_LV_OVP 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_HV_OCP 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_CAN_Fault 0 "No fault" 1 "Fault" ;
+VAL_ 1075 CCU_ID3_DCAC_DTC 0 "NO Fault" 1 "TempSenseErr" 2 "InsulationFault" 3 "LVOVP" 4 "PFCOCP " 5 "LVUVP" 6 "VinOVP" 7 "VinUVP" 8 "PFCOVP" 9 "ACOVP" 10 "CCUnValid" 11 "Inn1CommuErr" 12 "Inn2CommuErr" 13 "AirUTP" 14 "HWOCP" 15 "AIROTP" 16 "Cali2Err" 17 "Cali1Err" 18 "BMSCANTimeOut" 255 "RSVD255" ;
+VAL_ 1075 CCU_ID3_OBC_DTC 0 "NO Fault" 1 "RSVD1" 2 "TempDerate" 3 "TempSenseErr" 4 "RSVD4" 5 "LVOVP" 6 "PFCOCP" 7 "LVUVP" 8 "HVOVP" 9 "HVUVP" 10 "PFCOVP" 11 "ACOVP" 12 "ACUVP" 13 "ACOFF" 14 "Inn1CommuErr" 15 "Inn2CommuErr" 16 "CPUnValid" 17 "CCUnValid" 18 "AirUTP" 19 "KL31OVP" 20 "WakeUpShort" 21 "HWOCP" 22 "OBCOTP" 23 "Cali2Err" 24 "Cali1Err" 25 "BMSCANTimeOut" 255 "RSVD255" ;
+

@@ -1,0 +1,180 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Dash VCU
+VAL_TABLE_ VT_Lights 1 "Light on" 0 "Light off" ;
+VAL_TABLE_ VT_ErrorCodes 4 "HV battery overvoltage fault" 3 "HV Battery isolation fault" 2 "E-stop Pressed" 1 "12V battery low" 0 "No Error" ;
+VAL_TABLE_ VT_Parking_Brake 1 "Parking brake engaged" 0 "Parking brake disengaged" ;
+VAL_TABLE_ VT_Seatbelt 1 "Seatbelt plugged in" 0 "Seatbelt not plugged in" ;
+VAL_TABLE_ VT_FNR 2 "R" 1 "F" 0 "N" ;
+VAL_TABLE_ ASCII 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Overcurrent_Fault_Detection : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ CNT : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Gear_Target : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Fault_Code : 0|10@1+ (1,20000) [20000|21023] "" Vector__XXX
+
+BO_ 2565562935 Dash_FirmwareVersion: 8 Vector__XXX
+ SG_ FBK_FirmwareVersion_DateStamp m1 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ FBK_FirmwareVersion_7 m0 : 42|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ FBK_FirmwareVersion_6 m0 : 35|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ FBK_FirmwareVersion_5 m0 : 28|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ FBK_FirmwareVersion_4 m0 : 21|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ FBK_FirmwareVersion_3 m0 : 14|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ FBK_FirmwareVersion_2 m0 : 7|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ FBK_FirmwareVersion_1 m0 : 0|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Version_mux M : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2565609313 Autonomy_Data: 3 Vector__XXX
+ SG_ Trip_Hour_meter : 17|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Black_Screen_on : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hour_meter : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2565543777 VCU_Data_multiplexed: 8 Vector__XXX
+ SG_ VCU_Error_code m1 : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Light_L9 m1 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L8 m1 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L7 m1 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L6 m1 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L5 m1 : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L4 m1 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L3 m1 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L2 m1 : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L18 m1 : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L17 m1 : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L16 m1 : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L15 m1 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L14 m1 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L13 m1 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L12 m1 : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L11 m1 : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L10 m1 : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Light_L1 m1 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Multiplexor M : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hitch_Position m0 : 56|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Tractor_Ready m1 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Autonomous_mode_on m1 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Shifting_Locked m1 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OTA_Ongoing m1 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TCS_on m1 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hill_Hold_on m1 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Split_Braking_active m1 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RevMatch_Upper_Limit_exceeded m1 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RevMatch_Lower_Limit_exceeded m1 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FWD_on m1 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Buzzer m1 : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_Battery_SOC m0 : 33|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ PTO_RPM m0 : 23|10@1+ (1,0) [0|1023] "" Vector__XXX
+ SG_ Vehicle_Speed m0 : 14|9@1+ (0.1,0) [0|51.1] "" Vector__XXX
+ SG_ Seatbelt m1 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Parking_Brake m1 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Traction_Motor_RPM m0 : 8|6@1+ (100,0) [0|6300] "" Vector__XXX
+ SG_ FNR_Feedback m0 : 4|2@1- (1,0) [-2|1] "" Vector__XXX
+ SG_ Gear_Feedback m0 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2565562647 Dash_IO_Temp_Status: 8 Dash
+ SG_ PE_VMAX_Coolant_Outlet_Temp : 46|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ PE_VMAX_Coolant_Inlet_Temp : 34|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ PE_Rad_Coolant_Outlet_Temp : 10|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Dash_Washer : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ S_IMPL_Voltage_Detection : 22|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Dash_StalkRotaryPosition_01 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_RightTurn : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_ReverseReq : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_StalkRotaryPosition_02 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_LeftTurnReq : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_HornReq : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_StalkRotaryPosition_03 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_ForwardReq : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dash_StalkFlashPosition_01 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2565562647 Dash_StalkRotaryPosition_01 "running light";
+CM_ SG_ 2565562647 Dash_StalkRotaryPosition_02 "low beam
+";
+CM_ SG_ 2565562647 Dash_StalkRotaryPosition_03 "high beam
+";
+CM_ SG_ 2565562647 Dash_StalkFlashPosition_01 "DV: N in FNR
+PS: high beam flash";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "HMI_dbc_test";
+BA_ "GenMsgCycleTime" BO_ 2565562647 100;
+BA_ "GenMsgSendType" BO_ 2565562647 0;
+VAL_ 2565562935 FBK_FirmwareVersion_7 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+VAL_ 2565562935 FBK_FirmwareVersion_6 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+VAL_ 2565562935 FBK_FirmwareVersion_5 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+VAL_ 2565562935 FBK_FirmwareVersion_4 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+VAL_ 2565562935 FBK_FirmwareVersion_3 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+VAL_ 2565562935 FBK_FirmwareVersion_2 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+VAL_ 2565562935 FBK_FirmwareVersion_1 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z" ;
+VAL_ 2565543777 VCU_Error_code 4 "HV battery overvoltage fault" 3 "HV Battery isolation fault" 2 "E-stop Pressed" 1 "12V battery low" 0 "No Error" ;
+VAL_ 2565543777 Light_L9 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L8 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L7 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L6 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L5 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L4 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L3 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L2 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L18 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L17 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L16 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L15 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L14 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L13 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L12 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L11 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L10 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Light_L1 1 "Light on" 0 "Light off" ;
+VAL_ 2565543777 Seatbelt 1 "Seatbelt plugged in" 0 "Seatbelt not plugged in" ;
+VAL_ 2565543777 Parking_Brake 1 "Parking brake engaged" 0 "Parking brake disengaged" ;
+

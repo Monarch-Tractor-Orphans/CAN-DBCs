@@ -1,0 +1,1258 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Sevcon Bring_Up_Code VCU IX3212_Roof IX3212_Bed DBG
+VAL_TABLE_ ThreePoint_LH_RH 3 "Float" 2 "Go down" 1 "Go up" 0 "Hold" ;
+VAL_TABLE_ SteeringCalib_FBK 17 "Standby" 16 "Error State" 15 "Calibration Complete" 14 "Checking Stored Values" 13 "Checking Center" 12 "Saving Center" 11 "Finding Center (Precise)" 10 "Finding Center" 9 "Error Checking" 8 "Checking Right" 7 "Saving Right" 6 "Finding Right" 5 "Description for the value '0x5'" 4 "Checking Left" 3 "Saving Left" 2 "Description for the value '0x2'" 1 "Finding Left" 0 "Initialization" ;
+VAL_TABLE_ Dial_MessageID 4 "MessageId" ;
+VAL_TABLE_ Multiplexor_1 1 "Driver_inputs_01" 0 "Sensor_measurements_01" ;
+VAL_TABLE_ Multiplexor_2 3 "Driver_inputs_3" 2 "Driver_inputs_2" 1 "Joystick" 0 "IO_Checks" ;
+VAL_TABLE_ JS_Button 3 "NA" 2 "Error Indicator" 1 "Button Pressed" 0 "Button not pressed" ;
+VAL_TABLE_ JS_Status 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_TABLE_ Sensor_Status 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_TABLE_ IO_Checks 1 "Connected" 0 "Not Connected" ;
+VAL_TABLE_ Relief_value 3 "Description for the value '0x3'" 2 "PUmp compensator" 1 "main relief" 0 "disabled" ;
+VAL_TABLE_ FWD_mode 2 "Force OFF" 1 "Manual ON" 0 "Auto" ;
+VAL_TABLE_ ASCII 122 "z" 121 "y" 120 "x" 119 "w" 118 "v" 117 "u" 116 "t" 115 "s" 114 "r" 113 "q" 112 "p" 111 "o" 110 "n" 109 "m" 108 "l" 107 "k" 106 "j" 105 "i" 104 "h" 103 "g" 102 "f" 101 "e" 100 "d" 99 "c" 98 "b" 97 "a" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" ;
+VAL_TABLE_ PTO_State 1 "PTO Disabled" 0 "PTO Enabled" ;
+VAL_TABLE_ Cell_Temperature_SNA 127 "ERROR" 126 "NO_VALUE" ;
+VAL_TABLE_ Cell_Voltage_SNA 511 "ERROR" 510 "NO_VALUE" ;
+VAL_TABLE_ ROOF_DIRECTION 3 "Signal Not Available, will stop motion" 2 "Moving Down" 1 "Moving Up" 0 "Stop Motion" ;
+VAL_TABLE_ STATE_VCU 15 "Power Off" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Driverless" 9 "Disengaging" 8 "Autopilot" 7 "Enabled Driving" 6 "Enabled Stationary" 5 "HV Disabling" 4 "HV Standby" 3 "Precharging" 2 "Low Voltage Standby" 1 "Initialization" 0 "Not Used" ;
+VAL_TABLE_ STATE_CONTACTORS 3 "DISABLE IN PROCESS" 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_TABLE_ OVERRIDE_BRAKE_LIGHT 3 "FUNCTION NOT AVAILABLE" 2 "ENABLE OVERRIDE TO ON" 1 "ENABLE OVERRIDE TO OFF" 0 "DISABLE OVERRIDE" ;
+VAL_TABLE_ STATE_SHIFT 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_TABLE_ STATE_GEAR_POSITION 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_TABLE_ STATE_HEAD_LIGHT 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_TABLE_ STATE_TURN_SIGNAL 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+VAL_TABLE_ H_Bridge 1 "H-Bridge" 0 "High Side" ;
+VAL_TABLE_ Current_Retry 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_TABLE_ Feedback_Type 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_TABLE_ Diagnostic_bits 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_TABLE_ Digital_Input 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_TABLE_ Feedback_ID 136 "Channel 7-12 Configuration" 135 "Channel 1-6 Configuration" 133 "Channel 7-12 Feedback" 132 "Channel 1-6 Feedback" 131 "Analog7-8, SW Version" 130 "Analog5-6, Batt Volt, 5V" 129 "Analog3-4, Diagnostic" 128 "Analog1-2, Digital 1-12" ;
+VAL_TABLE_ Output_Command_Identifier 7 "Configuration 7-12" 6 "Configuration 1-6" 5 "Command 7-12" 4 "Command 1-6" 0 "Motor Model Configuration" ;
+VAL_TABLE_ General_Flt 20066 "Front Aux Power Flt" 20065 "Front PCB Flt" 20064 "Rear Aux Power Flt" 20063 "Rear PCB Flt" 20062 "Rear Light Flt" 20061 "Front Light Flt" 20060 "Spare Power Flt" 20059 "Left Light Flt" 20058 "Right Light Flt" 20057 "AV Power Flt" 20056 "Wifi power Flt" 20055 "Front Fans Flt" 20054 "PE fan Flt" 20053 "Oil Fan Flt" 20052 "PE Pump Flt" 20051 "12V outlet Flt" 20050 "Front Light Strip Flt" 20049 "Ix_bed Ch7 Flt" 20048 "Charger Relay Flt" 20047 "Trailer Brake Light Flt" 20046 "Ix_bed Ch4 Flt" 20045 "High beam Flt" 20044 "Low Beam Flt" 20043 "Running Light Flt" 20042 "Relay14_ACDB Power" 20041 "Relay13_Front Sensor" 20040 "Relay12_BattPower" 20039 "Relay11_HV Ign" 20038 "Relay10_TFD Ign" 20037 "Relay9_TTC580 Ign" 20036 "Relay8_TTC580 Power" 20035 "Relay7_ Pump Ign" 20034 "Relay6_HMI Ign" 20033 "Relay5_EHI Ign" 20032 "Relay4_Right Turn Signal" 20031 "Relay3_mRFRM Ign" 20030 "Relay2_Left Turn Signal " 20029 "Relay1_Autonomy Cams" 20028 "Fuse28_TTC580 Power" 20027 "Fuse27_Ecotrons2" 20026 "Fuse26_ACDB Power" 20025 "Fuse25_Front Sensor" 20024 "Fuse24_BMS power" 20023 "Fuse23_HV Ign" 20022 "Fuse22_mRFRFM Power" 20021 "Fuse21_ Ecotrons1" 20020 "Fuse20_Vmax Power" 20019 "Fuse19_ OTA TTC580" 20018 "Fuse18_TFD" 20017 "Fuse17_TTC580 Ubatt" 20016 "Fuse16_TractorPump Ign" 20015 "Fuse15_ TTC580 Ign" 20014 "Fuse14_SevconPower2" 20013 "Fuse13_SevconPower1" 20012 "Fuse12_ SIMPL Power" 20011 "Fuse11_MTA Power" 20010 "Fuse10_Steering Valve" 20009 "Fuse9_ HMI Power" 20008 "Fuse8_Right Turn Signal" 20007 "Fuse7_Left Turn Signal" 20006 "Fuse6_empty" 20005 "Fuse5_ISOBus Power" 20004 "Fuse4_EstopCharger" 20003 "Fuse3_empty" 20002 "Fuse2_VmaxHVIL" 20001 "Fuse1_Autonomy Cams" 0 "No Fault" ;
+VAL_TABLE_ Battery_Subsystem 24 "HV battery Low" 23 "12 Battery Low" 22 "Tractor HVIL" 21 "BMS HVIL" 20 "Lower BMS Severe Fault" 19 "Lower String High CellV" 18 "Lower String Over Voltage" 17 "Lower String Low CellV" 16 "Lower String Low Voltage" 15 "Upper BMS Severe Fault" 14 "Upper String High CellV" 13 "Upper String Over Voltage" 12 "Upper String Low CellV" 11 "Upper String low Voltage" 10 "Pack imbl_ Upper Active" 9 "Pack imbl_ Lower Active" 8 "SOC Critically Low" 7 "Low SOC" 6 "Lower String Down" 5 "Upper String Down" 4 "Voltage Imbalance" 3 "Both BMS LOC" 2 "Lower String LOC" 1 "Upper String LOC" 0 "No Fault" ;
+VAL_TABLE_ Hydraulics_Flt 37 "Work Pump Pos OOR" 36 "Drive Clutch Pressure OOR" 35 "PTO Clutch Pressure OOR" 34 "Trans Acc Pressure OOR" 33 "SteerBrk Acc Pressure OOR" 32 "Suction Line Pressure OOR" 31 "Tractor Pump Pressure OOR" 30 "Work Pump Pressure OOR" 29 "Right Brake Pressure OOR" 28 "Left Brake Pressure OOR" 27 "Tractor Pump OverLoaded" 26 "RH Brake Out Of Calibration" 25 "LH Brake Out Of Calibration" 24 "RH Brake SetValve OpenCircuit" 23 "RH Brake RelValve OpenCircuit" 22 "LH Brake SetValve OpenCircuit" 21 "LH Brake RelValve OpenCircuit" 20 "RH Brake Under Engagement" 19 "LH Brake Under Engagement" 18 "RH Brake Over Engagement" 17 "LH Brake Over Engagement" 16 "PTO Engagement Interlock" 15 "PTO Clutch Valve OpenCircuit" 14 "Lube Valve OpenCircuit" 13 "Drive Clutch Valve OpenCircuit" 12 "Lube Valve Timeout" 11 "Gear mismatch clutch disengaged" 10 "Clutch Pressure Low" 9 "Aux ON/OFFvalve OpenCircuit" 8 "WorkPumpOverloaded/Air" 7 "PTO Clutch Pressure Low" 6 "TransFlowValve OpenCircuit" 5 "Trans Manifold Pressure High" 4 "Trans Manifold Pressure Low" 3 "SteerBrake Valve OpenCircuit" 2 "SteerBrake Acc Press High" 1 "SteerBrake Acc Press Low" 0 "No Fault" ;
+VAL_TABLE_ Charging_Flt 32 "Chargers Disabled" 31 "DCAC_3 Flt" 30 "DCAC_2 Flt" 29 "DCAC_1 Flt" 28 "DCDC_3 Irregular Voltage" 27 "DCDC_2 Irregular Voltage" 26 "DCDC_1 Irregular Voltage" 25 "Chg_3 OBC Flt" 24 "Chg_2 OBC Flt" 23 "Chg_1 OBC Flt" 22 "DCDC_3 OverTemp" 21 "DCDC_2 OverTemp" 20 "DCDC_1 OverTemp" 19 "Chg_3 OverTemp " 18 "Chg_2 OverTemp" 17 "Chg_1 OverTemp" 16 "DCDC_3 Flt" 15 "DCDC_2 Flt" 14 "DCDC_1 Flt" 13 "ACDB eFuse8 OverCurrent" 12 "ACDB eFuse6 OverCurrent" 11 "ACDB eFuse3 OverCurrent" 10 "ACDB eFuse1 OverCurrent" 9 "ACDB Conv. Error" 8 "ACDB SIMPL Error" 7 "ACDB EVSE Error" 6 "ACDB 3Ph Error" 5 "ACDB 1Ph Error" 4 "ACDB OverTemp" 3 "ACDB disabled" 2 "Charger Improper Connection" 1 "Charger LOC" 0 "No Fault" ;
+VAL_TABLE_ Thermal_Flt 5 "Hyd Over Temp Protection" 4 "Hyd Over Temp Warning" 3 "Cooling Pump Disconnected" 2 "Air in cooling system" 1 "Cooling Pump OverCurrent" 0 "No Fault" ;
+VAL_TABLE_ Traction_Flt 23 "Inverter LOC" 22 "Regen Limited" 21 "Regen Disabled" 20 "Clutch Interlock" 19 "Motor Over loaded" 18 "bStart Check Fail" 17 "Disengage by Accel." 16 "Min Cell Voltage Low" 15 "DC Link Voltage Low" 14 "Pack Voltage Low" 13 "Speed Input Error" 12 "Motor Torque Limit" 11 "Insufficient Torque Applied" 10 "Hydraulic Oil Over Temp" 9 "Inverter Over Temperature" 8 "Inverter Fault OFF" 7 "Control Word Check Error" 6 "Hand Throttle Error" 5 "Hand Throttle Ch2 OOR" 4 "Hand Throttle Ch1 OOR" 3 "Foot Throttle Error" 2 "Foot Throttle Ch2 OOR" 1 "Foot Throttle Ch1 OOR" 0 "No Fault" ;
+VAL_TABLE_ Shift_Position_Error 0 "Not In Any Target" ;
+VAL_TABLE_ STATE_CONTACTORS 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_TABLE_ OVERRIDE_BRAKE_LIGHT 3 "FUNCTION NOT AVAILABLE" 2 "ENABLE OVERRIDE TO ON" 1 "ENABLE OVERRIDE TO OFF" 0 "DISABLE OVERRIDE" ;
+VAL_TABLE_ STATE_SHIFT 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_TABLE_ STATE_GEAR_POSITION 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_TABLE_ STATE_HEAD_LIGHT 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_TABLE_ STATE_TURN_SIGNAL 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+VAL_TABLE_ State 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ LOC_GILES01_Command_Implement : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Multiplexor_3 : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IO_AC_RearAux2_Float_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_RearAux1_Float_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI3_PTO_Norm_Open_State : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI3_PTO_Norm_Close_State : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_WorkPump_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_VMax_Coolant_Outlet_Temp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_VMax_Coolant_Inlet_Temp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Transmission_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Tractor_Pump_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_TopLink_Retract : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_TopLink_Position : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_TopLink_Extend : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_SuctionLine_Temp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_SuctionLine_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Right_Brake_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Right_Brake_Position : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Rear_Aux_6B : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Rear_Aux_6A : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Rear_Aux_2B : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Rear_Aux_2A : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_RadCoolant_Outlet_Temp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_PTO_Clutch : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Oil_Rad_Outlet_Temp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Oil_Rad_Outlet_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Oil_Rad_Inlet_Temp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Oil_Rad_Inlet_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_MainSwashPlate : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Left_Brake_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Left_Brake_Position : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Implement_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_FWD_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_FWD_Oil_Temp : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Drive_Clutch_Pressure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Brake_Steer_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_3Pt_Right_Raise : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_3Pt_Right_Lower : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_3Pt_Right_Angle : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_3Pt_Left_Raise : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_3Pt_Left_Lower : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_3Pt_Left_Angle : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Transflow_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_TopLink_Retract_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_TopLink_Extend_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Steer_Brk_Shutdown_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_RightBrk_Set_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_RightBrk_Release_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Rear_Aux_6B_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Rear_Aux_6A_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Rear_Aux_2B_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Rear_Aux_2A_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_PTO_Clutch_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_MainSwashPlate_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Lube_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_LeftBrk_Set_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_LeftBrk_Release_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Imple_Recirculation_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Imple_Flow_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_FWD_Reverse_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_FWD_Forward_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Drive_Clutch_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_AUX_ON_OFF_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_AUX_Bypass_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_3Pt_Right_Raise_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_3Pt_Right_Lower_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_3Pt_Left_Raise_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_3Pt_Left_Lower_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_4WD_SpeedSensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Steer_Right_TTC : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Steer_Left_TTC : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Steer_Safety_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Steer_Right_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_AC_Steer_Left_Valve : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DanfossOrCustomSteering : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SteeringCal_Save_Right : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SteeringCal_Save_Left : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SteeringCal_Save_Center : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Start_SteeringCal : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI1_LH_BrkRotPos_InRange : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI1_RH_BrkRotPos_InRange : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_AuxBypass_Valve_over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_RearAux6B_Valve_over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_RearAux2B_Valve_over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_AuxOnOff_Valve_over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_ToplinkRet_Valve_over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_RightLower_Valve_over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_LeftLower_Valve_over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IMPL_Subsystem : 0|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Steering_Subsystem : 0|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Gearbox_Subsystem : 0|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ General_Subsytem : 0|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Battery_Subsystem : 0|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Hydraulic_Subsystem : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Charging_Subsystem : 0|16@1+ (1,0) [0|32767] "" Vector__XXX
+ SG_ Fault_Code_mux : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Thermal_Subsystem : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Traction_Subsystem : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 257 User_cmd_02: 8 Vector__XXX
+ SG_ SteeringSpoolCalib_CMD : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SteeringCalib_CMD : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Tractor_Configuration_CMD : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Tractor_Config_Trigger : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 264 Cmd_Sevcon: 8 Vector__XXX
+ SG_ Cmd_Torque_Request : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+ SG_ Cmd_Torque_Traction_Limit : 16|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+ SG_ Cmd_Speed_Limit_Forward : 0|16@1- (1,0) [-32768|32767] "RPM" Vector__XXX
+
+BO_ 1698 VCU_Feedbacks: 8 Vector__XXX
+ SG_ FBK_AUX6_operation m3 : 49|3@1- (1,0) [-4|3] "" Vector__XXX
+ SG_ FBK_AUX2_operation m3 : 46|3@1- (1,0) [0|7] "" Vector__XXX
+ SG_ SteeringToeError m3 : 41|5@1- (1,0) [-16|15] "" Vector__XXX
+ SG_ SteeringToeAngle m3 : 36|5@1- (1,0) [-16|15] "deg" Vector__XXX
+ SG_ SteeringRight_pcnt m3 : 30|6@1+ (1.6,0) [0|100.8] "%" Vector__XXX
+ SG_ SteeringLeft_pcnt m3 : 24|6@1+ (1.6,0) [0|100.8] "%" Vector__XXX
+ SG_ RightStrPosRedunRaw_mV m3 : 12|12@1+ (1.25,0) [0|5118.75] "" Vector__XXX
+ SG_ LeftStrPosRedunRaw_mV m3 : 0|12@1+ (1.25,0) [0|5118.75] "" Vector__XXX
+ SG_ AngleCalibrationComplete m1 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SpoolRightDeadband m1 : 56|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ SpoolLeftDeadband m2 : 56|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ SpoolCalibrationComplete m2 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LeftSteeringSensrRaw m2 : 26|13@1+ (1,0) [0|8191] "" Vector__XXX
+ SG_ RightSteeringSensrRaw m2 : 39|13@1+ (1,0) [0|8191] "" Vector__XXX
+ SG_ SteeringSpoolCalib_FBK m1 : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ SM1_3Pt_RH_Angle_ECO_mV m2 : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ SM1_3Pt_LH_Angle_ECO_mV m2 : 13|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ SteeringCalib_FBK m0 : 57|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ BrakePedalPos_pcnt m1 : 45|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ BrakePedalPos_mV m1 : 32|13@1+ (1,0) [0|8191] "" Vector__XXX
+ SG_ Tractor_Configuration_FBK m1 : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Multiplexor_4 M : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SM1_3Pt_Toplink_Angle_mV m0 : 44|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ SM1_3Pt_Toplink_Angle_pct m0 : 38|6@1+ (1.6,0) [0|100.8] "%" Vector__XXX
+ SG_ SM1_3Pt_RH_Angle_pct m0 : 32|6@1+ (1.6,0) [0|100.8] "%" Vector__XXX
+ SG_ SM1_3Pt_RH_Angle_mV m0 : 19|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ SM1_3Pt_LH_Angle_pct m0 : 13|6@1+ (1.6,0) [0|100.8] "%" Vector__XXX
+ SG_ SM1_3Pt_LH_Angle_mV m0 : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+
+BO_ 2565832704 Dial_Blinker: 8 Vector__XXX
+ SG_ Dial_Save : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dial_MessageID : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Dial_Disable : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 262 DriverInputs_IO_Checks: 8 VCU
+ SG_ BMS2_HVIL_Status m2 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS1_HVIL_Status m2 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACDB_HVIL_Out m2 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACDB_HVIL_In m2 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P196 m2 : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P147 m0 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P146 m0 : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P254 m0 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P253 m0 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P252 m0 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P251 m0 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P240 m0 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P239 m0 : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P238 m0 : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P194 m0 : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P191 m0 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P188 m0 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P185 m0 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P182 m0 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P179 m0 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P176 m0 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P173 m0 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P170 m0 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P167 m0 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P164 m0 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P161 m0 : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P158 m0 : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P155 m0 : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P152 m0 : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P149 m0 : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P148 m0 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P195 m0 : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P193 m0 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P192 m0 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P190 m0 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P189 m0 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P187 m0 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P186 m0 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P184 m0 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P183 m0 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P181 m0 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P180 m0 : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P178 m0 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P177 m0 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P175 m0 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P174 m0 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P172 m0 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P171 m0 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P169 m0 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P168 m0 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P166 m0 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P165 m0 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P163 m0 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P162 m0 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P160 m0 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P159 m0 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P157 m0 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P156 m0 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P154 m0 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P153 m0 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P151 m0 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P150 m0 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P126 m0 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P125 m0 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P102 m0 : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_P101 m0 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_RightWSS m2 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_LeftWSS m2 : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Steer_Right_ECO m2 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Steer_Left_ECO m2 : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI3_Outlet_Status m3 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI3_1Phase_Status m3 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI3_EVSE_Status m3 : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DI3_PTOSwitch_Status m3 : 59|1@1+ (1,0) [0|1] ""  Bring_Up_Code
+ SG_ DI3_PTO_NO_raw m3 : 45|12@1+ (1.221,0) [0|4999.995] "mV"  Bring_Up_Code
+ SG_ DI3_PTO_NC_raw m3 : 33|12@1+ (1.221,0) [0|4999.995] "mV"  Bring_Up_Code
+ SG_ DI3_Hand_Acc_Pos_pct m3 : 2|7@1+ (1,0) [0|127] "%"  Bring_Up_Code
+ SG_ DI3_Hand_Acc_Pos_CH2_mV m3 : 9|12@1+ (1.221,0) [0|4999.995] "mV"  Bring_Up_Code
+ SG_ DI3_Hand_Acc_Pos_CH1_mV m3 : 21|12@1+ (1.221,0) [0|4999.995] "%"  Bring_Up_Code
+ SG_ DI3_Hand_Acc_Pdl_Pos_Status m3 : 60|1@1+ (1,0) [0|1] ""  Bring_Up_Code
+ SG_ DI2_Acc_Pdl_Pos_Status m2 : 47|1@1+ (1,0) [0|1] ""  Bring_Up_Code
+ SG_ DI2_Acc_Pdl_Pos_pct m2 : 40|7@1+ (1,0) [0|127] "mV"  Bring_Up_Code
+ SG_ DI2_Acc_Pdl_Pos_CH2_pct m2 : 33|7@1+ (1,0) [0|127] "%"  Bring_Up_Code
+ SG_ DI2_Acc_Pdl_Pos_CH2_mV m2 : 21|12@1+ (1.221,0) [0|4999.995] "mV"  Bring_Up_Code
+ SG_ DI2_Acc_Pdl_Pos_CH1_pct m2 : 14|7@1+ (1,0) [0|127] "%"  Bring_Up_Code
+ SG_ DI2_Acc_Pdl_Pos_CH1_mV m2 : 2|12@1+ (1.221,0) [0|4999.995] "mV"  Bring_Up_Code
+ SG_ Multiplex_2 M : 0|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_Button_Front_TopCenter m1 : 10|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_X_Axis_Position m1 : 38|10@1+ (0.1,0) [0|102.3] "%"  Bring_Up_Code
+ SG_ JS_Y_Axis_Position m1 : 54|10@1+ (0.1,0) [0|102.3] "%"  Bring_Up_Code
+ SG_ JS_Y_Axis_NeutralPosStatus m1 : 50|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_Y_Axis_FwdPosStatus m1 : 48|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_Y_Axis_BackPosStatus m1 : 52|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_X_Axis_RightPosStatus m1 : 32|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_X_Axis_NeutralPosStatus m1 : 34|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_X_Axis_LeftPosStatus m1 : 36|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_ThmbWhlPos_FrntLeft_TopSts m1 : 28|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_ThmbWhlPos_FrntLeft_NtrlSts m1 : 26|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_ThmbWhlPos_FrntLeft_DwnSts m1 : 30|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_ThumbWhlPos_FrontLeft m1 : 16|10@1+ (0.1,0) [0|102.3] "%"  Bring_Up_Code
+ SG_ JS_Button_Front_TopRight m1 : 12|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ JS_Button_Back m1 : 8|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+
+BO_ 261 DriverInput_SensorMeas: 8 VCU
+ SG_ VMax3_DClinkVolt m3 : 24|8@1+ (2,0) [0|510] "V" Vector__XXX
+ SG_ VMax1_DClinkVolt m3 : 8|8@1+ (2,0) [0|510] "V" Vector__XXX
+ SG_ Sevcon_DClinkVolt m3 : 0|8@1+ (2,0) [0|510] "V" Vector__XXX
+ SG_ BMS2_DClinkVolt m3 : 40|8@1+ (2,0) [0|510] "V" Vector__XXX
+ SG_ BMS1_DClinkVolt m3 : 32|8@1+ (2,0) [0|510] "V" Vector__XXX
+ SG_ DCDC_Output_Current m3 : 53|6@1+ (1.4,0) [0|88.2] "A" Vector__XXX
+ SG_ DCDC_Output_Volt m3 : 48|5@1+ (1,0) [0|31] "V" Vector__XXX
+ SG_ VMax2_DClinkVolt m3 : 16|8@1+ (2,0) [0|510] "V" Vector__XXX
+ SG_ IO_SNS_5V2 m2 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_5V1 m2 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_10V m2 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Left3PtRed m2 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_Right3PtRed m2 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_17 m2 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_16 m2 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_15 m2 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_14 m2 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_13 m2 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_12 m2 : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_11 m2 : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TTC_OK m2 : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_9 m2 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_8 m2 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_7 m2 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_6 m2 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_5 m2 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_4 m2 : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_3 m2 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_2 m2 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_10 m2 : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LOC_1 m2 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P141 m2 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P140 m2 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P139 m2 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P138 m2 : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P137 m2 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P136 m2 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P135 m2 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P134 m2 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P133 m2 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P132 m2 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P131 m2 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P130 m2 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P129 m2 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P128 m2 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P127 m2 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P124 m2 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P123 m2 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P122 m2 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P117 m2 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P116 m2 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P115 m2 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P114 m2 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P113 m2 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P112 m2 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P111 m2 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P110 m2 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P109 m2 : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P108 m2 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P107 m2 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P106 m2 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P105 m2 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P104 m2 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IO_SNS_P103 m2 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SteeringAngle_Pcnt m1 : 53|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Fbk_Speed_Measured m1 : 24|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ Fbk_Torque_Measured m1 : 40|13@1+ (0.015625,0) [0|127.984375] "Nm" Vector__XXX
+ SG_ Multiplex_1 M : 62|2@1+ (1,0) [0|3] ""  Bring_Up_Code
+ SG_ SM1_RearRight_WheelSpeed_Sensor m1 : 0|7@1- (1,0) [-64|63] "RPM"  Bring_Up_Code
+ SG_ SM1_RearLeft_WheelSpeed_Sensor m1 : 8|7@1- (1,0) [-64|63] "RPM"  Bring_Up_Code
+ SG_ SM1_Front_WheelSpeed_Sensor m1 : 15|7@1- (1,0) [-64|63] "RPM"  Bring_Up_Code
+ SG_ SM1_Range_InPosition m1 : 23|1@1+ (1,0) [0|1] ""  Bring_Up_Code
+ SG_ SM1_Gear_InPosition m1 : 22|1@1+ (1,0) [0|1] ""  Bring_Up_Code
+ SG_ DI1_3Pt_DepthCtrl_Sens_Status m1 : 7|1@1+ (1,0) [0|1] ""  Bring_Up_Code
+ SG_ DI1_3Pt_DepthControl_pct m0 : 53|7@1- (1,0) [-64|63] "%"  Bring_Up_Code
+ SG_ DI1_3Pt_DepthControl_mV m0 : 40|13@1+ (1,0) [0|8191] "mV"  Bring_Up_Code
+ SG_ DI1_3Pt_Deadman_Switch m0 : 60|1@1+ (1,0) [0|1] ""  Bring_Up_Code
+ SG_ DI1_Right_Brk_Rotary_Pos_pct m0 : 33|7@1+ (1,0) [0|127] "%"  Bring_Up_Code
+ SG_ DI1_Right_Brk_Rotary_Pos_mV m0 : 20|13@1+ (1,0) [0|8191] "mV"  Bring_Up_Code
+ SG_ DI1_Lft_Brk_Rotary_Pos_pct m0 : 13|7@1+ (1,0) [0|127] "%"  Bring_Up_Code
+ SG_ DI1_Lft_Brk_Rotary_Pos_mV m0 : 0|13@1+ (1,0) [0|8191] "mV"  Bring_Up_Code
+
+BO_ 256 User_cmd_01: 8 Bring_Up_Code
+ SG_ ACDB_Checkout_Mode : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_RearTurnLights : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_CabinLights : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CMD_BrakeLights : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_ConstFlow_Valve_over : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_ImplRecirc_Valve_over : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_RearAux1 : 45|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ThreePoint_RearAux2 : 43|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlowDemand_cmd : 41|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ThreePoint_Toplink : 39|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ThreePoint_RH : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ThreePoint_LH : 35|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Enbl_Motors : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brk_RightTargetPcnt : 29|5@1+ (5,0) [0|155] "" Vector__XXX
+ SG_ Brk_LeftTargetPcnt : 24|5@1+ (5,0) [0|155] "" Vector__XXX
+ SG_ Brk_RightSet : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brk_RightRelease : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brk_LeftSet : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brk_LeftRelease : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ UC1_3Pt_Calibration_Mode : 18|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_3Pt_Save_calib_EEPROM : 19|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_HV_Unavailable : 17|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_Shift_Enable : 10|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_Range_Shift_cmd : 14|3@1+ (1,0) [0|7] ""  VCU
+ SG_ UC1_PE_Pump_cmd : 9|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_Oil_Fan_cmd : 8|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_Gear_Shift_cmd : 11|3@1+ (1,0) [0|7] ""  VCU
+ SG_ UC1_Coolant_Fan_cmd : 7|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_Relief_Valve_settings : 4|3@1+ (1,0) [0|7] ""  VCU
+ SG_ UC1_Enbl_Bring_up_mode : 0|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_ACBD_Outlet : 3|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_ACBD_EVSE : 2|1@1+ (1,0) [0|1] ""  VCU
+ SG_ UC1_ACBD_1Phase : 1|1@1+ (1,0) [0|1] ""  VCU
+
+BO_ 2498699025 VCU_IX3212_Command: 8 VCU
+ SG_ Reserved7 m7 : 56|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Reserved6 m6 : 56|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ HSorHbridge9 m7 : 24|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge8 m7 : 16|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge7 m7 : 8|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge6 m6 : 48|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge5 m6 : 40|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge4 m6 : 32|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge3 m6 : 24|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge2 m6 : 16|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge12 m7 : 48|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge11 m7 : 40|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge10 m7 : 32|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ HSorHbridge1 m6 : 8|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset9 m7 : 25|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset8 m7 : 17|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset7 m7 : 9|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset6 m6 : 49|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset5 m6 : 41|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset4 m6 : 33|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset3 m6 : 25|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset2 m6 : 17|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset12 m7 : 49|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset11 m7 : 41|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset10 m7 : 33|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Automatic_Reset1 m6 : 9|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Feedback_Type9 m7 : 26|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type8 m7 : 18|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type7 m7 : 10|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type6 m6 : 50|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type5 m6 : 42|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type4 m6 : 34|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type3 m6 : 26|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type2 m6 : 18|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type12 m7 : 50|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type11 m7 : 42|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type10 m7 : 34|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Feedback_Type1 m6 : 10|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Current_Limit_9 m7 : 28|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_8 m7 : 20|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_7 m7 : 12|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_6 m6 : 52|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_5 m6 : 44|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_4 m6 : 36|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_3 m6 : 28|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_2 m6 : 20|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_12 m7 : 52|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_11 m7 : 44|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_10 m7 : 36|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Current_Limit_1 m6 : 12|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Modulde_Transmit_Rate_7_12 m5 : 62|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Response m0 : 56|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Reseved2 m0 : 40|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ PRO_Enable m0 : 50|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ POR_Command m0 : 51|5@1+ (1,0) [0|31] ""  IX3212_Bed
+ SG_ Motor_Braking m0 : 48|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ LSC_Digital_Input m0 : 60|4@1+ (1,0) [0|15] ""  IX3212_Bed
+ SG_ Command_Type m0 : 49|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Calibration_Time m0 : 58|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ SoftStartStepSize m0 : 16|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Reserved1 m0 : 34|6@1+ (1,0) [0|63] ""  IX3212_Bed
+ SG_ Output_Channel_No m0 : 8|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ MotorLampMode m0 : 24|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ LossofCommunication m0 : 32|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Modulde_Transmit_Rate_1_6 m4 : 62|2@1+ (1,0) [0|3] ""  IX3212_Bed
+ SG_ Enable_Output9 m5 : 58|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output8 m5 : 57|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output7 m5 : 56|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output6 m4 : 61|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output5 m4 : 60|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output4 m4 : 59|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output3 m4 : 58|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output2 m4 : 57|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output12 m5 : 61|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output11 m5 : 60|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output10 m5 : 59|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Enable_Output1 m4 : 56|1@1+ (1,0) [0|1] ""  IX3212_Bed
+ SG_ Command_Output9 m5 : 24|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output8 m5 : 16|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output7 m5 : 8|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output6 m4 : 48|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output5 m4 : 40|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output4 m4 : 32|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output3 m4 : 24|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output2 m4 : 16|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output12 m5 : 48|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output11 m5 : 40|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output10 m5 : 32|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Command_Output1 m4 : 8|8@1+ (1,0) [0|255] ""  IX3212_Bed
+ SG_ Output_Command_Identifier M : 0|8@1+ (1,0) [0|255] ""  IX3212_Bed
+
+BO_ 2498695455 IX3212_Feedback: 8 IX3212_Bed
+ SG_ Overcurrent_Retry_9 m135 : 30|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_8 m135 : 22|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_7 m135 : 14|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_12 m135 : 54|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_11 m135 : 46|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_10 m135 : 38|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_9 m135 : 31|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_8 m135 : 23|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_7 m135 : 15|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_12 m135 : 55|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_11 m135 : 47|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_10 m135 : 39|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_9 m135 : 28|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_8 m135 : 20|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_7 m135 : 12|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_12 m135 : 52|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_11 m135 : 44|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_10 m135 : 36|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Config_9_Overcurrent m135 : 24|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_8_Overcurrent m135 : 16|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_7_Overcurrent m135 : 8|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_12_Overcurrent m135 : 48|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_11_Overcurrent m135 : 40|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_10_Overcurrent m135 : 32|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_6 m134 : 54|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_5 m134 : 46|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_4 m134 : 38|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_3 m134 : 30|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_2 m134 : 22|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Overcurrent_Retry_1 m134 : 14|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_6 m134 : 55|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_5 m134 : 47|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_4 m134 : 39|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_3 m134 : 31|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_2 m134 : 23|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ H_Bridge_1 m134 : 15|1@1+ (1,0) [0|1] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_6 m134 : 52|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_5 m134 : 44|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_4 m134 : 36|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_3 m134 : 28|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_2 m134 : 20|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Feedback_Type_1 m134 : 12|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Config_6_Overcurrent m134 : 48|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_5_Overcurrent m134 : 40|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_4_Overcurrent m134 : 32|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_3_Overcurrent m134 : 24|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_2_Overcurrent m134 : 16|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Config_1_Overcurrent m134 : 8|4@1+ (1,2.5) [0|15] ""  VCU,Bring_Up_Code
+ SG_ Analog_8 m131 : 48|10@1+ (0.0048828,0) [0|5] ""  VCU,Bring_Up_Code
+ SG_ Analog_7 m131 : 32|10@1+ (0.0048828,0) [0|5] ""  VCU,Bring_Up_Code
+ SG_ Analog_6 m130 : 48|10@1+ (0.0048828,0) [0|5] ""  VCU,Bring_Up_Code
+ SG_ Analog_5 m130 : 32|10@1+ (0.0048828,0) [0|5] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_9 m129 : 30|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_8 m129 : 16|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_7 m129 : 18|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_6 m129 : 20|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_5 m129 : 22|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_4 m129 : 8|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_3 m129 : 10|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_2 m129 : 12|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_12 m129 : 24|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_11 m129 : 26|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_10 m129 : 28|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Diagnostic_1 m129 : 14|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Analog_4 m129 : 48|10@1+ (0.0048828,0) [0|5] ""  VCU,Bring_Up_Code
+ SG_ Analog_3 m129 : 32|10@1+ (0.0048828,0) [0|4.9951044] ""  VCU,Bring_Up_Code
+ SG_ Digital_9 m128 : 24|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_8 m128 : 22|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_7 m128 : 20|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_6 m128 : 18|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_5 m128 : 16|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_4 m128 : 14|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_3 m128 : 12|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_2 m128 : 10|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_12 m128 : 30|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_11 m128 : 28|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_10 m128 : 26|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Digital_1 m128 : 8|2@1+ (1,0) [0|3] ""  VCU,Bring_Up_Code
+ SG_ Analog_2 m128 : 48|10@1+ (0.0048828,0) [0|5] ""  VCU,Bring_Up_Code
+ SG_ Analog_1 m128 : 32|10@1+ (0.0048828,0) [0|4.9951044] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch9 m133 : 24|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch8 m133 : 16|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch6 m132 : 48|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch5 m132 : 40|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch4 m132 : 32|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch3 m132 : 24|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch12 m133 : 48|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch11 m133 : 40|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch10 m133 : 32|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch1 m132 : 8|8@1- (0.125,0) [-25|35] ""  VCU,Bring_Up_Code
+ SG_ Feedback_ID M : 0|8@1+ (1,0) [0|127] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch7 m133 : 8|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+ SG_ Output_Ch2 m132 : 16|8@1- (0.125,0) [-25|25] ""  VCU,Bring_Up_Code
+
+BO_ 1300 VCU_Geartrain: 8 VCU
+ SG_ ShiftFeedback m1 : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FWD_slip_pcnt m1 : 0|8@1- (1,0) [-128|127] "%"  Bring_Up_Code
+ SG_ FWD_Target_RPM m1 : 32|16@1- (0.1,0) [-3276.8|3276.7] ""  Bring_Up_Code
+ SG_ FWD_RPM_KF m1 : 16|16@1- (0.1,0) [-3276.8|3276.7] ""  Bring_Up_Code
+ SG_ Geartrain_MUX M : 60|4@1+ (1,0) [0|15] ""  Bring_Up_Code
+ SG_ TargetRightwheelSpeed m0 : 52|8@1+ (1,0) [0|255] "RPM"  Bring_Up_Code
+ SG_ TargetRightBrake_Pcnt m0 : 45|7@1+ (1,0) [0|127] ""  Bring_Up_Code
+ SG_ TargetLeftwheelSpeed m0 : 37|8@1+ (1,0) [0|255] "RPM"  Bring_Up_Code
+ SG_ TargetLeftBrake_Pcnt m0 : 30|7@1+ (1,0) [0|127] ""  Bring_Up_Code
+ SG_ RightBrake_Pcnt m0 : 23|7@1+ (1,0) [0|127] ""  Bring_Up_Code
+ SG_ LeftBrake_Pcnt m0 : 16|7@1+ (1,0) [0|127] ""  Bring_Up_Code
+ SG_ RangeTargetPos m0 : 12|4@1+ (1,0) [0|15] ""  Bring_Up_Code
+ SG_ RangeFBKPos m0 : 8|4@1+ (1,0) [0|15] ""  Bring_Up_Code
+ SG_ GearTargetPos m0 : 4|4@1+ (1,0) [0|15] ""  Bring_Up_Code
+ SG_ GearFBKPos m0 : 0|4@1+ (1,0) [0|15] ""  Bring_Up_Code
+
+BO_ 1697 VCU_HydraulicPressure: 8 VCU
+ SG_ ThreePoint_Aux6BPress_bar m3 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ThreePoint_Aux6APress_bar m3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ThreePoint_Aux2BPress_bar m3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ThreePoint_Aux2APress_bar m3 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ImplConstantFlowPress_bar m2 : 56|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ Pump_TargetLPM m2 : 40|8@1+ (0.34,0) [0|86.7] ""  Bring_Up_Code
+ SG_ Pump_LPM m2 : 48|8@1+ (0.34,0) [0|86.7] ""  Bring_Up_Code
+ SG_ FWD_Press_bar m2 : 32|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ OilRadiator_OutletPress m2 : 16|8@1+ (0.03,0) [0|7.65] ""  Bring_Up_Code
+ SG_ OilRadiator_InletPress m2 : 24|8@1+ (0.03,0) [0|7.65] ""  Bring_Up_Code
+ SG_ SuctionLinePress m2 : 8|8@1+ (0.1,0) [0|25.5] ""  Bring_Up_Code
+ SG_ TopLink_Extend_Press_bar m1 : 56|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ TopLink_Retract_Press_bar m1 : 48|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ ThreePoint_RightRaisePress_bar m1 : 8|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ ThreePoint_RightLowerPress_bar m1 : 16|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ ThreePoint_LeftRaisePress_bar m1 : 24|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ ThreePoint_LeftLowerPress_bar m1 : 32|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ SteerBrakeAccumulatorPress m1 : 40|8@1+ (1,0) [0|255] "bar"  Bring_Up_Code
+ SG_ HydraulicPressure_Mux M : 0|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+ SG_ PTOClutchPressure_bar m0 : 56|8@1+ (1,0) [0|255] "bar"  Bring_Up_Code
+ SG_ DriveClutchPressure_bar m0 : 48|8@1+ (1,0) [0|255] "bar"  Bring_Up_Code
+ SG_ WorkPumpPressure_bar m0 : 40|8@1+ (1,0) [0|255] "bar"  Bring_Up_Code
+ SG_ TractorPumpPressure_bar m0 : 32|8@1+ (1,0) [0|255] "bar"  Bring_Up_Code
+ SG_ RightBrakeAccumulatorPress m0 : 24|8@1+ (1,0) [0|255] "bar"  Bring_Up_Code
+ SG_ LeftBrakeAccumulatorPress m0 : 16|8@1+ (1,0) [0|255] "bar"  Bring_Up_Code
+ SG_ TransManifoldPress_bar m0 : 8|8@1+ (1,0) [0|255] ""  Bring_Up_Code
+
+BO_ 1585 VCU_HydraulicControl: 8 VCU
+ SG_ ThreePoint_AuxOnOff_DO m5 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_RearAux6B_Duty m4 : 38|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_AuxBypass_DO m5 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_ConstFlow_Duty m4 : 48|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_ImplRecirc_DO m5 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThreePoint_RearAux6A_Duty m4 : 28|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_RearAux2B_Duty m4 : 18|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_RearAux2A_Duty m4 : 8|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ Joystick_height_pcnt m3 : 51|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ Joystick_deadman m3 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PumpLpm5_ConstFlow m3 : 38|6@1+ (1,0) [0|63] "lpm" Vector__XXX
+ SG_ PumpLpm4_3Pt m3 : 44|6@1+ (1,0) [0|63] "lpm" Vector__XXX
+ SG_ PumpLpm3_Cooling m2 : 58|6@1+ (1,0) [0|63] "lpm" Vector__XXX
+ SG_ PumpLpm2_SteerBrk m1 : 58|6@1+ (1,0) [0|63] "lpm" Vector__XXX
+ SG_ PumpLpm1_Fwd m0 : 58|6@1+ (1,0) [0|63] "lpm" Vector__XXX
+ SG_ FWD_ReverseValve_Duty m3 : 28|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ FWD_ForwardValve_Duty m3 : 18|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ WorkPumpSwashPlate_Pcnt m3 : 8|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ TopLink_Retract_Valve_Duty m2 : 8|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ TopLink_Extend_Valve_Duty m1 : 48|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_RightUp_Duty m2 : 18|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_RightDown_Duty m2 : 28|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_LeftUp_Duty m2 : 38|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ ThreePoint_LeftDown_Duty m2 : 48|10@1+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ PTO_ClutchValve m1 : 38|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ WorkPumpDutyCycle m0 : 48|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ LubricationValve m1 : 28|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ HydraulicControl_Mux M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TransFlowControlValve m1 : 18|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ DriveClutch_Valve m1 : 8|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ RightBrakeSetValve m0 : 38|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ RightBrakeReleaseValve m0 : 28|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ LeftBrakeSetValve m0 : 18|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+ SG_ LeftBrakeReleaseValve m0 : 8|10@1+ (0.1,0) [0|102.3] "%" Vector__XXX
+
+
+
+CM_ BU_ Sevcon "Torque generating inverter";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 264 Cmd_Torque_Request "Motor torque commanded from the bringup tool";
+CM_ SG_ 264 Cmd_Torque_Traction_Limit "Max torque sent from bringup tool";
+CM_ SG_ 264 Cmd_Speed_Limit_Forward "Maximum forward speed of motor";
+CM_ SG_ 2565832704 Dial_Save "163 to save, 0 to disable";
+CM_ SG_ 2565832704 Dial_MessageID "MessageID - 0x04";
+CM_ SG_ 2565832704 Dial_Disable "163 to disable, 05 to save";
+CM_ SG_ 261 Fbk_Speed_Measured "Measured motor RPM";
+CM_ SG_ 261 Fbk_Torque_Measured "Torque calculated by DSP in inverter";
+CM_ SG_ 2498699025 Feedback_Type9 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type8 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type7 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type6 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type5 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type4 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type3 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type2 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type12 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type11 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type10 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Feedback_Type1 "00 Position Feedback
+01 Rate Feedback
+10 Power Feedback
+11 Currrent Feedback";
+CM_ SG_ 2498699025 Current_Limit_9 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_8 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_7 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_6 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_5 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_4 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_3 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_2 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_12 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_11 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_10 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Current_Limit_1 "0 0.0A
+1 2.5A
+2 5.0A
+3 7.5A
+4 10.0A
+5 12.5A
+6 15.0A
+7-15 Reserved ";
+CM_ SG_ 2498699025 Command_Output9 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output8 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output7 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output6 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output5 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output4 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output3 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output2 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output12 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output11 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output10 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+CM_ SG_ 2498699025 Command_Output1 "0 %
+1 +0.78125%
+...
+127 100%
+128 -100%
+...
+255 -0.78125%";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "version" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "version" "draft_20191030";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_ "NmStationAddress" BU_ Bring_Up_Code 0;
+BA_ "NmStationAddress" BU_ VCU 97;
+BA_ "GenSigStartValue" SG_ 3221225472 IO_SNS_3Pt_Left_Lower 0;
+BA_ "GenSigStartValue" SG_ 261 VMax3_DClinkVolt 0;
+BA_ "GenSigStartValue" SG_ 261 VMax1_DClinkVolt 0;
+BA_ "GenSigStartValue" SG_ 261 Sevcon_DClinkVolt 0;
+BA_ "GenSigStartValue" SG_ 261 BMS2_DClinkVolt 0;
+BA_ "GenSigStartValue" SG_ 261 BMS1_DClinkVolt 0;
+BA_ "GenSigStartValue" SG_ 261 VMax2_DClinkVolt 0;
+BA_ "GenSigStartValue" SG_ 261 DI1_3Pt_DepthControl_mV 0;
+VAL_ 3221225472 IO_AC_RearAux2_Float_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_RearAux1_Float_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_WorkPump_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_VMax_Coolant_Outlet_Temp 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_VMax_Coolant_Inlet_Temp 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Transmission_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Tractor_Pump_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_TopLink_Retract 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_TopLink_Position 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_TopLink_Extend 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_SuctionLine_Temp 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_SuctionLine_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Right_Brake_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Right_Brake_Position 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Rear_Aux_6B 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Rear_Aux_6A 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Rear_Aux_2B 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Rear_Aux_2A 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_RadCoolant_Outlet_Temp 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_PTO_Clutch 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Oil_Rad_Outlet_Temp 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Oil_Rad_Outlet_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Oil_Rad_Inlet_Temp 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Oil_Rad_Inlet_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_MainSwashPlate 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Left_Brake_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Left_Brake_Position 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Implement_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_FWD_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_FWD_Oil_Temp 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Drive_Clutch_Pressure 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Brake_Steer_Sensor 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_3Pt_Right_Raise 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_3Pt_Right_Lower 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_3Pt_Right_Angle 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_3Pt_Left_Raise 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_3Pt_Left_Lower 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_3Pt_Left_Angle 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Transflow_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_TopLink_Retract_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_TopLink_Extend_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Steer_Brk_Shutdown_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_RightBrk_Set_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_RightBrk_Release_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Rear_Aux_6B_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Rear_Aux_6A_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Rear_Aux_2B_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Rear_Aux_2A_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_PTO_Clutch_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_MainSwashPlate_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Lube_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_LeftBrk_Set_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_LeftBrk_Release_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Imple_Recirculation_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Imple_Flow_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_FWD_Reverse_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_FWD_Forward_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Drive_Clutch_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_AUX_ON_OFF_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_AUX_Bypass_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_3Pt_Right_Raise_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_3Pt_Right_Lower_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_3Pt_Left_Raise_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_4WD_SpeedSensor 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Steer_Right_TTC 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_SNS_Steer_Left_TTC 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Steer_Safety_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Steer_Right_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 IO_AC_Steer_Left_Valve 1 "Connected" 0 "Not Connected" ;
+VAL_ 3221225472 DanfossOrCustomSteering 2 "Monarch_Steering" 1 "Danfoss_Steering" 0 "Undetermined" ;
+VAL_ 3221225472 DI1_LH_BrkRotPos_InRange 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 3221225472 DI1_RH_BrkRotPos_InRange 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 3221225472 General_Subsytem 20000 "No Fault" 20066 "Front Aux Power Flt" 20065 "Front PCB Flt" 20064 "Rear Aux Power Flt" 20063 "Rear PCB Flt" 20062 "Rear Light Flt" 20061 "Front Light Flt" 20060 "Spare Power Flt" 20059 "Left Light Flt" 20058 "Right Light Flt" 20057 "AV Power Flt" 20056 "Wifi power Flt" 20055 "Front Fans Flt" 20054 "PE fan Flt" 20053 "Oil Fan Flt" 20052 "PE Pump Flt" 20051 "12V outlet Flt" 20050 "Front Light Strip Flt" 20049 "Ix_bed Ch7 Flt" 20048 "Charger Relay Flt" 20047 "Trailer Brake Light Flt" 20046 "Ix_bed Ch4 Flt" 20045 "High beam Flt" 20044 "Low Beam Flt" 20043 "Running Light Flt" 20042 "Relay14_ACDB Power" 20041 "Relay13_Front Sensor" 20040 "Relay12_BattPower" 20039 "Relay11_HV Ign" 20038 "Relay10_TFD Ign" 20037 "Relay9_TTC580 Ign" 20036 "Relay8_TTC580 Power" 20035 "Relay7_ Pump Ign" 20034 "Relay6_HMI Ign" 20033 "Relay5_EHI Ign" 20032 "Relay4_Right Turn Signal" 20031 "Relay3_mRFRM Ign" 20030 "Relay2_Left Turn Signal " 20029 "Relay1_Autonomy Cams" 20028 "Fuse28_TTC580 Power" 20027 "Fuse27_Ecotrons2" 20026 "Fuse26_ACDB Power" 20025 "Fuse25_Front Sensor" 20024 "Fuse24_BMS power" 20023 "Fuse23_HV Ign" 20022 "Fuse22_mRFRFM Power" 20021 "Fuse21_ Ecotrons1" 20020 "Fuse20_Vmax Power" 20019 "Fuse19_ OTA TTC580" 20018 "Fuse18_TFD" 20017 "Fuse17_TTC580 Ubatt" 20016 "Fuse16_TractorPump Ign" 20015 "Fuse15_ TTC580 Ign" 20014 "Fuse14_SevconPower2" 20013 "Fuse13_SevconPower1" 20012 "Fuse12_ SIMPL Power" 20011 "Fuse11_MTA Power" 20010 "Fuse10_Steering Valve" 20009 "Fuse9_ HMI Power" 20008 "Fuse8_Right Turn Signal" 20007 "Fuse7_Left Turn Signal" 20006 "Fuse6_empty" 20005 "Fuse5_ISOBus Power" 20004 "Fuse4_EstopCharger" 20003 "Fuse3_empty" 20002 "Fuse2_VmaxHVIL" 20001 "Fuse1_Autonomy Cams" 0 "No Fault" ;
+VAL_ 3221225472 Battery_Subsystem 20400 "No Fault" 20424 "HV battery Low" 20423 "12 Battery Low" 20422 "Tractor HVIL" 20421 "BMS HVIL" 20420 "Lower BMS Severe Fault" 20419 "Lower String High CellV" 20418 "Lower String Over Voltage" 20417 "Lower String Low CellV" 20416 "Lower String Low Voltage" 20415 "Upper BMS Severe Fault" 20414 "Upper String High CellV" 20413 "Upper String Over Voltage" 20412 "Upper String Low CellV" 20411 "Upper String low Voltage" 20410 "Pack imbl_ Upper Active" 20409 "Pack imbl_ Lower Active" 20408 "SOC Critically Low" 20407 "Low SOC" 20406 "Lower String Down" 20405 "Upper String Down" 20404 "Voltage Imbalance" 20403 "Both BMS LOC" 20402 "Lower String LOC" 20401 "Upper String LOC" 0 "No Fault" ;
+VAL_ 3221225472 Hydraulic_Subsystem 20360 "ClutchEngage_SpeedLimit" 20359 "ClutchEngage_Regen" 20358 "ClutchEngage_RegenNLimit" 20357 "ClutchEngage_Pressure" 20356 "ClutchEngage_FNR" 20355 "ClutchEngage_ChargerConenct" 20354 "ClutchEngage_StateNTemp" 20353 "ClutchEngage_GearInPos" 20300 "No Fault" 20352 "TractorPump LOC" 20351 "TractorPump Stalled" 20350 "TractorPump OverTemp" 20349 "TractorPump OverLoad" 20348 "TractorPump OverCurrent" 20347 "TractorPump OverVoltage" 20346 "TractorPump Hw Failure" 20345 "RH Brake Sensor Failure" 20344 "LH Brake Sensor Failure" 20343 "Work Pump Open Circuit" 20342 "4WD Bad Sensor" 20341 "Brakes Stuck - Speed Limit" 20340 "Brakes Stuck - RollBack" 20339 "Brakes Stuck - Parking" 20338 "Brakes Stuck - Pressure" 20337 "Work Pump Pos OOR" 20336 "Drive Clutch Pressure OOR" 20335 "PTO Clutch Pressure OOR" 20334 "Trans Acc Pressure OOR" 20333 "SteerBrk Acc Pressure OOR" 20332 "Suction Line Pressure OOR" 20331 "Tractor Pump Pressure OOR" 20330 "Work Pump Pressure OOR" 20329 "Right Brake Pressure OOR" 20328 "Left Brake Pressure OOR" 20327 "Tractor Pump Not Primed" 20326 "RH Brake Out Of Calibration" 20325 "LH Brake Out Of Calibration" 20324 "RH Brake SetValve OpenCircuit" 20323 "RH Brake RelValve OpenCircuit" 20322 "LH Brake SetValve OpenCircuit" 20321 "LH Brake RelValve OpenCircuit" 20320 "RH Brake Under Engagement" 20319 "LH Brake Under Engagement" 20318 "RH Brake Over Engagement" 20317 "LH Brake Over Engagement" 20316 "PTO Engagement Interlock" 20315 "PTO Clutch Valve OpenCircuit" 20314 "Lube Valve OpenCircuit" 20313 "Drive Clutch Valve OpenCircuit" 20312 "Lube Valve Timeout" 20311 "Gear mismatch clutch disengaged" 20310 "Clutch Pressure Low" 20309 "Aux ON/OFFvalve OpenCircuit" 20308 "WorkPumpOverloaded/Air" 20307 "WorkPumpSwash FBK Error" 20306 "TransFlowValve OpenCircuit" 20305 "Trans Manifold Pressure High" 20304 "Trans Manifold Pressure Low" 20303 "SteerBrake Valve OpenCircuit" 20302 "SteerBrake Acc Press High" 20301 "SteerBrake Acc Press Low" 0 "No Fault" ;
+VAL_ 3221225472 Charging_Subsystem 20200 "No Fault" 20238 "ACDB eFuse OverCurrent" 20237 "ACDB outlet relay welded stuck" 20236 "ACDB SIMPL relay welded stuck" 20235 "ACDB EVSE relay welded stuck" 20234 "ACDB 3 Phase relay welded stuck" 20233 "ACDB 1 Phase relay welded stuck" 20232 "Chargers Disabled" 20231 "DCAC_3 Flt" 20230 "DCAC_2 Flt" 20229 "DCAC_1 Flt" 20228 "DCDC_3 Irregular Voltage" 20227 "DCDC_2 Irregular Voltage" 20226 "DCDC_1 Irregular Voltage" 20225 "Chg_3 OBC Flt" 20224 "Chg_2 OBC Flt" 20223 "Chg_1 OBC Flt" 20222 "DCDC_3 OverTemp" 20221 "DCDC_2 OverTemp" 20220 "DCDC_1 OverTemp" 20219 "Chg_3 OverTemp " 20218 "Chg_2 OverTemp" 20217 "Chg_1 OverTemp" 20216 "DCDC_3 Flt" 20215 "DCDC_2 Flt" 20214 "DCDC_1 Flt" 20213 "ACDB eFuse8 OverCurrent" 20212 "ACDB eFuse6 OverCurrent" 20211 "ACDB eFuse3 OverCurrent" 20210 "ACDB eFuse1 OverCurrent" 20209 "ACDB Conv. Error" 20208 "ACDB SIMPL Error" 20207 "ACDB EVSE Error" 20206 "ACDB 3Ph Error" 20205 "ACDB 1Ph Error" 20204 "ACDB OverTemp" 20203 "ACDB disabled" 20202 "Charger Improper Connection" 20201 "Charger LOC" 0 "No Fault" ;
+VAL_ 3221225472 Thermal_Subsystem 20100 "No Fault" 20109 "Oil fans disabled" 20108 "Oil fan stopped/broken" 20107 "PE fans disabled" 20106 "PE fan stopped/broken" 20105 "Hyd Over Temp Protection" 20104 "Hyd Over Temp Warning" 20103 "Cooling Pump Disconnected" 20102 "Air in cooling system" 20101 "Cooling Pump OverCurrent" 0 "No Fault" ;
+VAL_ 3221225472 Traction_Subsystem 20500 "No Fault" 20523 "Inverter LOC" 20522 "Regen Limited" 20521 "Regen Disabled" 20520 "Clutch Interlock" 20519 "Motor Over loaded" 20518 "bStart Check Fail" 20517 "Disengage by Accel." 20516 "Empty" 20515 "Empty" 20514 "Empty" 20513 "Speed Input Error" 20512 "Motor Torque Limit" 20511 "Insufficient Torque Applied" 20510 "Hydraulic Oil Over Temp" 20509 "Inverter Over Temperature" 20508 "Inverter Fault OFF" 20507 "Control Word Check Error" 20506 "Hand Throttle Error" 20505 "Hand Throttle Ch2 OOR" 20504 "Hand Throttle Ch1 OOR" 20503 "Foot Throttle Error" 20502 "Foot Throttle Ch2 OOR" 20501 "Foot Throttle Ch1 OOR" 0 "No Fault" ;
+VAL_ 1698 FBK_AUX6_operation 7 "implement 7" 6 "implement 6" 5 "implement 5" 4 "implement 4" 3 "implement 3" 2 "implement 2" 1 "Feedpusher" 0 "Normal operation" ;
+VAL_ 1698 FBK_AUX2_operation 7 "implement 7" 6 "implement 6" 5 "implement 5" 4 "implement 4" 3 "implement 3" 2 "implement 2" 1 "Feedpusher" 0 "Normal operation" ;
+VAL_ 1698 SteeringSpoolCalib_FBK 17 "Standby" 16 "Error State" 15 "Calibration Complete" 14 "Checking Stored Values" 13 "Checking Center" 12 "Saving Center" 11 "Finding Center (Precise)" 10 "Finding Center" 9 "Error Checking" 8 "Checking Right" 7 "Saving Right" 6 "Finding Right" 5 "Description for the value '0x5'" 4 "Checking Left" 3 "Saving Left" 2 "Description for the value '0x2'" 1 "Finding Left" 0 "Initialization" ;
+VAL_ 1698 SteeringCalib_FBK 17 "Standby" 16 "Error State" 15 "Calibration Complete" 14 "Checking Stored Values" 13 "Checking Center" 12 "Saving Center" 11 "Finding Center (Precise)" 10 "Finding Center" 9 "Error Checking" 8 "Checking Right" 7 "Saving Right" 6 "Finding Right" 5 "Description for the value '0x5'" 4 "Checking Left" 3 "Saving Left" 2 "Description for the value '0x2'" 1 "Finding Left" 0 "Initialization" ;
+VAL_ 262 BMS2_HVIL_Status 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 BMS1_HVIL_Status 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 ACDB_HVIL_Out 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 ACDB_HVIL_In 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P196 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P147 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P146 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P254 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P253 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P252 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P251 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P240 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P239 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P238 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P194 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P191 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P188 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P185 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P182 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P179 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P176 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P173 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P170 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P167 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P164 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P161 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P158 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P155 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P152 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P149 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_P148 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P195 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P193 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P192 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P190 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P189 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P187 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P186 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P184 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P183 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P181 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P180 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P178 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P177 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P175 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P174 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P172 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P171 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P169 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P168 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P166 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P165 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P163 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P162 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P160 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P159 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P157 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P156 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P154 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P153 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P151 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P150 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P126 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P125 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P102 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_P101 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_RightWSS 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_LeftWSS 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_Steer_Right_ECO 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 IO_SNS_Steer_Left_ECO 1 "Connected" 0 "Not Connected" ;
+VAL_ 262 DI3_PTOSwitch_Status 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 262 DI3_Hand_Acc_Pdl_Pos_Status 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 262 DI2_Acc_Pdl_Pos_Status 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 262 Multiplex_2 3 "Driver_inputs_3" 2 "Driver_inputs_2" 1 "Joystick" 0 "IO_Checks" ;
+VAL_ 262 JS_Button_Front_TopCenter 3 "NA" 2 "Error Indicator" 1 "Button Pressed" 0 "Button not pressed" ;
+VAL_ 262 JS_Y_Axis_NeutralPosStatus 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_Y_Axis_FwdPosStatus 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_Y_Axis_BackPosStatus 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_X_Axis_RightPosStatus 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_X_Axis_NeutralPosStatus 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_X_Axis_LeftPosStatus 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_ThmbWhlPos_FrntLeft_TopSts 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_ThmbWhlPos_FrntLeft_NtrlSts 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_ThmbWhlPos_FrntLeft_DwnSts 4 "Not Available" 2 "Error Indicator" 1 "In position" 0 "Not in position" ;
+VAL_ 262 JS_Button_Front_TopRight 3 "NA" 2 "Error Indicator" 1 "Button Pressed" 0 "Button not pressed" ;
+VAL_ 262 JS_Button_Back 3 "NA" 2 "Error Indicator" 1 "Button Pressed" 0 "Button not pressed" ;
+VAL_ 261 IO_SNS_5V2 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_5V1 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_10V 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_Left3PtRed 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_Right3PtRed 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P141 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P140 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P139 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P138 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P137 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P136 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P135 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P134 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P133 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P132 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P131 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P130 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P129 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P128 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P127 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P124 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P123 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P122 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P117 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P116 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P115 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P114 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P113 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P112 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P111 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P110 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P109 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P108 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P107 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P106 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P105 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P104 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 IO_SNS_P103 1 "Connected" 0 "Not Connected" ;
+VAL_ 261 Multiplex_1 2 "Pin_IO" 1 "Driver_inputs_01" 0 "Sensor_measurements_01" ;
+VAL_ 261 SM1_Range_InPosition 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 261 SM1_Gear_InPosition 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 261 DI1_3Pt_DepthCtrl_Sens_Status 1 "Good" 0 "Error_OutofRange_OR_Discrepancy" ;
+VAL_ 256 ThreePoint_RearAux1 3 "Float" 2 "Go down" 1 "Go up" 0 "Hold" ;
+VAL_ 256 ThreePoint_RearAux2 3 "Float" 2 "Go down" 1 "Go up" 0 "Hold" ;
+VAL_ 256 FlowDemand_cmd 3 "10 LPM" 2 "6 LPM" 1 "4 LPM" 0 "0 LPM" ;
+VAL_ 256 ThreePoint_Toplink 3 "Float" 2 "Go down" 1 "Go up" 0 "Hold" ;
+VAL_ 256 ThreePoint_RH 3 "Float" 2 "Go down" 1 "Go up" 0 "Hold" ;
+VAL_ 256 ThreePoint_LH 3 "Float" 2 "Go down" 1 "Go up" 0 "Hold" ;
+VAL_ 256 UC1_Relief_Valve_settings 3 "Description for the value '0x3'" 2 "PUmp compensator" 1 "main relief" 0 "disabled" ;
+VAL_ 2498699025 Output_Command_Identifier 7 "Configuration 7-12" 6 "Configuration 1-6" 5 "Command 7-12" 4 "Command 1-6" 0 "Motor Model Configuration" ;
+VAL_ 2498695455 Overcurrent_Retry_9 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_8 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_7 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_12 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_11 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_10 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 H_Bridge_9 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_8 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_7 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_12 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_11 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_10 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 Feedback_Type_9 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_8 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_7 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_12 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_11 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_10 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Overcurrent_Retry_6 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_5 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_4 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_3 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_2 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 Overcurrent_Retry_1 1 "Manual Reset" 0 "Auto Retry" ;
+VAL_ 2498695455 H_Bridge_6 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_5 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_4 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_3 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_2 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 H_Bridge_1 1 "H-Bridge" 0 "High Side" ;
+VAL_ 2498695455 Feedback_Type_6 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_5 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_4 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_3 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_2 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Feedback_Type_1 3 "Current Feedback" 2 "Power Feedback" 1 "Rate Feedback" 0 "Position Feedback" ;
+VAL_ 2498695455 Diagnostic_9 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_8 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_7 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_6 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_5 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_4 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_3 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_2 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_12 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_11 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_10 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Diagnostic_1 3 "Open Circuit" 2 "Overcurrent" 1 "Short Circuit" 0 "No Faults" ;
+VAL_ 2498695455 Digital_9 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_8 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_7 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_6 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_5 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_4 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_3 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_2 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_12 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_11 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_10 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Digital_1 3 "Not Available" 2 "Short to Battery" 1 "Short to Ground" 0 "Open Circuit" ;
+VAL_ 2498695455 Feedback_ID 136 "Channel 7-12 Configuration" 135 "Channel 1-6 Configuration" 133 "Channel 7-12 Feedback" 132 "Channel 1-6 Feedback" 131 "Analog7-8, SW Version" 130 "Analog5-6, Batt Volt, 5V" 129 "Analog3-4, Diagnostic" 128 "Analog1-2, Digital 1-12" ;
+

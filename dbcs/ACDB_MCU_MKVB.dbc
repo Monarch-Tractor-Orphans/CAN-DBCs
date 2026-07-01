@@ -1,0 +1,220 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU ACDB_MCU
+VAL_TABLE_ ACDB_HW_Variant 3 "Reserved" 2 "Reserved" 1 "MKV_B" 0 "MKV_A" ;
+VAL_TABLE_ HW_Variant 3 "Reserved" 2 "MKVB" 1 "MKVA_newDBC" 0 "MKVA_oldDBC" ;
+VAL_TABLE_ PP_D0 1 "Locked" 0 "Unlocked" ;
+VAL_TABLE_ PP_D1 1 "Detected" 0 "Unconnected" ;
+VAL_TABLE_ Switch_Status 1 "ON" 0 "OFF" ;
+VAL_TABLE_ nFault 1 "No Fault" 0 "Fault Present" ;
+
+
+BO_ 2667708864 BL_CallApplication: 8 VCU
+ SG_ BL_CallApp_Signal : 0|64@1+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 2667708800 BL_Request: 8 VCU
+
+BO_ 2667708672 BL_Acknowledge: 1 VCU
+ SG_ BL_Ack_Signal : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2667708608 BL_Reset: 8 VCU
+ SG_ BL_Reset_Signal : 0|64@1+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 2667708544 BL_SendData: 8 VCU
+ SG_ BL_SD_BYTE8 : 56|8@1- (1,0) [0|0] ""  ACDB_MCU
+ SG_ BL_SD_BYTE7 : 48|8@1- (1,0) [0|0] ""  ACDB_MCU
+ SG_ BL_SD_BYTE6 : 40|8@1- (1,0) [0|0] ""  ACDB_MCU
+ SG_ BL_SD_BYTE5 : 32|8@1- (1,0) [0|0] ""  ACDB_MCU
+ SG_ BL_SD_BYTE4 : 24|8@1- (1,0) [0|0] ""  ACDB_MCU
+ SG_ BL_SD_BYTE3 : 16|8@1- (1,0) [0|0] ""  ACDB_MCU
+ SG_ BL_SD_BYTE2 : 8|8@1- (1,0) [0|0] ""  ACDB_MCU
+ SG_ BL_SD_BYTE1 : 0|8@1- (1,0) [0|0] ""  ACDB_MCU
+
+BO_ 2667708480 BL_Download: 8 VCU
+ SG_ BL_Download_SIZE4 : 32|8@1- (1,0) [0|0] "NA" Vector__XXX
+ SG_ BL_Download_SIZE3 : 40|8@1- (1,0) [0|0] "NA" Vector__XXX
+ SG_ BL_Download_SIZE2 : 48|8@1- (1,0) [0|0] "NA" Vector__XXX
+ SG_ BL_Download_SIZE1 : 56|8@1- (1,0) [0|0] "NA" Vector__XXX
+ SG_ BL_Download_ADDRSS4 : 0|8@1- (1,0) [0|0] "NA"  ACDB_MCU
+ SG_ BL_Download_ADDRSS3 : 8|8@1- (1,0) [0|0] "NA"  ACDB_MCU
+ SG_ BL_Download_ADDRSS2 : 16|8@1- (1,0) [0|0] "NA"  ACDB_MCU
+ SG_ BL_Download_ADDRSS1 : 24|8@1- (1,0) [0|0] "NA"  ACDB_MCU
+
+BO_ 2667708416 BL_Ping: 8 VCU
+ SG_ BL_Ping_Signal : 0|64@1+ (1,0) [0|1.84467440737096E+019] "" Vector__XXX
+
+BO_ 593 ACDB_Status_02: 8 ACDB_MCU
+ SG_ I_4 m1 : 0|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ J3068_SM m0 : 56|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ I_3 m0 : 48|8@1+ (0.1,0) [0|25.5] "A" Vector__XXX
+ SG_ I_2 m0 : 40|8@1+ (0.1,0) [0|25.5] "A" Vector__XXX
+ SG_ I_1 m0 : 32|8@1+ (0.1,0) [0|25.5] "A" Vector__XXX
+ SG_ Mux_251 M : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Vout_N m0 : 24|8@1+ (1,0) [0|255] "V"  VCU
+ SG_ Vout_3 m0 : 16|8@1+ (1,0) [0|255] "V"  VCU
+ SG_ Vout_2 m0 : 8|8@1+ (1,0) [0|255] "V"  VCU
+ SG_ Vout_1 m0 : 0|8@1+ (1,0) [0|255] "V"  VCU
+ SG_ Temp_DC_Pos m1 : 8|7@1+ (1,-15) [-15|112] "degC"  VCU
+ SG_ Temp_DC_Neg m1 : 15|7@1+ (1,-15) [-15|112] "degC"  VCU
+ SG_ Board_Temp_2 m1 : 29|7@1+ (1,-15) [-15|112] "degC"  VCU
+ SG_ Board_Temp_1 m1 : 22|7@1+ (1,-15) [-15|112] "degC"  VCU
+
+BO_ 597 VCU_Command_01: 8 VCU
+ SG_ EV_Status_ver m0 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EV_Status_op m0 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EV_Status_init m0 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EV_Min_Volt_LL m2 : 0|13@1+ (0.1,0) [0|819.1] "V" Vector__XXX
+ SG_ EV_Min_Volt_L1N m2 : 13|13@1+ (0.1,0) [0|819.1] "V" Vector__XXX
+ SG_ EV_Min_Current_L3 m1 : 0|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ EV_Min_Current_L2 m1 : 8|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ EV_Min_Current_L1 m1 : 16|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ EV_Max_Volt_LL m2 : 26|13@1+ (0.1,0) [0|819.1] "V" Vector__XXX
+ SG_ EV_Max_Volt_L1N m2 : 39|13@1+ (0.1,0) [0|819.1] "V" Vector__XXX
+ SG_ EV_Max_Current_N m1 : 24|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ EV_Max_Current_L3 m1 : 32|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ EV_Max_Current_L2 m1 : 40|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ EV_Max_Current_L1 m1 : 48|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ LIN_En m0 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ nDEMUX_En m0 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reset_MCU m0 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Serial_SupplierCode_cmd m4 : 32|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ Serial_SerialNo_cmd m3 : 17|20@1+ (1,0) [0|1048575] "" Vector__XXX
+ SG_ Serial_Rev_cmd m4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Serial_PartNumber_1_cmd m4 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Serial_PartNumber_2_cmd m4 : 0|14@1+ (1,0) [0|16383] "" Vector__XXX
+ SG_ Serial_JulianDate_cmd m3 : 0|17@1+ (1,0) [0|131071] "" Vector__XXX
+ SG_ Multiplexor_255 M : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ nOC_Fault_Clear m0 : 1|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ Motor_Ctrl_2 m0 : 32|7@1+ (1,0) [0|127] ""  ACDB_MCU
+ SG_ Motor_Ctrl_1 m0 : 24|7@1+ (1,0) [0|127] ""  ACDB_MCU
+ SG_ D_Select m0 : 7|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ C_Select m0 : 6|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ B2B3_Select m0 : 5|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ B1_Select m0 : 4|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ A2A3_Select m0 : 3|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ A1_Select m0 : 2|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ Charge_Enable m0 : 0|1@1+ (1,0) [0|1] ""  ACDB_MCU
+ SG_ PE_Fan_Ctrl m0 : 8|7@1+ (1,0) [0|127] "%"  ACDB_MCU
+ SG_ Hyd_Fan_Ctrl m0 : 16|7@1+ (1,0) [0|127] "%"  ACDB_MCU
+
+BO_ 592 ACDB_Status_01: 8 ACDB_MCU
+ SG_ HW_Variant m3 : 54|3@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SE_Status_init m1 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SE_Status_ver m1 : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SE_Status_op m1 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SE_Max_Current_N m1 : 6|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ SE_Max_Current_L3 m1 : 14|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ SE_Max_Current_L2 m1 : 22|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ SE_Max_Current_L1 m1 : 30|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ SE_Available_Volt_LL m1 : 38|13@1+ (0.1,0) [0|819.1] "V" Vector__XXX
+ SG_ SE_Available_Volt_L1N m1 : 51|13@1+ (0.1,0) [0|819.1] "V" Vector__XXX
+ SG_ LinEn_Status m0 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FW_Month m3 : 38|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FW_Year m3 : 42|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ FW_Date m3 : 33|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Fuse_Fault m0 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PGood_2 m0 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PGood_1 m0 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EVSE_LockStatus m0 : 56|8@1+ (0.013098,0) [0|3.33999] "V" Vector__XXX
+ SG_ Firmware_Hash_7 m4 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Firmware_Hash_6 m4 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Firmware_Hash_5 m4 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Firmware_Hash_4 m4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Firmware_Hash_3 m4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Firmware_Hash_2 m4 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Firmware_Hash_1 m4 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OCD_Ext_4 m0 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OCD_Ext_3 m0 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OCD_Ext_2 m0 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OCD_Ext_1 m0 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Status m0 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EVSE_PP_D1 m0 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EVSE_PP_D0 m0 : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChargeEnable_Status m0 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Codes m0 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Serial_PartNumber_2 m3 : 11|14@1+ (1,0) [0|16383] "" Vector__XXX
+ SG_ Serial_PartNumber_1 m3 : 3|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Serial_Rev m3 : 25|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Serial_SupplierCode m2 : 40|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ Serial_JulianDate m2 : 3|17@1+ (1,0) [0|131071] "" Vector__XXX
+ SG_ Serial_SerialNo m2 : 20|20@1+ (1,0) [0|1048575] "" Vector__XXX
+ SG_ Multiplexor_250 M : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ nFuse_Fault2 m0 : 16|1@1+ (1,0) [0|1] ""  VCU
+ SG_ nFuse_Fault1 m0 : 15|1@1+ (1,0) [0|1] ""  VCU
+ SG_ nHVILIN_Fault m0 : 13|1@1+ (1,0) [0|1] ""  VCU
+ SG_ nHVIL_Fault m0 : 14|1@1+ (1,0) [0|1] ""  VCU
+ SG_ J1772_Detect m0 : 11|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CCS_Detect m0 : 12|1@1+ (1,0) [0|1] ""  VCU
+ SG_ EVSE_CP m0 : 33|7@1+ (1,0) [0|127] "%"  VCU
+ SG_ EVSE_PP m0 : 40|8@1+ (0.013098,0) [0|3.33999] "V"  VCU
+ SG_ D_Status m0 : 10|1@1+ (1,0) [0|1] ""  VCU
+ SG_ C_Status m0 : 9|1@1+ (1,0) [0|1] ""  VCU
+ SG_ B3_Status m0 : 8|1@1+ (1,0) [0|1] ""  VCU
+ SG_ B2_Status m0 : 7|1@1+ (1,0) [0|1] ""  VCU
+ SG_ B1_Status m0 : 6|1@1+ (1,0) [0|1] ""  VCU
+ SG_ A3_Status m0 : 5|1@1+ (1,0) [0|1] ""  VCU
+ SG_ A2_Status m0 : 4|1@1+ (1,0) [0|1] ""  VCU
+ SG_ A1_Status m0 : 3|1@1+ (1,0) [0|1] ""  VCU
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+BA_ "GenSigStartValue" SG_ 593 Temp_DC_Pos 15;
+BA_ "GenSigStartValue" SG_ 593 Temp_DC_Neg 15;
+BA_ "GenSigStartValue" SG_ 593 Board_Temp_2 15;
+BA_ "GenSigStartValue" SG_ 593 Board_Temp_1 15;
+VAL_ 592 HW_Variant 3 "Reserved" 2 "MKVB" 1 "MKVA_newDBC" 0 "MKVA_oldDBC" ;
+VAL_ 592 EVSE_PP_D1 1 "Detected" 0 "Unconnected" ;
+VAL_ 592 EVSE_PP_D0 1 "Locked" 0 "Unlocked" ;
+VAL_ 592 nFuse_Fault2 1 "No Fault" 0 "Fault Present" ;
+VAL_ 592 nFuse_Fault1 1 "No Fault" 0 "Fault Present" ;
+VAL_ 592 nHVILIN_Fault 1 "No Fault" 0 "Fault Present" ;
+VAL_ 592 nHVIL_Fault 1 "No Fault" 0 "Fault Present" ;
+VAL_ 592 D_Status 1 "ON" 0 "OFF" ;
+VAL_ 592 C_Status 1 "ON" 0 "OFF" ;
+VAL_ 592 B3_Status 1 "ON" 0 "OFF" ;
+VAL_ 592 B2_Status 1 "ON" 0 "OFF" ;
+VAL_ 592 B1_Status 1 "ON" 0 "OFF" ;
+VAL_ 592 A3_Status 1 "ON" 0 "OFF" ;
+VAL_ 592 A2_Status 1 "ON" 0 "OFF" ;
+VAL_ 592 A1_Status 1 "ON" 0 "OFF" ;
+

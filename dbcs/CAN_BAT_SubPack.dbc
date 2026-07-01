@@ -1,0 +1,379 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS_2 Tester
+VAL_TABLE_ VtCntStatus 1 "CLOSED" 0 "OPEN" ;
+
+
+BO_ 866 Pack2_KAB_Version: 8 Vector__XXX
+ SG_ Pack2_timeAppCodeMonth : 39|4@0+ (1,0) [1|12] "" Vector__XXX
+ SG_ Pack2_timeAppCodeDay : 31|5@0+ (1,0) [1|31] "" Vector__XXX
+ SG_ Pack2_noAppCodeSubMinorVer : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Pack2_noAppCodeMinorVer : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Pack2_noAppCodeMajorVer : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 821 Pack2_KAB_MCU9_2: 8 Vector__XXX
+ SG_ Pack2_MCU9_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU9_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU9_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU9_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU9_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU9_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 820 Pack2_KAB_MCU9_1: 8 Vector__XXX
+ SG_ Pack2_MCU9_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU9_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU9_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU9_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 819 Pack2_KAB_MCU8_2: 8 Vector__XXX
+ SG_ Pack2_MCU8_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU8_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU8_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU8_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU8_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU8_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 818 Pack2_KAB_MCU8_1: 8 Vector__XXX
+ SG_ Pack2_MCU8_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU8_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU8_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU8_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 817 Pack2_KAB_MCU7_2: 8 Vector__XXX
+ SG_ Pack2_MCU7_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU7_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU7_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU7_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU7_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU7_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 816 Pack2_KAB_MCU7_1: 8 Vector__XXX
+ SG_ Pack2_MCU7_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU7_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU7_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU7_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 809 Pack2_KAB_MCU6_2: 8 Vector__XXX
+ SG_ Pack2_MCU6_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU6_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU6_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU6_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU6_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU6_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 808 Pack2_KAB_MCU6_1: 8 Vector__XXX
+ SG_ Pack2_MCU6_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU6_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU6_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU6_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 807 Pack2_KAB_MCU5_2: 8 Vector__XXX
+ SG_ Pack2_MCU5_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU5_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU5_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU5_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU5_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU5_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 806 Pack2_KAB_MCU5_1: 8 Vector__XXX
+ SG_ Pack2_MCU5_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU5_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU5_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU5_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 805 Pack2_KAB_MCU4_2: 8 Vector__XXX
+ SG_ Pack2_MCU4_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU4_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU4_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU4_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU4_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU4_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 804 Pack2_KAB_MCU4_1: 8 Vector__XXX
+ SG_ Pack2_MCU4_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU4_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU4_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU4_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 803 Pack2_KAB_MCU3_2: 8 Vector__XXX
+ SG_ Pack2_MCU3_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU3_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU3_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU3_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU3_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU3_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 802 Pack2_KAB_MCU3_1: 8 Vector__XXX
+ SG_ Pack2_MCU3_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU3_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU3_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU3_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 801 Pack2_KAB_MCU2_2: 8 Vector__XXX
+ SG_ Pack2_MCU2_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU2_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU2_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU2_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU2_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU2_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 800 Pack2_KAB_MCU2_1: 8 Vector__XXX
+ SG_ Pack2_MCU2_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU2_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU2_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU2_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 793 Pack2_KAB_MCU1_2: 8 Vector__XXX
+ SG_ Pack2_MCU1_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU1_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU1_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU1_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU1_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU1_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 792 Pack2_KAB_MCU1_1: 8 Vector__XXX
+ SG_ Pack2_MCU1_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU1_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU1_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU1_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 791 Pack2_KAB_MCU16_2: 8 Vector__XXX
+ SG_ Pack2_MCU16_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU16_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU16_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU16_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU16_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU16_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 790 Pack2_KAB_MCU16_1: 8 Vector__XXX
+ SG_ Pack2_MCU16_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU16_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU16_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU16_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 789 Pack2_KAB_MCU15_2: 8 Vector__XXX
+ SG_ Pack2_MCU15_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU15_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU15_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU15_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU15_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU15_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 788 Pack2_KAB_MCU15_1: 8 Vector__XXX
+ SG_ Pack2_MCU15_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU15_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU15_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU15_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 787 Pack2_KAB_MCU14_2: 8 Vector__XXX
+ SG_ Pack2_MCU14_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU14_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU14_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU14_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU14_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU14_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 786 Pack2_KAB_MCU14_1: 8 Vector__XXX
+ SG_ Pack2_MCU14_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU14_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU14_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU14_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 785 Pack2_KAB_MCU13_2: 8 Vector__XXX
+ SG_ Pack2_MCU13_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU13_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU13_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU13_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU13_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU13_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 784 Pack2_KAB_MCU13_1: 8 Vector__XXX
+ SG_ Pack2_MCU13_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU13_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU13_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU13_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 777 Pack2_KAB_MCU12_2: 8 Vector__XXX
+ SG_ Pack2_MCU12_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU12_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU12_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU12_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU12_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU12_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 776 Pack2_KAB_MCU12_1: 8 Vector__XXX
+ SG_ Pack2_MCU12_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU12_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU12_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU12_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 775 Pack2_KAB_MCU11_2: 8 Vector__XXX
+ SG_ Pack2_MCU11_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU11_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU11_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU11_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU11_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU11_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 774 Pack2_KAB_MCU11_1: 8 Vector__XXX
+ SG_ Pack2_MCU11_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU11_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU11_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU11_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 773 Pack2_KAB_MCU10_2: 8 Vector__XXX
+ SG_ Pack2_MCU10_uSumCell : 53|12@0+ (0.01,0) [0|40.95] "V" Vector__XXX
+ SG_ Pack2_MCU10_uCell6 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU10_uCell5 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU10_tPcb : 45|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU10_t2 : 37|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ Pack2_MCU10_t1 : 29|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+
+BO_ 772 Pack2_KAB_MCU10_1: 8 Vector__XXX
+ SG_ Pack2_MCU10_uCell4 : 44|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU10_uCell3 : 26|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU10_uCell2 : 8|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_MCU10_uCell1 : 6|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 771 Pack2_KAB_Limits2: 8 Vector__XXX
+ SG_ Pack2_bcmc_iCurrPulseLim : 39|8@0+ (10,0) [0|2550] "A" Vector__XXX
+ SG_ Pack2_bcmc_ePackCapNom : 31|8@0+ (1,0) [0|255] "Ah" Vector__XXX
+
+BO_ 770 Pack2_KAB_Limits1: 8 Vector__XXX
+ SG_ Pack2_bcmc_uCellUndVoltLim : 28|9@0+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ Pack2_bcmc_uCellToc : 14|9@0+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ Pack2_bcmc_uCellOverVoltLim : 7|9@0+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ Pack2_bcmc_uCellBoc : 21|9@0+ (10,0) [0|5000] "mV" Vector__XXX
+ SG_ Pack2_bcmc_tCellTmpHiLim : 55|8@0+ (1,0) [0|255] "degC" Vector__XXX
+ SG_ Pack2_bcmc_tCellOverTmpLim : 47|8@0+ (1,0) [0|255] "degC" Vector__XXX
+ SG_ Pack2_bcmc_tBusbarTmpLim : 63|8@0- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 769 Pack2_KAB_HV_Sense3: 8 Vector__XXX
+ SG_ Pack2_spi_uIsoDivider : 31|12@0+ (0.001,-0.5) [-0.5|3.595] "V" Vector__XXX
+ SG_ Pack2_spi_uFuseLS : 11|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+ SG_ Pack2_spi_uFuseHS : 7|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+ SG_ Pack2_spi_tShunt : 63|8@0+ (1,-70) [-70|185] "degC" Vector__XXX
+ SG_ Pack2_spi_rIsoPos : 35|10@0+ (10,0) [0|10230] "kOhm" Vector__XXX
+ SG_ Pack2_spi_rIsoNeg : 41|10@0+ (10,0) [0|10230] "kOhm" Vector__XXX
+
+BO_ 768 Pack2_KAB_HV_Sense2: 8 Vector__XXX
+ SG_ Pack2_spi_uVbusDcPos : 31|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+ SG_ Pack2_spi_uVbusDcNeg : 35|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+ SG_ Pack2_spi_uVbusAcPos : 7|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+ SG_ Pack2_spi_uVbusAcNeg : 11|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+
+BO_ 373 Pack2_KAB_Debug1: 8 BMS_2
+ SG_ Pack2_MainState : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Pack2_FaultMgrState : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Pack2_bPrechgCntLS : 25|5@0+ (0.1,0) [0|1] "%/100" Vector__XXX
+ SG_ Pack2_bMainPosCntStatus : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_bMainPosCntLS : 21|5@0+ (0.1,0) [0|1] "%/100" Vector__XXX
+ SG_ Pack2_bMainPosCntHS : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_bMainNegCntStatus : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_bMainNegCntLS : 30|5@0+ (0.1,0) [0|1] "%/100" Vector__XXX
+ SG_ Pack2_bMainNegCntHS : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_bDcNegCntStatus : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_bDcNegCntLS : 43|5@0+ (0.1,0) [0|1] "%/100" Vector__XXX
+ SG_ Pack2_bDcNegCntHS : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_bAcPosCntStatus : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack2_bAcPosCntLS : 34|5@0+ (0.1,0) [0|1] "%/100" Vector__XXX
+ SG_ Pack2_bAcPosCntHS : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 374 Pack2_KAB_Debug2: 8 BMS_2
+ SG_ Pack2_ePackCapacity : 23|16@0+ (0.1,0) [0|6553.5] "Ah" Vector__XXX
+ SG_ Pack2_eLifetimeAccum : 39|16@0+ (0.1,0) [0|6553.5] "Ah" Vector__XXX
+ SG_ Pack2_SOC_Coulomb_Raw : 55|11@0+ (0.1,-50) [-50|154.7] "%" Vector__XXX
+ SG_ Pack2_SOC_Coulomb : 7|10@0+ (0.1,0) [0|100] "%" Vector__XXX
+
+BO_ 391 Pack2_KAB_Debug3: 8 BMS_2
+ SG_ Pack2_uAvgCell : 52|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ Pack2_tMinVCell : 43|7@0+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ Pack2_tMaxVCell : 34|7@0+ (1,-40) [-40|85] "degC" Vector__XXX
+ SG_ Pack2_noMinVCellMod : 27|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ Pack2_noMinVCell : 38|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Pack2_noMaxVCellMod : 20|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ Pack2_noMaxVCell : 31|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Pack2_Runtime : 7|16@0+ (0.1,0) [0|6553.5] "hr" Vector__XXX
+
+BO_ 388 Pack2_KAB_HV_Sense1: 8 BMS_2
+ SG_ Pack2_spi_uVbusPos : 27|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+ SG_ Pack2_spi_uVbusNeg : 47|12@0+ (0.5,-50) [-50|1200] "V" Vector__XXX
+ SG_ Pack2_spi_uPack : 23|12@0+ (0.5,0) [0|1200] "V" Vector__XXX
+ SG_ Pack2_spi_iPack : 7|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+
+BO_ 390 Pack2_KAB_Current: 8 BMS_2
+ SG_ Pack2_icc_iPackIvt : 39|16@0+ (1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ Pack2_iab_iLem : 23|16@0+ (1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ Pack2_cur_iPack : 7|16@0+ (1,-1600) [-1600|1600] "A" Vector__XXX
+
+
+
+CM_ SG_ 771 Pack2_bcmc_iCurrPulseLim "Minimum allowed cell voltage, below this limit - contactors open (Pack 2)";
+CM_ SG_ 771 Pack2_bcmc_ePackCapNom "Calibratable Nominal Pack Capacity (BOL Capacity) for pack 2";
+CM_ SG_ 770 Pack2_bcmc_uCellUndVoltLim "Minimum allowed cell voltage, below this limit - contactors open (Pack 2)";
+CM_ SG_ 770 Pack2_bcmc_uCellToc "Cell voltage at top of charge for pack 2";
+CM_ SG_ 770 Pack2_bcmc_uCellOverVoltLim "Maximum allowed cell voltage - above this limit, contactors open for pack 2";
+CM_ SG_ 770 Pack2_bcmc_uCellBoc "Cell voltage at bottom of charge for pack 2";
+CM_ SG_ 770 Pack2_bcmc_tCellTmpHiLim "Cell temp warning limit for pack 2";
+CM_ SG_ 770 Pack2_bcmc_tCellOverTmpLim "Cell temp fault limit for pack 2";
+CM_ SG_ 770 Pack2_bcmc_tBusbarTmpLim "Busbar temperature limit for pack 2";
+CM_ SG_ 769 Pack2_spi_tShunt "Shunt temperature for pack 2";
+CM_ SG_ 373 Pack2_MainState "Current state within the main BMS state machine for pack 2";
+CM_ SG_ 373 Pack2_FaultMgrState "Current state within the main BMS state machine for pack 2";
+CM_ SG_ 374 Pack2_ePackCapacity "Current remaining pack 2 energy";
+CM_ SG_ 374 Pack2_eLifetimeAccum "Pack 2 accumulated lifetime Ah";
+CM_ SG_ 374 Pack2_SOC_Coulomb_Raw "SOC based on coulomb counting for pack 2 (actual value, doesn't saturate at 100%)";
+CM_ SG_ 374 Pack2_SOC_Coulomb "SOC based on coulomb counting for pack 2";
+CM_ SG_ 391 Pack2_uAvgCell "high precision average cell measurement for pack 2";
+CM_ SG_ 391 Pack2_tMinVCell "Temperature of the module containing the minimum cell voltage for pack 2";
+CM_ SG_ 391 Pack2_tMaxVCell "Temperature of the module containing the maximum cell voltage for pack 2";
+CM_ SG_ 391 Pack2_noMinVCellMod "Module number for the module that contains the cell with min cell voltage for pack 2";
+CM_ SG_ 391 Pack2_noMinVCell "cell number of min cell voltage cell for pack 2";
+CM_ SG_ 391 Pack2_noMaxVCellMod "Module number for the module that contains the cell with max cell voltage for pack 2";
+CM_ SG_ 391 Pack2_noMaxVCell "cell number of max cell voltage cell for pack 2";
+CM_ SG_ 390 Pack2_icc_iPackIvt "Isabellenhutte CAN shunt current measurement for pack 2";
+CM_ SG_ 390 Pack2_iab_iLem "LEM sensor current measurement for pack 2";
+CM_ SG_ 390 Pack2_cur_iPack "Blended pack 2 current (blend between shunt and LEM current sensors)";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "";
+VAL_ 373 Pack2_bMainPosCntStatus 1 "CLOSED" 0 "OPEN" ;
+VAL_ 373 Pack2_bMainNegCntStatus 1 "CLOSED" 0 "OPEN" ;
+VAL_ 373 Pack2_bMainNegCntHS 1 "CLOSED" 0 "OPEN" ;
+VAL_ 373 Pack2_bDcNegCntStatus 1 "CLOSED" 0 "OPEN" ;
+VAL_ 373 Pack2_bDcNegCntHS 1 "CLOSED" 0 "OPEN" ;
+VAL_ 373 Pack2_bAcPosCntStatus 1 "CLOSED" 0 "OPEN" ;
+VAL_ 373 Pack2_bAcPosCntHS 1 "CLOSED" 0 "OPEN" ;
+

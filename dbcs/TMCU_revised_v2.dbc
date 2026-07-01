@@ -1,0 +1,1096 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: OffBoardDiagnosticTool1_PBus Dummy_PurpleBus Inverter_Sevcon VCU UCM_Nano_PBus
+VAL_TABLE_ HydCldStrtWrmUpFdk 3 "Completed" 2 "In progress" 1 "Ignored by user" 0 "Not required" ;
+VAL_TABLE_ Vt_Sig_Enable_Service 1 "Active" 0 "Not Active" ;
+VAL_TABLE_ Vt_Wake_Up 1 "Wake Up" 0 "Sleep" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ AddrAck : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ New_Signal_92 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2564462073 ISO15765_Phys_F9_95: 8 OffBoardDiagnosticTool1_PBus
+ SG_ SN m2 : 0|4@1+ (1,0) [0|15] ""  UCM_Nano_PBus
+ SG_ SingFrameDataLen m0 : 0|4@1- (1,0) [0|7] ""  UCM_Nano_PBus
+ SG_ SepTime m3 : 16|8@1+ (1,0) [0|255] "ms"  UCM_Nano_PBus
+ SG_ ProtocCntrlInfo M : 4|4@1+ (1,0) [0|3] ""  UCM_Nano_PBus
+ SG_ N1FrameDataLen m1 : 3|12@0+ (1,0) [0|4095] ""  UCM_Nano_PBus
+ SG_ FlowSts m3 : 0|4@1+ (1,0) [0|3] ""  UCM_Nano_PBus
+ SG_ BlkSize m3 : 8|8@1+ (1,0) [0|255] ""  UCM_Nano_PBus
+
+BO_ 2564489209 ISO15765_Phys_F9: 8 OffBoardDiagnosticTool1_PBus
+ SG_ SN m2 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SingFrameDataLen m0 : 0|4@1- (1,0) [0|7] "" Vector__XXX
+ SG_ SepTime m3 : 16|8@1+ (1,0) [0|255] "ms" Vector__XXX
+ SG_ ProtocCntrlInfo M : 4|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ N1FrameDataLen m1 : 3|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ FlowSts m3 : 0|4@1+ (1,0) [0|3] ""  UCM_Nano_PBus
+ SG_ BlkSize m3 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2564487573 ISO15765_Phys_95_F9: 8 UCM_Nano_PBus
+ SG_ SingFrameDataLen m0 : 0|4@1- (1,0) [0|7] "" Vector__XXX
+ SG_ SepTime m3 : 16|8@1+ (1,0) [0|255] "ms" Vector__XXX
+ SG_ ProtocCntrlInfo M : 4|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ N1FrameDataLen m1 : 3|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ FlowSts m3 : 0|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BlkSize m3 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SN m2 : 0|4@1+ (1,0) [0|15] ""  OffBoardDiagnosticTool1_PBus
+
+BO_ 2565799929 ACL_F9: 8 OffBoardDiagnosticTool1_PBus
+ SG_ VehSysInst : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VehSys : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Rsrvd_1Bit : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ManufctCod : 21|11@1+ (1,0) [0|2047] "" Vector__XXX
+ SG_ IndstryGrp : 60|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IdNum : 0|21@1+ (1,0) [0|2097151] "" Vector__XXX
+ SG_ FunctInst : 35|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Funct : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECU_Inst : 32|3@1+ (1,0) [0|7] ""  UCM_Nano_PBus
+ SG_ ArbAddrCap : 63|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus
+
+BO_ 2565799829 ACL_95: 8 UCM_Nano_PBus
+ SG_ VehSysInst : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VehSys : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ Rsrvd_1Bit : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ManufctCod : 21|11@1+ (1,0) [0|2047] "" Vector__XXX
+ SG_ IndstryGrp : 60|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IdNum : 0|21@1+ (1,0) [0|2097151] ""  OffBoardDiagnosticTool1_PBus
+ SG_ FunctInst : 35|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Funct : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECU_Inst : 32|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ArbAddrCap : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2565406613 ACKM_95: 8 UCM_Nano_PBus
+ SG_ PGN_NAckBusy m3 : 40|24@1+ (1,0) [0|16777200] ""  OffBoardDiagnosticTool1_PBus
+ SG_ PGN_Ack m0 : 40|24@1+ (1,0) [0|16777200] ""  OffBoardDiagnosticTool1_PBus
+ SG_ PGN_NAckAd m2 : 40|24@1+ (1,0) [0|16777200] ""  OffBoardDiagnosticTool1_PBus
+ SG_ PGN_NAck m1 : 40|24@1+ (1,0) [0|16777200] ""  OffBoardDiagnosticTool1_PBus
+ SG_ GrpFunctValNAckBusy m3 : 8|8@1+ (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+ SG_ GrpFunctValNAck m1 : 8|8@1+ (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+ SG_ GrpFunctValAck m0 : 8|8@1+ (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+ SG_ AddrNegAck m1 : 32|8@1+ (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+ SG_ AddrBusy m3 : 32|8@1+ (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+ SG_ AddrAck m0 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AddrAccssDeny m2 : 32|8@1+ (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+ SG_ GrpFunctValNAckAd m2 : 8|8@1- (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+ SG_ CByteAckm M : 0|8@1+ (1,0) [0|255] ""  OffBoardDiagnosticTool1_PBus
+
+BO_ 2565537785 RQST_F9: 3 OffBoardDiagnosticTool1_PBus
+ SG_ PNG_RQST_F9 : 0|24@1+ (1,0) [0|16777200] ""  UCM_Nano_PBus
+
+BO_ 2568683265 HS3_Temperature_Feedback_Node_1: 8 Inverter_Sevcon
+ SG_ MotorTemperature : 16|16@1- (1,0) [-32768|32767] "C"  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ Temperature_Remaining : 0|16@1- (1,0) [0|140] "C"  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ SEQ_Temp : 48|8@1+ (1,0) [0|255] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ DC_Link_Voltage : 32|16@1- (0.0625,0) [-2048|2047.9375] "V"  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ CS_Temp : 56|8@1+ (1,0) [0|255] ""  UCM_Nano_PBus,Dummy_PurpleBus
+
+BO_ 2566890134 Service: 8 VCU
+ SG_ VCU_stCldWrmupFdk : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_Blower_Spd4 : 55|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ HVAC_Blower_Spd3 : 54|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ HVAC_Blower_Spd2 : 53|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ HVAC_Blower_Spd1 : 52|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ FBK_LLCState : 48|4@1+ (1,0) [0|15] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ Wake_Up : 46|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ Fan_RevRqst_ManualOperation : 45|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ CompSpeed_Target : 26|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ CompPwrLim_Target : 0|3@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ CompOnOff_Target : 44|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ HydBPV_Target : 24|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ RadBPV_Target : 22|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ BattBPV_Target : 20|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ LeftFCV_Target : 18|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ RightFCV_Target : 16|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ MainFCV_Target : 14|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ ChillerSOV_Target : 43|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ ACSOV_Target : 42|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ AuxFan_Target : 12|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ RadFan_Target : 10|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ HtrPump_Target : 8|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ BattPump_Target : 5|2@1+ (1,0) [0|3] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ PtPump_Enable : 41|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ Main_Enable : 40|1@1+ (1,0) [0|1] ""  UCM_Nano_PBus,Dummy_PurpleBus
+ SG_ CompOnOff_Enable : 39|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ HydBPV_Enable : 38|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ RadBPV_Enable : 37|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ BattBPV_Enable : 36|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ ChillerSOV_Enable : 35|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ ACSOV_Enable : 34|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ LeftFCV_Enable : 33|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ RightFCV_Enable : 32|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ MainFCV_Enable : 31|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ AuxFan_Enable : 30|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ RadFan_Enable : 29|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ HtrPump_Enable : 28|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ PtPump_Target : 3|2@1+ (1,0) [0|3] ""  Dummy_PurpleBus,UCM_Nano_PBus
+ SG_ BattPump_Enable : 7|1@1+ (1,0) [0|1] ""  Dummy_PurpleBus,UCM_Nano_PBus
+
+BO_ 2566562197 TMCU_Info6: 8 UCM_Nano_PBus
+ SG_ BattLsFCV_ActPosition : 55|16@0+ (1,0) [0|65535] ""  Dummy_PurpleBus
+ SG_ BattMFCV_ActPosition : 39|16@0+ (1,0) [0|65535] "0"  Dummy_PurpleBus
+ SG_ BattRsFCV_ActPosition : 23|16@0+ (1,0) [0|65535] ""  Dummy_PurpleBus
+ SG_ HydBPV_ActPos : 15|8@0+ (1,0) [0|255] "%"  Dummy_PurpleBus
+ SG_ RadBPV_ActPos : 7|8@0+ (1,0) [0|255] "%"  Dummy_PurpleBus
+
+BO_ 2566627733 TMCU_Info5: 8 UCM_Nano_PBus
+ SG_ ACSOV_Status : 63|8@0+ (1,0) [0|3] "On/Off"  Dummy_PurpleBus
+ SG_ BattSOV_Status : 55|8@0+ (1,0) [0|3] "On/Off"  Dummy_PurpleBus
+ SG_ PwtPmp_ActVoltage : 47|8@0+ (1,0) [0|255] "V"  Dummy_PurpleBus
+ SG_ PwtPmp_ActCurrent : 39|8@0+ (1,0) [0|255] "A"  Dummy_PurpleBus
+ SG_ CabPmp_ActCurrent : 31|8@0+ (1,0) [0|255] "A"  Dummy_PurpleBus
+ SG_ CabPmp_ActVoltage : 23|8@0+ (1,0) [0|255] "V"  Dummy_PurpleBus
+ SG_ BattPmp_ActCurrent : 15|8@0+ (1,0) [0|255] "A"  Dummy_PurpleBus
+ SG_ BattPmp_ActVoltage : 7|8@0+ (1,0) [0|255] "V"  Dummy_PurpleBus
+
+BO_ 2566693269 TMCU_Info4: 8 UCM_Nano_PBus
+ SG_ CldWrmUp_SpeedReq : 53|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CldWrmUp_Enable : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Refrigerant_LSPressure : 63|8@0+ (0.05,0) [0|12.75] "barA"  Dummy_PurpleBus
+ SG_ Enable_Service_Status : 50|1@0+ (1,0) [0|1] ""  Dummy_PurpleBus
+ SG_ RadFAN_ReverseStatus : 49|2@0+ (1,0) [0|3] ""  Dummy_PurpleBus
+ SG_ BattBPV_ActPos : 47|8@0+ (1,0) [0|255] "%"  Dummy_PurpleBus
+ SG_ HVACBlower_TargetSpeed : 39|8@0+ (1,0) [0|255] "Step"  Dummy_PurpleBus
+ SG_ AuxFan_TargetSpeed : 31|8@0+ (20,0) [0|5100] "rpm"  Dummy_PurpleBus
+ SG_ MainFan_TargetSpeed : 23|8@0+ (20,0) [0|5100] "rpm"  Dummy_PurpleBus
+ SG_ Discharge_AirTemp : 15|8@0- (1,0) [-128|127] "°C"  Dummy_PurpleBus
+ SG_ Evap_FreezeTemp : 7|8@0- (1,0) [-128|127] "°C"  Dummy_PurpleBus
+
+BO_ 2566824341 TMCU_Info3: 8 UCM_Nano_PBus
+ SG_ Refrigerant_HSPressure : 39|8@0+ (0.2,0) [0|51] "barA"  Dummy_PurpleBus
+ SG_ BattHtr_Voltage : 47|8@0+ (2,0) [0|510] "V"  Dummy_PurpleBus
+ SG_ BattHtr_Current : 15|8@0+ (0.25,0) [0|1020] "A"  Dummy_PurpleBus
+ SG_ BattHtr_ClntOutTemp : 31|8@0+ (1,-40) [-40|215] "°C"  Dummy_PurpleBus
+ SG_ BattHtr_ClntInTemp : 23|8@0+ (1,-40) [-40|215] "°C"  Dummy_PurpleBus
+ SG_ BattHtr_Power : 7|8@0+ (40,0) [0|10200] "W"  Dummy_PurpleBus
+
+BO_ 2566758805 TMCU_Info2: 8 UCM_Nano_PBus
+ SG_ Temperature_Pot : 47|8@0+ (1,0) [0|50] "°C"  Dummy_PurpleBus
+ SG_ Refrigerant_LSTemp : 55|8@0+ (1,-40) [-40|215] "°C"  Dummy_PurpleBus
+ SG_ CabHtr_Voltage : 39|8@0+ (2,0) [0|510] "V"  Dummy_PurpleBus
+ SG_ CabHtr_Current : 31|8@0+ (0.25,0) [0|63.75] "A"  Dummy_PurpleBus
+ SG_ CabHtr_ClntOutTemp : 23|8@0+ (1,-40) [-40|215] "°C"  Dummy_PurpleBus
+ SG_ CabHtr_ClntInTemp : 15|8@0+ (1,-40) [-40|215] "°C"  Dummy_PurpleBus
+ SG_ CabHtr_Power : 7|8@0+ (40,0) [0|10200] "W"  Dummy_PurpleBus
+
+BO_ 2566855317 TMCU_Info1: 8 UCM_Nano_PBus
+ SG_ PTCooling_Enable : 7|1@0+ (1,0) [0|1] ""  Dummy_PurpleBus
+ SG_ CabHeating_Enable : 6|1@0+ (1,0) [0|1] ""  Dummy_PurpleBus
+ SG_ CabCooling_Enable : 5|1@0+ (1,0) [0|1] ""  Dummy_PurpleBus
+ SG_ BattHeating_Enable : 3|1@0+ (1,0) [0|1] ""  Dummy_PurpleBus
+ SG_ BattCooling_Enable : 4|1@0+ (1,0) [0|1] ""  Dummy_PurpleBus
+ SG_ Hydraulic_OilTemp : 55|8@0+ (1,0) [-40|215] "°C"  Dummy_PurpleBus
+ SG_ Condenser_ClntOutTemp : 63|8@0+ (1,-40) [-40|215] "°C"  Dummy_PurpleBus
+ SG_ CabHtr_TargetTemp : 47|8@0- (1,0) [-128|127] "°C"  Dummy_PurpleBus
+ SG_ BattHtr_TargetTemp : 39|8@0+ (1,0) [0|255] "°C"  Dummy_PurpleBus
+ SG_ PwtrnPmp_ActSpeed : 31|8@0+ (28,0) [0|7140] "rpm"  Dummy_PurpleBus
+ SG_ CabPmp_ActSpeed : 23|8@0+ (28,0) [0|7140] "rpm"  Dummy_PurpleBus
+ SG_ BattPmp_ActSpeed : 15|8@0+ (28,0) [0|7140] "rpm"  Dummy_PurpleBus
+ SG_ TMStatus : 2|3@0+ (1,0) [0|5] ""  Dummy_PurpleBus
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ BO_ 2564462073 "Reserved for ISO 15765";
+CM_ SG_ 2564462073 ProtocCntrlInfo "Part of Network Protocol Control Information (N_PCI) of a ISO 15765 message.";
+CM_ BO_ 2565799929 "Address Claimed";
+CM_ BO_ 2565799829 "Address Claimed";
+CM_ BO_ 2565406613 "The Acknowledgment PG is used to provide a handshake mechanism between transmitting and receiving devices.";
+CM_ SG_ 2565406613 PGN_NAckBusy "PGN which is requested by Request2 message";
+CM_ SG_ 2565406613 PGN_Ack "PGN which is requested by Request2 message";
+CM_ SG_ 2565406613 PGN_NAckAd "PGN which is requested by Request2 message";
+CM_ SG_ 2565406613 PGN_NAck "PGN which is requested by Request2 message";
+CM_ SG_ 2565406613 GrpFunctValNAckBusy "Group Function of PGN being acknowledged. This field identifies for a device the specific group function of a PGN being acknowledged or declined.  This field is not used if the PGN being acknowledged or declined is not a group function PGN.";
+CM_ SG_ 2565406613 GrpFunctValNAck "Group Function of PGN being acknowledged. This field identifies for a device the specific group function of a PGN being acknowledged or declined.  This field is not used if the PGN being acknowledged or declined is not a group function PGN.";
+CM_ SG_ 2565406613 GrpFunctValAck "Group Function of PGN being acknowledged. This field identifies for a device the specific group function of a PGN being acknowledged or declined.  This field is not used if the PGN being acknowledged or declined is not a group function PGN.";
+CM_ SG_ 2565406613 GrpFunctValNAckAd "Group Function of PGN being acknowledged. This field identifies for a device the specific group function of a PGN being acknowledged or declined.  This field is not used if the PGN being acknowledged or declined is not a group function PGN.";
+CM_ BO_ 2565537785 "Request
+";
+CM_ BO_ 2568683265 "To command the anciliary switch";
+CM_ SG_ 2568683265 MotorTemperature "Measured motor temperature";
+CM_ SG_ 2568683265 Temperature_Remaining "Inverter module temperature";
+CM_ SG_ 2568683265 SEQ_Temp "Temperature message sequence counter";
+CM_ SG_ 2568683265 CS_Temp "Temperature message checksum";
+CM_ SG_ 2566890134 VCU_stCldWrmupFdk "Hyd oil cold start warm up procedure status feedback from vcu to tmcu ";
+CM_ SG_ 2566693269 CldWrmUp_SpeedReq "hydraulic oil cold start warm up requested hyd pump speed ";
+CM_ SG_ 2566693269 CldWrmUp_Enable "Hydraulic oil warm up procedure during cold conditions. requested by tmcu to vcu";
+BA_DEF_ SG_  "CI_RepetitionNum" ENUM  "1","2";
+BA_DEF_ SG_  "CI_RepetitionType" ENUM  "NA","1","2","3","4";
+BA_DEF_ SG_  "CI_RepetitionComplemented" ENUM  "0","1","vector_leerstring";
+BA_DEF_ SG_  "DDI" INT 0 65535;
+BA_DEF_ SG_  "CI_FullName" STRING ;
+BA_DEF_ SG_  "GenSigTimeoutTime" INT 0 3600000;
+BA_DEF_ SG_  "CI_ParId" STRING ;
+BA_DEF_ SG_  "CI_SLOT_Name" STRING ;
+BA_DEF_ SG_  "CI_ParVersion" STRING ;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "Yes","No";
+BA_DEF_ BO_  "SingleFrame" INT 0 1;
+BA_DEF_ BO_  "CI_AllowedLostMessages" ENUM  "NA","0","1","2","3","4";
+BA_DEF_ BO_  "CI_AliveTimeout" INT 0 3600000;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "CI_ShowSignals" INT -1 0;
+BA_DEF_ BO_  "CI_PgVersion" STRING ;
+BA_DEF_ BO_  "CI_GroupSignals" INT 1 100;
+BA_DEF_ BO_  "DiagUUDTResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagConnection" INT 0 65535;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 3600000;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","reserved","cyclicIfActive","reserved","reserved","reserved","reserved","reserved","noMsgSendType";
+BA_DEF_ BU_  "IsOBDrelevant" ENUM  "No","Yes";
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "CI_Identity_Number_Type" ENUM  "Static","Dynamic";
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 31;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "NMEA2000_SpecVersion" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "CI_MakeDbcSwLastRevDate" STRING ;
+BA_DEF_  "CI_CcdVersion" STRING ;
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_DEF_  "CI_RepetitionNum" "1";
+BA_DEF_DEF_  "CI_RepetitionType" "NA";
+BA_DEF_DEF_  "CI_RepetitionComplemented" "0";
+BA_DEF_DEF_  "DDI" 0;
+BA_DEF_DEF_  "CI_FullName" "";
+BA_DEF_DEF_  "GenSigTimeoutTime" 0;
+BA_DEF_DEF_  "CI_ParId" "";
+BA_DEF_DEF_  "CI_SLOT_Name" "0";
+BA_DEF_DEF_  "CI_ParVersion" "0";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "SingleFrame" 1;
+BA_DEF_DEF_  "CI_AllowedLostMessages" "NA";
+BA_DEF_DEF_  "CI_AliveTimeout" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "CI_ShowSignals" -1;
+BA_DEF_DEF_  "CI_PgVersion" "0";
+BA_DEF_DEF_  "CI_GroupSignals" 1;
+BA_DEF_DEF_  "DiagUUDTResponse" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagConnection" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 1;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 0;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "IsOBDrelevant" "No";
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "CI_Identity_Number_Type" "Static";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NodeLayerModules" "J1939_IL.dll";
+BA_DEF_DEF_  "NMEA2000_SpecVersion" "-";
+BA_DEF_DEF_  "Manufacturer" "";
+BA_DEF_DEF_  "CI_MakeDbcSwLastRevDate" "";
+BA_DEF_DEF_  "CI_CcdVersion" "";
+BA_DEF_DEF_  "Baudrate" 0;
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "DBName" "";
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "J1939";
+BA_ "DatabaseVersion" "01";
+BA_ "Baudrate" 500000;
+BA_ "DBName" "PurpleBus_ver_00215_ASSET_021";
+BA_ "NmStationAddress" BU_ OffBoardDiagnosticTool1_PBus 249;
+BA_ "NmJ1939Function" BU_ OffBoardDiagnosticTool1_PBus 129;
+BA_ "ECU" BU_ OffBoardDiagnosticTool1_PBus "EST";
+BA_ "NodeLayerModules" BU_ OffBoardDiagnosticTool1_PBus "J1939_IL.dll*";
+BA_ "NmStationAddress" BU_ Dummy_PurpleBus 253;
+BA_ "NmStationAddress" BU_ Inverter_Sevcon 1;
+BA_ "NmStationAddress" BU_ VCU 150;
+BA_ "ECU" BU_ VCU "VCU";
+BA_ "NodeLayerModules" BU_ UCM_Nano_PBus "J1939_IL";
+BA_ "ECU" BU_ UCM_Nano_PBus "NanoUCM";
+BA_ "NmStationAddress" BU_ UCM_Nano_PBus 149;
+BA_ "VFrameFormat" BO_ 2564462073 3;
+BA_ "VFrameFormat" BO_ 2564489209 3;
+BA_ "VFrameFormat" BO_ 2564487573 3;
+BA_ "VFrameFormat" BO_ 2565799929 3;
+BA_ "VFrameFormat" BO_ 2565799829 3;
+BA_ "VFrameFormat" BO_ 2565406613 3;
+BA_ "VFrameFormat" BO_ 2565537785 3;
+BA_ "GenMsgSendType" BO_ 2568683265 0;
+BA_ "GenMsgCycleTime" BO_ 2568683265 48;
+BA_ "VFrameFormat" BO_ 2568683265 1;
+BA_ "VFrameFormat" BO_ 2566890134 1;
+BA_ "VFrameFormat" BO_ 2566562197 3;
+BA_ "VFrameFormat" BO_ 2566627733 3;
+BA_ "VFrameFormat" BO_ 2566693269 3;
+BA_ "VFrameFormat" BO_ 2566824341 3;
+BA_ "VFrameFormat" BO_ 2566758805 3;
+BA_ "VFrameFormat" BO_ 2566855317 3;
+BA_ "CI_ParId" SG_ 2564487573 ProtocCntrlInfo "ESMD_02905";
+BA_ "CI_FullName" SG_ 2564487573 ProtocCntrlInfo "Protocol Control Information";
+BA_ "GenSigILSupport" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "SigType" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "SPN" SG_ 2566890134 HVAC_Blower_Spd4 2844;
+BA_ "GenSigEVName" SG_ 2566890134 HVAC_Blower_Spd4 "Env@Nodename_@Signame";
+BA_ "GenSigStartValue" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "GenSigSendType" SG_ 2566890134 HVAC_Blower_Spd4 7;
+BA_ "CI_ParVersion" SG_ 2566890134 HVAC_Blower_Spd4 "0";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HVAC_Blower_Spd4 "0";
+BA_ "CI_ParId" SG_ 2566890134 HVAC_Blower_Spd4 "ESMD_08115";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "CI_FullName" SG_ 2566890134 HVAC_Blower_Spd4 "Arbitrary Address Capable";
+BA_ "DDI" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HVAC_Blower_Spd4 2;
+BA_ "CI_RepetitionType" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HVAC_Blower_Spd4 0;
+BA_ "GenSigILSupport" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "SigType" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "SPN" SG_ 2566890134 HVAC_Blower_Spd3 2844;
+BA_ "GenSigEVName" SG_ 2566890134 HVAC_Blower_Spd3 "Env@Nodename_@Signame";
+BA_ "GenSigStartValue" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "GenSigSendType" SG_ 2566890134 HVAC_Blower_Spd3 7;
+BA_ "CI_ParVersion" SG_ 2566890134 HVAC_Blower_Spd3 "0";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HVAC_Blower_Spd3 "0";
+BA_ "CI_ParId" SG_ 2566890134 HVAC_Blower_Spd3 "ESMD_08115";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "CI_FullName" SG_ 2566890134 HVAC_Blower_Spd3 "Arbitrary Address Capable";
+BA_ "DDI" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HVAC_Blower_Spd3 2;
+BA_ "CI_RepetitionType" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HVAC_Blower_Spd3 0;
+BA_ "GenSigILSupport" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "SigType" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "SPN" SG_ 2566890134 HVAC_Blower_Spd2 2844;
+BA_ "GenSigEVName" SG_ 2566890134 HVAC_Blower_Spd2 "Env@Nodename_@Signame";
+BA_ "GenSigStartValue" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "GenSigSendType" SG_ 2566890134 HVAC_Blower_Spd2 7;
+BA_ "CI_ParVersion" SG_ 2566890134 HVAC_Blower_Spd2 "0";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HVAC_Blower_Spd2 "0";
+BA_ "CI_ParId" SG_ 2566890134 HVAC_Blower_Spd2 "ESMD_08115";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "CI_FullName" SG_ 2566890134 HVAC_Blower_Spd2 "Arbitrary Address Capable";
+BA_ "DDI" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HVAC_Blower_Spd2 2;
+BA_ "CI_RepetitionType" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HVAC_Blower_Spd2 0;
+BA_ "GenSigILSupport" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "SigType" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "SPN" SG_ 2566890134 HVAC_Blower_Spd1 2844;
+BA_ "GenSigEVName" SG_ 2566890134 HVAC_Blower_Spd1 "Env@Nodename_@Signame";
+BA_ "GenSigStartValue" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "GenSigSendType" SG_ 2566890134 HVAC_Blower_Spd1 7;
+BA_ "CI_ParVersion" SG_ 2566890134 HVAC_Blower_Spd1 "0";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HVAC_Blower_Spd1 "0";
+BA_ "CI_ParId" SG_ 2566890134 HVAC_Blower_Spd1 "ESMD_08115";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "CI_FullName" SG_ 2566890134 HVAC_Blower_Spd1 "Arbitrary Address Capable";
+BA_ "DDI" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HVAC_Blower_Spd1 2;
+BA_ "CI_RepetitionType" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HVAC_Blower_Spd1 0;
+BA_ "DDI" SG_ 2566890134 FBK_LLCState 0;
+BA_ "CI_FullName" SG_ 2566890134 FBK_LLCState "Address Acknowledged";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 FBK_LLCState 0;
+BA_ "CI_ParId" SG_ 2566890134 FBK_LLCState "ESMD_00041";
+BA_ "CI_SLOT_Name" SG_ 2566890134 FBK_LLCState "0";
+BA_ "CI_ParVersion" SG_ 2566890134 FBK_LLCState "0";
+BA_ "GenSigInactiveValue" SG_ 2566890134 FBK_LLCState 0;
+BA_ "GenSigStartValue" SG_ 2566890134 FBK_LLCState 0;
+BA_ "GenSigEVName" SG_ 2566890134 FBK_LLCState "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 FBK_LLCState 3290;
+BA_ "SigType" SG_ 2566890134 FBK_LLCState 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 Wake_Up 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 Wake_Up 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 Wake_Up 2;
+BA_ "DDI" SG_ 2566890134 Wake_Up 0;
+BA_ "CI_FullName" SG_ 2566890134 Wake_Up "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 Wake_Up 0;
+BA_ "CI_ParId" SG_ 2566890134 Wake_Up "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 Wake_Up "0";
+BA_ "CI_ParVersion" SG_ 2566890134 Wake_Up "0";
+BA_ "GenSigSendType" SG_ 2566890134 Wake_Up 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 Wake_Up 0;
+BA_ "GenSigStartValue" SG_ 2566890134 Wake_Up 0;
+BA_ "GenSigEVName" SG_ 2566890134 Wake_Up "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 Wake_Up 2844;
+BA_ "SigType" SG_ 2566890134 Wake_Up 0;
+BA_ "GenSigILSupport" SG_ 2566890134 Wake_Up 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 Fan_RevRqst_ManualOperation 2;
+BA_ "DDI" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "CI_FullName" SG_ 2566890134 Fan_RevRqst_ManualOperation "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "CI_ParId" SG_ 2566890134 Fan_RevRqst_ManualOperation "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 Fan_RevRqst_ManualOperation "0";
+BA_ "CI_ParVersion" SG_ 2566890134 Fan_RevRqst_ManualOperation "0";
+BA_ "GenSigSendType" SG_ 2566890134 Fan_RevRqst_ManualOperation 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "GenSigStartValue" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "GenSigEVName" SG_ 2566890134 Fan_RevRqst_ManualOperation "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 Fan_RevRqst_ManualOperation 2844;
+BA_ "SigType" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "GenSigILSupport" SG_ 2566890134 Fan_RevRqst_ManualOperation 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 CompSpeed_Target 2;
+BA_ "DDI" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 CompSpeed_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 CompSpeed_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 CompSpeed_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 CompSpeed_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 CompSpeed_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 CompSpeed_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 CompSpeed_Target 2844;
+BA_ "SigType" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 CompSpeed_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 CompPwrLim_Target 2;
+BA_ "DDI" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 CompPwrLim_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 CompPwrLim_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 CompPwrLim_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 CompPwrLim_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 CompPwrLim_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 CompPwrLim_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 CompPwrLim_Target 2844;
+BA_ "SigType" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 CompPwrLim_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 CompOnOff_Target 2;
+BA_ "DDI" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 CompOnOff_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 CompOnOff_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 CompOnOff_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 CompOnOff_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 CompOnOff_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 CompOnOff_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 CompOnOff_Target 2844;
+BA_ "SigType" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 CompOnOff_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HydBPV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 HydBPV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HydBPV_Target 2;
+BA_ "DDI" SG_ 2566890134 HydBPV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 HydBPV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HydBPV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 HydBPV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HydBPV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 HydBPV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 HydBPV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HydBPV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 HydBPV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 HydBPV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 HydBPV_Target 2844;
+BA_ "SigType" SG_ 2566890134 HydBPV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 HydBPV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 RadBPV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 RadBPV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 RadBPV_Target 2;
+BA_ "DDI" SG_ 2566890134 RadBPV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 RadBPV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 RadBPV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 RadBPV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 RadBPV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 RadBPV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 RadBPV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 RadBPV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 RadBPV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 RadBPV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 RadBPV_Target 2844;
+BA_ "SigType" SG_ 2566890134 RadBPV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 RadBPV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 BattBPV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 BattBPV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 BattBPV_Target 2;
+BA_ "DDI" SG_ 2566890134 BattBPV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 BattBPV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 BattBPV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 BattBPV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 BattBPV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 BattBPV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 BattBPV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 BattBPV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 BattBPV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 BattBPV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 BattBPV_Target 2844;
+BA_ "SigType" SG_ 2566890134 BattBPV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 BattBPV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 LeftFCV_Target 2;
+BA_ "DDI" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 LeftFCV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 LeftFCV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 LeftFCV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 LeftFCV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 LeftFCV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 LeftFCV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 LeftFCV_Target 2844;
+BA_ "SigType" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 LeftFCV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 RightFCV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 RightFCV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 RightFCV_Target 2;
+BA_ "DDI" SG_ 2566890134 RightFCV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 RightFCV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 RightFCV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 RightFCV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 RightFCV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 RightFCV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 RightFCV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 RightFCV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 RightFCV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 RightFCV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 RightFCV_Target 2844;
+BA_ "SigType" SG_ 2566890134 RightFCV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 RightFCV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 MainFCV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 MainFCV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 MainFCV_Target 2;
+BA_ "DDI" SG_ 2566890134 MainFCV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 MainFCV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 MainFCV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 MainFCV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 MainFCV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 MainFCV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 MainFCV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 MainFCV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 MainFCV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 MainFCV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 MainFCV_Target 2844;
+BA_ "SigType" SG_ 2566890134 MainFCV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 MainFCV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 ChillerSOV_Target 2;
+BA_ "DDI" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 ChillerSOV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 ChillerSOV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 ChillerSOV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 ChillerSOV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 ChillerSOV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 ChillerSOV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 ChillerSOV_Target 2844;
+BA_ "SigType" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 ChillerSOV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 ACSOV_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 ACSOV_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 ACSOV_Target 2;
+BA_ "DDI" SG_ 2566890134 ACSOV_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 ACSOV_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 ACSOV_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 ACSOV_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 ACSOV_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 ACSOV_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 ACSOV_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 ACSOV_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 ACSOV_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 ACSOV_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 ACSOV_Target 2844;
+BA_ "SigType" SG_ 2566890134 ACSOV_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 ACSOV_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 AuxFan_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 AuxFan_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 AuxFan_Target 2;
+BA_ "DDI" SG_ 2566890134 AuxFan_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 AuxFan_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 AuxFan_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 AuxFan_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 AuxFan_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 AuxFan_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 AuxFan_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 AuxFan_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 AuxFan_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 AuxFan_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 AuxFan_Target 2844;
+BA_ "SigType" SG_ 2566890134 AuxFan_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 AuxFan_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 RadFan_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 RadFan_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 RadFan_Target 2;
+BA_ "DDI" SG_ 2566890134 RadFan_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 RadFan_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 RadFan_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 RadFan_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 RadFan_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 RadFan_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 RadFan_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 RadFan_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 RadFan_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 RadFan_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 RadFan_Target 2844;
+BA_ "SigType" SG_ 2566890134 RadFan_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 RadFan_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HtrPump_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 HtrPump_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HtrPump_Target 2;
+BA_ "DDI" SG_ 2566890134 HtrPump_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 HtrPump_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HtrPump_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 HtrPump_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HtrPump_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 HtrPump_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 HtrPump_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HtrPump_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 HtrPump_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 HtrPump_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 HtrPump_Target 2844;
+BA_ "SigType" SG_ 2566890134 HtrPump_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 HtrPump_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 BattPump_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 BattPump_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 BattPump_Target 2;
+BA_ "DDI" SG_ 2566890134 BattPump_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 BattPump_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 BattPump_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 BattPump_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 BattPump_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 BattPump_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 BattPump_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 BattPump_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 BattPump_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 BattPump_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 BattPump_Target 2844;
+BA_ "SigType" SG_ 2566890134 BattPump_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 BattPump_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 PtPump_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 PtPump_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 PtPump_Enable 2;
+BA_ "DDI" SG_ 2566890134 PtPump_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 PtPump_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 PtPump_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 PtPump_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 PtPump_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 PtPump_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 PtPump_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 PtPump_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 PtPump_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 PtPump_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 PtPump_Enable 2844;
+BA_ "SigType" SG_ 2566890134 PtPump_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 PtPump_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 CompOnOff_Enable 2;
+BA_ "DDI" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 CompOnOff_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 CompOnOff_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 CompOnOff_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 CompOnOff_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 CompOnOff_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 CompOnOff_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 CompOnOff_Enable 2844;
+BA_ "SigType" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 CompOnOff_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HydBPV_Enable 2;
+BA_ "DDI" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 HydBPV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 HydBPV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HydBPV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 HydBPV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 HydBPV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 HydBPV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 HydBPV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 HydBPV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 RadBPV_Enable 2;
+BA_ "DDI" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 RadBPV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 RadBPV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 RadBPV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 RadBPV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 RadBPV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 RadBPV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 RadBPV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 RadBPV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 BattBPV_Enable 2;
+BA_ "DDI" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 BattBPV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 BattBPV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 BattBPV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 BattBPV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 BattBPV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 BattBPV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 BattBPV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 BattBPV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 ChillerSOV_Enable 2;
+BA_ "DDI" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 ChillerSOV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 ChillerSOV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 ChillerSOV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 ChillerSOV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 ChillerSOV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 ChillerSOV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 ChillerSOV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 ChillerSOV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 ACSOV_Enable 2;
+BA_ "DDI" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 ACSOV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 ACSOV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 ACSOV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 ACSOV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 ACSOV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 ACSOV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 ACSOV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 ACSOV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 LeftFCV_Enable 2;
+BA_ "DDI" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 LeftFCV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 LeftFCV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 LeftFCV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 LeftFCV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 LeftFCV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 LeftFCV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 LeftFCV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 LeftFCV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 RightFCV_Enable 2;
+BA_ "DDI" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 RightFCV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 RightFCV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 RightFCV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 RightFCV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 RightFCV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 RightFCV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 RightFCV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 RightFCV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 MainFCV_Enable 2;
+BA_ "DDI" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 MainFCV_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 MainFCV_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 MainFCV_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 MainFCV_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 MainFCV_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 MainFCV_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 MainFCV_Enable 2844;
+BA_ "SigType" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 MainFCV_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 AuxFan_Enable 2;
+BA_ "DDI" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 AuxFan_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 AuxFan_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 AuxFan_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 AuxFan_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 AuxFan_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 AuxFan_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 AuxFan_Enable 2844;
+BA_ "SigType" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 AuxFan_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 RadFan_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 RadFan_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 RadFan_Enable 2;
+BA_ "DDI" SG_ 2566890134 RadFan_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 RadFan_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 RadFan_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 RadFan_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 RadFan_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 RadFan_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 RadFan_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 RadFan_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 RadFan_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 RadFan_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 RadFan_Enable 2844;
+BA_ "SigType" SG_ 2566890134 RadFan_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 RadFan_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 HtrPump_Enable 2;
+BA_ "DDI" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 HtrPump_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 HtrPump_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 HtrPump_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 HtrPump_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 HtrPump_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 HtrPump_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 HtrPump_Enable 2844;
+BA_ "SigType" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 HtrPump_Enable 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 PtPump_Target 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 PtPump_Target 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 PtPump_Target 2;
+BA_ "DDI" SG_ 2566890134 PtPump_Target 0;
+BA_ "CI_FullName" SG_ 2566890134 PtPump_Target "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 PtPump_Target 0;
+BA_ "CI_ParId" SG_ 2566890134 PtPump_Target "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 PtPump_Target "0";
+BA_ "CI_ParVersion" SG_ 2566890134 PtPump_Target "0";
+BA_ "GenSigSendType" SG_ 2566890134 PtPump_Target 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 PtPump_Target 0;
+BA_ "GenSigStartValue" SG_ 2566890134 PtPump_Target 0;
+BA_ "GenSigEVName" SG_ 2566890134 PtPump_Target "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 PtPump_Target 2844;
+BA_ "SigType" SG_ 2566890134 PtPump_Target 0;
+BA_ "GenSigILSupport" SG_ 2566890134 PtPump_Target 0;
+BA_ "CI_RepetitionNum" SG_ 2566890134 BattPump_Enable 0;
+BA_ "CI_RepetitionType" SG_ 2566890134 BattPump_Enable 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566890134 BattPump_Enable 2;
+BA_ "DDI" SG_ 2566890134 BattPump_Enable 0;
+BA_ "CI_FullName" SG_ 2566890134 BattPump_Enable "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566890134 BattPump_Enable 0;
+BA_ "CI_ParId" SG_ 2566890134 BattPump_Enable "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566890134 BattPump_Enable "0";
+BA_ "CI_ParVersion" SG_ 2566890134 BattPump_Enable "0";
+BA_ "GenSigSendType" SG_ 2566890134 BattPump_Enable 7;
+BA_ "GenSigInactiveValue" SG_ 2566890134 BattPump_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566890134 BattPump_Enable 0;
+BA_ "GenSigEVName" SG_ 2566890134 BattPump_Enable "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566890134 BattPump_Enable 2844;
+BA_ "SigType" SG_ 2566890134 BattPump_Enable 0;
+BA_ "GenSigILSupport" SG_ 2566890134 BattPump_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566693269 Refrigerant_LSPressure 0;
+BA_ "CI_RepetitionNum" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "CI_RepetitionType" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566693269 Enable_Service_Status 2;
+BA_ "DDI" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "CI_FullName" SG_ 2566693269 Enable_Service_Status "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "CI_ParId" SG_ 2566693269 Enable_Service_Status "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566693269 Enable_Service_Status "0";
+BA_ "CI_ParVersion" SG_ 2566693269 Enable_Service_Status "0";
+BA_ "GenSigSendType" SG_ 2566693269 Enable_Service_Status 7;
+BA_ "GenSigInactiveValue" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "GenSigStartValue" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "GenSigEVName" SG_ 2566693269 Enable_Service_Status "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566693269 Enable_Service_Status 2844;
+BA_ "SigType" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "GenSigILSupport" SG_ 2566693269 Enable_Service_Status 0;
+BA_ "CI_RepetitionNum" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "CI_RepetitionType" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "CI_RepetitionComplemented" SG_ 2566693269 RadFAN_ReverseStatus 2;
+BA_ "DDI" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "CI_FullName" SG_ 2566693269 RadFAN_ReverseStatus "Arbitrary Address Capable";
+BA_ "GenSigTimeoutTime" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "CI_ParId" SG_ 2566693269 RadFAN_ReverseStatus "ESMD_08115";
+BA_ "CI_SLOT_Name" SG_ 2566693269 RadFAN_ReverseStatus "0";
+BA_ "CI_ParVersion" SG_ 2566693269 RadFAN_ReverseStatus "0";
+BA_ "GenSigSendType" SG_ 2566693269 RadFAN_ReverseStatus 7;
+BA_ "GenSigInactiveValue" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "GenSigStartValue" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "GenSigEVName" SG_ 2566693269 RadFAN_ReverseStatus "Env@Nodename_@Signame";
+BA_ "SPN" SG_ 2566693269 RadFAN_ReverseStatus 2844;
+BA_ "SigType" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "GenSigILSupport" SG_ 2566693269 RadFAN_ReverseStatus 0;
+BA_ "GenSigStartValue" SG_ 2566693269 Discharge_AirTemp 0;
+BA_ "GenSigStartValue" SG_ 2566693269 Evap_FreezeTemp 0;
+BA_ "GenSigStartValue" SG_ 2566824341 Refrigerant_HSPressure 0;
+BA_ "GenSigStartValue" SG_ 2566824341 BattHtr_ClntOutTemp 40;
+BA_ "GenSigStartValue" SG_ 2566824341 BattHtr_ClntInTemp 40;
+BA_ "GenSigStartValue" SG_ 2566758805 Temperature_Pot 0;
+BA_ "GenSigStartValue" SG_ 2566758805 Refrigerant_LSTemp 40;
+BA_ "GenSigStartValue" SG_ 2566758805 CabHtr_ClntOutTemp 40;
+BA_ "GenSigStartValue" SG_ 2566758805 CabHtr_ClntInTemp 40;
+BA_ "GenSigStartValue" SG_ 2566855317 Hydraulic_OilTemp 0;
+BA_ "GenSigStartValue" SG_ 2566855317 Condenser_ClntOutTemp 40;
+BA_ "GenSigStartValue" SG_ 2566855317 CabHtr_TargetTemp 0;
+BA_ "GenSigStartValue" SG_ 2566855317 BattHtr_TargetTemp 0;
+VAL_ 2564462073 ProtocCntrlInfo 3 "Flow control" 2 "Consecutive frame" 1 "First frame" 0 "Single Frame" ;
+VAL_ 2564489209 ProtocCntrlInfo 3 "Flow control" 2 "Consecutive frame" 1 "First frame" 0 "Single Frame" ;
+VAL_ 2564487573 ProtocCntrlInfo 3 "Flow control" 2 "Consecutive frame" 1 "First frame" 0 "Single Frame" ;
+VAL_ 2565406613 PGN_NAckBusy 65521 "Dataset Identific-DIS" 65520 "SecurityCheck" 65257 "FuelConsumption" 65253 "EngHoursRevolutio" 65242 "SOFT" 65235 "DM11Req" 65228 "DM3Req" 65227 "DM2Req" 61184 "STOD" ;
+VAL_ 2565406613 PGN_Ack 65521 "Dataset Identific-DIS" 65520 "SecurityCheck" 65257 "FuelConsumption" 65253 "EngHoursRevolutio" 65242 "SOFT" 65235 "DM11Req" 65228 "DM3Req" 65227 "DM2Req" 61184 "STOD" ;
+VAL_ 2565406613 PGN_NAckAd 65521 "Dataset Identific-DIS" 65520 "SecurityCheck" 65257 "FuelConsumption" 65253 "EngHoursRevolutio" 65242 "SOFT" 65235 "DM11Req" 65228 "DM3Req" 65227 "DM2Req" 61184 "STOD" ;
+VAL_ 2565406613 PGN_NAck 65521 "Dataset Identific-DIS" 65520 "SecurityCheck" 65257 "FuelConsumption" 65253 "EngHoursRevolutio" 65242 "SOFT" 65235 "DM11Req" 65228 "DM3Req" 65227 "DM2Req" 61184 "STOD" ;
+VAL_ 2565406613 CByteAckm 3 "CannotRespond" 2 "AccessDenied" 1 "NACK" 0 "ACK" ;
+VAL_ 2566890134 VCU_stCldWrmupFdk 3 "Completed" 2 "In progress" 1 "Ignored by user" 0 "Not required" ;
+VAL_ 2566890134 HVAC_Blower_Spd4 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 HVAC_Blower_Spd3 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 HVAC_Blower_Spd2 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 HVAC_Blower_Spd1 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 Wake_Up 3 "Inhebit" 2 "Completed" 1 "In Progress" 0 "Default" ;
+VAL_ 2566890134 Fan_RevRqst_ManualOperation 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 CompSpeed_Target 3 "8500 rpm" 2 "4000 rpm" 1 "500 rpm" 0 "0 rpm" ;
+VAL_ 2566890134 CompPwrLim_Target 3 "20.23" 2 "15" 1 "5" 0 "0" ;
+VAL_ 2566890134 CompOnOff_Target 1 "On" 0 "Off" ;
+VAL_ 2566890134 HydBPV_Target 3 "100%" 2 "50%" 1 "25%" 0 "0%" ;
+VAL_ 2566890134 RadBPV_Target 3 "100%" 2 "50%" 1 "25%" 0 "0%" ;
+VAL_ 2566890134 BattBPV_Target 3 "100%" 2 "50%" 1 "25%" 0 "0%" ;
+VAL_ 2566890134 LeftFCV_Target 3 "4500" 2 "3000" 1 "1500" 0 "0" ;
+VAL_ 2566890134 RightFCV_Target 3 "4500" 2 "3000" 1 "1500" 0 "0" ;
+VAL_ 2566890134 MainFCV_Target 3 "4500" 2 "3000" 1 "1500" 0 "0" ;
+VAL_ 2566890134 ChillerSOV_Target 1 "Closed" 0 "Open" ;
+VAL_ 2566890134 ACSOV_Target 1 "Closed" 0 "Open" ;
+VAL_ 2566890134 AuxFan_Target 3 "100% Duty Cycle" 2 "75% Duty Cycle" 1 "25% Duty Cycle" 0 "0 %  Duty Cycle" ;
+VAL_ 2566890134 RadFan_Target 3 "100% Duty Cycle" 2 "75% Duty Cycle" 1 "25% Duty Cycle" 0 "0 %  Duty Cycle" ;
+VAL_ 2566890134 HtrPump_Target 3 "7000 rpm" 2 "3750 rpm" 1 "500 rpm" 0 "0 rpm" ;
+VAL_ 2566890134 BattPump_Target 3 "7000 rpm" 2 "3750 rpm" 1 "500 rpm" 0 "0 rpm" ;
+VAL_ 2566890134 PtPump_Enable 3 "7000 rpm" 2 "3750 rpm" 1 "500 rpm" 0 "0 rpm" ;
+VAL_ 2566890134 Main_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 CompOnOff_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 HydBPV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 RadBPV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 BattBPV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 ChillerSOV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 ACSOV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 LeftFCV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 RightFCV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 MainFCV_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 AuxFan_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 RadFan_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 HtrPump_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566890134 PtPump_Target 3 "7000 rpm" 2 "3750 rpm" 1 "500 rpm" 0 "0 rpm" ;
+VAL_ 2566890134 BattPump_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 2566627733 ACSOV_Status 3 "SNA" 2 "Not Used" 1 "On" 0 "Off" ;
+VAL_ 2566627733 BattSOV_Status 3 "SNA" 2 "Not Used" 1 "On" 0 "Off" ;
+VAL_ 2566693269 CldWrmUp_SpeedReq 3 "Reserved" 2 "1000 rpm req by TMCU at Hyd Pump" 1 "500 rpm req by TMCU at Hyd Pump" 0 "0 rpm" ;
+VAL_ 2566693269 CldWrmUp_Enable 1 "Cold start warmup needed" 0 "Cold start warmup not needed" ;
+VAL_ 2566693269 Enable_Service_Status 1 "Active" 0 "Inactive" ;
+VAL_ 2566693269 RadFAN_ReverseStatus 3 "Inhebit" 2 "Completed" 1 "In Progress" 0 "Default" ;
+VAL_ 2566855317 TMStatus 5 "Fault_Emergency" 4 "Operative_Active" 3 "Operative_Idle" 2 "StandBy_KeyOff" 1 "StandBy_KeyOn" 0 "Off" ;
+

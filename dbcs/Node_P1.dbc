@@ -1,0 +1,128 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU P1
+VAL_TABLE_ Set_Param_Values 256 "Set Center Zero Position" 274 "Transmit Rate in milliseconds (5-200) (for 20Hz send 0x32)" 273 "Set Turns lock to lock (2-8, gain = 30, for 4 send 0x78)" 272 "Send Endstop brake gain (50-100)" ;
+VAL_TABLE_ Get_Param_Values 510 "Software Version" 274 "Transmit Rate" 273 "Turns lock to lock" 272 "Endstop brake gain" ;
+
+
+BO_ 2566775848 P1_EPD: 8 P1
+ SG_ FBK_Internal_Speed : 48|16@1+ (1,0) [0|65535] "rpm"  VCU
+ SG_ FBK_Pump_Temperature : 32|16@1- (1,0) [-32768|32767] "degC"  VCU
+ SG_ FLT_CoilCircuitOpen : 29|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_CoilCircuitShort : 28|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_ExternalSpeedSensor : 27|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_InternalSpeedSensor : 26|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_PLoopCommand : 25|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_QLoopCommand : 24|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_ExternalOutletPressure : 23|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_ExternalLoadSense : 22|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_PowerSupply : 21|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_InternalTemperature : 20|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_LoadSensePressure : 19|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_DisplacementSensor : 18|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_PressureSensor : 17|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FLT_GlobalEnable : 16|1@1+ (1,0) [0|1] ""  VCU
+
+BO_ 2565810215 VCU_P1_PropA: 8 VCU
+ SG_ CMD_LS_Loop : 32|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ CMD_Direction : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Command_Number : 56|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ CMD_Torque_Loop : 40|16@1+ (1,0) [0|65535] "Nm" Vector__XXX
+ SG_ CMD_Pressure : 16|16@1+ (1,0) [0|65535] "bar" Vector__XXX
+ SG_ CMD_Q_Loop : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ Password : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566775592 P1_EOAC: 8 P1
+ SG_ P1_Torque_Command : 48|16@1+ (1,0) [0|375] "Nm" Vector__XXX
+ SG_ P1_Load_Sense_Command : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P1_Q_Loop_Command : 16|8@1- (1,0) [0|100] "%" Vector__XXX
+ SG_ P1_Pressure_Command : 24|16@1- (1,0) [0|280] "bar" Vector__XXX
+
+BO_ 2565867560 P1_HPG: 8 P1
+ SG_ FBK_Load_Sense_Pressure : 32|16@1+ (1,0) [0|65535] "bar"  VCU
+ SG_ FBK_Displacement : 48|16@1- (1,0) [-32768|32767] "%"  VCU
+ SG_ FBK_Pressure : 0|16@1+ (1,0) [0|65535] "bar"  VCU
+
+
+
+CM_ BO_ 2566775848 "Equipment Performance Data";
+CM_ SG_ 2566775848 FBK_Internal_Speed "not used, range from 0 to 4500 rpm";
+CM_ SG_ 2566775848 FBK_Pump_Temperature "range from -40 to 250 degC";
+CM_ SG_ 2566775848 FLT_CoilCircuitOpen "coil circuit open fault";
+CM_ SG_ 2566775848 FLT_CoilCircuitShort "coil circuit short fault";
+CM_ SG_ 2566775848 FLT_ExternalSpeedSensor "external speed sensor fault - not incorporated";
+CM_ SG_ 2566775848 FLT_InternalSpeedSensor "internal speed sensor fault - not incorporated";
+CM_ SG_ 2566775848 FLT_PLoopCommand "P loop command fault";
+CM_ SG_ 2566775848 FLT_QLoopCommand "Q loop command fault";
+CM_ SG_ 2566775848 FLT_ExternalOutletPressure "external outlet pressure fault - not incorporated";
+CM_ SG_ 2566775848 FLT_ExternalLoadSense "external load sense fault - not incorporated";
+CM_ SG_ 2566775848 FLT_PowerSupply "power supply fault - not incorporated";
+CM_ SG_ 2566775848 FLT_InternalTemperature "internal temperature fault";
+CM_ SG_ 2566775848 FLT_LoadSensePressure "load sense pressure fault - not incorporated";
+CM_ SG_ 2566775848 FLT_DisplacementSensor "displacement sensor fault";
+CM_ SG_ 2566775848 FLT_PressureSensor "pressure sensor fault";
+CM_ SG_ 2566775848 FLT_GlobalEnable "global enable";
+CM_ SG_ 2565810215 CMD_LS_Loop "not used, range from 20 to 80 bar";
+CM_ SG_ 2565810215 CMD_Direction "0 = read; 1 = write";
+CM_ SG_ 2565810215 Command_Number "must b 42 = 0x2A";
+CM_ SG_ 2565810215 CMD_Torque_Loop "range from 0 to 375 Nm";
+CM_ SG_ 2565810215 CMD_Pressure "range from 0 to 280 bar";
+CM_ SG_ 2565810215 CMD_Q_Loop "0 to 100% for standard pump, 0 ~100% = -100% _ 100% for overcenter pump";
+CM_ SG_ 2565810215 Password "must be 170 = 0xAA";
+CM_ BO_ 2566775592 "Equipment Operation and Control";
+CM_ SG_ 2566775592 P1_Load_Sense_Command "not used, range from 20 to 80 bar";
+CM_ SG_ 2566775592 P1_Q_Loop_Command "0 to 100% for standard pump, 0 ~100% = -100% _ 100% for overcenter pump";
+CM_ SG_ 2566775592 P1_Pressure_Command "range from 0 to 280 bar";
+CM_ BO_ 2565867560 "Hydraulic Pressure Governor Info";
+CM_ SG_ 2565867560 FBK_Load_Sense_Pressure "not used, range from 20 to 80 bar";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "NmStationAddress" BU_ VCU 90;
+BA_ "NmStationAddress" BU_ P1 40;
+BA_ "GenMsgCycleTime" BO_ 2566775848 100;
+BA_ "GenMsgSendType" BO_ 2566775848 0;
+BA_ "GenMsgSendType" BO_ 2565810215 0;
+BA_ "GenMsgCycleTime" BO_ 2565810215 10;
+BA_ "GenMsgSendType" BO_ 2566775592 7;
+BA_ "GenMsgSendType" BO_ 2565867560 0;
+BA_ "GenMsgCycleTime" BO_ 2565867560 150;
+

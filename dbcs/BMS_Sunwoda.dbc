@@ -1,0 +1,2184 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU BMS2 BMS1
+
+
+BO_ 1712 Thermal_Actuator_Cmd: 5 VCU
+ SG_ Pump_PWMFrequency : 32|8@1+ (0.5,0) [0|0] "kHz" Vector__XXX
+ SG_ Fan_PWMFrequency : 24|8@1+ (0.5,0) [0|0] "kHz" Vector__XXX
+ SG_ Fan_DutyCycle : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ WP_DutyCycle : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ TEC_2_Relay : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TEC_1_Relay : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1715 Serial_Number: 8 BMS1
+ SG_ Serial_Number : 0|64@1+ (1,0) [0|0] ""  VCU
+
+BO_ 1714 BMS2_Thermal_Sense: 7 Vector__XXX
+ SG_ Fan2_Tach : 48|8@1+ (1,0) [0|0] "rpm" Vector__XXX
+ SG_ Fan1_Tach : 40|8@1+ (1,0) [0|0] "rpm" Vector__XXX
+ SG_ Pressure : 24|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ Leak_Sensor_Front_Right : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Leak_Sensor_Front_Left : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Air_Temp_Left_Outlet : 16|8@1- (1,0) [0|0] "C" Vector__XXX
+ SG_ Air_Temp_Left_Inlet : 8|8@1- (1,0) [0|0] "C" Vector__XXX
+ SG_ Coolant_Temp_Outlet_Left : 0|8@1- (1,0) [-128|127] "C" Vector__XXX
+
+BO_ 1713 BMS1_ThermalSense: 5 VCU
+ SG_ Coolant_Temp_Outlet_Right : 32|8@1- (1,0) [-128|127] "C" Vector__XXX
+ SG_ Leak_Sensor_Rear_Right : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Leak_Sensor_Rear_Left : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Coolant_Temp_Inlet : 16|8@1- (1,0) [-128|127] "C" Vector__XXX
+ SG_ Air_Temp_Right_Outlet : 8|8@1- (1,0) [0|0] "C" Vector__XXX
+ SG_ Air_Temp_Right_Inlet : 0|8@1- (1,0) [0|0] "C" Vector__XXX
+
+BO_ 979 VCU_BMS_Both_Sleep: 8 VCU
+ SG_ HCU_3_BmsSleep : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 416 VCU_BMS2_Fr01: 8 VCU
+ SG_ HCU2_1_St_HVConnectRequest : 47|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ HCU2_1_F_HVConnectRequest : 45|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ HCU2_1_St_Ready : 14|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ HCU2_1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS2
+ SG_ HCU2_1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS2
+
+BO_ 1469 BMS2_CMATemp_Fr01: 8 BMS2
+ SG_ BMS2_CMATemp_N_No1 : 7|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No3 : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No4 : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No5 : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No6 : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No7 : 55|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No8 : 63|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No2 : 15|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+
+BO_ 1470 BMS2_CMATemp_Fr02: 8 BMS2
+ SG_ BMS2_CMATemp_N_No9 : 7|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No11 : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No12 : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No13 : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No14 : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No15 : 55|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No16 : 63|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No10 : 15|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+
+BO_ 1471 BMS2_CMATemp_Fr03: 8 BMS2
+ SG_ BMS2_CMATemp_N_No17 : 7|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No19 : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No20 : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No21 : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No22 : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No23 : 55|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No24 : 63|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_CMATemp_N_No18 : 15|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+
+BO_ 1457 BMS2_CellVol_Fr01: 8 BMS2
+ SG_ BMS2_CellVol1_N_No1 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol1_N_No3 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol1_N_No4 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol1_N_No5 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol1_N_No6 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol1_N_No7 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol1_N_No8 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol1_N_No2 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1466 BMS2_CellVol_Fr10: 8 BMS2
+ SG_ BMS2_CellVol10_N_No73 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol10_N_No75 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol10_N_No76 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol10_N_No77 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol10_N_No78 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol10_N_No79 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol10_N_No80 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol10_N_No74 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1467 BMS2_CellVol_Fr11: 8 BMS2
+ SG_ BMS2_CellVol11_N_No81 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol11_N_No83 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol11_N_No84 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol11_N_No85 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol11_N_No86 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol11_N_No87 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol11_N_No88 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol11_N_No82 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1468 BMS2_CellVol_Fr12: 8 BMS2
+ SG_ BMS2_CellVol12_N_No89 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol12_N_No91 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol12_N_No92 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol12_N_No93 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol12_N_No94 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol12_N_No95 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol12_N_No96 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol12_N_No90 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1458 BMS2_CellVol_Fr02: 8 BMS2
+ SG_ BMS2_CellVol2_N_No9 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol2_N_No11 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol2_N_No12 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol2_N_No13 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol2_N_No14 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol2_N_No15 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol2_N_No16 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol2_N_No10 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1459 BMS2_CellVol_Fr03: 8 BMS2
+ SG_ BMS2_CellVol3_N_No17 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol3_N_No19 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol3_N_No20 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol3_N_No21 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol3_N_No22 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol3_N_No23 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol3_N_No24 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol3_N_No18 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1460 BMS2_CellVol_Fr04: 8 BMS2
+ SG_ BMS2_CellVol4_N_No25 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol4_N_No27 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol4_N_No28 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol4_N_No29 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol4_N_No30 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol4_N_No31 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol4_N_No32 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol4_N_No26 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1461 BMS2_CellVol_Fr05: 8 BMS2
+ SG_ BMS2_CellVol5_N_No33 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol5_N_No35 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol5_N_No36 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol5_N_No37 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol5_N_No38 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol5_N_No39 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol5_N_No40 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol5_N_No34 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1462 BMS2_CellVol_Fr06: 8 BMS2
+ SG_ BMS2_CellVol6_N_No41 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol6_N_No43 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol6_N_No44 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol6_N_No45 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol6_N_No46 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol6_N_No47 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol6_N_No48 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol6_N_No42 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1463 BMS2_CellVol_Fr07: 8 BMS2
+ SG_ BMS2_CellVol7_N_No49 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol7_N_No51 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol7_N_No52 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol7_N_No53 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol7_N_No54 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol7_N_No55 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol7_N_No56 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol7_N_No50 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1464 BMS2_CellVol_Fr08: 8 BMS2
+ SG_ BMS2_CellVol8_N_No57 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol8_N_No59 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol8_N_No60 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol8_N_No61 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol8_N_No62 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol8_N_No63 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol8_N_No64 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol8_N_No58 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1465 BMS2_CellVol_Fr09: 8 BMS2
+ SG_ BMS2_CellVol9_N_No65 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol9_N_No67 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol9_N_No68 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol9_N_No69 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol9_N_No70 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol9_N_No71 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol9_N_No72 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_CellVol9_N_No66 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 688 BMS2_Fr01: 8 BMS2
+ SG_ BMS2_1_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_1_F_BatteryFaultLevel : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS2_1_St_BatteryMode : 22|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS2_1_St_HVIL : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_1_N_BatteryCurrent : 18|11@0+ (1,-800) [-800|800] "A" Vector__XXX
+ SG_ BMS2_1_St_PrechargeMode : 45|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ BMS2_1_N_BatteryVoltage : 39|10@0+ (1,0) [0|510] "V" Vector__XXX
+ SG_ BMS2_1_N_DCLinkVoltage : 41|10@0+ (1,0) [0|510] "V" Vector__XXX
+ SG_ BMS2_1_St_MainPositiveRelay : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_1_St_MainNegativeRelay : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_1_St_PrechargeRelay : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_1_St_QCPositiveRelay : 59|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_1_St_QCNegativeRelay : 60|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_1_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1200 BMS2_Fr02: 8 BMS2
+ SG_ BMS2_2_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_2_F_Isolation : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_2_N_CellSumVoltage : 23|10@0+ (1,0) [0|510] "V" Vector__XXX
+ SG_ BMS2_2_N_SOE : 25|10@0+ (0.1,0) [0|60] "kWh" Vector__XXX
+ SG_ BMS2_2_N_SOH : 47|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ BMS2_2_N_RSOC : 55|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ BMS2_2_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1201 BMS2_Fr03: 8 BMS2
+ SG_ BMS2_3_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_3_F_CellOverV : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_3_F_CellUnderV : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_3_F_CellVoltagedropout : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_3_F_BattOverV : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_3_F_BattUnderV : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_3_N_CellVoltageMax : 36|13@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_3_N_CellVoltageMin : 52|13@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS2_3_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1202 BMS2_Fr04: 8 BMS2
+ SG_ BMS2_4_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_4_F_CMATempDiff : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_4_F_BattOverTemp : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_4_N_CMATempAve : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_4_N_CMATempMax : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_4_N_CMATempMin : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_4_N_InletTemp : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS2_4_F_BattLowTemp1 : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_4_F_BattLowTemp2 : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_4_F_BattLowTemp3 : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_4_N_BatPwrConsumption : 55|13@0+ (0.1,-360) [-360|360] "kW" Vector__XXX
+ SG_ BMS2_4_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 948 BMS2_Fr06: 8 BMS2
+ SG_ BMS2_6_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_6_St_BatHeatingReq : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_6_W_HVBattDanger : 42|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_6_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1204 BMS2_Fr07: 8 BMS2
+ SG_ BMS2_7_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_7_N_SOF10D : 23|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS2_7_N_SOFContinuousD : 26|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS2_7_N_SOF10C : 47|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS2_7_N_SOF30C : 50|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS2_7_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1205 BMS2_Fr08: 8 BMS2
+ SG_ BMS2_8_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_8_N_SOF30D : 23|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS2_8_N_SOF2D : 47|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS2_8_N_SOF2C : 50|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS2_8_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1456 BMS2_Fr09: 8 BMS2
+ SG_ BMS2_9_F_BattSupplyingOverI : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_QCNegativeRelay : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_MainPositiveRelayCoil : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_MainNegativeRelayCoil : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_PrechargeRelayCoil : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_QCPositiveRelayCoil : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_MainPositiveRelay : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_QCNegativeRelayCoil : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_CellBalancingCircuit : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_9_F_BattOverChgErr : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_9_F_BattPluginChgOverI : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_PrechargeRelayOpenStuck : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_9_F_MSDFuse : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_9_F_HVBattTempRisingOverspe : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_9_F_BattRegenerativeOverI : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_MainNegativeRelay : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_N_PosInsR : 39|16@0+ (1,0) [0|65534] "kOhm" Vector__XXX
+ SG_ BMS2_9_N_NegInsR : 55|16@0+ (1,0) [0|65534] "kOhm" Vector__XXX
+ SG_ BMS2_9_F_PrechargeRelay : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_9_F_QCPositiveRelay : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1206 BMS2_Fr10: 8 BMS2
+ SG_ BMS2_10_InsChkState : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_10_RelayChkState : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS2_10_ChargerWorkingEnable : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_10_ChargeVoltageRequest : 15|10@0+ (1,0) [0|500] "" Vector__XXX
+ SG_ BMS2_10_ChargeCurrentRequest : 21|12@0+ (1,0) [0|40.94] "" Vector__XXX
+ SG_ BMS2_10_BatteryChargeStatus : 6|2@0+ (0.01,0) [0|3] "" Vector__XXX
+
+BO_ 1696 BMS2_DevFr01: 8 BMS2
+ SG_ DevBMS2_1_N_ColdFanPWM : 23|8@0+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 1677 BMS2_NM: 8 BMS2
+ SG_ NMBMS2__SourceID : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ NMBMS2__RepeatFromSleep : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__RepeatFromPrepare : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__RepeatFromNormal : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__RepeatFromReady : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__NormalFromRepeat : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__NormalFromReady : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__WakeFromGW : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__GWRequest : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__WakeSource : 27|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ NMBMS2__ActiveSource1 : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__ActiveSource2 : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__ActiveSource3 : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__ActiveSource4 : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__ActiveSource5 : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS2__RepeatReq : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 883 NULL_BMS2_Reserved_BCM: 8 Vector__XXX
+ SG_ BCM2_1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS2
+ SG_ BCM2_1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS2
+ SG_ BCM2_1_St_KL15 : 13|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ BCM2_1_St_KLR : 14|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ BCM2_1_St_KL50 : 15|1@0+ (1,0) [0|1] ""  BMS2
+
+BO_ 417 VCU_BMS2_Fr02: 8 VCU
+ SG_ HCU2_2_InsCheck : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HCU2_2_WeldedFaultCheck : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HCU2_2_RelayOn : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HCU2_2_ChargingStopRequest : 17|2@0+ (1,0) [0|3] ""  BMS2
+ SG_ HCU2_2_OBCRelayStatus : 18|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ HCU2_2_ChargerAllow : 19|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ HCU2_2_CCStatus : 20|1@0+ (1,0) [0|1] ""  BMS2
+
+BO_ 320 NULL_BMS2_Reserved_BR: 8 Vector__XXX
+ SG_ BR2_1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS2
+ SG_ BR2_1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS2
+ SG_ BR2_1_F_VehicleSpeed : 39|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ BR2_1_N_VehicleSpeed : 38|15@0+ (0.01,0) [0|327.67] "km/h"  BMS2
+
+BO_ 1152 NULL_BMS2_Reserved_ICM: 8 Vector__XXX
+ SG_ ICM2_1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS2
+ SG_ ICM2_1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS2
+ SG_ ICM2_1_N_Odograph : 27|20@0+ (1,0) [0|999999] "kilometer"  BMS2
+
+BO_ 38 DONOT_SEND_BMS2_SDM: 8 Vector__XXX
+ SG_ SDM2_1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS2
+ SG_ SDM2_1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS2
+ SG_ SDM2_1_St_FrontCrash : 16|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ SDM2_1_St_BackCrash : 17|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ SDM2_1_St_LeftCrash : 18|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ SDM2_1_St_RightCrash : 19|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ SDM2_1_St_CrashIntensity : 23|3@0+ (1,0) [0|7] ""  BMS2
+
+BO_ 885 NULL_BMS2_Reserved_OBC: 8 Vector__XXX
+ SG_ OBC2__Status : 1|2@0+ (1,0) [0|3] ""  BMS2
+ SG_ OBC2__CPStatus : 3|2@0+ (1,0) [0|3] ""  BMS2
+ SG_ OBC2__OutputVoltage : 15|10@0+ (1,0) [0|500] "V"  BMS2
+ SG_ OBC2__Status_RelayWeldCheckRslt : 5|2@0+ (1,0) [0|3] ""  BMS2
+ SG_ OBC2__OutputCurrent : 21|12@0+ (0.01,0) [0|40.94] "A"  BMS2
+ SG_ OBC2__RQ_S2Relay_OnOff : 25|1@0+ (1,0) [0|1] ""  BMS2
+ SG_ OBC2__ChargingStopResponse : 7|2@0+ (1,0) [0|3] ""  BMS2
+
+BO_ 1453 BMS1_CMATemp_Fr01: 8 BMS1
+ SG_ BMSCMATemp_N_No1 : 7|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No3 : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No4 : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No5 : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No6 : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No7 : 55|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No8 : 63|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No2 : 15|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+
+BO_ 1454 BMS1_CMATemp_Fr02: 8 BMS1
+ SG_ BMSCMATemp_N_No9 : 7|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No11 : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No12 : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No13 : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No14 : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No15 : 55|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No16 : 63|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No10 : 15|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+
+BO_ 1455 BMS1_CMATemp_Fr03: 8 BMS1
+ SG_ BMSCMATemp_N_No17 : 7|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No19 : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No20 : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No21 : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No22 : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No23 : 55|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No24 : 63|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMSCMATemp_N_No18 : 15|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+
+BO_ 1441 BMS1_CellVol_Fr01: 8 BMS1
+ SG_ BMSCellVol1_N_No1 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol1_N_No3 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol1_N_No4 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol1_N_No5 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol1_N_No6 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol1_N_No7 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol1_N_No8 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol1_N_No2 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1450 BMS1_CellVol_Fr10: 8 BMS1
+ SG_ BMSCellVol10_N_No73 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol10_N_No75 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol10_N_No76 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol10_N_No77 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol10_N_No78 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol10_N_No79 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol10_N_No80 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol10_N_No74 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1451 BMS1_CellVol_Fr11: 8 BMS1
+ SG_ BMSCellVol11_N_No81 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol11_N_No83 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol11_N_No84 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol11_N_No85 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol11_N_No86 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol11_N_No87 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol11_N_No88 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol11_N_No82 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1452 BMS1_CellVol_Fr12: 8 BMS1
+ SG_ BMSCellVol12_N_No89 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol12_N_No91 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol12_N_No92 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol12_N_No93 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol12_N_No94 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol12_N_No95 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol12_N_No96 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol12_N_No90 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1442 BMS1_CellVol_Fr02: 8 BMS1
+ SG_ BMSCellVol2_N_No9 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol2_N_No11 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol2_N_No12 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol2_N_No13 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol2_N_No14 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol2_N_No15 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol2_N_No16 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol2_N_No10 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1443 BMS1_CellVol_Fr03: 8 BMS1
+ SG_ BMSCellVol3_N_No17 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol3_N_No19 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol3_N_No20 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol3_N_No21 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol3_N_No22 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol3_N_No23 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol3_N_No24 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol3_N_No18 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1444 BMS1_CellVol_Fr04: 8 BMS1
+ SG_ BMSCellVol4_N_No25 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol4_N_No27 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol4_N_No28 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol4_N_No29 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol4_N_No30 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol4_N_No31 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol4_N_No32 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol4_N_No26 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1445 BMS1_CellVol_Fr05: 8 BMS1
+ SG_ BMSCellVol5_N_No33 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol5_N_No35 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol5_N_No36 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol5_N_No37 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol5_N_No38 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol5_N_No39 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol5_N_No40 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol5_N_No34 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1446 BMS1_CellVol_Fr06: 8 BMS1
+ SG_ BMSCellVol6_N_No41 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol6_N_No43 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol6_N_No44 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol6_N_No45 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol6_N_No46 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol6_N_No47 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol6_N_No48 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol6_N_No42 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1447 BMS1_CellVol_Fr07: 8 BMS1
+ SG_ BMSCellVol7_N_No49 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol7_N_No51 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol7_N_No52 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol7_N_No53 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol7_N_No54 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol7_N_No55 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol7_N_No56 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol7_N_No50 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1448 BMS1_CellVol_Fr08: 8 BMS1
+ SG_ BMSCellVol8_N_No57 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol8_N_No59 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol8_N_No60 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol8_N_No61 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol8_N_No62 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol8_N_No63 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol8_N_No64 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol8_N_No58 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 1449 BMS1_CellVol_Fr09: 8 BMS1
+ SG_ BMSCellVol9_N_No65 : 7|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol9_N_No67 : 23|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol9_N_No68 : 31|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol9_N_No69 : 39|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol9_N_No70 : 47|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol9_N_No71 : 55|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol9_N_No72 : 63|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSCellVol9_N_No66 : 15|8@0+ (20,0) [0|5000] "mV" Vector__XXX
+
+BO_ 672 BMS1_Fr01: 8 BMS1
+ SG_ BMS1_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS1_F_BatteryFaultLevel : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS1_St_BatteryMode : 22|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS1_St_HVIL : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS1_N_BatteryCurrent : 18|11@0+ (1,-800) [-800|800] "A" Vector__XXX
+ SG_ BMS1_St_PrechargeMode : 45|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ BMS1_N_BatteryVoltage : 39|10@0+ (1,0) [0|510] "V" Vector__XXX
+ SG_ BMS1_N_DCLinkVoltage : 41|10@0+ (1,0) [0|510] "V" Vector__XXX
+ SG_ BMS1_St_MainPositiveRelay : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS1_St_MainNegativeRelay : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS1_St_PrechargeRelay : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS1_St_QCPositiveRelay : 59|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS1_St_QCNegativeRelay : 60|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS1_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1184 BMS1_Fr02: 8 BMS1
+ SG_ BMS2_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS2_F_Isolation : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS2_N_CellSumVoltage : 23|10@0+ (1,0) [0|510] "V" Vector__XXX
+ SG_ BMS2_N_SOE : 25|10@0+ (0.1,0) [0|60] "kWh" Vector__XXX
+ SG_ BMS2_N_SOH : 47|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ BMS2_N_RSOC : 55|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ BMS2_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1185 BMS1_Fr03: 8 BMS1
+ SG_ BMS3_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS3_F_CellOverV : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS3_F_CellUnderV : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS3_F_CellVoltagedropout : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS3_F_BattOverV : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS3_F_BattUnderV : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS3_N_CellVoltageMax : 36|13@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS3_N_CellVoltageMin : 52|13@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS3_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1186 BMS1_Fr04: 8 BMS1
+ SG_ BMS4_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS4_F_CMATempDiff : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS4_F_BattOverTemp : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS4_N_CMATempAve : 23|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS4_N_CMATempMax : 31|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS4_N_CMATempMin : 39|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS4_N_InletTemp : 47|8@0+ (1,-40) [-40|120] "degC" Vector__XXX
+ SG_ BMS4_F_BattLowTemp1 : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS4_F_BattLowTemp2 : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS4_F_BattLowTemp3 : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS4_N_BatPwrConsumption : 55|13@0+ (0.1,-360) [-360|360] "kW" Vector__XXX
+ SG_ BMS4_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 932 BMS1_Fr06: 8 BMS1
+ SG_ BMS6_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS6_St_BatHeatingReq : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS6_W_HVBattDanger : 42|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS6_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1188 BMS1_Fr07: 8 BMS1
+ SG_ BMS7_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS7_N_SOF10D : 23|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS7_N_SOFContinuousD : 26|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS7_N_SOF10C : 47|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS7_N_SOF30C : 50|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS7_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1189 BMS1_Fr08: 8 BMS1
+ SG_ BMS8_Checksum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS8_N_SOF30D : 23|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS8_N_SOF2D : 47|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS8_N_SOF2C : 50|11@0+ (0.2,0) [0|409.2] "kW" Vector__XXX
+ SG_ BMS8_RollingCounter : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1440 BMS1_Fr09: 8 BMS1
+ SG_ BMS9_F_BattSupplyingOverI : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_QCNegativeRelay : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_MainPositiveRelayCoil : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_MainNegativeRelayCoil : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_PrechargeRelayCoil : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_QCPositiveRelayCoil : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_MainPositiveRelay : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_QCNegativeRelayCoil : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_CellBalancingCircuit : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS9_F_BattOverChgErr : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS9_F_BattPluginChgOverI : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_PrechargeRelayOpenStuck : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS9_F_MSDFuse : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS9_F_HVBattTempRisingOverspeed : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS9_F_BattRegenerativeOverI : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_MainNegativeRelay : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_N_PosInsR : 39|16@0+ (1,0) [0|65534] "kOhm" Vector__XXX
+ SG_ BMS9_N_NegInsR : 55|16@0+ (1,0) [0|65534] "kOhm" Vector__XXX
+ SG_ BMS9_F_PrechargeRelay : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS9_F_QCPositiveRelay : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1190 BMS1_Fr10: 8 BMS1
+ SG_ BMS10_InsChkState : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS10_RelayChkState : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS10_ChargerWorkingEnable : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS10_ChargeVoltageRequest : 15|10@0+ (1,0) [0|500] "" Vector__XXX
+ SG_ BMS10_ChargeCurrentRequest : 21|12@0+ (1,0) [0|40.94] "" Vector__XXX
+ SG_ BMS10_BatteryChargeStatus : 6|2@0+ (0.01,0) [0|3] "" Vector__XXX
+
+BO_ 1680 BMS1_DevFr01: 8 BMS1
+ SG_ DevBMS1_N_ColdFanPWM : 23|8@0+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 1661 BMS1_NM: 8 BMS1
+ SG_ NMBMS_SourceID : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ NMBMS_RepeatFromSleep : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_RepeatFromPrepare : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_RepeatFromNormal : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_RepeatFromReady : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_NormalFromRepeat : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_NormalFromReady : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_WakeFromGW : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_GWRequest : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_WakeSource : 27|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ NMBMS_ActiveSource1 : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_ActiveSource2 : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_ActiveSource3 : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_ActiveSource4 : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_ActiveSource5 : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMBMS_RepeatReq : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1848 Diag_BMS_UDS_Resp: 8 BMS1
+ SG_ Diag_BMS_Resp_b0 : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Diag_BMS_Resp_b2 : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Diag_BMS_Resp_b3 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Diag_BMS_Resp_b4 : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Diag_BMS_Resp_b5 : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Diag_BMS_Resp_b6 : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Diag_BMS_Resp_b7 : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Diag_BMS_Resp_b1 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 867 NULL_BMS1_Reserved_BCM: 8 Vector__XXX
+ SG_ BCM1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ BCM1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS1
+ SG_ BCM1_St_KL15 : 13|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ BCM1_St_KLR : 14|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ BCM1_St_KL50 : 15|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ BCM1_ChargingStopRequest : 17|2@0+ (1,0) [0|3] ""  BMS1
+ SG_ BCM1_OBCRelayStatus : 18|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ BCM1_ChargerAllow : 19|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ BCM1_CCStatus : 20|1@0+ (1,0) [0|1] ""  BMS1
+
+BO_ 401 VCU_BMS1_Fr02: 8 VCU
+ SG_ HCU_2_ChargingStopRequest : 17|2@0+ (1,0) [0|3] ""  BMS1
+ SG_ HCU_2_OBCRelayStatus : 18|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ HCU_2_ChargerAllow : 19|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ HCU_2_CCStatus : 20|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ HCU_2_InsCheck : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HCU_2_WeldedFaultCheck : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HCU_2_RelayOn : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 304 NULL_BMS1_Reserved_BR: 8 Vector__XXX
+ SG_ BR1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ BR1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS1
+ SG_ BR1_F_VehicleSpeed : 39|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ BR1_N_VehicleSpeed : 38|15@0+ (0.01,0) [0|327.67] "km/h"  BMS1
+
+BO_ 400 VCU_BMS1_Fr01: 8 VCU
+ SG_ HCU1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ HCU1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS1
+ SG_ HCU1_St_Ready : 14|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ HCU1_F_HVConnectRequest : 45|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ HCU1_St_HVConnectRequest : 47|1@0+ (1,0) [0|1] ""  BMS1
+
+BO_ 1136 NULL_BMS1_Reserved_ICM: 8 Vector__XXX
+ SG_ ICM1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ ICM1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS1
+ SG_ ICM1_N_Odograph : 27|20@0+ (1,0) [0|999999] "kilometer"  BMS1
+
+BO_ 22 DONOT_SEND_BMS1_SDM: 8 Vector__XXX
+ SG_ SDM1_Checksum : 7|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ SDM1_RollingCounter : 11|4@0+ (1,0) [0|15] ""  BMS1
+ SG_ SDM1_St_FrontCrash : 16|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ SDM1_St_BackCrash : 17|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ SDM1_St_LeftCrash : 18|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ SDM1_St_RightCrash : 19|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ SDM1_St_CrashIntensity : 23|3@0+ (1,0) [0|7] ""  BMS1
+
+BO_ 1840 Diag_BMS_UDS_ReqPhsy: 8 Vector__XXX
+ SG_ Diag_BMS_ReqPhsy_b0 : 7|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_BMS_ReqPhsy_b1 : 15|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_BMS_ReqPhsy_b2 : 23|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_BMS_ReqPhsy_b3 : 31|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_BMS_ReqPhsy_b4 : 39|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_BMS_ReqPhsy_b5 : 47|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_BMS_ReqPhsy_b6 : 55|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_BMS_ReqPhsy_b7 : 63|8@0+ (1,0) [0|255] ""  BMS1
+
+BO_ 2015 Diag_BMS_UDS_ReqFunc: 8 Vector__XXX
+ SG_ Diag_HCAN_ReqFunc_b0 : 7|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_HCAN_ReqFunc_b1 : 15|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_HCAN_ReqFunc_b2 : 23|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_HCAN_ReqFunc_b3 : 31|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_HCAN_ReqFunc_b4 : 39|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_HCAN_ReqFunc_b5 : 47|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_HCAN_ReqFunc_b6 : 55|8@0+ (1,0) [0|255] ""  BMS1
+ SG_ Diag_HCAN_ReqFunc_b7 : 63|8@0+ (1,0) [0|255] ""  BMS1
+
+BO_ 869 NULL_BMS1_Reserved_OBC: 8 Vector__XXX
+ SG_ OBC_Status : 1|2@0+ (1,0) [0|3] ""  BMS1
+ SG_ OBC_CPStatus : 3|2@0+ (1,0) [0|3] ""  BMS1
+ SG_ OBC_OutputVoltage : 15|10@0+ (1,0) [0|500] "V"  BMS1
+ SG_ OBC_Status_RelayWeldCheckRslt : 5|2@0+ (1,0) [0|3] ""  BMS1
+ SG_ OBC_OutputCurrent : 21|12@0+ (0.01,0) [0|40.94] "A"  BMS1
+ SG_ OBC_RQ_S2Relay_OnOff : 25|1@0+ (1,0) [0|1] ""  BMS1
+ SG_ OBC_ChargingStopResponse : 7|2@0+ (1,0) [0|3] ""  BMS1
+
+
+
+CM_ " ";
+CM_ SG_ 979 HCU_3_BmsSleep "Ctrl BMS go to sleep mode";
+CM_ SG_ 416 HCU2_1_St_HVConnectRequest "High Voltage Connect Request";
+CM_ SG_ 416 HCU2_1_F_HVConnectRequest "High Voltage Connect Request Valid";
+CM_ SG_ 416 HCU2_1_St_Ready "Ready Status";
+CM_ SG_ 416 HCU2_1_RollingCounter "RollingCounter";
+CM_ SG_ 416 HCU2_1_Checksum "Checksum";
+CM_ SG_ 1469 BMS2_CMATemp_N_No1 "No1 CMA Temp";
+CM_ SG_ 1469 BMS2_CMATemp_N_No3 "No3 CMA Temp";
+CM_ SG_ 1469 BMS2_CMATemp_N_No4 "No4 CMA Temp";
+CM_ SG_ 1469 BMS2_CMATemp_N_No5 "No5 CMA Temp";
+CM_ SG_ 1469 BMS2_CMATemp_N_No6 "No6 CMA Temp";
+CM_ SG_ 1469 BMS2_CMATemp_N_No7 "No7 CMA Temp";
+CM_ SG_ 1469 BMS2_CMATemp_N_No8 "No8 CMA Temp";
+CM_ SG_ 1469 BMS2_CMATemp_N_No2 "No2 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No9 "No9 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No11 "No11 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No12 "No12 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No13 "No13 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No14 "No14 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No15 "No15 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No16 "No16 CMA Temp";
+CM_ SG_ 1470 BMS2_CMATemp_N_No10 "No10 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No17 "No17 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No19 "No19 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No20 "No20 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No21 "No21 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No22 "No22 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No23 "No23 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No24 "No24 CMA Temp";
+CM_ SG_ 1471 BMS2_CMATemp_N_No18 "No18 CMA Temp";
+CM_ SG_ 1457 BMS2_CellVol1_N_No1 "No1 Cell Voltage";
+CM_ SG_ 1457 BMS2_CellVol1_N_No3 "No3 Cell Voltage";
+CM_ SG_ 1457 BMS2_CellVol1_N_No4 "No4 Cell Voltage";
+CM_ SG_ 1457 BMS2_CellVol1_N_No5 "No5 Cell Voltage";
+CM_ SG_ 1457 BMS2_CellVol1_N_No6 "No6 Cell Voltage";
+CM_ SG_ 1457 BMS2_CellVol1_N_No7 "No7 Cell Voltage";
+CM_ SG_ 1457 BMS2_CellVol1_N_No8 "No8 Cell Voltage";
+CM_ SG_ 1457 BMS2_CellVol1_N_No2 "No2 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No73 "No73 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No75 "No75 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No76 "No76 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No77 "No77 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No78 "No78 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No79 "No79 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No80 "No80 Cell Voltage";
+CM_ SG_ 1466 BMS2_CellVol10_N_No74 "No74 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No81 "No81 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No83 "No83 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No84 "No84 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No85 "No85 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No86 "No86 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No87 "No87 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No88 "No88 Cell Voltage";
+CM_ SG_ 1467 BMS2_CellVol11_N_No82 "No82 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No89 "No89 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No91 "No91 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No92 "No92 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No93 "No93 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No94 "No94 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No95 "No95 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No96 "No96 Cell Voltage";
+CM_ SG_ 1468 BMS2_CellVol12_N_No90 "No90 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No9 "No9 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No11 "No11 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No12 "No12 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No13 "No13 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No14 "No14 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No15 "No15 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No16 "No16 Cell Voltage";
+CM_ SG_ 1458 BMS2_CellVol2_N_No10 "No10 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No17 "No17 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No19 "No19 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No20 "No20 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No21 "No21 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No22 "No22 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No23 "No23 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No24 "No24 Cell Voltage";
+CM_ SG_ 1459 BMS2_CellVol3_N_No18 "No18 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No25 "No25 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No27 "No27 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No28 "No28 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No29 "No29 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No30 "No30 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No31 "No31 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No32 "No32 Cell Voltage";
+CM_ SG_ 1460 BMS2_CellVol4_N_No26 "No26 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No33 "No33 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No35 "No35 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No36 "No36 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No37 "No37 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No38 "No38 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No39 "No39 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No40 "No40 Cell Voltage";
+CM_ SG_ 1461 BMS2_CellVol5_N_No34 "No34 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No41 "No41 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No43 "No43 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No44 "No44 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No45 "No45 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No46 "No46 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No47 "No47 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No48 "No48 Cell Voltage";
+CM_ SG_ 1462 BMS2_CellVol6_N_No42 "No42 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No49 "No49 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No51 "No51 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No52 "No52 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No53 "No53 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No54 "No54 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No55 "No55 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No56 "No56 Cell Voltage";
+CM_ SG_ 1463 BMS2_CellVol7_N_No50 "No50 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No57 "No57 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No59 "No59 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No60 "No60 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No61 "No61 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No62 "No62 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No63 "No63 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No64 "No64 Cell Voltage";
+CM_ SG_ 1464 BMS2_CellVol8_N_No58 "No58 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No65 "No65 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No67 "No67 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No68 "No68 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No69 "No69 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No70 "No70 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No71 "No71 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No72 "No72 Cell Voltage";
+CM_ SG_ 1465 BMS2_CellVol9_N_No66 "No66 Cell Voltage";
+CM_ SG_ 688 BMS2_1_Checksum "Checksum";
+CM_ SG_ 688 BMS2_1_F_BatteryFaultLevel "Battery Fault Level";
+CM_ SG_ 688 BMS2_1_St_BatteryMode "Battery Mode";
+CM_ SG_ 688 BMS2_1_St_HVIL "HVIL Status";
+CM_ SG_ 688 BMS2_1_N_BatteryCurrent "Battery Current
+Charge is Negative polarity
+Discharge is Positive Polarity";
+CM_ SG_ 688 BMS2_1_St_PrechargeMode "Precharge Mode";
+CM_ SG_ 688 BMS2_1_N_BatteryVoltage "Battery Voltage";
+CM_ SG_ 688 BMS2_1_N_DCLinkVoltage "DC Link Voltage(Bus Voltage)";
+CM_ SG_ 688 BMS2_1_St_MainPositiveRelay "Main+ Relay Status";
+CM_ SG_ 688 BMS2_1_St_MainNegativeRelay "Main- Relay Status";
+CM_ SG_ 688 BMS2_1_St_PrechargeRelay "Precharge Relay Status";
+CM_ SG_ 688 BMS2_1_St_QCPositiveRelay "QC + Relay Status
+S7N0 not used";
+CM_ SG_ 688 BMS2_1_St_QCNegativeRelay "QC - Relay Status
+S7N0 not used";
+CM_ SG_ 688 BMS2_1_RollingCounter "RollingCounter";
+CM_ SG_ 1200 BMS2_2_Checksum "Checksum";
+CM_ SG_ 1200 BMS2_2_F_Isolation "Isolation Status";
+CM_ SG_ 1200 BMS2_2_N_CellSumVoltage "Cell Sum Voltage";
+CM_ SG_ 1200 BMS2_2_N_SOE "SOE";
+CM_ SG_ 1200 BMS2_2_N_SOH "SOH";
+CM_ SG_ 1200 BMS2_2_N_RSOC "RSOC(Related SOC)";
+CM_ SG_ 1200 BMS2_2_RollingCounter "RollingCounter";
+CM_ SG_ 1201 BMS2_3_Checksum "Checksum";
+CM_ SG_ 1201 BMS2_3_F_CellOverV "Cell OverVoltage fault state";
+CM_ SG_ 1201 BMS2_3_F_CellUnderV "Cell UnderVoltage fault state";
+CM_ SG_ 1201 BMS2_3_F_CellVoltagedropout "Cell Voltage Dropout fault state";
+CM_ SG_ 1201 BMS2_3_F_BattOverV "Battery Voltage OverVoltage  fault state";
+CM_ SG_ 1201 BMS2_3_F_BattUnderV "Battery Voltage UnderVoltage  fault state";
+CM_ SG_ 1201 BMS2_3_N_CellVoltageMax "Cell Voltage Max";
+CM_ SG_ 1201 BMS2_3_N_CellVoltageMin "Cell Voltage Min";
+CM_ SG_ 1201 BMS2_3_RollingCounter "RollingCounter";
+CM_ SG_ 1202 BMS2_4_Checksum "Checksum";
+CM_ SG_ 1202 BMS2_4_F_CMATempDiff "CMA Temp Difference  fault state";
+CM_ SG_ 1202 BMS2_4_F_BattOverTemp "Battery Over Temperature Fault";
+CM_ SG_ 1202 BMS2_4_N_CMATempAve "CMA Temp Ave";
+CM_ SG_ 1202 BMS2_4_N_CMATempMax "CMA Temp Max";
+CM_ SG_ 1202 BMS2_4_N_CMATempMin "CMA Temp Min";
+CM_ SG_ 1202 BMS2_4_N_InletTemp "Inlet Temp.(water inlet)";
+CM_ SG_ 1202 BMS2_4_F_BattLowTemp1 "Battery Low Temperature Fault（Prohibit DC Charge）";
+CM_ SG_ 1202 BMS2_4_F_BattLowTemp2 "Battery Low Temperature Fault（Prohibit AC Charge）";
+CM_ SG_ 1202 BMS2_4_F_BattLowTemp3 "Battery Low Temperature Fault（Prohibit Discharge）";
+CM_ SG_ 1202 BMS2_4_N_BatPwrConsumption "Battery Power Consumption
+(the product of Cell Sum Voltage & Battery Current) 
+Charge is Negative polarity
+Discharge is Positive Polarity";
+CM_ SG_ 1202 BMS2_4_RollingCounter "RollingCounter";
+CM_ SG_ 948 BMS2_6_Checksum "Checksum";
+CM_ SG_ 948 BMS2_6_St_BatHeatingReq "Battery Heating Request";
+CM_ SG_ 948 BMS2_6_W_HVBattDanger "The warning for the HV battery danger status";
+CM_ SG_ 948 BMS2_6_RollingCounter "RollingCounter";
+CM_ SG_ 1204 BMS2_7_Checksum "Checksum";
+CM_ SG_ 1204 BMS2_7_N_SOF10D "SOF 10sec(Discharge)";
+CM_ SG_ 1204 BMS2_7_N_SOFContinuousD "SOF Continuoous(Discharge)";
+CM_ SG_ 1204 BMS2_7_N_SOF10C "SOF 10sec(Charge)";
+CM_ SG_ 1204 BMS2_7_N_SOF30C "SOF 30sec(Charge)";
+CM_ SG_ 1204 BMS2_7_RollingCounter "RollingCounter";
+CM_ SG_ 1205 BMS2_8_Checksum "Checksum";
+CM_ SG_ 1205 BMS2_8_N_SOF30D "SOF 30sec(Discharge)";
+CM_ SG_ 1205 BMS2_8_N_SOF2D "SOF 2sec(Discharge)";
+CM_ SG_ 1205 BMS2_8_N_SOF2C "SOF 2sec(Charge)";
+CM_ SG_ 1205 BMS2_8_RollingCounter "RollingCounter";
+CM_ SG_ 1456 BMS2_9_F_BattSupplyingOverI "HV Battery Supplying Over Current";
+CM_ SG_ 1456 BMS2_9_F_QCNegativeRelay "QC- Relay Diagnosis not used";
+CM_ SG_ 1456 BMS2_9_F_MainPositiveRelayCoil "Main+ Relay Coil Diagnosis";
+CM_ SG_ 1456 BMS2_9_F_MainNegativeRelayCoil "Main- Relay Coil Diagnosis";
+CM_ SG_ 1456 BMS2_9_F_PrechargeRelayCoil "Precharge Relay Coil Diagnosis";
+CM_ SG_ 1456 BMS2_9_F_QCPositiveRelayCoil "QC+ Relay Coil Diagnosis not used";
+CM_ SG_ 1456 BMS2_9_F_MainPositiveRelay "Main+ Relay Diagnosis";
+CM_ SG_ 1456 BMS2_9_F_QCNegativeRelayCoil "QC- Relay Coil Diagnosis not used";
+CM_ SG_ 1456 BMS2_9_F_CellBalancingCircuit "Cell balancing Circuit Fault";
+CM_ SG_ 1456 BMS2_9_F_BattOverChgErr "Battery OverCharge Fault";
+CM_ SG_ 1456 BMS2_9_F_BattPluginChgOverI "HV Battery Plugin Charge Over Current";
+CM_ SG_ 1456 BMS2_9_F_PrechargeRelayOpenStuck "Precharge Relay Open Stuck Fault";
+CM_ SG_ 1456 BMS2_9_F_MSDFuse "MSD Fuse Fault";
+CM_ SG_ 1456 BMS2_9_F_HVBattTempRisingOverspe "HV Battery Temperature Rising Overspeed ";
+CM_ SG_ 1456 BMS2_9_F_BattRegenerativeOverI "HV Battery Regenerative Over Current";
+CM_ SG_ 1456 BMS2_9_F_MainNegativeRelay "Main- Relay Diagnosis";
+CM_ SG_ 1456 BMS2_9_N_PosInsR "DC Link Positive Insulation";
+CM_ SG_ 1456 BMS2_9_N_NegInsR "DC Link Negative Insulation";
+CM_ SG_ 1456 BMS2_9_F_PrechargeRelay "Precharge relay Diagnosis";
+CM_ SG_ 1456 BMS2_9_F_QCPositiveRelay "QC+ Relay Diagnosis not used";
+CM_ SG_ 1206 BMS2_10_InsChkState "Insulation checking  status ";
+CM_ SG_ 1206 BMS2_10_RelayChkState " Relay checking  status  ";
+CM_ SG_ 1206 BMS2_10_ChargerWorkingEnable "Charger working enable";
+CM_ SG_ 1206 BMS2_10_ChargeVoltageRequest "Charge voltage request  ";
+CM_ SG_ 1206 BMS2_10_ChargeCurrentRequest "Charge current request    ";
+CM_ SG_ 1206 BMS2_10_BatteryChargeStatus "BMS charge status ";
+CM_ SG_ 1677 NMBMS2__SourceID "The source node id";
+CM_ SG_ 1677 NMBMS2__WakeSource "The wakeup source";
+CM_ SG_ 1677 NMBMS2__ActiveSource1 "The NM active sorce is KL15";
+CM_ SG_ 1677 NMBMS2__ActiveSource2 "The NM active sorce is Diagnose";
+CM_ SG_ 1677 NMBMS2__ActiveSource3 "The NM active sorce is Repeat message timer has not expired";
+CM_ SG_ 1677 NMBMS2__ActiveSource4 "The NM active sorce is AC Charging";
+CM_ SG_ 1677 NMBMS2__ActiveSource5 "The NM active sorce is DC Charging";
+CM_ SG_ 1677 NMBMS2__RepeatReq "The repeat message request";
+CM_ BO_ 883 "vehicle key signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 883 BCM2_1_Checksum "Checksum";
+CM_ SG_ 883 BCM2_1_RollingCounter "RollingCounter";
+CM_ SG_ 883 BCM2_1_St_KL15 "KL_15 Status";
+CM_ SG_ 883 BCM2_1_St_KLR "KL_R Status";
+CM_ SG_ 883 BCM2_1_St_KL50 "KL_50 Status";
+CM_ SG_ 417 HCU2_2_ChargingStopRequest "Charging stop request to Charger";
+CM_ SG_ 417 HCU2_2_OBCRelayStatus "OBC Relay (+) Status  ";
+CM_ SG_ 417 HCU2_2_ChargerAllow "Allow to charger";
+CM_ SG_ 417 HCU2_2_CCStatus "CC Status for normal charge";
+CM_ BO_ 320 "speed  signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 320 BR2_1_Checksum "Checksum";
+CM_ SG_ 320 BR2_1_RollingCounter "RollingCounter";
+CM_ SG_ 320 BR2_1_F_VehicleSpeed "Vehicle speed value valid";
+CM_ SG_ 320 BR2_1_N_VehicleSpeed "Vehicle speed value";
+CM_ BO_ 1152 "odometer signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 1152 ICM2_1_Checksum "Checksum";
+CM_ SG_ 1152 ICM2_1_RollingCounter "RollingCounter";
+CM_ SG_ 1152 ICM2_1_N_Odograph "The odograph output";
+CM_ BO_ 38 "DO NOT SENT THIS!! 
+collision status signal to BMS, if message appears, 
+BMS uses for fault diagnosis, used on other vehicles, but BMS will still react to this";
+CM_ SG_ 38 SDM2_1_Checksum "Checksum";
+CM_ SG_ 38 SDM2_1_RollingCounter "RollingCounter";
+CM_ SG_ 38 SDM2_1_St_FrontCrash "Front Crash";
+CM_ SG_ 38 SDM2_1_St_BackCrash "Back Crash";
+CM_ SG_ 38 SDM2_1_St_LeftCrash "Left Crash";
+CM_ SG_ 38 SDM2_1_St_RightCrash "Right Crash";
+CM_ SG_ 38 SDM2_1_St_CrashIntensity "Crash Intensity";
+CM_ BO_ 885 "AC charging signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 885 OBC2__Status "Charger status";
+CM_ SG_ 885 OBC2__CPStatus "CP status";
+CM_ SG_ 885 OBC2__OutputVoltage "Charger output voltage";
+CM_ SG_ 885 OBC2__Status_RelayWeldCheckRslt "Relay Weld Check Result Status";
+CM_ SG_ 885 OBC2__OutputCurrent "Charger output current";
+CM_ SG_ 885 OBC2__RQ_S2Relay_OnOff "S2 Switch of Vehicle 220V AC Charging Relay On/Off Request";
+CM_ SG_ 885 OBC2__ChargingStopResponse "Response for VCM_Charging stop request";
+CM_ SG_ 1453 BMSCMATemp_N_No1 "No1 CMA Temp";
+CM_ SG_ 1453 BMSCMATemp_N_No3 "No3 CMA Temp";
+CM_ SG_ 1453 BMSCMATemp_N_No4 "No4 CMA Temp";
+CM_ SG_ 1453 BMSCMATemp_N_No5 "No5 CMA Temp";
+CM_ SG_ 1453 BMSCMATemp_N_No6 "No6 CMA Temp";
+CM_ SG_ 1453 BMSCMATemp_N_No7 "No7 CMA Temp";
+CM_ SG_ 1453 BMSCMATemp_N_No8 "No8 CMA Temp";
+CM_ SG_ 1453 BMSCMATemp_N_No2 "No2 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No9 "No9 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No11 "No11 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No12 "No12 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No13 "No13 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No14 "No14 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No15 "No15 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No16 "No16 CMA Temp";
+CM_ SG_ 1454 BMSCMATemp_N_No10 "No10 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No17 "No17 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No19 "No19 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No20 "No20 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No21 "No21 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No22 "No22 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No23 "No23 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No24 "No24 CMA Temp";
+CM_ SG_ 1455 BMSCMATemp_N_No18 "No18 CMA Temp";
+CM_ SG_ 1441 BMSCellVol1_N_No1 "No1 Cell Voltage";
+CM_ SG_ 1441 BMSCellVol1_N_No3 "No3 Cell Voltage";
+CM_ SG_ 1441 BMSCellVol1_N_No4 "No4 Cell Voltage";
+CM_ SG_ 1441 BMSCellVol1_N_No5 "No5 Cell Voltage";
+CM_ SG_ 1441 BMSCellVol1_N_No6 "No6 Cell Voltage";
+CM_ SG_ 1441 BMSCellVol1_N_No7 "No7 Cell Voltage";
+CM_ SG_ 1441 BMSCellVol1_N_No8 "No8 Cell Voltage";
+CM_ SG_ 1441 BMSCellVol1_N_No2 "No2 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No73 "No73 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No75 "No75 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No76 "No76 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No77 "No77 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No78 "No78 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No79 "No79 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No80 "No80 Cell Voltage";
+CM_ SG_ 1450 BMSCellVol10_N_No74 "No74 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No81 "No81 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No83 "No83 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No84 "No84 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No85 "No85 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No86 "No86 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No87 "No87 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No88 "No88 Cell Voltage";
+CM_ SG_ 1451 BMSCellVol11_N_No82 "No82 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No89 "No89 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No91 "No91 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No92 "No92 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No93 "No93 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No94 "No94 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No95 "No95 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No96 "No96 Cell Voltage";
+CM_ SG_ 1452 BMSCellVol12_N_No90 "No90 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No9 "No9 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No11 "No11 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No12 "No12 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No13 "No13 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No14 "No14 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No15 "No15 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No16 "No16 Cell Voltage";
+CM_ SG_ 1442 BMSCellVol2_N_No10 "No10 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No17 "No17 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No19 "No19 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No20 "No20 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No21 "No21 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No22 "No22 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No23 "No23 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No24 "No24 Cell Voltage";
+CM_ SG_ 1443 BMSCellVol3_N_No18 "No18 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No25 "No25 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No27 "No27 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No28 "No28 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No29 "No29 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No30 "No30 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No31 "No31 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No32 "No32 Cell Voltage";
+CM_ SG_ 1444 BMSCellVol4_N_No26 "No26 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No33 "No33 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No35 "No35 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No36 "No36 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No37 "No37 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No38 "No38 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No39 "No39 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No40 "No40 Cell Voltage";
+CM_ SG_ 1445 BMSCellVol5_N_No34 "No34 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No41 "No41 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No43 "No43 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No44 "No44 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No45 "No45 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No46 "No46 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No47 "No47 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No48 "No48 Cell Voltage";
+CM_ SG_ 1446 BMSCellVol6_N_No42 "No42 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No49 "No49 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No51 "No51 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No52 "No52 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No53 "No53 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No54 "No54 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No55 "No55 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No56 "No56 Cell Voltage";
+CM_ SG_ 1447 BMSCellVol7_N_No50 "No50 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No57 "No57 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No59 "No59 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No60 "No60 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No61 "No61 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No62 "No62 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No63 "No63 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No64 "No64 Cell Voltage";
+CM_ SG_ 1448 BMSCellVol8_N_No58 "No58 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No65 "No65 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No67 "No67 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No68 "No68 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No69 "No69 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No70 "No70 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No71 "No71 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No72 "No72 Cell Voltage";
+CM_ SG_ 1449 BMSCellVol9_N_No66 "No66 Cell Voltage";
+CM_ SG_ 672 BMS1_Checksum "Checksum";
+CM_ SG_ 672 BMS1_F_BatteryFaultLevel "Battery Fault Level";
+CM_ SG_ 672 BMS1_St_BatteryMode "Battery Mode";
+CM_ SG_ 672 BMS1_St_HVIL "HVIL Status";
+CM_ SG_ 672 BMS1_N_BatteryCurrent "Battery Current
+Charge is Negative polarity
+Discharge is Positive Polarity";
+CM_ SG_ 672 BMS1_St_PrechargeMode "Precharge Mode";
+CM_ SG_ 672 BMS1_N_BatteryVoltage "Battery Voltage";
+CM_ SG_ 672 BMS1_N_DCLinkVoltage "DC Link Voltage(Bus Voltage)";
+CM_ SG_ 672 BMS1_St_MainPositiveRelay "Main+ Relay Status";
+CM_ SG_ 672 BMS1_St_MainNegativeRelay "Main- Relay Status";
+CM_ SG_ 672 BMS1_St_PrechargeRelay "Precharge Relay Status";
+CM_ SG_ 672 BMS1_St_QCPositiveRelay "QC + Relay Status
+S7N0 not used";
+CM_ SG_ 672 BMS1_St_QCNegativeRelay "QC - Relay Status
+S7N0 not used";
+CM_ SG_ 672 BMS1_RollingCounter "RollingCounter";
+CM_ SG_ 1184 BMS2_Checksum "Checksum";
+CM_ SG_ 1184 BMS2_F_Isolation "Isolation Status";
+CM_ SG_ 1184 BMS2_N_CellSumVoltage "Cell Sum Voltage";
+CM_ SG_ 1184 BMS2_N_SOE "SOE";
+CM_ SG_ 1184 BMS2_N_SOH "SOH";
+CM_ SG_ 1184 BMS2_N_RSOC "RSOC(Related SOC)";
+CM_ SG_ 1184 BMS2_RollingCounter "RollingCounter";
+CM_ SG_ 1185 BMS3_Checksum "Checksum";
+CM_ SG_ 1185 BMS3_F_CellOverV "Cell OverVoltage fault state";
+CM_ SG_ 1185 BMS3_F_CellUnderV "Cell UnderVoltage fault state";
+CM_ SG_ 1185 BMS3_F_CellVoltagedropout "Cell Voltage Dropout fault state";
+CM_ SG_ 1185 BMS3_F_BattOverV "Battery Voltage OverVoltage  fault state";
+CM_ SG_ 1185 BMS3_F_BattUnderV "Battery Voltage UnderVoltage  fault state";
+CM_ SG_ 1185 BMS3_N_CellVoltageMax "Cell Voltage Max";
+CM_ SG_ 1185 BMS3_N_CellVoltageMin "Cell Voltage Min";
+CM_ SG_ 1185 BMS3_RollingCounter "RollingCounter";
+CM_ SG_ 1186 BMS4_Checksum "Checksum";
+CM_ SG_ 1186 BMS4_F_CMATempDiff "CMA Temp Difference  fault state";
+CM_ SG_ 1186 BMS4_F_BattOverTemp "Battery Over Temperature Fault";
+CM_ SG_ 1186 BMS4_N_CMATempAve "CMA Temp Ave";
+CM_ SG_ 1186 BMS4_N_CMATempMax "CMA Temp Max";
+CM_ SG_ 1186 BMS4_N_CMATempMin "CMA Temp Min";
+CM_ SG_ 1186 BMS4_N_InletTemp "Inlet Temp.(water inlet)";
+CM_ SG_ 1186 BMS4_F_BattLowTemp1 "Battery Low Temperature Fault（Prohibit DC Charge）";
+CM_ SG_ 1186 BMS4_F_BattLowTemp2 "Battery Low Temperature Fault（Prohibit AC Charge）";
+CM_ SG_ 1186 BMS4_F_BattLowTemp3 "Battery Low Temperature Fault（Prohibit Discharge）";
+CM_ SG_ 1186 BMS4_N_BatPwrConsumption "Battery Power Consumption
+(the product of Cell Sum Voltage & Battery Current) 
+Charge is Negative polarity
+Discharge is Positive Polarity";
+CM_ SG_ 1186 BMS4_RollingCounter "RollingCounter";
+CM_ SG_ 932 BMS6_Checksum "Checksum";
+CM_ SG_ 932 BMS6_St_BatHeatingReq "Battery Heating Request";
+CM_ SG_ 932 BMS6_W_HVBattDanger "The warning for the HV battery danger status";
+CM_ SG_ 932 BMS6_RollingCounter "RollingCounter";
+CM_ SG_ 1188 BMS7_Checksum "Checksum";
+CM_ SG_ 1188 BMS7_N_SOF10D "SOF 10sec(Discharge)";
+CM_ SG_ 1188 BMS7_N_SOFContinuousD "SOF Continuoous(Discharge)";
+CM_ SG_ 1188 BMS7_N_SOF10C "SOF 10sec(Charge)";
+CM_ SG_ 1188 BMS7_N_SOF30C "SOF 30sec(Charge)";
+CM_ SG_ 1188 BMS7_RollingCounter "RollingCounter";
+CM_ SG_ 1189 BMS8_Checksum "Checksum";
+CM_ SG_ 1189 BMS8_N_SOF30D "SOF 30sec(Discharge)";
+CM_ SG_ 1189 BMS8_N_SOF2D "SOF 2sec(Discharge)";
+CM_ SG_ 1189 BMS8_N_SOF2C "SOF 2sec(Charge)";
+CM_ SG_ 1189 BMS8_RollingCounter "RollingCounter";
+CM_ SG_ 1440 BMS9_F_BattSupplyingOverI "HV Battery Supplying Over Current";
+CM_ SG_ 1440 BMS9_F_QCNegativeRelay "QC- Relay Diagnosis not used";
+CM_ SG_ 1440 BMS9_F_MainPositiveRelayCoil "Main+ Relay Coil Diagnosis";
+CM_ SG_ 1440 BMS9_F_MainNegativeRelayCoil "Main- Relay Coil Diagnosis";
+CM_ SG_ 1440 BMS9_F_PrechargeRelayCoil "Precharge Relay Coil Diagnosis";
+CM_ SG_ 1440 BMS9_F_QCPositiveRelayCoil "QC+ Relay Coil Diagnosis not used";
+CM_ SG_ 1440 BMS9_F_MainPositiveRelay "Main+ Relay Diagnosis";
+CM_ SG_ 1440 BMS9_F_QCNegativeRelayCoil "QC- Relay Coil Diagnosis not used";
+CM_ SG_ 1440 BMS9_F_CellBalancingCircuit "Cell balancing Circuit Fault";
+CM_ SG_ 1440 BMS9_F_BattOverChgErr "Battery OverCharge Fault";
+CM_ SG_ 1440 BMS9_F_BattPluginChgOverI "HV Battery Plugin Charge Over Current";
+CM_ SG_ 1440 BMS9_F_PrechargeRelayOpenStuck "Precharge Relay Open Stuck Fault";
+CM_ SG_ 1440 BMS9_F_MSDFuse "MSD Fuse Fault";
+CM_ SG_ 1440 BMS9_F_HVBattTempRisingOverspeed "HV Battery Temperature Rising Overspeed ";
+CM_ SG_ 1440 BMS9_F_BattRegenerativeOverI "HV Battery Regenerative Over Current";
+CM_ SG_ 1440 BMS9_F_MainNegativeRelay "Main- Relay Diagnosis";
+CM_ SG_ 1440 BMS9_N_PosInsR "DC Link Positive Insulation";
+CM_ SG_ 1440 BMS9_N_NegInsR "DC Link Negative Insulation";
+CM_ SG_ 1440 BMS9_F_PrechargeRelay "Precharge relay Diagnosis";
+CM_ SG_ 1440 BMS9_F_QCPositiveRelay "QC+ Relay Diagnosis not used";
+CM_ SG_ 1190 BMS10_InsChkState "Insulation checking  status ";
+CM_ SG_ 1190 BMS10_RelayChkState " Relay checking  status  ";
+CM_ SG_ 1190 BMS10_ChargerWorkingEnable "Charger working enable";
+CM_ SG_ 1190 BMS10_ChargeVoltageRequest "Charge voltage request  ";
+CM_ SG_ 1190 BMS10_ChargeCurrentRequest "Charge current request    ";
+CM_ SG_ 1190 BMS10_BatteryChargeStatus "BMS charge status ";
+CM_ SG_ 1661 NMBMS_SourceID "The source node id";
+CM_ SG_ 1661 NMBMS_WakeSource "The wakeup source";
+CM_ SG_ 1661 NMBMS_ActiveSource1 "The NM active sorce is KL15";
+CM_ SG_ 1661 NMBMS_ActiveSource2 "The NM active sorce is Diagnose";
+CM_ SG_ 1661 NMBMS_ActiveSource3 "The NM active sorce is Repeat message timer has not expired";
+CM_ SG_ 1661 NMBMS_ActiveSource4 "The NM active sorce is AC Charging";
+CM_ SG_ 1661 NMBMS_ActiveSource5 "The NM active sorce is DC Charging";
+CM_ SG_ 1661 NMBMS_RepeatReq "The repeat message request";
+CM_ BO_ 1848 "Used for UDS function";
+CM_ BO_ 867 "vehicle key signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 867 BCM1_Checksum "Checksum";
+CM_ SG_ 867 BCM1_RollingCounter "RollingCounter";
+CM_ SG_ 867 BCM1_St_KL15 "KL_15 Status";
+CM_ SG_ 867 BCM1_St_KLR "KL_R Status";
+CM_ SG_ 867 BCM1_St_KL50 "KL_50 Status";
+CM_ SG_ 401 HCU_2_ChargingStopRequest "Charging stop request to Charger";
+CM_ SG_ 401 HCU_2_OBCRelayStatus "OBC Relay (+) Status  ";
+CM_ SG_ 401 HCU_2_ChargerAllow "Allow to charger";
+CM_ SG_ 401 HCU_2_CCStatus "CC Status for normal charge";
+CM_ SG_ 401 HCU_2_InsCheck "BMS  insulation check  command ";
+CM_ SG_ 401 HCU_2_WeldedFaultCheck "Relay  open check comand";
+CM_ SG_ 401 HCU_2_RelayOn "Relay  close check comand ";
+CM_ BO_ 304 "speed  signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 304 BR1_Checksum "Checksum";
+CM_ SG_ 304 BR1_RollingCounter "RollingCounter";
+CM_ SG_ 304 BR1_F_VehicleSpeed "Vehicle speed value valid";
+CM_ SG_ 304 BR1_N_VehicleSpeed "Vehicle speed value";
+CM_ SG_ 400 HCU1_Checksum "Checksum";
+CM_ SG_ 400 HCU1_RollingCounter "RollingCounter";
+CM_ SG_ 400 HCU1_St_Ready "Ready Status";
+CM_ SG_ 400 HCU1_F_HVConnectRequest "High Voltage Connect Request Valid";
+CM_ SG_ 400 HCU1_St_HVConnectRequest "High Voltage Connect Request";
+CM_ BO_ 1136 "odometer signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 1136 ICM1_Checksum "Checksum";
+CM_ SG_ 1136 ICM1_RollingCounter "RollingCounter";
+CM_ SG_ 1136 ICM1_N_Odograph "The odograph output";
+CM_ BO_ 22 "DO NOT SENT THIS!! 
+collision status signal to BMS, if message appears, 
+BMS uses for fault diagnosis, used on other vehicles, but BMS will still react to this";
+CM_ SG_ 22 SDM1_Checksum "Checksum";
+CM_ SG_ 22 SDM1_RollingCounter "RollingCounter";
+CM_ SG_ 22 SDM1_St_FrontCrash "Front Crash";
+CM_ SG_ 22 SDM1_St_BackCrash "Back Crash";
+CM_ SG_ 22 SDM1_St_LeftCrash "Left Crash";
+CM_ SG_ 22 SDM1_St_RightCrash "Right Crash";
+CM_ SG_ 22 SDM1_St_CrashIntensity "Crash Intensity";
+CM_ BO_ 1840 "Used for UDS function";
+CM_ BO_ 2015 "Used for UDS function";
+CM_ BO_ 869 "AC charging signal for other application,not being used by BMS now.
+Prefer to reserve this ID on the network so that none of the nodes would send this ID";
+CM_ SG_ 869 OBC_Status "Charger status";
+CM_ SG_ 869 OBC_CPStatus "CP status";
+CM_ SG_ 869 OBC_OutputVoltage "Charger output voltage";
+CM_ SG_ 869 OBC_Status_RelayWeldCheckRslt "Relay Weld Check Result Status";
+CM_ SG_ 869 OBC_OutputCurrent "Charger output current";
+CM_ SG_ 869 OBC_RQ_S2Relay_OnOff "S2 Switch of Vehicle 220V AC Charging Relay On/Off Request";
+CM_ SG_ 869 OBC_ChargingStopResponse "Response for VCM_Charging stop request";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event","Mixed";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 300000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 300000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 300000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 300000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 300000;
+BA_DEF_ BO_  "GenMsgInhibitTime" INT 0 300000;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigGWTimeoutValue" HEX 0 300000;
+BA_DEF_ SG_  "GenSigValidAfterKL15" ENUM  "Y","N","Null";
+BA_DEF_ SG_  "GenSigUpdataPeriod" INT 0 300000;
+BA_DEF_ SG_  "GenSigNote" STRING ;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_ BU_  "NMAsrNodeIdentifier" HEX 0 255;
+BA_DEF_  "NmAsrMessageCount" INT 1 256;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 2047;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 0 65535;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 1 65535;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 1 65535;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTimeActive" INT 0 0;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "DiagStationAddress" HEX 0 255;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "No","Yes";
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v3_0" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v2_3" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v3_1" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v2_2" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v2_1" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgInhibitTime" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenSigGWTimeoutValue" 0;
+BA_DEF_DEF_  "GenSigValidAfterKL15" "Null";
+BA_DEF_DEF_  "GenSigUpdataPeriod" 0;
+BA_DEF_DEF_  "GenSigNote" "";
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 1500;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 500;
+BA_DEF_DEF_  "NMAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrMessageCount" 128;
+BA_DEF_DEF_  "NmAsrBaseAddress" 1536;
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 100;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 200;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 5000;
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_DEF_DEF_  "GenMsgCycleTimeActive" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "DiagStationAddress" 0;
+BA_DEF_DEF_  "NmAsrNode" "No";
+BA_DEF_DEF_  "Manufacturer" "Borgward";
+BA_DEF_DEF_  "NmType" "NmAsr";
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v3_0" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v2_3" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v3_1" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v2_2" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v2_1" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "DBName" "BMS_Sunwoda";
+BA_ "GenMsgSendType" BO_ 979 1;
+BA_ "DiagRequest" BO_ 979 1;
+BA_ "GenMsgCycleTime" BO_ 416 10;
+BA_ "GenMsgCycleTime" BO_ 1469 5000;
+BA_ "GenMsgCycleTime" BO_ 1470 5000;
+BA_ "GenMsgCycleTime" BO_ 1471 5000;
+BA_ "GenMsgCycleTime" BO_ 1457 1000;
+BA_ "GenMsgCycleTime" BO_ 1466 1000;
+BA_ "GenMsgCycleTime" BO_ 1467 1000;
+BA_ "GenMsgCycleTime" BO_ 1468 1000;
+BA_ "GenMsgCycleTime" BO_ 1458 1000;
+BA_ "GenMsgCycleTime" BO_ 1459 1000;
+BA_ "GenMsgCycleTime" BO_ 1460 1000;
+BA_ "GenMsgCycleTime" BO_ 1461 1000;
+BA_ "GenMsgCycleTime" BO_ 1462 1000;
+BA_ "GenMsgCycleTime" BO_ 1463 1000;
+BA_ "GenMsgCycleTime" BO_ 1464 1000;
+BA_ "GenMsgCycleTime" BO_ 1465 1000;
+BA_ "GenMsgCycleTime" BO_ 688 10;
+BA_ "GenMsgCycleTime" BO_ 1200 100;
+BA_ "GenMsgCycleTime" BO_ 1201 1000;
+BA_ "GenMsgCycleTime" BO_ 1202 200;
+BA_ "GenMsgCycleTime" BO_ 948 200;
+BA_ "GenMsgCycleTime" BO_ 1204 100;
+BA_ "GenMsgCycleTime" BO_ 1205 100;
+BA_ "GenMsgCycleTime" BO_ 1456 1000;
+BA_ "GenMsgCycleTime" BO_ 1206 100;
+BA_ "GenMsgCycleTime" BO_ 1696 500;
+BA_ "GenMsgCycleTimeFast" BO_ 1677 100;
+BA_ "GenMsgCycleTime" BO_ 1677 200;
+BA_ "GenMsgSendType" BO_ 1677 2;
+BA_ "NmMessage" BO_ 1677 1;
+BA_ "GenMsgCycleTime" BO_ 883 100;
+BA_ "GenMsgCycleTime" BO_ 417 100;
+BA_ "GenMsgCycleTime" BO_ 320 10;
+BA_ "GenMsgCycleTime" BO_ 1152 500;
+BA_ "GenMsgNrOfRepetition" BO_ 38 250;
+BA_ "GenMsgCycleTimeFast" BO_ 38 20;
+BA_ "GenMsgCycleTime" BO_ 38 100;
+BA_ "GenMsgSendType" BO_ 38 2;
+BA_ "GenMsgCycleTime" BO_ 885 100;
+BA_ "GenMsgCycleTime" BO_ 1453 5000;
+BA_ "GenMsgCycleTime" BO_ 1454 5000;
+BA_ "GenMsgCycleTime" BO_ 1455 5000;
+BA_ "GenMsgCycleTime" BO_ 1441 1000;
+BA_ "GenMsgCycleTime" BO_ 1450 1000;
+BA_ "GenMsgCycleTime" BO_ 1451 1000;
+BA_ "GenMsgCycleTime" BO_ 1452 1000;
+BA_ "GenMsgCycleTime" BO_ 1442 1000;
+BA_ "GenMsgCycleTime" BO_ 1443 1000;
+BA_ "GenMsgCycleTime" BO_ 1444 1000;
+BA_ "GenMsgCycleTime" BO_ 1445 1000;
+BA_ "GenMsgCycleTime" BO_ 1446 1000;
+BA_ "GenMsgCycleTime" BO_ 1447 1000;
+BA_ "GenMsgCycleTime" BO_ 1448 1000;
+BA_ "GenMsgCycleTime" BO_ 1449 1000;
+BA_ "GenMsgCycleTime" BO_ 672 10;
+BA_ "GenMsgCycleTime" BO_ 1184 100;
+BA_ "GenMsgCycleTime" BO_ 1185 1000;
+BA_ "GenMsgCycleTime" BO_ 1186 200;
+BA_ "GenMsgCycleTime" BO_ 932 200;
+BA_ "GenMsgCycleTime" BO_ 1188 100;
+BA_ "GenMsgCycleTime" BO_ 1189 100;
+BA_ "GenMsgCycleTime" BO_ 1440 1000;
+BA_ "GenMsgCycleTime" BO_ 1190 100;
+BA_ "GenMsgCycleTime" BO_ 1680 500;
+BA_ "GenMsgCycleTimeFast" BO_ 1661 100;
+BA_ "GenMsgCycleTime" BO_ 1661 200;
+BA_ "GenMsgSendType" BO_ 1661 2;
+BA_ "NmMessage" BO_ 1661 1;
+BA_ "GenMsgSendType" BO_ 1848 1;
+BA_ "DiagResponse" BO_ 1848 1;
+BA_ "GenMsgCycleTime" BO_ 867 100;
+BA_ "GenMsgCycleTime" BO_ 401 100;
+BA_ "GenMsgCycleTime" BO_ 304 10;
+BA_ "GenMsgCycleTime" BO_ 400 10;
+BA_ "GenMsgCycleTime" BO_ 1136 500;
+BA_ "GenMsgNrOfRepetition" BO_ 22 250;
+BA_ "GenMsgCycleTimeFast" BO_ 22 20;
+BA_ "GenMsgCycleTime" BO_ 22 100;
+BA_ "GenMsgSendType" BO_ 22 2;
+BA_ "GenMsgSendType" BO_ 1840 1;
+BA_ "DiagRequest" BO_ 1840 1;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "DiagState" BO_ 2015 1;
+BA_ "GenMsgCycleTime" BO_ 869 100;
+BA_ "GenSigStartValue" SG_ 1714 Coolant_Temp_Outlet_Left 30.4;
+BA_ "GenSigStartValue" SG_ 1713 Coolant_Temp_Outlet_Right 30.4;
+BA_ "GenSigStartValue" SG_ 1713 Coolant_Temp_Inlet 30.4;
+BA_ "GenSigNote" SG_ 979 HCU_3_BmsSleep "Ctrl BMS go to sleep mode";
+BA_ "GenSigNote" SG_ 416 HCU2_1_St_HVConnectRequest "高压连接请求";
+BA_ "GenSigNote" SG_ 416 HCU2_1_F_HVConnectRequest "高压连接请求有效";
+BA_ "GenSigStartValue" SG_ 416 HCU2_1_F_HVConnectRequest 1;
+BA_ "GenSigNote" SG_ 416 HCU2_1_St_Ready "动力系统准备就绪状态";
+BA_ "GenSigNote" SG_ 416 HCU2_1_RollingCounter "RollingCounter";
+BA_ "GenSigNote" SG_ 416 HCU2_1_Checksum "Checksum";
+BA_ "GenSigNote" SG_ 1457 BMS2_CellVol1_N_No1 "No1 Cell Voltage";
+BA_ "GenSigNote" SG_ 688 BMS2_1_Checksum "校验和";
+BA_ "GenSigNote" SG_ 688 BMS2_1_F_BatteryFaultLevel "电池故障状态";
+BA_ "GenSigNote" SG_ 688 BMS2_1_St_BatteryMode "电池模式";
+BA_ "GenSigNote" SG_ 688 BMS2_1_St_HVIL "动力电池包高压互锁状态";
+BA_ "GenSigNote" SG_ 688 BMS2_1_N_BatteryCurrent "电池电流";
+BA_ "GenSigNote" SG_ 688 BMS2_1_N_BatteryVoltage "电池电压（接触器之前）";
+BA_ "GenSigNote" SG_ 688 BMS2_1_N_DCLinkVoltage "母线电压（接触器之后）";
+BA_ "GenSigNote" SG_ 688 BMS2_1_St_MainPositiveRelay "主正继电器状态";
+BA_ "GenSigNote" SG_ 688 BMS2_1_St_MainNegativeRelay "主负继电器状态";
+BA_ "GenSigNote" SG_ 688 BMS2_1_St_PrechargeRelay "预充继电器状态";
+BA_ "GenSigNote" SG_ 688 BMS2_1_St_QCPositiveRelay "快充正继电器状态";
+BA_ "GenSigNote" SG_ 688 BMS2_1_St_QCNegativeRelay "快充负继电器状态";
+BA_ "GenSigNote" SG_ 688 BMS2_1_RollingCounter "计数器";
+BA_ "GenSigNote" SG_ 1200 BMS2_2_Checksum "Checksum";
+BA_ "GenSigNote" SG_ 1200 BMS2_2_F_Isolation "绝缘故障状态";
+BA_ "GenSigNote" SG_ 1200 BMS2_2_N_CellSumVoltage "Cell Sum Voltage";
+BA_ "GenSigNote" SG_ 1200 BMS2_2_N_SOE "电池电量SOE";
+BA_ "GenSigNote" SG_ 1200 BMS2_2_N_SOH "电池健康度SOH";
+BA_ "GenSigNote" SG_ 1200 BMS2_2_N_RSOC "电池关联SOC";
+BA_ "GenSigNote" SG_ 1200 BMS2_2_RollingCounter "RollingCounter";
+BA_ "GenSigNote" SG_ 1201 BMS2_3_F_CellOverV "Cell OverVoltage fault state";
+BA_ "GenSigNote" SG_ 1201 BMS2_3_F_CellUnderV "Cell UnderVoltage fault state";
+BA_ "GenSigNote" SG_ 1201 BMS2_3_F_CellVoltagedropout "动力蓄电池一致性差报警（单体压差过大）";
+BA_ "GenSigNote" SG_ 1201 BMS2_3_F_BattOverV "动力电池过压报警（上限单体电压*总单体数）";
+BA_ "GenSigNote" SG_ 1201 BMS2_3_F_BattUnderV "动力电池欠压报警";
+BA_ "GenSigNote" SG_ 1201 BMS2_3_N_CellVoltageMax "最大单体电压";
+BA_ "GenSigNote" SG_ 1201 BMS2_3_N_CellVoltageMin "最小单体电压";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_F_CMATempDiff "温度差异报警";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_F_BattOverTemp "电池高温报警";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_N_CMATempAve "模组平均温度";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_N_CMATempMax "模组最大温度";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_N_CMATempMin "模组最小温度";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_N_InletTemp "冷却液入水口温度";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_F_BattLowTemp1 "电池低温报警(禁止DC充电)";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_F_BattLowTemp2 "电池低温报警（禁止AC充电）";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_F_BattLowTemp3 "电池低温报警（禁止放电）";
+BA_ "GenSigNote" SG_ 1202 BMS2_4_N_BatPwrConsumption "电池功率（单体总电压与电池电流的乘积）";
+BA_ "GenSigNote" SG_ 948 BMS2_6_Checksum "校验和";
+BA_ "GenSigNote" SG_ 948 BMS2_6_St_BatHeatingReq "电池加热请求";
+BA_ "GenSigNote" SG_ 948 BMS2_6_W_HVBattDanger "电池危险报警";
+BA_ "GenSigNote" SG_ 948 BMS2_6_RollingCounter "计数器";
+BA_ "GenSigNote" SG_ 1204 BMS2_7_N_SOF10D "电池10s最大放电功率（峰值放电SOF）";
+BA_ "GenSigNote" SG_ 1204 BMS2_7_N_SOFContinuousD "电池持续最大放电功率（持续放电SOF）";
+BA_ "GenSigNote" SG_ 1204 BMS2_7_N_SOF10C "电池10s最大充电功率（峰值回馈SOF）";
+BA_ "GenSigNote" SG_ 1204 BMS2_7_N_SOF30C "电池30s最大充电功率（持续回馈SOF）";
+BA_ "GenSigNote" SG_ 1205 BMS2_8_N_SOF30D "电池30s最大放电功率";
+BA_ "GenSigNote" SG_ 1205 BMS2_8_N_SOF2D "电池2s最大放电功率";
+BA_ "GenSigNote" SG_ 1205 BMS2_8_N_SOF2C "电池2s最大充电功率";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_BattSupplyingOverI "动力电池放电电流过大";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_QCNegativeRelay "直流充电负继电器触点故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_MainPositiveRelayCoil "主正继电器线圈故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_MainNegativeRelayCoil "主负继电器线圈故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_PrechargeRelayCoil "预充继电器线圈故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_QCPositiveRelayCoil "直流充电正继电器线圈故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_MainPositiveRelay "主正继电器触点故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_QCNegativeRelayCoil "直流充电负继电器线圈故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_CellBalancingCircuit "均衡电路故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_BattOverChgErr "动力电池过充故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_BattPluginChgOverI "动力电池外接充电电流过大";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_PrechargeRelayOpenStuck "预充电阻开路故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_MSDFuse "MSD Fuse Fault";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_HVBattTempRisingOverspe "电池温升过快";
+BA_ "SystemSignalLongSymbol" SG_ 1456 BMS2_9_F_HVBattTempRisingOverspe "BMS2_9_F_HVBattTempRisingOverspeed";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_BattRegenerativeOverI "动力电池回充充电电流过大";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_MainNegativeRelay "主负继电器触点故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_N_PosInsR "母线正极对车体绝缘电阻值";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_N_NegInsR "母线负极对车体绝缘电阻值";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_PrechargeRelay "预充继电器触点故障";
+BA_ "GenSigNote" SG_ 1456 BMS2_9_F_QCPositiveRelay "直流充电正继电器触点故障";
+BA_ "GenSigNote" SG_ 1206 BMS2_10_InsChkState "绝缘检测状态";
+BA_ "GenSigNote" SG_ 1206 BMS2_10_RelayChkState "接触器粘连检测状态";
+BA_ "GenSigNote" SG_ 1206 BMS2_10_ChargerWorkingEnable "Charger working enable";
+BA_ "GenSigNote" SG_ 1206 BMS2_10_ChargeVoltageRequest "Charge voltage request";
+BA_ "GenSigNote" SG_ 1206 BMS2_10_ChargeCurrentRequest "Charge current request";
+BA_ "GenSigNote" SG_ 1206 BMS2_10_BatteryChargeStatus "BMS charge status";
+BA_ "GenSigNote" SG_ 1696 DevBMS2_1_N_ColdFanPWM "风机PWM值(仅骡子车，检测冷却状态用)";
+BA_ "GenSigStartValue" SG_ 1677 NMBMS2__SourceID 125;
+BA_ "GenSigNote" SG_ 883 BCM2_1_Checksum "checksum";
+BA_ "GenSigNote" SG_ 883 BCM2_1_RollingCounter "rollingcounter";
+BA_ "GenSigNote" SG_ 883 BCM2_1_St_KL15 "KL_15 Status";
+BA_ "GenSigNote" SG_ 883 BCM2_1_St_KLR "KL_R Status";
+BA_ "GenSigNote" SG_ 883 BCM2_1_St_KL50 "KL_50 Status";
+BA_ "GenSigNote" SG_ 417 HCU2_2_ChargingStopRequest "Charging stop request to Charger";
+BA_ "GenSigNote" SG_ 417 HCU2_2_OBCRelayStatus "OBC Relay (+) Status";
+BA_ "GenSigNote" SG_ 417 HCU2_2_ChargerAllow "Allow to charger";
+BA_ "GenSigNote" SG_ 417 HCU2_2_CCStatus "CC Status for normal charge";
+BA_ "GenSigNote" SG_ 320 BR2_1_Checksum "Checksum";
+BA_ "GenSigNote" SG_ 320 BR2_1_RollingCounter "Rollingcounter";
+BA_ "GenSigNote" SG_ 320 BR2_1_F_VehicleSpeed "Vehicle speed value valid";
+BA_ "GenSigStartValue" SG_ 320 BR2_1_F_VehicleSpeed 1;
+BA_ "GenSigNote" SG_ 320 BR2_1_N_VehicleSpeed "Vehicle speed value";
+BA_ "GenSigNote" SG_ 1152 ICM2_1_Checksum "checksum";
+BA_ "GenSigNote" SG_ 1152 ICM2_1_RollingCounter "Rollingcounter";
+BA_ "GenSigNote" SG_ 1152 ICM2_1_N_Odograph "里程";
+BA_ "GenSigNote" SG_ 38 SDM2_1_Checksum "checksum";
+BA_ "GenSigNote" SG_ 38 SDM2_1_RollingCounter "rollingcounter";
+BA_ "GenSigNote" SG_ 38 SDM2_1_St_FrontCrash "前撞";
+BA_ "GenSigNote" SG_ 38 SDM2_1_St_BackCrash "后撞";
+BA_ "GenSigNote" SG_ 38 SDM2_1_St_LeftCrash "左撞";
+BA_ "GenSigNote" SG_ 38 SDM2_1_St_RightCrash "右撞";
+BA_ "GenSigNote" SG_ 38 SDM2_1_St_CrashIntensity "碰撞程度";
+BA_ "GenSigNote" SG_ 885 OBC2__Status "Charger status";
+BA_ "GenSigNote" SG_ 885 OBC2__CPStatus "CP status";
+BA_ "GenSigNote" SG_ 885 OBC2__OutputVoltage "Charger output voltage";
+BA_ "GenSigNote" SG_ 885 OBC2__Status_RelayWeldCheckRslt "继电器粘连检测结果状态";
+BA_ "GenSigNote" SG_ 885 OBC2__OutputCurrent "Charger output current";
+BA_ "GenSigNote" SG_ 885 OBC2__RQ_S2Relay_OnOff "S2 Switch of Vehicle 220V AC Charging Relay On/Off Request";
+BA_ "GenSigNote" SG_ 885 OBC2__ChargingStopResponse "Response for VCM_Charging stop request";
+BA_ "GenSigNote" SG_ 1441 BMSCellVol1_N_No1 "No1 Cell Voltage";
+BA_ "GenSigNote" SG_ 672 BMS1_Checksum "校验和";
+BA_ "GenSigNote" SG_ 672 BMS1_F_BatteryFaultLevel "电池故障状态";
+BA_ "GenSigNote" SG_ 672 BMS1_St_BatteryMode "电池模式";
+BA_ "GenSigNote" SG_ 672 BMS1_St_HVIL "动力电池包高压互锁状态";
+BA_ "GenSigNote" SG_ 672 BMS1_N_BatteryCurrent "电池电流";
+BA_ "GenSigNote" SG_ 672 BMS1_N_BatteryVoltage "电池电压（接触器之前）";
+BA_ "GenSigNote" SG_ 672 BMS1_N_DCLinkVoltage "母线电压（接触器之后）";
+BA_ "GenSigNote" SG_ 672 BMS1_St_MainPositiveRelay "主正继电器状态";
+BA_ "GenSigNote" SG_ 672 BMS1_St_MainNegativeRelay "主负继电器状态";
+BA_ "GenSigNote" SG_ 672 BMS1_St_PrechargeRelay "预充继电器状态";
+BA_ "GenSigNote" SG_ 672 BMS1_St_QCPositiveRelay "快充正继电器状态";
+BA_ "GenSigNote" SG_ 672 BMS1_St_QCNegativeRelay "快充负继电器状态";
+BA_ "GenSigNote" SG_ 672 BMS1_RollingCounter "计数器";
+BA_ "GenSigNote" SG_ 1184 BMS2_Checksum "Checksum";
+BA_ "GenSigNote" SG_ 1184 BMS2_F_Isolation "绝缘故障状态";
+BA_ "GenSigNote" SG_ 1184 BMS2_N_CellSumVoltage "Cell Sum Voltage";
+BA_ "GenSigNote" SG_ 1184 BMS2_N_SOE "电池电量SOE";
+BA_ "GenSigNote" SG_ 1184 BMS2_N_SOH "电池健康度SOH";
+BA_ "GenSigNote" SG_ 1184 BMS2_N_RSOC "电池关联SOC";
+BA_ "GenSigNote" SG_ 1184 BMS2_RollingCounter "RollingCounter";
+BA_ "GenSigNote" SG_ 1185 BMS3_F_CellOverV "Cell OverVoltage fault state";
+BA_ "GenSigNote" SG_ 1185 BMS3_F_CellUnderV "Cell UnderVoltage fault state";
+BA_ "GenSigNote" SG_ 1185 BMS3_F_CellVoltagedropout "动力蓄电池一致性差报警（单体压差过大）";
+BA_ "GenSigNote" SG_ 1185 BMS3_F_BattOverV "动力电池过压报警（上限单体电压*总单体数）";
+BA_ "GenSigNote" SG_ 1185 BMS3_F_BattUnderV "动力电池欠压报警";
+BA_ "GenSigNote" SG_ 1185 BMS3_N_CellVoltageMax "最大单体电压";
+BA_ "GenSigNote" SG_ 1185 BMS3_N_CellVoltageMin "最小单体电压";
+BA_ "GenSigNote" SG_ 1186 BMS4_F_CMATempDiff "温度差异报警";
+BA_ "GenSigNote" SG_ 1186 BMS4_F_BattOverTemp "电池高温报警";
+BA_ "GenSigNote" SG_ 1186 BMS4_N_CMATempAve "模组平均温度";
+BA_ "GenSigNote" SG_ 1186 BMS4_N_CMATempMax "模组最大温度";
+BA_ "GenSigNote" SG_ 1186 BMS4_N_CMATempMin "模组最小温度";
+BA_ "GenSigNote" SG_ 1186 BMS4_N_InletTemp "冷却液入水口温度";
+BA_ "GenSigNote" SG_ 1186 BMS4_F_BattLowTemp1 "电池低温报警(禁止DC充电)";
+BA_ "GenSigNote" SG_ 1186 BMS4_F_BattLowTemp2 "电池低温报警（禁止AC充电）";
+BA_ "GenSigNote" SG_ 1186 BMS4_F_BattLowTemp3 "电池低温报警（禁止放电）";
+BA_ "GenSigNote" SG_ 1186 BMS4_N_BatPwrConsumption "电池功率（单体总电压与电池电流的乘积）";
+BA_ "GenSigNote" SG_ 932 BMS6_Checksum "校验和";
+BA_ "GenSigNote" SG_ 932 BMS6_St_BatHeatingReq "电池加热请求";
+BA_ "GenSigNote" SG_ 932 BMS6_W_HVBattDanger "电池危险报警";
+BA_ "GenSigNote" SG_ 932 BMS6_RollingCounter "计数器";
+BA_ "GenSigNote" SG_ 1188 BMS7_N_SOF10D "电池10s最大放电功率（峰值放电SOF）";
+BA_ "GenSigNote" SG_ 1188 BMS7_N_SOFContinuousD "电池持续最大放电功率（持续放电SOF）";
+BA_ "GenSigNote" SG_ 1188 BMS7_N_SOF10C "电池10s最大充电功率（峰值回馈SOF）";
+BA_ "GenSigNote" SG_ 1188 BMS7_N_SOF30C "电池30s最大充电功率（持续回馈SOF）";
+BA_ "GenSigNote" SG_ 1189 BMS8_N_SOF30D "电池30s最大放电功率";
+BA_ "GenSigNote" SG_ 1189 BMS8_N_SOF2D "电池2s最大放电功率";
+BA_ "GenSigNote" SG_ 1189 BMS8_N_SOF2C "电池2s最大充电功率";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_BattSupplyingOverI "动力电池放电电流过大";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_QCNegativeRelay "直流充电负继电器触点故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_MainPositiveRelayCoil "主正继电器线圈故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_MainNegativeRelayCoil "主负继电器线圈故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_PrechargeRelayCoil "预充继电器线圈故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_QCPositiveRelayCoil "直流充电正继电器线圈故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_MainPositiveRelay "主正继电器触点故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_QCNegativeRelayCoil "直流充电负继电器线圈故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_CellBalancingCircuit "均衡电路故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_BattOverChgErr "动力电池过充故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_BattPluginChgOverI "动力电池外接充电电流过大";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_PrechargeRelayOpenStuck "预充电阻开路故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_MSDFuse "MSD Fuse Fault";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_HVBattTempRisingOverspeed "电池温升过快";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_BattRegenerativeOverI "动力电池回充充电电流过大";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_MainNegativeRelay "主负继电器触点故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_N_PosInsR "母线正极对车体绝缘电阻值";
+BA_ "GenSigNote" SG_ 1440 BMS9_N_NegInsR "母线负极对车体绝缘电阻值";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_PrechargeRelay "预充继电器触点故障";
+BA_ "GenSigNote" SG_ 1440 BMS9_F_QCPositiveRelay "直流充电正继电器触点故障";
+BA_ "GenSigNote" SG_ 1190 BMS10_InsChkState "绝缘检测状态";
+BA_ "GenSigNote" SG_ 1190 BMS10_RelayChkState "接触器粘连检测状态";
+BA_ "GenSigNote" SG_ 1190 BMS10_ChargerWorkingEnable "Charger working enable";
+BA_ "GenSigNote" SG_ 1190 BMS10_ChargeVoltageRequest "Charge voltage request";
+BA_ "GenSigNote" SG_ 1190 BMS10_ChargeCurrentRequest "Charge current request";
+BA_ "GenSigNote" SG_ 1190 BMS10_BatteryChargeStatus "BMS charge status";
+BA_ "GenSigNote" SG_ 1680 DevBMS1_N_ColdFanPWM "风机PWM值(仅骡子车，检测冷却状态用)";
+BA_ "GenSigStartValue" SG_ 1661 NMBMS_SourceID 125;
+BA_ "GenSigNote" SG_ 867 BCM1_Checksum "checksum";
+BA_ "GenSigNote" SG_ 867 BCM1_RollingCounter "rollingcounter";
+BA_ "GenSigNote" SG_ 867 BCM1_St_KL15 "KL_15 Status";
+BA_ "GenSigNote" SG_ 867 BCM1_St_KLR "KL_R Status";
+BA_ "GenSigNote" SG_ 867 BCM1_St_KL50 "KL_50 Status";
+BA_ "GenSigNote" SG_ 401 HCU_2_ChargingStopRequest "Charging stop request to Charger";
+BA_ "GenSigNote" SG_ 401 HCU_2_OBCRelayStatus "OBC Relay (+) Status";
+BA_ "GenSigNote" SG_ 401 HCU_2_ChargerAllow "Allow to charger";
+BA_ "GenSigNote" SG_ 401 HCU_2_CCStatus "CC Status for normal charge";
+BA_ "GenSigNote" SG_ 401 HCU_2_InsCheck "绝缘检测控制";
+BA_ "GenSigNote" SG_ 401 HCU_2_WeldedFaultCheck "接触器断开粘连检测";
+BA_ "GenSigNote" SG_ 401 HCU_2_RelayOn "接触器闭合检测";
+BA_ "GenSigNote" SG_ 304 BR1_Checksum "Checksum";
+BA_ "GenSigNote" SG_ 304 BR1_RollingCounter "Rollingcounter";
+BA_ "GenSigNote" SG_ 304 BR1_F_VehicleSpeed "Vehicle speed value valid";
+BA_ "GenSigStartValue" SG_ 304 BR1_F_VehicleSpeed 1;
+BA_ "GenSigNote" SG_ 304 BR1_N_VehicleSpeed "Vehicle speed value";
+BA_ "GenSigNote" SG_ 400 HCU1_Checksum "Checksum";
+BA_ "GenSigNote" SG_ 400 HCU1_RollingCounter "RollingCounter";
+BA_ "GenSigNote" SG_ 400 HCU1_St_Ready "动力系统准备就绪状态";
+BA_ "GenSigNote" SG_ 400 HCU1_F_HVConnectRequest "高压连接请求有效";
+BA_ "GenSigStartValue" SG_ 400 HCU1_F_HVConnectRequest 1;
+BA_ "GenSigNote" SG_ 400 HCU1_St_HVConnectRequest "高压连接请求";
+BA_ "GenSigNote" SG_ 1136 ICM1_Checksum "checksum";
+BA_ "GenSigNote" SG_ 1136 ICM1_RollingCounter "Rollingcounter";
+BA_ "GenSigNote" SG_ 1136 ICM1_N_Odograph "里程";
+BA_ "GenSigNote" SG_ 22 SDM1_Checksum "checksum";
+BA_ "GenSigNote" SG_ 22 SDM1_RollingCounter "rollingcounter";
+BA_ "GenSigNote" SG_ 22 SDM1_St_FrontCrash "前撞";
+BA_ "GenSigNote" SG_ 22 SDM1_St_BackCrash "后撞";
+BA_ "GenSigNote" SG_ 22 SDM1_St_LeftCrash "左撞";
+BA_ "GenSigNote" SG_ 22 SDM1_St_RightCrash "右撞";
+BA_ "GenSigNote" SG_ 22 SDM1_St_CrashIntensity "碰撞程度";
+BA_ "GenSigNote" SG_ 869 OBC_Status "Charger status";
+BA_ "GenSigNote" SG_ 869 OBC_CPStatus "CP status";
+BA_ "GenSigNote" SG_ 869 OBC_OutputVoltage "Charger output voltage";
+BA_ "GenSigNote" SG_ 869 OBC_Status_RelayWeldCheckRslt "继电器粘连检测结果状态";
+BA_ "GenSigNote" SG_ 869 OBC_OutputCurrent "Charger output current";
+BA_ "GenSigNote" SG_ 869 OBC_RQ_S2Relay_OnOff "S2 Switch of Vehicle 220V AC Charging Relay On/Off Request";
+BA_ "GenSigNote" SG_ 869 OBC_ChargingStopResponse "Response for VCM_Charging stop request";
+VAL_ 979 HCU_3_BmsSleep 0 "none" 1 "go to sleep" 2 "wake up" 3 "Invalid" ;
+VAL_ 416 HCU2_1_St_HVConnectRequest 1 "Connect" 0 "Disconnect" ;
+VAL_ 416 HCU2_1_F_HVConnectRequest 1 "Valid" 0 "Invalid" ;
+VAL_ 416 HCU2_1_St_Ready 1 "Ready" 0 "Not Ready" ;
+VAL_ 1469 BMS2_CMATemp_N_No1 255 "Error Value" ;
+VAL_ 1469 BMS2_CMATemp_N_No3 255 "Error Value" ;
+VAL_ 1469 BMS2_CMATemp_N_No4 255 "Error Value" ;
+VAL_ 1469 BMS2_CMATemp_N_No5 255 "Error Value" ;
+VAL_ 1469 BMS2_CMATemp_N_No6 255 "Error Value" ;
+VAL_ 1469 BMS2_CMATemp_N_No7 255 "Error Value" ;
+VAL_ 1469 BMS2_CMATemp_N_No8 255 "Error Value" ;
+VAL_ 1469 BMS2_CMATemp_N_No2 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No9 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No11 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No12 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No13 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No14 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No15 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No16 255 "Error Value" ;
+VAL_ 1470 BMS2_CMATemp_N_No10 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No17 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No19 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No20 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No21 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No22 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No23 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No24 255 "Error Value" ;
+VAL_ 1471 BMS2_CMATemp_N_No18 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No1 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No3 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No4 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No5 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No6 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No7 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No8 255 "Error Value" ;
+VAL_ 1457 BMS2_CellVol1_N_No2 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No73 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No75 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No76 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No77 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No78 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No79 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No80 255 "Error Value" ;
+VAL_ 1466 BMS2_CellVol10_N_No74 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No81 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No83 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No84 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No85 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No86 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No87 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No88 255 "Error Value" ;
+VAL_ 1467 BMS2_CellVol11_N_No82 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No89 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No91 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No92 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No93 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No94 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No95 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No96 255 "Error Value" ;
+VAL_ 1468 BMS2_CellVol12_N_No90 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No9 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No11 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No12 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No13 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No14 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No15 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No16 255 "Error Value" ;
+VAL_ 1458 BMS2_CellVol2_N_No10 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No17 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No19 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No20 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No21 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No22 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No23 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No24 255 "Error Value" ;
+VAL_ 1459 BMS2_CellVol3_N_No18 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No25 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No27 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No28 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No29 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No30 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No31 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No32 255 "Error Value" ;
+VAL_ 1460 BMS2_CellVol4_N_No26 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No33 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No35 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No36 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No37 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No38 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No39 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No40 255 "Error Value" ;
+VAL_ 1461 BMS2_CellVol5_N_No34 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No41 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No43 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No44 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No45 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No46 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No47 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No48 255 "Error Value" ;
+VAL_ 1462 BMS2_CellVol6_N_No42 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No49 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No51 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No52 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No53 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No54 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No55 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No56 255 "Error Value" ;
+VAL_ 1463 BMS2_CellVol7_N_No50 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No57 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No59 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No60 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No61 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No62 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No63 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No64 255 "Error Value" ;
+VAL_ 1464 BMS2_CellVol8_N_No58 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No65 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No67 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No68 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No69 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No70 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No71 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No72 255 "Error Value" ;
+VAL_ 1465 BMS2_CellVol9_N_No66 255 "Error Value" ;
+VAL_ 688 BMS2_1_F_BatteryFaultLevel 15 "Error Value" 5 "Very Serious(Power Derating:Cut off relay by BMS2_ after 2s)" 4 "Serious(Power Derating:Cut off relay by HCU vai CAN Command)" 3 "Serious but not relay off(Power Derating to Zero by BMS2_)" 2 "Minor fault but derating(Power Derating by BMS2_)" 1 "Minor fault(No effect on SOF)" 0 "Normal" ;
+VAL_ 688 BMS2_1_St_BatteryMode 15 "Error Value" 7 "Failure(Diag-Level 5)" 6 "Battery Heating" 5 "Power off" 4 "DC Charge" 3 "AC Charge" 2 "Supplying" 0 "Init" ;
+VAL_ 688 BMS2_1_St_HVIL 1 "Disconnected" 0 "Connected" ;
+VAL_ 688 BMS2_1_N_BatteryCurrent 2047 "Error Value" ;
+VAL_ 688 BMS2_1_St_PrechargeMode 7 "Error Value" 4 "Precharge Inhibited" 3 "Precharge Failed" 2 "Precharge Finished" 1 "Precharging" 0 "Standby" ;
+VAL_ 688 BMS2_1_N_BatteryVoltage 1023 "Error Value" ;
+VAL_ 688 BMS2_1_N_DCLinkVoltage 1023 "Error Value" ;
+VAL_ 688 BMS2_1_St_MainPositiveRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 688 BMS2_1_St_MainNegativeRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 688 BMS2_1_St_PrechargeRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 688 BMS2_1_St_QCPositiveRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 688 BMS2_1_St_QCNegativeRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 1200 BMS2_2_F_Isolation 1 "Fault" 0 "No Fault" ;
+VAL_ 1200 BMS2_2_N_CellSumVoltage 1023 "Error Value" ;
+VAL_ 1200 BMS2_2_N_SOE 1023 "Error Value" ;
+VAL_ 1200 BMS2_2_N_SOH 255 "Error Value" ;
+VAL_ 1200 BMS2_2_N_RSOC 255 "Error Value" ;
+VAL_ 1201 BMS2_3_F_CellOverV 1 "Fault" 0 "No Fault" ;
+VAL_ 1201 BMS2_3_F_CellUnderV 1 "Fault" 0 "No Fault" ;
+VAL_ 1201 BMS2_3_F_CellVoltagedropout 1 "Fault" 0 "No Fault" ;
+VAL_ 1201 BMS2_3_F_BattOverV 1 "Fault" 0 "No Fault" ;
+VAL_ 1201 BMS2_3_F_BattUnderV 1 "Fault" 0 "No Fault" ;
+VAL_ 1201 BMS2_3_N_CellVoltageMax 8191 "Error Value" ;
+VAL_ 1201 BMS2_3_N_CellVoltageMin 8191 "Error Value" ;
+VAL_ 1202 BMS2_4_F_CMATempDiff 1 "Fault" 0 "No Fault" ;
+VAL_ 1202 BMS2_4_F_BattOverTemp 3 "Level 3, Derating to Zero" 2 "Level 2, Derating(Not Zero)" 1 "Level 1, Warning" 0 "Normal" ;
+VAL_ 1202 BMS2_4_N_CMATempAve 255 "Error Value" ;
+VAL_ 1202 BMS2_4_N_CMATempMax 255 "Error Value" ;
+VAL_ 1202 BMS2_4_N_CMATempMin 255 "Error Value" ;
+VAL_ 1202 BMS2_4_N_InletTemp 255 "Error Value" ;
+VAL_ 1202 BMS2_4_F_BattLowTemp1 1 "Low Temperature ，Prohibit DC Charge" 0 "Normal" ;
+VAL_ 1202 BMS2_4_F_BattLowTemp2 1 "Low Temperature ，Prohibit AC Charge" 0 "Normal" ;
+VAL_ 1202 BMS2_4_F_BattLowTemp3 1 "Low Temperature ，Prohibit Discharge" 0 "Normal" ;
+VAL_ 1202 BMS2_4_N_BatPwrConsumption 8191 "Error Value" ;
+VAL_ 948 BMS2_6_St_BatHeatingReq 1 "Request" 0 "Not Request" ;
+VAL_ 948 BMS2_6_W_HVBattDanger 1 "Warning" 0 "Not warning" ;
+VAL_ 1204 BMS2_7_N_SOF10D 2047 "Error Value" ;
+VAL_ 1204 BMS2_7_N_SOFContinuousD 2047 "Error Value" ;
+VAL_ 1204 BMS2_7_N_SOF10C 2047 "Error Value" ;
+VAL_ 1204 BMS2_7_N_SOF30C 2047 "Error Value" ;
+VAL_ 1205 BMS2_8_N_SOF30D 2047 "Error Value" ;
+VAL_ 1205 BMS2_8_N_SOF2D 2047 "Error Value" ;
+VAL_ 1205 BMS2_8_N_SOF2C 2047 "Error Value" ;
+VAL_ 1456 BMS2_9_F_BattSupplyingOverI 3 "Level3 Fault" 2 "Level2 Fault" 1 "Level1 Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_QCNegativeRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_MainPositiveRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_MainNegativeRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_PrechargeRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_QCPositiveRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_MainPositiveRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_QCNegativeRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_CellBalancingCircuit 1 "Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_BattOverChgErr 1 "Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_BattPluginChgOverI 3 "Level3 Fault" 2 "Level2 Fault" 1 "Level1 Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_PrechargeRelayOpenStuck 1 "Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_MSDFuse 1 "Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_HVBattTempRisingOverspe 1 "Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_BattRegenerativeOverI 3 "Level3 Fault" 2 "Level2 Fault" 1 "Level1 Fault" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_MainNegativeRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_N_PosInsR 65535 "Error Value" ;
+VAL_ 1456 BMS2_9_N_NegInsR 65535 "Error Value" ;
+VAL_ 1456 BMS2_9_F_PrechargeRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1456 BMS2_9_F_QCPositiveRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1206 BMS2_10_InsChkState 2 "System check completed，please restart vehicle
+ 1 System checking, please wait
+ 0 No error" ;
+VAL_ 1206 BMS2_10_RelayChkState 2 "System check completed，please restart vehicle
+
+ 1 System checking, please wait
+ 0 No error" ;
+VAL_ 1206 BMS2_10_ChargerWorkingEnable 0 "Not Enable
+ 1 Enable" ;
+VAL_ 1206 BMS2_10_BatteryChargeStatus 0 "Idle
+ 1 Charging" 2 "Normal Charge Finish
+ 3 Abnormal Charge Fault" ;
+VAL_ 1696 DevBMS2_1_N_ColdFanPWM 255 "Error Value" ;
+VAL_ 1677 NMBMS2__RepeatFromSleep 1 "occur" 0 "not occur" ;
+VAL_ 1677 NMBMS2__RepeatFromPrepare 1 "occur" 0 "not occur" ;
+VAL_ 1677 NMBMS2__RepeatFromNormal 1 "occur" 0 "not occur" ;
+VAL_ 1677 NMBMS2__RepeatFromReady 1 "occur" 0 "not occur" ;
+VAL_ 1677 NMBMS2__NormalFromRepeat 1 "occur" 0 "not occur" ;
+VAL_ 1677 NMBMS2__NormalFromReady 1 "occur" 0 "not occur" ;
+VAL_ 1677 NMBMS2__WakeFromGW 1 "occur" 0 "not occur" ;
+VAL_ 1677 NMBMS2__GWRequest 1 "request" 0 "not request" ;
+VAL_ 1677 NMBMS2__WakeSource 4 "External Charging Equipment（DC）" 1 "KL.15" 0 "CAN wakeup" ;
+VAL_ 1677 NMBMS2__ActiveSource1 1 "KL15" 0 "not active" ;
+VAL_ 1677 NMBMS2__ActiveSource2 1 "Diagnose" 0 "not active" ;
+VAL_ 1677 NMBMS2__ActiveSource3 1 "Repeat message timer has not expired" 0 "not active" ;
+VAL_ 1677 NMBMS2__ActiveSource4 1 "AC Charging" 0 "not active" ;
+VAL_ 1677 NMBMS2__ActiveSource5 1 "DC Charging" 0 "not active" ;
+VAL_ 1677 NMBMS2__RepeatReq 1 "request" 0 "not request" ;
+VAL_ 883 BCM2_1_St_KL15 1 "Active" 0 "Inactive" ;
+VAL_ 883 BCM2_1_St_KLR 1 "Active" 0 "Inactive" ;
+VAL_ 883 BCM2_1_St_KL50 1 "Active" 0 "Inactive" ;
+VAL_ 417 HCU2_2_InsCheck 1 "Check" 0 "Discheck" ;
+VAL_ 417 HCU2_2_WeldedFaultCheck 1 "Check" 0 "Discheck" ;
+VAL_ 417 HCU2_2_RelayOn 1 "Check" 0 "Discheck" ;
+VAL_ 417 HCU2_2_ChargingStopRequest 0 "none" 1 "charging stop" 2 "error" 3 "Invalid" ;
+VAL_ 417 HCU2_2_OBCRelayStatus 1 "Relay On" 0 "Relay Off" ;
+VAL_ 417 HCU2_2_ChargerAllow 1 "allow" 0 "Not allow
+" ;
+VAL_ 417 HCU2_2_CCStatus 1 "Connected" 0 "Disconnected" ;
+VAL_ 320 BR2_1_F_VehicleSpeed 1 "Valid" 0 "Invalid" ;
+VAL_ 1152 ICM2_1_N_Odograph 1048575 "Error Value" ;
+VAL_ 38 SDM2_1_St_FrontCrash 1 "Front_Crash" 0 "not_Front_Crash" ;
+VAL_ 38 SDM2_1_St_BackCrash 1 "Back_Crash" 0 "not_Back_Crash" ;
+VAL_ 38 SDM2_1_St_LeftCrash 1 "Left__Crash" 0 "not_Left_Crash" ;
+VAL_ 38 SDM2_1_St_RightCrash 1 "Right_Crash" 0 "not_Right_Crash" ;
+VAL_ 38 SDM2_1_St_CrashIntensity 7 "Urgent Crash" 6 "Fuel Cutoff" 5 "Fuel Cutoff" 4 "Fuel Cutoff" 3 "Alarm Telephone" 2 "Alarm Telephone" 1 "Hazard Flash, interior light on." 0 "not crash" ;
+VAL_ 885 OBC2__Status 0 "idle" 1 "Ready" 2 "Working
+" 3 "Charger Fault" ;
+VAL_ 885 OBC2__CPStatus 0 "No CP Signal(Charge Mode 1)" 1 "CP Normal (Charge Mode 2, 3)" 2 "CP Abnormal (Charge Mode 2, 3)
+" ;
+VAL_ 885 OBC2__Status_RelayWeldCheckRslt 0 "Init 初始化状态，未开始检测或者重新开启检测
+" 1 "Pass 粘连检测无异常" 2 "OpenFail 继电器粘连
+" 3 "CloseFail 继电器无法闭合" ;
+VAL_ 885 OBC2__RQ_S2Relay_OnOff 1 "Relay On" 0 "Relay Off" ;
+VAL_ 885 OBC2__ChargingStopResponse 0 "None" 1 "Charging stop" 2 "Error
+" 3 "Invalid" ;
+VAL_ 1453 BMSCMATemp_N_No1 255 "Error Value" ;
+VAL_ 1453 BMSCMATemp_N_No3 255 "Error Value" ;
+VAL_ 1453 BMSCMATemp_N_No4 255 "Error Value" ;
+VAL_ 1453 BMSCMATemp_N_No5 255 "Error Value" ;
+VAL_ 1453 BMSCMATemp_N_No6 255 "Error Value" ;
+VAL_ 1453 BMSCMATemp_N_No7 255 "Error Value" ;
+VAL_ 1453 BMSCMATemp_N_No8 255 "Error Value" ;
+VAL_ 1453 BMSCMATemp_N_No2 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No9 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No11 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No12 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No13 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No14 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No15 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No16 255 "Error Value" ;
+VAL_ 1454 BMSCMATemp_N_No10 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No17 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No19 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No20 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No21 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No22 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No23 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No24 255 "Error Value" ;
+VAL_ 1455 BMSCMATemp_N_No18 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No1 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No3 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No4 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No5 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No6 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No7 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No8 255 "Error Value" ;
+VAL_ 1441 BMSCellVol1_N_No2 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No73 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No75 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No76 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No77 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No78 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No79 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No80 255 "Error Value" ;
+VAL_ 1450 BMSCellVol10_N_No74 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No81 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No83 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No84 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No85 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No86 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No87 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No88 255 "Error Value" ;
+VAL_ 1451 BMSCellVol11_N_No82 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No89 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No91 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No92 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No93 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No94 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No95 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No96 255 "Error Value" ;
+VAL_ 1452 BMSCellVol12_N_No90 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No9 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No11 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No12 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No13 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No14 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No15 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No16 255 "Error Value" ;
+VAL_ 1442 BMSCellVol2_N_No10 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No17 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No19 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No20 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No21 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No22 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No23 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No24 255 "Error Value" ;
+VAL_ 1443 BMSCellVol3_N_No18 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No25 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No27 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No28 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No29 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No30 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No31 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No32 255 "Error Value" ;
+VAL_ 1444 BMSCellVol4_N_No26 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No33 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No35 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No36 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No37 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No38 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No39 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No40 255 "Error Value" ;
+VAL_ 1445 BMSCellVol5_N_No34 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No41 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No43 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No44 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No45 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No46 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No47 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No48 255 "Error Value" ;
+VAL_ 1446 BMSCellVol6_N_No42 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No49 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No51 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No52 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No53 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No54 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No55 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No56 255 "Error Value" ;
+VAL_ 1447 BMSCellVol7_N_No50 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No57 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No59 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No60 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No61 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No62 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No63 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No64 255 "Error Value" ;
+VAL_ 1448 BMSCellVol8_N_No58 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No65 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No67 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No68 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No69 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No70 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No71 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No72 255 "Error Value" ;
+VAL_ 1449 BMSCellVol9_N_No66 255 "Error Value" ;
+VAL_ 672 BMS1_F_BatteryFaultLevel 15 "Error Value" 5 "Very Serious(Power Derating:Cut off relay by BMS after 2s)" 4 "Serious(Power Derating:Cut off relay by HCU vai CAN Command)" 3 "Serious but not relay off(Power Derating to Zero by BMS)" 2 "Minor fault but derating(Power Derating by BMS)" 1 "Minor fault(No effect on SOF)" 0 "Normal" ;
+VAL_ 672 BMS1_St_BatteryMode 15 "Error Value" 7 "Failure(Diag-Level 5)" 6 "Battery Heating" 5 "Power off" 4 "DC Charge" 3 "AC Charge" 2 "Supplying" 0 "Init" ;
+VAL_ 672 BMS1_St_HVIL 1 "Disconnected" 0 "Connected" ;
+VAL_ 672 BMS1_N_BatteryCurrent 2047 "Error Value" ;
+VAL_ 672 BMS1_St_PrechargeMode 7 "Error Value" 4 "Precharge Inhibited" 3 "Precharge Failed" 2 "Precharge Finished" 1 "Precharging" 0 "Standby" ;
+VAL_ 672 BMS1_N_BatteryVoltage 1023 "Error Value" ;
+VAL_ 672 BMS1_N_DCLinkVoltage 1023 "Error Value" ;
+VAL_ 672 BMS1_St_MainPositiveRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 672 BMS1_St_MainNegativeRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 672 BMS1_St_PrechargeRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 672 BMS1_St_QCPositiveRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 672 BMS1_St_QCNegativeRelay 1 "Connected" 0 "Disconnected" ;
+VAL_ 1184 BMS2_F_Isolation 1 "Fault" 0 "No Fault" ;
+VAL_ 1184 BMS2_N_CellSumVoltage 1023 "Error Value" ;
+VAL_ 1184 BMS2_N_SOE 1023 "Error Value" ;
+VAL_ 1184 BMS2_N_SOH 255 "Error Value" ;
+VAL_ 1184 BMS2_N_RSOC 255 "Error Value" ;
+VAL_ 1185 BMS3_F_CellOverV 1 "Fault" 0 "No Fault" ;
+VAL_ 1185 BMS3_F_CellUnderV 1 "Fault" 0 "No Fault" ;
+VAL_ 1185 BMS3_F_CellVoltagedropout 1 "Fault" 0 "No Fault" ;
+VAL_ 1185 BMS3_F_BattOverV 1 "Fault" 0 "No Fault" ;
+VAL_ 1185 BMS3_F_BattUnderV 1 "Fault" 0 "No Fault" ;
+VAL_ 1185 BMS3_N_CellVoltageMax 8191 "Error Value" ;
+VAL_ 1185 BMS3_N_CellVoltageMin 8191 "Error Value" ;
+VAL_ 1186 BMS4_F_CMATempDiff 1 "Fault" 0 "No Fault" ;
+VAL_ 1186 BMS4_F_BattOverTemp 3 "Level 3, Derating to Zero" 2 "Level 2, Derating(Not Zero)" 1 "Level 1, Warning" 0 "Normal" ;
+VAL_ 1186 BMS4_N_CMATempAve 255 "Error Value" ;
+VAL_ 1186 BMS4_N_CMATempMax 255 "Error Value" ;
+VAL_ 1186 BMS4_N_CMATempMin 255 "Error Value" ;
+VAL_ 1186 BMS4_N_InletTemp 255 "Error Value" ;
+VAL_ 1186 BMS4_F_BattLowTemp1 1 "Low Temperature ，Prohibit DC Charge" 0 "Normal" ;
+VAL_ 1186 BMS4_F_BattLowTemp2 1 "Low Temperature ，Prohibit AC Charge" 0 "Normal" ;
+VAL_ 1186 BMS4_F_BattLowTemp3 1 "Low Temperature ，Prohibit Discharge" 0 "Normal" ;
+VAL_ 1186 BMS4_N_BatPwrConsumption 8191 "Error Value" ;
+VAL_ 932 BMS6_St_BatHeatingReq 1 "Request" 0 "Not Request" ;
+VAL_ 932 BMS6_W_HVBattDanger 1 "Warning" 0 "Not warning" ;
+VAL_ 1188 BMS7_N_SOF10D 2047 "Error Value" ;
+VAL_ 1188 BMS7_N_SOFContinuousD 2047 "Error Value" ;
+VAL_ 1188 BMS7_N_SOF10C 2047 "Error Value" ;
+VAL_ 1188 BMS7_N_SOF30C 2047 "Error Value" ;
+VAL_ 1189 BMS8_N_SOF30D 2047 "Error Value" ;
+VAL_ 1189 BMS8_N_SOF2D 2047 "Error Value" ;
+VAL_ 1189 BMS8_N_SOF2C 2047 "Error Value" ;
+VAL_ 1440 BMS9_F_BattSupplyingOverI 3 "Level3 Fault" 2 "Level2 Fault" 1 "Level1 Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_QCNegativeRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_MainPositiveRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_MainNegativeRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_PrechargeRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_QCPositiveRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_MainPositiveRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_QCNegativeRelayCoil 2 "GND Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_CellBalancingCircuit 1 "Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_BattOverChgErr 1 "Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_BattPluginChgOverI 3 "Level3 Fault" 2 "Level2 Fault" 1 "Level1 Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_PrechargeRelayOpenStuck 1 "Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_MSDFuse 1 "Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_HVBattTempRisingOverspeed 1 "Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_BattRegenerativeOverI 3 "Level3 Fault" 2 "Level2 Fault" 1 "Level1 Fault" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_MainNegativeRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_N_PosInsR 65535 "Error Value" ;
+VAL_ 1440 BMS9_N_NegInsR 65535 "Error Value" ;
+VAL_ 1440 BMS9_F_PrechargeRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1440 BMS9_F_QCPositiveRelay 2 "Close Stuck" 1 "Open Stuck" 0 "Not Fault" ;
+VAL_ 1190 BMS10_InsChkState 2 "System check completed，please restart vehicle
+" 1 "System checking, please wait
+" 0 "No error" ;
+VAL_ 1190 BMS10_RelayChkState 2 "System check completed，please restart vehicle
+
+" 1 "System checking, please wait
+" 0 "No error" ;
+VAL_ 1190 BMS10_ChargerWorkingEnable 0 "Not Enable
+" 1 "Enable" ;
+VAL_ 1190 BMS10_BatteryChargeStatus 0 "Idle
+" 1 "Charging" 2 "Normal Charge Finish
+" 3 "Abnormal Charge Fault" ;
+VAL_ 1680 DevBMS1_N_ColdFanPWM 255 "Error Value" ;
+VAL_ 1661 NMBMS_RepeatFromSleep 1 "occur" 0 "not occur" ;
+VAL_ 1661 NMBMS_RepeatFromPrepare 1 "occur" 0 "not occur" ;
+VAL_ 1661 NMBMS_RepeatFromNormal 1 "occur" 0 "not occur" ;
+VAL_ 1661 NMBMS_RepeatFromReady 1 "occur" 0 "not occur" ;
+VAL_ 1661 NMBMS_NormalFromRepeat 1 "occur" 0 "not occur" ;
+VAL_ 1661 NMBMS_NormalFromReady 1 "occur" 0 "not occur" ;
+VAL_ 1661 NMBMS_WakeFromGW 1 "occur" 0 "not occur" ;
+VAL_ 1661 NMBMS_GWRequest 1 "request" 0 "not request" ;
+VAL_ 1661 NMBMS_WakeSource 4 "External Charging Equipment（DC）" 1 "KL.15" 0 "CAN wakeup" ;
+VAL_ 1661 NMBMS_ActiveSource1 1 "KL15" 0 "not active" ;
+VAL_ 1661 NMBMS_ActiveSource2 1 "Diagnose" 0 "not active" ;
+VAL_ 1661 NMBMS_ActiveSource3 1 "Repeat message timer has not expired" 0 "not active" ;
+VAL_ 1661 NMBMS_ActiveSource4 1 "AC Charging" 0 "not active" ;
+VAL_ 1661 NMBMS_ActiveSource5 1 "DC Charging" 0 "not active" ;
+VAL_ 1661 NMBMS_RepeatReq 1 "request" 0 "not request" ;
+VAL_ 867 BCM1_St_KL15 1 "Active" 0 "Inactive" ;
+VAL_ 867 BCM1_St_KLR 1 "Active" 0 "Inactive" ;
+VAL_ 867 BCM1_St_KL50 1 "Active" 0 "Inactive" ;
+VAL_ 401 HCU_2_ChargingStopRequest 0 "none" 1 "charging stop" 2 "error" 3 "Invalid" ;
+VAL_ 401 HCU_2_OBCRelayStatus 1 "Relay On" 0 "Relay Off" ;
+VAL_ 401 HCU_2_ChargerAllow 1 "allow" 0 "Not allow" ;
+VAL_ 401 HCU_2_CCStatus 1 "Connected" 0 "Disconnected" ;
+VAL_ 401 HCU_2_InsCheck 1 "Check" 0 "Discheck" ;
+VAL_ 401 HCU_2_WeldedFaultCheck 1 "Check" 0 "Discheck" ;
+VAL_ 401 HCU_2_RelayOn 1 "Check" 0 "Discheck" ;
+VAL_ 304 BR1_F_VehicleSpeed 1 "Valid" 0 "Invalid" ;
+VAL_ 400 HCU1_St_Ready 1 "Ready" 0 "Not Ready" ;
+VAL_ 400 HCU1_F_HVConnectRequest 1 "Valid" 0 "Invalid" ;
+VAL_ 400 HCU1_St_HVConnectRequest 1 "Connect" 0 "Disconnect" ;
+VAL_ 1136 ICM1_N_Odograph 1048575 "Error Value" ;
+VAL_ 22 SDM1_St_FrontCrash 1 "Front_Crash" 0 "not_Front_Crash" ;
+VAL_ 22 SDM1_St_BackCrash 1 "Back_Crash" 0 "not_Back_Crash" ;
+VAL_ 22 SDM1_St_LeftCrash 1 "Left__Crash" 0 "not_Left_Crash" ;
+VAL_ 22 SDM1_St_RightCrash 1 "Right_Crash" 0 "not_Right_Crash" ;
+VAL_ 22 SDM1_St_CrashIntensity 7 "Urgent Crash" 6 "Fuel Cutoff" 5 "Fuel Cutoff" 4 "Fuel Cutoff" 3 "Alarm Telephone" 2 "Alarm Telephone" 1 "Hazard Flash, interior light on." 0 "not crash" ;
+VAL_ 869 OBC_Status 0 "idle" 1 "Ready" 2 "Working
+" 3 "Charger Fault" ;
+VAL_ 869 OBC_CPStatus 0 "No CP Signal(Charge Mode 1)" 1 "CP Normal (Charge Mode 2, 3)" 2 "CP Abnormal (Charge Mode 2, 3)
+" ;
+VAL_ 869 OBC_Status_RelayWeldCheckRslt 0 "Init 初始化状态，未开始检测或者重新开启检测
+" 1 "Pass 粘连检测无异常" 2 "OpenFail 继电器粘连
+" 3 "CloseFail 继电器无法闭合" ;
+VAL_ 869 OBC_RQ_S2Relay_OnOff 1 "Relay On" 0 "Relay Off" ;
+VAL_ 869 OBC_ChargingStopResponse 0 "None" 1 "Charging stop" 2 "Error
+" 3 "Invalid" ;
+

@@ -1,0 +1,279 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DBG VCU
+VAL_TABLE_ Shift_Position_Error 0 "Not In Any Target" ;
+VAL_TABLE_ STATE_CONTACTORS 2 "CLOSED" 1 "PRECHARGE IN PROCESS" 0 "OPEN" ;
+VAL_TABLE_ OVERRIDE_BRAKE_LIGHT 3 "FUNCTION NOT AVAILABLE" 2 "ENABLE OVERRIDE TO ON" 1 "ENABLE OVERRIDE TO OFF" 0 "DISABLE OVERRIDE" ;
+VAL_TABLE_ STATE_SHIFT 2 "REVERSE" 1 "FORWARD" 0 "NEUTRAL/PARK" ;
+VAL_TABLE_ STATE_GEAR_POSITION 12 "POSITION 12" 11 "POSITION 11" 10 "POSITION 10" 9 "POSITION 09" 8 "POSITION 08" 7 "POSITION 07" 6 "POSITION 06" 5 "POSITION 05" 4 "POSITION 04" 3 "POSITION 03" 2 "POSITION 02" 1 "POSITION 01" 0 "NEUTRAL" ;
+VAL_TABLE_ STATE_HEAD_LIGHT 3 "HIGH_BEAM" 2 "LOW_BEAM" 1 "RUNNING_LIGHT" 0 "OFF" ;
+VAL_TABLE_ STATE_TURN_SIGNAL 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "OFF" ;
+VAL_TABLE_ State 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+
+
+BO_ 1827 VCU_CtrlTrePt_Fr003: 8 Vector__XXX
+ SG_ VCU_CtrlTrePt_EstimateMassFromFo : 40|12@1- (1,0) [-2048|2047] "kg" Vector__XXX
+ SG_ VCU_CtrlTrePt_EndAHeight_Right : 32|8@1+ (0.01,0) [0|2.55] "m" Vector__XXX
+ SG_ VCU_CtrlTrePt_EndAHeight_Left : 24|8@1+ (0.01,0) [0|2.55] "m" Vector__XXX
+ SG_ VCU_CtrlTrePt_CylinderPosition_R : 16|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ VCU_CtrlTrePt_CylinderPosition_L : 8|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ VCU_CtrlTrePt_State_Right : 5|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_State_Left : 2|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_EnPressurePID_Righ : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_CtrlTrePt_EnPressurePID_Left : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1826 VCU_CtrlTrePt_Fr002: 8 Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_OnGrou : 52|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_Error : 38|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_EquivM : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_Actual : 24|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Right_Acc : 12|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+
+BO_ 1825 VCU_CtrlTrePt_Fr001: 8 Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_OnGroun : 52|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_Error : 38|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_Actual : 24|14@1- (0.01,0) [-81.92|81.91] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_Acc : 12|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+ SG_ VCU_CtrlTrePt_Force_Left_EquivMa : 0|12@1- (0.01,0) [-20.48|20.47] "kN" Vector__XXX
+
+BO_ 1754 VCU_Energy_01: 8 VCU
+ SG_ energy_hydraulic : 44|12@1+ (3,0) [0|12285] "Wh" Vector__XXX
+ SG_ energy_DCDC : 32|12@1+ (3,0) [0|12285] "Wh" Vector__XXX
+ SG_ energy_battery : 16|16@1- (4,0) [-131072|131068] "Wh" Vector__XXX
+ SG_ energy_mechanical : 0|16@1- (4,0) [-131072|131068] "Wh" Vector__XXX
+
+BO_ 1750 VCU_Power_01: 8 VCU
+ SG_ power_motor : 46|17@1- (1,0) [-65536|65535] "W" Vector__XXX
+ SG_ power_hydraulic : 30|16@1+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ power_battery : 12|18@1- (1,0) [-131072|131071] "W" Vector__XXX
+ SG_ power_DCDC : 0|12@1+ (1,0) [0|4095] "W" Vector__XXX
+
+BO_ 1284 VCU_Debug_CtrlTrePt_Right: 8 VCU
+ SG_ three_point_depth_position_senso : 32|14@1+ (1,0) [0|16383] "mV" Vector__XXX
+ SG_ do3_right_three_point_up_valve_d : 16|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ do3_right_three_point_down_valve : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+
+BO_ 1283 VCU_Debug_CtrlTrePt_Left: 8 VCU
+ SG_ three_point_depth_position__0000 : 32|14@1+ (1,0) [0|16383] "mV" Vector__XXX
+ SG_ do3_left_three_point_down_valve_ : 16|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ do3_left_three_point_up_valve_du : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+
+BO_ 1282 VCU_Debug_CtrlShift_Range: 8 VCU
+ SG_ range_control_execute : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_control_done : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_control_busy : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_control_abort : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ range_target_position_voltage : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ range_target_position_logical : 32|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ range_feedback_position_voltage : 16|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ range_feedback_position_logical : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1281 VCU_Debug_CtrlShift_Gear: 8 VCU
+ SG_ gear_control_abort : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_control_busy : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_control_done : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_control_execute : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ gear_feedback_position_logical : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ gear_target_position_logical : 32|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ gear_feedback_position_voltage : 16|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ gear_target_position_voltage : 0|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+
+BO_ 1545 VCU_GeartrainSensorsRaw_02: 8 VCU
+ SG_ right_wheel_speed_sensor_motion_ : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ right_wheel_speed_sensor_calcula : 48|12@1+ (0.001,0) [0|4.095] "" Vector__XXX
+ SG_ right_wheel_speed_sensor_pulse_w : 8|24@1+ (1,0) [0|16777215] "us" Vector__XXX
+ SG_ right_wheel_speed_sensor_freq_ra : 32|16@1+ (1,0) [0|65535] "mHz" Vector__XXX
+ SG_ right_wheel_speed_sensor_error : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1546 VCU_WheeSpeedSensor: 8 VCU
+ SG_ RightBrkSpeed_Pcnt : 48|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ LeftBrkSpeed_Pcnt : 40|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ Target_wheel_Speed : 32|8@1+ (1,0) [0|255] "RPM" Vector__XXX
+ SG_ right_wheel_speed_raw : 24|8@1+ (1,0) [0|255] "rpm" Vector__XXX
+ SG_ left_wheel_speed_raw : 16|8@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ right_whee_speed : 8|8@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ left_whee_speed : 0|8@1+ (1,0) [0|65535] "rpm" Vector__XXX
+
+BO_ 1811 VCU_TTLIB_DEBUG_03: 8 VCU
+ SG_ ttlib_diag_status_watchdog_state : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_watchdog_error : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_watchdog_devic : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_error_count : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_state : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_error_cod : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_device_nu : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ttlib_diag_status_b_IODrv_versio : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ttlib_diag_status_b_FPGA_version : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1810 VCU_TTLIB_DEBUG_02: 8 VCU
+ SG_ ttlib_diag_status_watchdog_fault : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ ttlib_diag_status_diag_faulty_va : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 1809 VCU_TTLIB_DEBUG_01: 8 VCU
+ SG_ ttlib_diag_status_error_code : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ttlib_maindlg_error_code : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ttlib_maindlg_execution_time : 0|32@1+ (1,0) [0|4294967295] "ms" Vector__XXX
+
+BO_ 1544 VCU_GeartrainSensorsRaw_01: 8 VCU
+ SG_ left_wheel_speed_sensor_motion_d : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ left_wheel_speed_sensor_calculat : 48|12@1+ (0.001,0) [0|4.095] "" Vector__XXX
+ SG_ left_wheel_speed_sensor_error : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ left_wheel_speed_sensor_pulse_wi : 8|24@1+ (1,0) [0|16777215] "us" Vector__XXX
+ SG_ left_wheel_speed_sensor_freq_raw : 32|16@1+ (1,0) [0|65535] "mHz" Vector__XXX
+
+BO_ 1702 VCU_DriverInputs_02: 8 VCU
+ SG_ brake_pedal_switch : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ right_brake_rotary_position_raw : 40|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ left_brake_rotary_position_raw : 24|13@1+ (1,0) [0|8191] "mV" Vector__XXX
+ SG_ left_brake_rotary_position : 0|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ right_brake_rotary_position : 12|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+
+BO_ 1701 VCU_DriverInputs_01: 8 VCU
+ SG_ three_point_depth_control_input : 48|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ hand_throttle_sensor_ch2 : 40|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ hand_throttle_sensor_ch1 : 32|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ hand_throttle_sensor : 8|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ throttle_pedal_position_ch2 : 24|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ throttle_pedal_position_ch1 : 16|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ throttle_pedal_position : 0|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+
+BO_ 1700 VCU_HydraulicPressure_04: 8 VCU
+ SG_ three_point_depth_position__0001 : 48|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ do3_auxiliary_b_front_a_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_b_front_b_pressure : 12|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_b_rear_a_pressure : 24|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_b_rear_b_pressure : 36|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+
+BO_ 1699 VCU_HydraulicPressure_03: 8 VCU
+ SG_ three_point_depth_position__0002 : 48|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ do3_auxiliary_a_front_a_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_a_front_b_pressure : 12|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_a_rear_a_pressure : 24|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_auxiliary_a_rear_b_pressure : 36|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+
+BO_ 1698 VCU_HydraulicPressure_02: 8 VCU
+ SG_ do3_front_axle_forward_pressure : 36|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_front_axle_reverse_pressure : 48|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ do3_implement_pressure : 24|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ trans_manifold_forward_pressure : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ trans_manifold_reverse_pressure : 12|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+
+BO_ 1697 VCU_HydraulicPressure_01: 8 VCU
+ SG_ trans_manifold_accumulator_press : 48|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ trans_manifold_system_pressure : 36|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ brake_manifold_steer_brake_accum : 24|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ brake_manifold_right_hand_brake_ : 12|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+ SG_ brake_manifold_left_hand_brake_p : 0|12@1+ (1,0) [0|4095] "psi" Vector__XXX
+
+BO_ 1586 VCU_HydraulicControl_02: 8 VCU
+ SG_ pump_power_watts : 48|16@1+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ pump_flow_rate_lpm : 32|16@1+ (0.001,0) [0|40] "lpm" Vector__XXX
+ SG_ stock_pto_engage_valve : 16|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ trans_manifold_lubrication_valve : 17|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ priority_on_off_valve : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+
+BO_ 1585 VCU_HydraulicControl_01: 8 VCU
+ SG_ trans_manifold_reverse_valve : 32|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ trans_manifold_forward_valve : 48|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ brake_manifold_right_hand_b_0000 : 16|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+ SG_ brake_manifold_left_hand_brake_s : 0|16@1+ (0.00152590218966964,0) [0|100] "%" Vector__XXX
+
+
+
+BA_DEF_  "version" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "version" "draft_20191030";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "version" "";
+BA_ "GenMsgCycleTime" BO_ 1282 20;
+BA_ "GenMsgSendType" BO_ 1282 0;
+BA_ "GenMsgCycleTime" BO_ 1281 20;
+BA_ "GenMsgSendType" BO_ 1281 0;
+BA_ "GenMsgSendType" BO_ 1702 0;
+BA_ "GenMsgCycleTime" BO_ 1702 100;
+BA_ "GenMsgSendType" BO_ 1701 0;
+BA_ "GenMsgCycleTime" BO_ 1701 100;
+BA_ "GenMsgSendType" BO_ 1700 0;
+BA_ "GenMsgCycleTime" BO_ 1700 100;
+BA_ "GenMsgSendType" BO_ 1699 0;
+BA_ "GenMsgCycleTime" BO_ 1699 100;
+BA_ "GenMsgSendType" BO_ 1698 0;
+BA_ "GenMsgCycleTime" BO_ 1698 100;
+BA_ "GenMsgSendType" BO_ 1697 0;
+BA_ "GenMsgCycleTime" BO_ 1697 100;
+BA_ "SystemSignalLongSymbol" SG_ 1827 VCU_CtrlTrePt_EstimateMassFromFo "VCU_CtrlTrePt_EstimateMassFromForce_Total";
+BA_ "SystemSignalLongSymbol" SG_ 1826 VCU_CtrlTrePt_Force_Right_OnGrou "VCU_CtrlTrePt_Force_Right_OnGround";
+BA_ "SystemSignalLongSymbol" SG_ 1826 VCU_CtrlTrePt_Force_Right_EquivM "VCU_CtrlTrePt_Force_Right_EquivMass";
+BA_ "SystemSignalLongSymbol" SG_ 1825 VCU_CtrlTrePt_Force_Left_OnGroun "VCU_CtrlTrePt_Force_Left_OnGround";
+BA_ "SystemSignalLongSymbol" SG_ 1825 VCU_CtrlTrePt_Force_Left_EquivMa "VCU_CtrlTrePt_Force_Left_EquivMass";
+BA_ "SystemSignalLongSymbol" SG_ 1284 three_point_depth_position_senso "three_point_depth_position_sensor_right_hand_raw";
+BA_ "SystemSignalLongSymbol" SG_ 1284 do3_right_three_point_up_valve_d "do3_right_three_point_up_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 1284 do3_right_three_point_down_valve "do3_right_three_point_down_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 1283 three_point_depth_position__0000 "three_point_depth_position_sensor_left_hand_raw";
+BA_ "SystemSignalLongSymbol" SG_ 1283 do3_left_three_point_down_valve_ "do3_left_three_point_down_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 1283 do3_left_three_point_up_valve_du "do3_left_three_point_up_valve_dutycycle";
+BA_ "SystemSignalLongSymbol" SG_ 1545 right_wheel_speed_sensor_motion_ "right_wheel_speed_sensor_motion_detected";
+BA_ "SystemSignalLongSymbol" SG_ 1545 right_wheel_speed_sensor_calcula "right_wheel_speed_sensor_calculated_value";
+BA_ "SystemSignalLongSymbol" SG_ 1545 right_wheel_speed_sensor_pulse_w "right_wheel_speed_sensor_pulse_width";
+BA_ "SystemSignalLongSymbol" SG_ 1545 right_wheel_speed_sensor_freq_ra "right_wheel_speed_sensor_freq_raw";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_watchdog_error "ttlib_diag_status_watchdog_error_code";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_watchdog_devic "ttlib_diag_status_watchdog_device_num";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_diag_error_cod "ttlib_diag_status_diag_error_code";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_diag_device_nu "ttlib_diag_status_diag_device_num";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_b_IODrv_versio "ttlib_diag_status_b_IODrv_version_OK";
+BA_ "SystemSignalLongSymbol" SG_ 1811 ttlib_diag_status_b_FPGA_version "ttlib_diag_status_b_FPGA_version_OK";
+BA_ "SystemSignalLongSymbol" SG_ 1810 ttlib_diag_status_watchdog_fault "ttlib_diag_status_watchdog_faulty_value";
+BA_ "SystemSignalLongSymbol" SG_ 1810 ttlib_diag_status_diag_faulty_va "ttlib_diag_status_diag_faulty_value";
+BA_ "SystemSignalLongSymbol" SG_ 1544 left_wheel_speed_sensor_motion_d "left_wheel_speed_sensor_motion_detected";
+BA_ "SystemSignalLongSymbol" SG_ 1544 left_wheel_speed_sensor_calculat "left_wheel_speed_sensor_calculated_value";
+BA_ "SystemSignalLongSymbol" SG_ 1544 left_wheel_speed_sensor_pulse_wi "left_wheel_speed_sensor_pulse_width";
+BA_ "SystemSignalLongSymbol" SG_ 1700 three_point_depth_position__0001 "three_point_depth_position_sensor_right_hand";
+BA_ "SystemSignalLongSymbol" SG_ 1699 three_point_depth_position__0002 "three_point_depth_position_sensor_left_hand";
+BA_ "SystemSignalLongSymbol" SG_ 1697 trans_manifold_accumulator_press "trans_manifold_accumulator_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 1697 brake_manifold_steer_brake_accum "brake_manifold_steer_brake_accumulator_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 1697 brake_manifold_right_hand_brake_ "brake_manifold_right_hand_brake_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 1697 brake_manifold_left_hand_brake_p "brake_manifold_left_hand_brake_pressure";
+BA_ "SystemSignalLongSymbol" SG_ 1585 brake_manifold_right_hand_b_0000 "brake_manifold_right_hand_brake_servo_valve";
+BA_ "SystemSignalLongSymbol" SG_ 1585 brake_manifold_left_hand_brake_s "brake_manifold_left_hand_brake_servo_valve";
+VAL_ 1827 VCU_CtrlTrePt_State_Right 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+VAL_ 1827 VCU_CtrlTrePt_State_Left 7 "Reserved" 6 "Reserved" 5 "Float" 4 "Turn Off" 3 "Consider Turn Off" 2 "Tracking Active" 1 "Tracking Desired" 0 "Initialization" ;
+VAL_ 1282 range_target_position_logical 0 "Not In Any Target" ;
+VAL_ 1282 range_feedback_position_logical 0 "Not In Any Target" ;
+

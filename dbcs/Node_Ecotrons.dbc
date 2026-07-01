@@ -1,0 +1,220 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TCU_ID2 TCU_ID1 VCU
+VAL_TABLE_ Clog_Sensors 1 "Not Okay" 0 "Okay" ;
+VAL_TABLE_ Seatbelt 1 "On" 0 "Off" ;
+VAL_TABLE_ Transmission_motor_enable 1 "Disabled" 0 "Enabled" ;
+VAL_TABLE_ RoofLift_Direction 1 "downward" 0 "upward" ;
+VAL_TABLE_ Joystick_Working_Status 3 "Short to power" 2 "Short to ground" 1 "Normal" 0 "Offline" ;
+VAL_TABLE_ H_Bridge_Diagnostics 7 "Other" 6 "Overload" 5 "Load short circuit" 4 "Power supply error" 3 "Over temperature" 2 "Open load" 1 "Short to ground" 0 "Short to power supply" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ RoofLift_VREF : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ RoofLift_POSN_RR : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ RoofLift_DIR_RR : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_2B_Current : 0|16@1+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ H_Bridge_2A_Current : 0|16@1+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ RoofLift_POSN_RL : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ RoofLift_DIR_RL : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RWHL_Freq : 0|12@1+ (0.01,0) [0|1000] "Hz" Vector__XXX
+ SG_ RWHL_Duty : 0|12@1+ (0.01,0) [0|100] "%" Vector__XXX
+ SG_ H_Bridge_2C_OverCurrent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_2C_MotorAbnormal : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_2B_OverCurrent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_2B_MotorAbnormal : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_2A_MotorAbnormal : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_1C_OverCurrent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_1C_MotorAbnormal : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_1B_OverCurrent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_1B_MotorAbnormal : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RoofLift_POSN_FR : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ RoofLift_DIR_FR : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H_Bridge_1B_Current : 0|16@1+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ H_Bridge_1A_Current : 0|16@1+ (1,0) [0|65535] "mA" Vector__XXX
+ SG_ RoofLift_POSN_FL : 0|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ RoofLift_DIR_FL : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566877312 VCU_Calibration_Parameters: 8 Vector__XXX
+ SG_ Shifting_Ki_Deadband_Enable : 50|1@1+ (1,0) [0|1] "mV" Vector__XXX
+ SG_ Shifting_Ki_Deadband : 51|10@1+ (1,0) [0|1023] "mV" Vector__XXX
+ SG_ Shifting_PositionThreshold : 43|7@1+ (1,0) [0|127] "mV" Vector__XXX
+ SG_ Shifting_Kp_Saturation_enable : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Shifting_Kp_Saturation : 36|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ Shifting_Kp : 29|7@1+ (0.01,0) [0|1.27] "" Vector__XXX
+ SG_ Shifting_Ki_Saturation : 22|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ Shifting_Ki : 15|7@1+ (0.01,0) [0|2.55] "" Vector__XXX
+ SG_ Shifting_Kd : 8|7@1+ (0.01,0) [0|2.55] "" Vector__XXX
+ SG_ Shifting_HBridge_Saturation : 0|7@1+ (100,0) [0|10000] "" Vector__XXX
+
+BO_ 2566848626 TCU_ID2_Ecotrons_left: 8 TCU_ID2
+ SG_ Left_Wheel_Direction : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Work_Filter_Clog : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Tractor_Filter_Clog : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Return_Filter_Clog : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Driver_occupancy : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Seatbelt : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Communication : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_PositionFeebackOutRange : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_PositionCommandOutRange : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_MotorOverCurrent : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_MotorAbnormal : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Left_Wheel_RPM : 32|12@1+ (0.1,0) [0|409.5] "RPM" Vector__XXX
+ SG_ Trans_Range_MotorCurrent : 24|8@1+ (0.2,0) [0|51] "A" Vector__XXX
+ SG_ TCU_ID2_Status : 0|4@1+ (4,0) [0|60] "" Vector__XXX
+ SG_ Trans_Range_Position : 8|16@1+ (1,0) [0|5000] "count" Vector__XXX
+ SG_ Fault_Shifting_Timeout : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_ID_Error : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Rolling_Counter : 4|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 2566848625 TCU_ID1_Ecotrons_right: 8 TCU_ID1
+ SG_ Right_wheel_direction : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Communication : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_PositionCommandOutRange : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_PositionFeebackOutRange : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_MotorOverCurrent : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_MotorAbnormal : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Trans_Gear_MotorCurrent : 24|8@1+ (0.2,0) [0|51] "A" Vector__XXX
+ SG_ TCU_ID01_Status : 0|4@1+ (4,0) [0|60] "" Vector__XXX
+ SG_ Trans_Gear_Position : 8|16@1+ (1,0) [0|5000] "" Vector__XXX
+ SG_ Fault_ID_Error : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Right_Wheel_RPM : 36|12@1+ (0.1,0) [0|409.5] "rpm" Vector__XXX
+ SG_ Fault_Shifting_Timeout : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Rolling_Counter : 4|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 2565828736 VCU_TCU_Command: 8 VCU
+ SG_ Right_Turn_Signal : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Rear_Running_Light : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Left_Turn_Signal : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brake_Light : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PE_FAN_PWM : 40|4@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ Oil_Fan_PWM : 44|4@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ Checksum : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Rolling_Counter : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Test_AllowShifting : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Trans_Range_TargetPosition : 24|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ Trans_Gear_TargetPosition : 8|12@1+ (1,0) [0|4095] "count"  TCU_ID1
+
+
+
+CM_ "V1 01/05/2021 TW";
+CM_ BU_ TCU_ID2 "Ecotron ET3206A
+Transmission Control Unit
+Controls:
+1. Transmission Range Motor
+2. Left wheel speed sensor
+3. Rear left roofLift motor 
+4. Rear right rooflift motor";
+CM_ BU_ TCU_ID1 "Ecotron ET3206A
+Transmission Control Unit
+Controls:
+1. Gear Motor
+2. Joystick
+3. Right wheel speed sensor
+4. Front left roofLift motor 
+5. Front right rooflift motor";
+CM_ BU_ VCU "HY_TTC580
+Vehicle Control Unit";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 RoofLift_VREF "RoofLift Position Command (reference voltage)";
+CM_ SG_ 3221225472 RoofLift_POSN_RR "Roof Lift Position Rear Right";
+CM_ SG_ 3221225472 RoofLift_DIR_RR "Roof Lift Direction Rear Right";
+CM_ SG_ 3221225472 H_Bridge_2B_Current "H Bridge Voltage Feedback";
+CM_ SG_ 3221225472 H_Bridge_2A_Current "H Bridge Voltage Feedback";
+CM_ SG_ 3221225472 RoofLift_POSN_RL "Roof Lift Position Rear Left";
+CM_ SG_ 3221225472 RoofLift_DIR_RL "Roof Lift Direction Rear Left";
+CM_ SG_ 3221225472 RWHL_Freq "Right Wheel Speed Sensor Frequency";
+CM_ SG_ 3221225472 RWHL_Duty "Right Wheel Speed Sensor Duty Ratio";
+CM_ SG_ 3221225472 RoofLift_POSN_FR "Roof Lift Position Front Right";
+CM_ SG_ 3221225472 RoofLift_DIR_FR "Roof Lift Direction Front Right
+";
+CM_ SG_ 3221225472 H_Bridge_1B_Current "H Bridge Voltage Feedback";
+CM_ SG_ 3221225472 H_Bridge_1A_Current "H Bridge Voltage Feedback";
+CM_ SG_ 3221225472 RoofLift_POSN_FL "Roof Lift Position Front Left";
+CM_ SG_ 3221225472 RoofLift_DIR_FL "Roof Lift Direction Front Left";
+CM_ SG_ 2566848625 Trans_Gear_MotorCurrent "H Bridge Voltage Feedback";
+CM_ SG_ 2566848625 TCU_ID01_Status "Transmission Gear Motor Enable";
+CM_ SG_ 2566848625 Right_Wheel_RPM "Right Wheel Speed ";
+CM_ SG_ 2566848625 Rolling_Counter "ET3206A_1 heartbeat signal";
+CM_ SG_ 2565828736 PE_FAN_PWM "0 0%
+1 10%
+...
+...
+...
+10 100%";
+CM_ SG_ 2565828736 Oil_Fan_PWM "0 0%
+1 10%
+...
+...
+10 100%";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+BA_ "DBName" "Node_Ecotrons";
+BA_ "NmStationAddress" BU_ TCU_ID2 114;
+BA_ "NmStationAddress" BU_ TCU_ID1 113;
+BA_ "NmStationAddress" BU_ VCU 128;
+BA_ "GenMsgSendType" BO_ 2566877312 0;
+BA_ "GenMsgCycleTime" BO_ 2566877312 5000;
+BA_ "GenMsgCycleTime" BO_ 2566848626 20;
+BA_ "GenMsgSendType" BO_ 2566848626 0;
+BA_ "GenMsgCycleTime" BO_ 2566848625 20;
+BA_ "GenMsgSendType" BO_ 2566848625 0;
+BA_ "GenMsgCycleTime" BO_ 2565828736 10;
+BA_ "GenMsgSendType" BO_ 2565828736 0;
+VAL_ 3221225472 RoofLift_DIR_RR 1 "downward" 0 "upward" ;
+VAL_ 3221225472 RoofLift_DIR_RL 1 "downward" 0 "upward" ;
+VAL_ 3221225472 RoofLift_DIR_FR 1 "downward" 0 "upward" ;
+VAL_ 3221225472 RoofLift_DIR_FL 1 "downward" 0 "upward" ;
+VAL_ 2566848626 Work_Filter_Clog 1 "Okay" 0 "Not Okay" ;
+VAL_ 2566848626 Tractor_Filter_Clog 1 "Okay" 0 "Not Okay" ;
+VAL_ 2566848626 Return_Filter_Clog 1 "Okay" 0 "Not Okay" ;
+VAL_ 2566848626 Driver_occupancy 1 "On" 0 "Off" ;
+VAL_ 2566848626 Seatbelt 1 "On" 0 "Off" ;
+VAL_ 2566848625 TCU_ID01_Status 1 "Disabled" 0 "Enabled" ;
+

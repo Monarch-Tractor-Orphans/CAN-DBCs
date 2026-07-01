@@ -1,0 +1,109 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Dash VCU
+VAL_TABLE_ GearStatus 12 "12" 11 "11" 10 "10" 9 "9" 8 "8" 7 "7" 6 "6" 5 "5" 4 "4" 3 "3" 2 "2" 1 "1" 0 "N" ;
+VAL_TABLE_ Indicator 3 "Description for the value '0x3'" 2 "FLASHING" 1 "ON" 0 "OFF" ;
+
+
+BO_ 2566910561 VCU_Dash_Control_02: 8 VCU
+ SG_ CMD_DisplayPtoEngageIndicator : 13|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_DisplaySeatBeltIndicator : 12|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_ShowTargetGear : 24|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_DisplayIntentedPtoSpeed : 0|12@1+ (1,0) [0|4095] "rpm"  Dash
+ SG_ CMD_DisplayCurrentFNR : 14|2@1+ (1,0) [0|3] ""  Dash
+ SG_ CMD_DisplayTargetGear : 20|4@1+ (1,0) [0|15] ""  Dash
+ SG_ CNT : 60|4@1+ (1,0) [0|15] ""  Dash
+ SG_ CMD_DisplayCurrentGear : 16|4@1+ (1,0) [0|15] ""  Dash
+
+BO_ 2565562647 Dash_IO_Status: 8 Dash
+ SG_ Dash_StalkFlashPosition_02 : 9|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_StalkFlashPosition_01 : 8|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_StalkRotaryPosition_03 : 7|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_StalkRotaryPosition_02 : 6|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_StalkRotaryPosition_01 : 5|1@1+ (1,0) [0|1] ""  VCU
+ SG_ CNT : 60|4@1+ (1,0) [0|15] ""  VCU
+ SG_ Dash_RightTurnReq : 2|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_ReverseReq : 4|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_LeftTurnReq : 1|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_HornReq : 0|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Dash_ForwardReq : 3|1@1+ (1,0) [0|1] ""  VCU
+
+BO_ 2566910305 VCU_Dash_Control_01: 8 VCU
+ SG_ CNT : 60|4@1+ (1,0) [0|15] ""  Dash
+ SG_ CMD_DisplayBrightness : 48|8@1+ (1,0) [0|255] "%"  Dash
+ SG_ CMD_L09 : 8|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L08 : 7|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L07 : 6|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L06 : 5|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L05 : 4|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L04 : 3|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L03 : 2|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L02 : 1|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L19 : 18|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L18 : 17|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L17 : 16|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L16 : 15|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L15 : 14|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L14 : 13|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L13 : 12|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L12 : 11|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L11 : 10|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L10 : 9|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_L01 : 0|1@1+ (1,0) [0|1] ""  Dash
+ SG_ CMD_G2 : 32|8@1+ (1,0) [0|255] "%"  Dash
+ SG_ CMD_G1 : 24|8@1+ (1,0) [0|255] "%"  Dash
+ SG_ CMD_PlateBrightness : 40|8@1+ (1,0) [0|255] "%"  Dash
+ SG_ CMD_Buzzer : 23|1@1+ (1,0) [0|1] ""  Dash
+
+
+
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "NmStationAddress" BU_ Dash 23;
+BA_ "NmStationAddress" BU_ VCU 97;
+BA_ "GenMsgCycleTime" BO_ 2566910561 100;
+BA_ "GenMsgSendType" BO_ 2566910561 0;
+BA_ "GenMsgSendType" BO_ 2565562647 0;
+BA_ "GenMsgCycleTime" BO_ 2565562647 100;
+BA_ "GenMsgSendType" BO_ 2566910305 0;
+BA_ "GenMsgCycleTime" BO_ 2566910305 100;
+
